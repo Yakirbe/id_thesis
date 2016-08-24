@@ -1,0 +1,90 @@
+% Chapter 1
+
+\chapter{ID Embedding} % Main chapter title
+
+\label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+%----------------------------------------------------------------------------------------
+
+% Define some commands to keep the formatting separated from the content 
+%\newcommand{\keyword}[1]{\textbf{#1}}
+%\newcommand{\tabhead}[1]{\textbf{#1}}
+%\newcommand{\code}[1]{\texttt{#1}}
+%\newcommand{\file}[1]{\texttt{\bfseries#1}}
+%\newcommand{\option}[1]{\texttt{\itshape#1}}
+
+%----------------------------------------------------------------------------------------
+
+We now describe the general embedding process for both single objects and object pairs. This is the core process applied on several tasks in our work, such classification, regression, pairs matching etc.
+Our embedding method is assembled from three main phases:
+
+\begin{itemize}
+	\item Discretization
+	\item Interpolation
+	\item Assigning
+\end{itemize}
+
+let us describe each part in the ID sequence:
+
+\section{Discretization}
+Discretization phase is performed in order to downgrade complexity of a given machine/metric learning problem. 
+Let us assume we have a very high ordered vectors to classify, for example a 1G ordered vectors dataset $\overrightarrow{v} \in \Re^{10^9}$ would cause struggled learning process due to high memory resources required.
+
+For that reason we downscale problems’ dimensions by discretizing the dataset in the following \textbf{dimension-wise} method:
+Each dimension in dataset is clustered and sorted into $C_i$ - dimensional $\overrightarrow{v} \in \Re^{C_i}$ vector.\\
+Any common clustering method may benefit in this, with one exception:
+The extremum points of the sorted discretized vector must surround the extremum values of the dataset.
+
+\section{Interpolation}
+
+As described above, our IDD function should delivers continuous output for any given valid object/pair of objects. 
+For this purpose we perform interpolation of the given data sample features, where each element among data sample is interpolated by its closest boundaries in the proper discretization vector space. By the following algorithm:
+
+\begin{enumerate}
+	\item For each element find closest bounds among discretization vector
+	\item Compute coefficients - this will be described further for every scenario, where this phase is actually performs a multidimensional interpolation
+	
+\end{enumerate}
+\section{Assigning}
+
+This phase assigns the coefficients computed in the last phase, in their proper locations among the embedded (sparsed) vector.
+
+In the following sections we describe specifically each nuance of each sub-domain of the method. Please notice that the most detailed sub-method in this work is the multidimensional IDD pairs embedding, since it is the most innovative section in this work in our opinion.
+
+	\begin{figure} 
+		\begin{algorithm} 
+		\caption{Embedding Procedure - General}
+		\begin{algorithmic}[1]
+			
+			\REQUIRE $L$ sized, vectorized n-dimensional dataset
+			\REQUIRE number of centers per dimension - $C$
+			\ENSURE $\overrightarrow{\phi}$: $L$ sized set, embedded, sparsed vectors\\
+			
+			\STATE Find centers vectors
+			\STATE V shall be a set of centers vectors
+			\FORALL{dim in $n$}  
+			\STATE $V_{dim} \leftarrow centers \quad vector \quad per \quad dim$
+			\ENDFOR
+			
+			\STATE Find embedded coefficients for all dataset
+			\STATE $\overrightarrow{\phi} = C^n$ length empty $emb-set$ embedded vectors
+			\FORALL{$vec$ in $L$}
+			\STATE find $vec$ bounding hypercube 
+			\STATE find $vec$ bounding simplex (permutation method)
+			\STATE $\overrightarrow{\lambda} \leftarrow$ find $vec$ barycentric coefficients 
+			\STATE $\overrightarrow{\hat{\lambda}} \leftarrow$ normalize($\overrightarrow{\lambda}$)
+			\ENDFOR
+			\STATE Assign
+			\FORALL{$\overrightarrow{evec}$ in $emb-set$}
+			\STATE $inds \leftarrow$ find vertices from hypercube and simplex locations
+			\FORALL{$i$ in $inds$}
+			\STATE $\overrightarrow{evec}(i) \leftarrow \overrightarrow{\hat{\lambda}}(j(i))$ -- j is the assigning function between the coef. vector and embedding vector
+			\ENDFOR
+			\ENDFOR
+			
+			\RETURN $\overrightarrow{\phi}$
+			
+		\end{algorithmic}
+	 
+	\end{algorithm}
+	\end{figure}

@@ -1,0 +1,116 @@
+% Chapter 1
+
+\chapter{Interpolated Discretized object pairs embedding} % Main chapter title
+
+\label{Chapter3} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+We now describe the Interpolated Discretized Distances (IDD) embedding method.
+As mentioned above, this method uniqueness is applying an embedding method that treats each pair as a \textbf{joint} object in its problem.
+This method may fit any two-objects task such similarity/matching problems etc. 
+Let us initiate by presenting the original single dimensional (IDD-1D) work[], then the expansion of this work into multidimensional (IDD-ND) scenario - general distance embedding is described.
+
+\section{1D case}
+
+	Our method's objective is to find an embedding function such:
+	
+	\begin{equation}
+		ID:\Re^n \times \Re^m \rightarrow \Re^d
+	\end{equation}
+	, which applies the following distance function by multiplying with a learned weights vector $\overrightarrow{w}$ (learned vector)
+	
+	\begin{equation}
+	d(\overrightarrow{x_1} , \overrightarrow{x_2}) = ID(\overrightarrow{x_1} , \overrightarrow{x_2}) \times \overrightarrow{w}
+	\end{equation}
+	
+	this embedding shall obtain semimetric constraints applied.
+	
+	\subsection{Discretization}
+
+	\begin{figure}
+		
+		\qquad \qquad \qquad \quad \begin{pmatrix} c_{1(1)} , \dots , \dots , \dots , c_{1(n)} \end{pmatrix}\\
+		
+		$W$ =		\begin{pmatrix} c_{2(1)} \\ \vdots \\ \vdots \\ \vdots \\ \vdots \\c_{2(m)} \end{pmatrix}
+		\begin{pmatrix}
+			s_{1,1}&   \dots&   \dots&   \dots& s_{1,m}\\
+			\vdots& \ddots &        &        & \vdots \\
+			\vdots&        & \ddots &        & \vdots  \\
+			\vdots&        &        & \ddots & \vdots  \\
+			\vdots&        &        &        & \vdots  \\
+			s_{n,1}  & \dots  & \dots  & \dots  & s_{n,m}
+		\end{pmatrix}
+		\caption{discretization matrix $W$ as built from 2 vectors $c_1 , c_2$. this matrix is 2D as it is an outcome of 2 - 1D vectors discretization processes}
+	\end{figure}
+
+	
+	as described in \ref{Chapter2} 1D-IDD describes bin-to-bin distance between two samples from single dimensional spaces. Each dimension is clustered and sorted into $C_i$ - dimensional: $\overrightarrow{c} \in \Re^{C_i}$ vector.
+	The vector's pair defines the shape of a distance matrix $W \in \Re^{C_i \times C_j}$ , where each element $W_i,j$ describes the distance between two cluster centers form vectors - $v_a , v_b$ \\
+	
+	
+	
+	\subsection{Interpolation}
+	
+	As described above , our $IDD$ function provides continuous output for any given valid object/pair of objects. 
+	For this purpose we perform interpolation of the given data sample features within the $W$ matrix space for each data sample by the following process:
+	\begin{itemize}
+		\item extract the closest vertices from $W$ matrix to the feature sample. 
+		\item calculate four (2 per feature) coefficients per sample, each represented by the normalized surface of the opposite triangle to a vertex (1D coefficients calculation will be described in section). 
+		\item 1D-IDD is computed by applying inner product between the sparse coefficient vector and their corresponding vertices vector:\\
+		\begin{equation}
+		1DIDD = \sum_{t=1}^{3}\alpha_{a(t),b(t)} \times W_{a(t),b(t)}
+		\end{equation}
+		where:\\
+		$\alpha$ is the coefficients sparse vector , representing the interpolation result per feature vector
+		$a , b$ are parametrization function for both $\alpha , W$
+		$t$ is the scanning index for all arguments among this expression
+	\end{itemize}
+		
+	Please notice that there are only 4 elements different than zero at $\alpha$, so this expression represents the non-zero elements only provides value to $1DIDD$ expression \\
+	
+	$a,b$ parameterizations are described as:
+	
+	\begin{itemize}
+		\item	\begin{equation} a_{(1)}=a{(2)} =argmax_{(c_i)} \{ v_{c_i} \leq x_i \} \end{equation}
+		\item 	\begin{equation} a_{(3)}=a{(4)} =argmin_{(c_i)} \{ v_{c_i} \geq x_i \}  \end{equation} 
+		\item 	\begin{equation} b_{(1)}= b_{(3)} =argmax_{(c_j)} \{ v_{c_j} \leq x_j \}  \end{equation}
+		\item 	\begin{equation} b_{(2)}=b_{(4)} =argmin_{(c_j)} \{ v_{c_j} \geq x_j \} \end{equation} 
+	\end{itemize}		
+	
+	\subsubsection{Interpolation Coefficients extraction - 1D}
+		
+		
+	
+	
+	\subsection{Assigning}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{multidimensional case}
+	\subsection{Discretization}
+	
+	\subsection{Interpolation}
+	\subsection{Assigning}
+
+
+
+

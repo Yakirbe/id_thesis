@@ -1,0 +1,156 @@
+% Chapter 1
+
+\chapter{Introduction} % Main chapter title
+
+\label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+%----------------------------------------------------------------------------------------
+
+% Define some commands to keep the formatting separated from the content 
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\tabhead}[1]{\textbf{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\file}[1]{\texttt{\bfseries#1}}
+\newcommand{\option}[1]{\texttt{\itshape#1}}
+
+%----------------------------------------------------------------------------------------
+
+%\section{Welcome and Thank You}
+Distance functions are at the core of numerous scientific areas , such as classification, regression, clustering challenges etc.
+it can be based either on strict, constant formulation, such as norms[] (such as $L_2$ norm, representing the euclidean distance []), or can be learned from datasets - metric learning.
+
+In metric learning, most of the works learn a Mahalanobis distance. These methods [1-12] learn a linear transformation that is applied on the vector and then apply the squared Euclidean distance (thus these methods are actually semimetric learning). 
+Kernel metric learning applies embedding separably on each vector before learning the linear transformation. 
+Deep learning methods [13] learn an embedding using a deep network and then apply the Euclidean distance on the embedded vectors (the output of the network). Thus, even kernel and deep metric learning can only learn a Euclidean distance. 
+Some works [14, 15, 16, 17] have suggested learning other families of distances. However, these methods are restricted to the suggested pre-chosen families of distances (e.g. Earth Mover’s Distance and $\chi$.
+Finally, multi-metric learning methods [1, 18] learn separate local Mahalanobis metrics around
+keypoints. However, they do not learn a global metric. An exception is [19] which shows how
+to combine information from several local metrics into one global metric. However, again it is only able to model Euclidean metrics.
+
+Our work is handling the following use case: let us say there is a given dataset, which does not own any euclidean properties, and cannot be embedded separately in order to perform various classification tasks. 
+Ofir’s work [] treats this particular matter, by interpolating and embedding pairs of data as a unified objects, by performing bin to bin semi-metric pairing.
+
+We propose a new embedding method for a single vector and for a pair
+of vectors. This embedding method enables: 
+\begin{itemize}[noitemsep]
+	\item  efficient classification and regression of functions of single vectors
+	\item  efficient approximation of distance functions
+	\item  general, non-Euclidean, semimetric learning 
+\end{itemize}
+
+Bin to bin comparison between pairs of data samples is beneficial when the data is not dimensionally correlated, and has no relations between one dimension in the first vector, to another. For example, when performing SIFT analysis to compare between two images for pattern recognition, there might be relations between one element to its own neighbors, but also to its paired - candidate neighbor.
+For this and other purposes we may consider a cross-bin comparison method.
+
+Let us now address describing the theories behind our method.
+
+%----------------------------------------------------------------------------------------
+
+\section{Metrics}
+
+
+\subsection{Definition}
+
+\textbf{Metric space} is a set for which distances between all members of the set are defined. Distances applied on every pair of objects on a given set called \textbf{metric}.
+A metric $d$ is defined as:\\
+\begin{equation}
+d: q_1 \times q_2 \rightarrow \Re
+\end{equation}
+where $q_i$ are objects in a given set
+
+\subsection{Metrics Properties}
+Any metrics must obey the following properties:
+
+\subsubsection{Non-negativity}  \label{sec:1}
+any metric on a pair of objects must be non-negative
+\begin{equation}
+d(q_1,q_2) \geq 0
+\end{equation}
+
+\subsubsection{Identity of Indiscernibles}  \label{sec:2}
+\begin{equation}
+d(q_1,q_2) = 0 \iff q_1 = q_2
+\end{equation}
+for every pair of objects $q_1,q_2$, $d$ metric function provides zero if and only if those objects are identical.
+Identity of indiscernibles is an ontological principle that states there cannot be separate objects or entities that have all their properties in common.
+
+
+\subsubsection{Symmetry} \label{sec:3}
+\begin{equation}
+d(q_1,q_2) = d(q_2,q_1)
+\end{equation}
+A symmetric function of a pair of objects is one whose value at any pair of objects is the same as its value at any permutation of that pair. 
+
+\subsubsection{Sub-additivity (Triangle Inequality)} \label{sec:4}
+\begin{equation}
+d(q_1,q_3) \leq d(q_1,q_2) + d(q_2,q_3)
+\end{equation}
+Evaluating the function for the sum of two elements of the domain always returns something less than or equal to the sum of the function's values at each element. 
+\\
+There are two useful generalizations for metric definition:
+
+\subsection{Semi-metrics}
+Semi metric is a generalization of the metric definition, which basically excludes \ref{sec:4}, and remains the rest.
+\subsection{Pseudo-metrics}
+Pseudometrics supports all metrics properties except the identity of indiscernibles property \ref{sec:2}, which is modified as follows:
+\begin{equation}
+q_1 = q_2 \Rightarrow d(q_1,q_2) = 0
+\end{equation}
+
+
+\section{Metric Learning}
+
+Metric learning study refers to learning a distance function from data objects, while still applying the basic properties of metrics.
+
+Most of the works learn a Mahalanobis distance[]. These methods [1-12] learn a linear transform that is applied on the vector and then apply the squared Euclidean distance (thus these methods are actually semimetric learning). 
+\\\textbf{Kernel metric learning} applies embedding separably on each vector before learning the linear transform. 
+\\\textbf{Deep learning} methods such [13] learn an embedding using a deep network and then apply the Euclidean (or any known) distance on the embedded vectors (the output of the network). 
+Thus, even kernel and deep metric learning can only learn a Euclidean distance. Some works [14-17] have suggested learning other families of distances. 
+However, these methods are restricted to the suggested pre-chosen families of distances (e.g. Earth Mover’s Distance[] and $\chi^2$[].\\
+Finally, multi-metric learning methods [1, 18] learn separate local Mahalanobis metrics around keypoints. However, they do not learn a global metric. An exception is [19] which shows how to combine information from several local metrics into one global metric. However, again it is only able to model Euclidean metrics.
+
+
+
+
+\section{Bin-to-Bin \& Cross-Bin Metrics}
+Bin-to-Bin distance functions such as $L_2, L_1$ and $\chi^2$ compare only corresponding bin’s of a vector to its exact corresponding bin in the second vector. The assumption when using these distances is that the histogram domains are aligned. However this assumption is violated in many cases due to quantization, shape deformation, light changes, etc. Bin-to-bin distances depend on the number of bins. If it is low, the distance is robust, but not discriminative, if it is high, the distance is discriminative, but not robust. 
+Distances that take into account cross-bin relationships (cross-bin distances) can be both robust and discriminative.
+
+
+\section{Mahalanobis Distance}
+Let $A \in \Re^{N \times N}$ be a bin-similarity matrix, so that $a_ij$ encodes how much bin i is similar to bin j. \\
+The Quadratic-Form (QF) distance [21] is defined as : 
+\begin{equation}
+QF^A(P, Q) = \sqrt{(P - Q)^T \times A(P - Q)}
+\end{equation}
+Where the bin-similarity matrix $A$ is the inverse of the covariance matrix, the $QF$ distance is called the Mahalanobis distance [22]. If the bin-similarity matrix is positive-semidefinitive (PSD), $A$ matrix can be expressed as $A = LL^T$ for some real matrix $L$. Thus, the distance can be computed as the Euclidean norm between linearly transformed vectors: 
+\begin{equation}
+QF^A(P, Q) = \lVert LP - LQ \rVert_2
+\end{equation}
+
+
+In this case the QF distance is a \textbf{psuedo-metric}
+
+
+\section{Related Work}
+
+Our method builds in a novel direction on the success of previous metric learning approaches. As Weinberger and Saul [1] conjectured, more adaptive transformations of the input space can lead to improved performance. Our method allows to enlarge the number of the learned parameters, while the computation of the distance between two never-seen examples is only linear in the dimension. 
+
+Chopra et al. [3] proposed to learn a convolutional neural net as a nonlinear transformation before applying the ℓ2 norm. They showed excellent results on image data. 
+Babenko et al. [12] suggested a boosting framework for learning non-Mahalanobis metrics. They also presented excellent results on image data. These methods are non-convex and thus they might suffer from local minimas and training is sensitive to parameters. 
+
+Kernel methods were also proposed in order to learn a Mahalanobis distance over non-linear transformations of the data [1, 7, 9]. Computing such a distance between two vectors scales linear in the number of training examples, which makes it impractical for large datasets. Computing our ID distances does not depend on the number of training examples. 
+
+A family of non-Mahalanobis distances recently proposed is the Quadratic-Chi (QC) [15]. The QC family generalizes both the Mahalanobis distance and the χ 2 distance. A QC distance have parameters that can be learned. However, a serious limitation is that it can only model χ 2 -like distances. In addition, it is applicable only to non-negative vectors. Finally, it is non-convex with respect to its parameters, so learning them is hard. 
+
+Rosales and Fung [5] also propose learning metrics via linear programming. However, while we learn a non-Mahalanobis distance, their method learns a subfamily of Mahalanobis distance. That is, their method is restricted to learning a Mahalanobis distance which is parameterized with a diagonal dominant matrix. 
+
+Danfeng et al. [3]  displays a Quantized Kernels metrics learning methods concludes additive and block-wise kernels learning. Our method refers to any multi-dimensional distance learning problem, not only blocks of objects (such as SIFT descriptor maps around any interest point of an image)
+
+
+\section{Contribution}
+
+In this novel work, we present an efficient method for embedding either single object or pairs of objects.
+This method applies a semi-metric learning for a given data space. This method is a generalization of the single-dimensional Interpolated-Discretized (ID) distance, presented by Dr. Ofir Pele[]. 
+In this work we embed pairs of objects jointly, which for our best of knowledge is the debut embedding method for such purpose.
+In this work a novel attitude for upgrading IDD embedding procedure to n-dimensional IDD, while maintaining its basic semi-metric, non-euclidean properties, and also contributes the ability of applying “physical” constraints during the embedding process to maintain our method continuous and linearly computated. 
+
