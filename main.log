@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.8.23)  30 AUG 2016 02:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.8.23)  30 AUG 2016 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1835,88 +1835,10 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
 (./main.aux (./Chapters/c1.aux) (./Chapters/c2.aux) (./Chapters/c3.aux)
-(./Chapters/c4.aux) (./Chapters/c5.aux
-
-LaTeX Warning: Label `FillingFile' multiply defined.
-
-
-LaTeX Warning: Label `ThesisConventions' multiply defined.
-
-
-LaTeX Warning: Label `tab:treatments' multiply defined.
-
-
-LaTeX Warning: Label `fig:Electron' multiply defined.
-
-
-LaTeX Warning: Label `eqn:Einstein' multiply defined.
-
-) (./Chapters/c6.aux
-
-LaTeX Warning: Label `FillingFile' multiply defined.
-
-
-LaTeX Warning: Label `ThesisConventions' multiply defined.
-
-
-LaTeX Warning: Label `tab:treatments' multiply defined.
-
-
-LaTeX Warning: Label `fig:Electron' multiply defined.
-
-
-LaTeX Warning: Label `eqn:Einstein' multiply defined.
-
-) (./Chapters/c7.aux
-
-LaTeX Warning: Label `FillingFile' multiply defined.
-
-
-LaTeX Warning: Label `ThesisConventions' multiply defined.
-
-
-LaTeX Warning: Label `tab:treatments' multiply defined.
-
-
-LaTeX Warning: Label `fig:Electron' multiply defined.
-
-
-LaTeX Warning: Label `eqn:Einstein' multiply defined.
-
-) (./Chapters/c8.aux
-
-LaTeX Warning: Label `FillingFile' multiply defined.
-
-
-LaTeX Warning: Label `ThesisConventions' multiply defined.
-
-
-LaTeX Warning: Label `tab:treatments' multiply defined.
-
-
-LaTeX Warning: Label `fig:Electron' multiply defined.
-
-
-LaTeX Warning: Label `eqn:Einstein' multiply defined.
-
-) (./Chapters/c9.aux
+(./Chapters/c4.aux) (./Chapters/c5.aux) (./Chapters/c6.aux) (./Chapters/c7.aux)
+(./Chapters/c8.aux) (./Chapters/c9.aux
 
 LaTeX Warning: Label `Chapter8' multiply defined.
-
-
-LaTeX Warning: Label `FillingFile' multiply defined.
-
-
-LaTeX Warning: Label `ThesisConventions' multiply defined.
-
-
-LaTeX Warning: Label `tab:treatments' multiply defined.
-
-
-LaTeX Warning: Label `fig:Electron' multiply defined.
-
-
-LaTeX Warning: Label `eqn:Einstein' multiply defined.
 
 ) (./Appendices/AppendixA.aux))
 \openout1 = `main.aux'.
@@ -2065,16 +1987,15 @@ Package caption Info: End \AtBeginDocument code.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* bindingoffset: 56.9055pt
 * modes: includehead includefoot twoside 
-* h-part:(L,W,R)=(71.13188pt, 361.34995pt, 108.12054pt)
+* h-part:(L,W,R)=(72.2698pt, 452.96826pt, 72.2698pt)
 * v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=361.34995pt
+* \textwidth=452.96826pt
 * \textheight=693.49821pt
-* \oddsidemargin=55.7674pt
-* \evensidemargin=35.85056pt
+* \oddsidemargin=-0.00018pt
+* \evensidemargin=-0.00018pt
 * \topmargin=-29.59087pt
 * \headheight=18.85364pt
 * \headsep=19.8738pt
@@ -2302,58 +2223,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--139
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 164.
 1: section
-[7] [8]
+[7] [8
+
+]
 --------------------
  Acknowledgements
 --------------------
 1: section
-[9
-
-] [10
+[9] [10
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 210.
  (./main.toc
-Overfull \hbox (2.19774pt too wide) in paragraph at lines 38--38
- [][] [][][]\T1/ppl/m/n/10.95 calculate sub-volumes of all sim-plices in-volved
-[][] [][]  
- []
-
-
-Overfull \hbox (4.94666pt too wide) in paragraph at lines 40--40
- [][] [][][]\T1/ppl/m/n/10.95 Efficient method - cal-cu-lat-ing Barycen-tric Co
-- 
- []
-
 1: section
-[11]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 58.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 58.
- [12]
-[13] [14])
+[11])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
- [15] [16
-
-] (./main.lof)
+ [12] (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
 
 1: section
-[17] [18
+[13
+
+] [14
 
 ] (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
 
+1: section
+[15] [16
+
+] (./main.loa)
+\tf@loa=\write10
+\openout10 = `main.loa'.
+
+
+1: section
+[17] [18
+
+]
 1: section
 [19] [20
 
@@ -2366,15 +2280,11 @@ LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
 [23] [24
 
 ]
-1: section
-[25] [26
-
-]
 --------------------
  Dedicatory
 --------------------
 1: section
-[27] [28
+[25] [26
 
 ]
 1: section
@@ -2441,48 +2351,29 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
-Overfull \hbox (13.3817pt too wide) in paragraph at lines 143--144
-[]\T1/ppl/m/n/10.95 A fam-ily of non-Mahalanobis dis-tances re-cently pro-posed
- is the Quadratic-
- []
-
-
-Overfull \hbox (0.60869pt too wide) in paragraph at lines 152--156
-\T1/ppl/m/n/10.95 IDD, while main-tain-ing its ba-sic semi-metric, non-euclidea
-n prop-er-ties, and
- []
-
-[4]) [5]
+) [4]
 \openout2 = `Chapters/c2.aux'.
 
- (./Chapters/c2.tex [6
-
-
-
-]
+ (./Chapters/c2.tex
 Chapter 2.
 
-Overfull \hbox (4.22194pt too wide) in paragraph at lines 50--51
-\T1/ppl/m/n/10.95 This phase as-signs the co-ef-fi-cients com-puted in the last
- phase, in their proper
+Overfull \hbox (3.54254pt too wide) in paragraph at lines 30--32
+\T1/ppl/m/n/10.95 Discretization phase is per-formed in or-der to down-grade co
+m-plex-ity of a given ma-chine/metric
  []
 
-1: section
-[7]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 55.
-) [8]
+1: section
+[5
+
+
+
+]) [6]
 \openout2 = `Chapters/c3.aux'.
 
  (./Chapters/c3.tex
 Chapter 3.
-
-Overfull \hbox (5.9407pt too wide) in paragraph at lines 18--20
-\T1/ppl/m/n/10.95 , which ap-plies the fol-low-ing dis-tance func-tion by mul-t
-i-ply-ing with a learned
- []
-
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -2529,8 +2420,8 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.34 	\begin{pmatrix}
-                     
+l.34 		\begin{pmatrix}
+                      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -2546,18 +2437,12 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (2.27356pt too wide) in paragraph at lines 47--49
-\T1/ppl/m/n/10.95 ples from sin-gle di-men-sional spaces. Each di-men-sion is c
-lus-tered and sorted
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 47--49
 
  []
 
 1: section
-[9
+[7
 
 
 
@@ -2572,191 +2457,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--70
  []
 
 
-! Package pgf Error: No shape named v00 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-
-! Package pgf Error: No shape named v10 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v10 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v00 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v20 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v20 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v10 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v30 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v30 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v20 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v40 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v40 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v30 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v50 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v50 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named v40 is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 				\end{tikzpicture}}
-                            
-(That was another \errmessage.)
-
-
-Overfull \hbox (90.2381pt too wide) in paragraph at lines 173--177
- [][] 
- []
-
-
-Overfull \hbox (36.13445pt too wide) in paragraph at lines 177--177
+Overfull \hbox (45.29614pt too wide) in paragraph at lines 179--179
 [] [] 
  []
 
@@ -2765,53 +2466,48 @@ Package caption Warning: \label without proper reference on input line 91.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:32' on page 10 undefined on input line 189.
+LaTeX Warning: Reference `fig:32' on page 8 undefined on input line 191.
 
-[10]
 
 Package caption Warning: \label without proper reference on input line 91.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:32' on page 11 undefined on input line 191.
+LaTeX Warning: Reference `fig:32' on page 8 undefined on input line 193.
+
+[8]
+
+Package caption Warning: \label without proper reference on input line 532.
+See the caption package documentation for explanation.
 
 
-Overfull \hbox (11.16422pt too wide) in paragraph at lines 206--209
-\T1/ppl/m/n/10.95 The se-lected co-ef-fi-cients cal-cu-la-tion pro-cess for our
- em-bed-ding is the Barycen-
+LaTeX Warning: Reference `flatt' on page 9 undefined on input line 201.
+
+
+Overfull \hbox (11.95175pt too wide) in paragraph at lines 208--211
+\T1/ppl/m/n/10.95 For this we should adapt a dif-fer-ent em-bed-ding at-ti-tude
+, since it should ob-tain multi-dimensional
  []
 
 
-Overfull \hbox (11.41591pt too wide) in paragraph at lines 217--218
-\T1/ppl/m/n/10.95 tions, which cor-re-lates be-tween the co-ef-fi-cients vec-to
-r and the learned weights
- []
-
-
-Overfull \hbox (5.09828pt too wide) in paragraph at lines 221--224
-\T1/ppl/m/n/10.95 Given a n-dimensional vec-tors dataset, we first dis-crete th
-e data range/space
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 231--233
+Underfull \hbox (badness 10000) in paragraph at lines 233--235
 
  []
 
-! Extra }, or forgotten $.
-l.250 ...s \leq p_{t(2n-1)} \leq p_{t(2n)} \leq 1}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+[9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 306--308
 
-[12]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--308
+
+ []
+
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.307 		\begin{bmatrix}
+l.309 		\begin{bmatrix}
                         0\\ 0\\ \vdots \\ 0\\ 0\\ \end{bmatrix} ,
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2819,26 +2515,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.307 ...} 0\\ 0\\ \vdots \\ 0\\ 0\\ \end{bmatrix}
-                                                   ,
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.308 		\begin{bmatrix}
-                        0\\ 0\\ \vdots \\ 0\\ 1\\ \end{bmatrix} ,
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.308 ...} 0\\ 0\\ \vdots \\ 0\\ 1\\ \end{bmatrix}
+l.309 ...} 0\\ 0\\ \vdots \\ 0\\ 0\\ \end{bmatrix}
                                                    ,
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2850,14 +2527,14 @@ my insertion and my current dilemma will both disappear.
 <inserted text> 
                 $
 l.310 		\begin{bmatrix}
-                        0\\ 1\\ \vdots \\ 1\\ 1\\ \end{bmatrix} ,
+                        0\\ 0\\ \vdots \\ 0\\ 1\\ \end{bmatrix} ,
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.310 ...} 0\\ 1\\ \vdots \\ 1\\ 1\\ \end{bmatrix}
+l.310 ...} 0\\ 0\\ \vdots \\ 0\\ 1\\ \end{bmatrix}
                                                    ,
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2868,7 +2545,26 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.311 		\begin{bmatrix}
+l.312 		\begin{bmatrix}
+                        0\\ 1\\ \vdots \\ 1\\ 1\\ \end{bmatrix} ,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.312 ...} 0\\ 1\\ \vdots \\ 1\\ 1\\ \end{bmatrix}
+                                                   ,
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.313 		\begin{bmatrix}
                         1\\ 1\\ \vdots \\ 1\\ 1\\ \end{bmatrix}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2876,7 +2572,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.311 ...} 1\\ 1\\ \vdots \\ 1\\ 1\\ \end{bmatrix}
+l.313 ...} 1\\ 1\\ \vdots \\ 1\\ 1\\ \end{bmatrix}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2884,7 +2580,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[13]
+[11]
 
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -2893,7 +2589,7 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.383 		\end{align*}
+l.385 		\end{align*}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2906,13 +2602,13 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.398 		\end{align*}
+l.400 		\end{align*}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
 
  []
 
@@ -2924,13 +2620,13 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.414 		\end{align*}
+l.416 		\end{align*}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 418--419
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
 
  []
 
@@ -2939,7 +2635,7 @@ Runaway argument?
 ! Paragraph ended before \align* was complete.
 <to be read again> 
                    \par 
-l.422 
+l.424 
       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -2948,7 +2644,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.422 
+l.424 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2956,7 +2652,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.422 
+l.424 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2967,7 +2663,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.422 
+l.424 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2978,7 +2674,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \par 
-l.422 
+l.424 
       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -2986,7 +2682,7 @@ So I shall assume that you typed `$$' both times.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.424 			\lambda
+l.426 			\lambda
                 _1 =	V_{[r^0,p,r^2,r^3,r^4]} =
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2994,20 +2690,20 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.432 
+l.434 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--432
+Underfull \hbox (badness 10000) in paragraph at lines 426--434
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.433 				= p_
+l.435 				= p_
               1 \cdot \begin{vmatrix} 0 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \\...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3015,20 +2711,20 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.437 
+l.439 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--437
+Underfull \hbox (badness 10000) in paragraph at lines 435--439
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.438 				= p_
+l.440 				= p_
               4 - p_3 = p_4 - (\lambda_2 + \lambda_3 + \lambda_4)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3036,7 +2732,7 @@ you left one out. Proceed, with fingers crossed.
 ! Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
-l.439 		\end{align*}
+l.441 		\end{align*}
                     
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -3047,7 +2743,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
-l.439 		\end{align*}
+l.441 		\end{align*}
                     
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -3055,7 +2751,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.439 		\end{align*}
+l.441 		\end{align*}
                     
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3063,7 +2759,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.439 		\end{align*}
+l.441 		\end{align*}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3074,7 +2770,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
                                                   
-l.439 		\end{align*}
+l.441 		\end{align*}
                     
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3085,7 +2781,7 @@ deleted material, e.g., by typing `I$}'.
 ! Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.439 		\end{align*}
+l.441 		\end{align*}
                     
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -3093,7 +2789,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra }, or forgotten \endgroup.
 \endalign ->\math@cr \black@ \totwidth@ \egroup 
                                                 \ifingather@ \restorealignst...
-l.439 		\end{align*}
+l.441 		\end{align*}
                     
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3102,13 +2798,13 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-! LaTeX Error: \begin{equation} on input line 420 ended by \end{align*}.
+! LaTeX Error: \begin{equation} on input line 422 ended by \end{align*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.439 		\end{align*}
+l.441 		\end{align*}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3117,7 +2813,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.439 		\end{align*}
+l.441 		\end{align*}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3128,11 +2824,12 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.439 		\end{align*}
+l.441 		\end{align*}
                     
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
+[12]
 
 ! LaTeX Error: Bad math environment delimiter.
 
@@ -3140,7 +2837,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.440 		\end{equation}
+l.442 		\end{equation}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3149,7 +2846,7 @@ or  <return>  to continue without it.
 ! You can't use `\eqno' in horizontal mode.
 \endmathdisplay@a ...\df@tag \@empty \else \veqno 
                                                   \alt@tag \df@tag \fi \ifx ...
-l.440 		\end{equation}
+l.442 		\end{equation}
                       
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -3163,7 +2860,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.440 		\end{equation}
+l.442 		\end{equation}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3172,7 +2869,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.440 		\end{equation}
+l.442 		\end{equation}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3183,7 +2880,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.440 		\end{equation}
+l.442 		\end{equation}
                       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -3191,7 +2888,7 @@ So I shall assume that you typed `$$' both times.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.440 		\end{equation}
+l.442 		\end{equation}
                       
 Things are pretty mixed up, but I think the worst is over.
 
@@ -3200,7 +2897,7 @@ Runaway argument?
 ! Paragraph ended before \align* was complete.
 <to be read again> 
                    \par 
-l.448 
+l.450 
       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -3209,7 +2906,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.448 
+l.450 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3217,7 +2914,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.448 
+l.450 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3228,7 +2925,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.448 
+l.450 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3239,7 +2936,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \par 
-l.448 
+l.450 
       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -3247,7 +2944,7 @@ So I shall assume that you typed `$$' both times.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.449 					\lambda
+l.451 					\lambda
                   _0 =	V_{[p,r^1,r^2,r^3,r^4]} =
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3255,20 +2952,20 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.457 
+l.459 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--457
+Underfull \hbox (badness 10000) in paragraph at lines 451--459
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.458 						= 1 - p_
+l.460 						= 1 - p_
                     1 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3276,20 +2973,20 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.462 
+l.464 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 458--462
+Underfull \hbox (badness 10000) in paragraph at lines 460--464
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.463 						= 1 - p_
+l.465 						= 1 - p_
                     4 - p_3 = 1 - (\lambda_1 + \lambda_2 + \lambda_3 + \lamb...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3297,7 +2994,7 @@ you left one out. Proceed, with fingers crossed.
 ! Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
-l.464 			\end{align*}
+l.466 			\end{align*}
                      
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -3308,7 +3005,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
-l.464 			\end{align*}
+l.466 			\end{align*}
                      
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -3316,7 +3013,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.464 			\end{align*}
+l.466 			\end{align*}
                      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3324,7 +3021,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.464 			\end{align*}
+l.466 			\end{align*}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3335,7 +3032,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
                                                   
-l.464 			\end{align*}
+l.466 			\end{align*}
                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3346,7 +3043,7 @@ deleted material, e.g., by typing `I$}'.
 ! Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.464 			\end{align*}
+l.466 			\end{align*}
                      
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -3354,7 +3051,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra }, or forgotten \endgroup.
 \endalign ->\math@cr \black@ \totwidth@ \egroup 
                                                 \ifingather@ \restorealignst...
-l.464 			\end{align*}
+l.466 			\end{align*}
                      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3363,13 +3060,13 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-! LaTeX Error: \begin{equation} on input line 446 ended by \end{align*}.
+! LaTeX Error: \begin{equation} on input line 448 ended by \end{align*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.464 			\end{align*}
+l.466 			\end{align*}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3378,7 +3075,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.464 			\end{align*}
+l.466 			\end{align*}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3389,7 +3086,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.464 			\end{align*}
+l.466 			\end{align*}
                      
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -3401,7 +3098,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.465 		\end{equation}
+l.467 		\end{equation}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3410,7 +3107,7 @@ or  <return>  to continue without it.
 ! You can't use `\eqno' in horizontal mode.
 \endmathdisplay@a ...\df@tag \@empty \else \veqno 
                                                   \alt@tag \df@tag \fi \ifx ...
-l.465 		\end{equation}
+l.467 		\end{equation}
                       
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -3424,7 +3121,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.465 		\end{equation}
+l.467 		\end{equation}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3433,7 +3130,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.465 		\end{equation}
+l.467 		\end{equation}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3444,7 +3141,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.465 		\end{equation}
+l.467 		\end{equation}
                       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -3452,985 +3149,241 @@ So I shall assume that you typed `$$' both times.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.465 		\end{equation}
+l.467 		\end{equation}
                       
 Things are pretty mixed up, but I think the worst is over.
 
-[15]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 488.
+               Default added (so using `tbp') on input line 490.
 
 
-Overfull \hbox (87.60872pt too wide) in paragraph at lines 491--501
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 507--512
+Underfull \hbox (badness 10000) in paragraph at lines 509--514
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 516--517
-
+[13]
+Overfull \hbox (2.59729pt too wide) in paragraph at lines 516--517
+[]\T1/ppl/m/n/10.95 and for $\OML/cmm/m/it/10.95 ^^U[]$ \T1/ppl/m/n/10.95 sim-p
+ly ap-ply the fi-nal step which pro-vides \T1/ppl/b/n/10.95 iden-ti-cal \T1/ppl
+/m/n/10.95 re-sult to the vol-ume method: 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--529
+Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 527--529
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 527--529
-
- []
-
-) [16] [17]
+<Figures/flatten.jpg, id=581, 963.6pt x 722.7pt>
+File: Figures/flatten.jpg Graphic file (type jpg)
+ <use Figures/flatten.jpg>
+Package pdftex.def Info: Figures/flatten.jpg used on input line 534.
+(pdftex.def)             Requested size: 452.96558pt x 339.72418pt.
+)
+[14] [15] [16 <./Figures/flatten.jpg>]
 \openout2 = `Chapters/c4.aux'.
 
- (./Chapters/c4.tex [18
-
-
-
-]
+ (./Chapters/c4.tex
 Chapter 4.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
+Package caption Warning: \label without proper reference on input line 31.
+See the caption package documentation for explanation.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathinner' on input line 27.
+LaTeX Warning: Reference `fig:4.1' on page 17 undefined on input line 28.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.34 		\begin{pmatrix}
+                       v_1 ,  v_2 , \dots , \dots , v_{n-1}, v_n} \end{pmatr...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
+! Extra }, or forgotten $.
+l.34 ...v_1 ,  v_2 , \dots , \dots , v_{n-1}, v_n}
+                                                   \end{pmatrix}\\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.34 ...dots , \dots , v_{n-1}, v_n} \end{pmatrix}
+                                                  \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.36 		\begin{pmatrix}
+                      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.43 		\end{pmatrix}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\vbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 7.0pt
-(hyperref)                replaced by space on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\psi' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
-
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 31.
 1: section
-[19] [20] [21]
-Overfull \hbox (43.18953pt too wide) in paragraph at lines 113--114
-[]\T1/ppl/m/n/10.95 Sunil's tem-plate was made avail-able through [][]$\T1/pcr/
-m/n/10.95 http : / / www . LaTeXTemplates .
- []
-
-[22]
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 171.
- [23]
-Overfull \hbox (1.61105pt too wide) in paragraph at lines 197--198
-[]\T1/ppl/m/n/10.95 The list of sym-bols is split into the Ro-man and Greek al-
-pha-bets. Whereas
- []
-
-[24]
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 203.
-
-Overfull \hbox (25.01874pt too wide) in paragraph at lines 219--220
-\T1/ppl/m/n/10.95 by re-plac-ing the \T1/pcr/m/sl/10.95 singlespacing \T1/ppl/m
-/n/10.95 with \T1/pcr/m/sl/10.95 onehalfspacing \T1/ppl/m/n/10.95 or \T1/pcr/m/
-sl/10.95 doublespacing\T1/ppl/m/n/10.95 . 
- []
-
-[25]
-
-LaTeX Warning: Citation 'Reference1' on page 26 undefined on input line 229.
+[17
 
 
-LaTeX Warning: Citation 'Reference2' on page 26 undefined on input line 229.
 
-
-LaTeX Warning: Citation 'Reference1' on page 26 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference3' on page 26 undefined on input line 229.
-
-[26]
-Overfull \hbox (64.65005pt too wide) in paragraph at lines 260--260
-[]\T1/pcr/m/n/10 \caption{The effects of treatments X and Y on the four groups 
-studied.}[] 
- []
-
-
-Overfull \hbox (40.65005pt too wide) in paragraph at lines 260--260
-[]\T1/pcr/m/n/10 \tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment 
-Y} \\[] 
- []
-
-
-Overfull \hbox (13.1396pt too wide) in paragraph at lines 292--292
-[]\T1/pcr/m/n/10.95 \caption[An Electron]{An electron (artist's impression).}[]
- 
- []
-
-<Figures/Electron.pdf, id=1341, 398.3386pt x 284.52756pt>
-File: Figures/Electron.pdf Graphic file (type pdf)
-
-<use Figures/Electron.pdf>
-Package pdftex.def Info: Figures/Electron.pdf used on input line 297.
-(pdftex.def)             Requested size: 398.33762pt x 284.52686pt.
-
-Overfull \hbox (36.98767pt too wide) in paragraph at lines 297--299
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[27] [28 <./Figures/Electron.pdf>]
-Overfull \hbox (27.45943pt too wide) in paragraph at lines 345--346
-\T1/ppl/m/n/10.95 the Ta-ble of Con-tents is for-mat-ted is set within \T1/pcr/
-b/n/10.95 MastersDoctoralThesis.cls\T1/ppl/m/n/10.95 .
- []
-
-) [29]
+]) [18]
 \openout2 = `Chapters/c5.aux'.
 
- (./Chapters/c5.tex [30
-
-
-
-]
+ (./Chapters/c5.tex
 Chapter 5.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
+LaTeX Warning: Reference `---' on page 19 undefined on input line 24.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathinner' on input line 27.
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\vbox' on input line 27.
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 \textbf
+            {$O(nlog(n))$}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 7.0pt
-(hyperref)                replaced by space on input line 27.
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\psi' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
+ []
 
 1: section
-[31] [32]
-Overfull \hbox (43.18953pt too wide) in paragraph at lines 113--114
-[]\T1/ppl/m/n/10.95 Sunil's tem-plate was made avail-able through [][]$\T1/pcr/
-m/n/10.95 http : / / www . LaTeXTemplates .
+[19
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
  []
 
-[33] [34]
-LaTeX Font Info:    Font shape `T1/pcr/bx/sl' in size <10.95> not available
-(Font)              Font shape `T1/pcr/b/sl' tried instead on input line 186.
- [35]
-Overfull \hbox (1.61105pt too wide) in paragraph at lines 197--198
-[]\T1/ppl/m/n/10.95 The list of sym-bols is split into the Ro-man and Greek al-
-pha-bets. Whereas
- []
-
-[36]
-Overfull \hbox (25.01874pt too wide) in paragraph at lines 219--220
-\T1/ppl/m/n/10.95 by re-plac-ing the \T1/pcr/m/sl/10.95 singlespacing \T1/ppl/m
-/n/10.95 with \T1/pcr/m/sl/10.95 onehalfspacing \T1/ppl/m/n/10.95 or \T1/pcr/m/
-sl/10.95 doublespacing\T1/ppl/m/n/10.95 . 
- []
-
-
-LaTeX Warning: Citation 'Reference1' on page 37 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference2' on page 37 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference1' on page 37 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference3' on page 37 undefined on input line 229.
-
-[37]
-Overfull \hbox (64.65005pt too wide) in paragraph at lines 260--260
-[]\T1/pcr/m/n/10 \caption{The effects of treatments X and Y on the four groups 
-studied.}[] 
- []
-
-
-Overfull \hbox (40.65005pt too wide) in paragraph at lines 260--260
-[]\T1/pcr/m/n/10 \tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment 
-Y} \\[] 
- []
-
-[38]
-Overfull \hbox (13.1396pt too wide) in paragraph at lines 292--292
-[]\T1/pcr/m/n/10.95 \caption[An Electron]{An electron (artist's impression).}[]
- 
- []
-
-File: Figures/Electron.pdf Graphic file (type pdf)
-<use Figures/Electron.pdf>
-Package pdftex.def Info: Figures/Electron.pdf used on input line 297.
-(pdftex.def)             Requested size: 398.33762pt x 284.52686pt.
-
-Overfull \hbox (36.98767pt too wide) in paragraph at lines 297--299
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[39] [40]
-Overfull \hbox (27.45943pt too wide) in paragraph at lines 345--346
-\T1/ppl/m/n/10.95 the Ta-ble of Con-tents is for-mat-ted is set within \T1/pcr/
-b/n/10.95 MastersDoctoralThesis.cls\T1/ppl/m/n/10.95 .
- []
-
-) [41]
+) [20]
 \openout2 = `Chapters/c6.aux'.
 
- (./Chapters/c6.tex [42
-
-
-
-]
+ (./Chapters/c6.tex
 Chapter 6.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathinner' on input line 27.
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
+ []
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\vbox' on input line 27.
+<Figures/sift1.jpg, id=658, 1606.0pt x 602.25pt>
+File: Figures/sift1.jpg Graphic file (type jpg)
+ <use Figures/sift1.jpg>
+Package pdftex.def Info: Figures/sift1.jpg used on input line 46.
+(pdftex.def)             Requested size: 452.9607pt x 169.86024pt.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 7.0pt
-(hyperref)                replaced by space on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\psi' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
-
+<Figures/sift2.jpg, id=659, 963.6pt x 722.7pt>
+File: Figures/sift2.jpg Graphic file (type jpg)
+ <use Figures/sift2.jpg>
+Package pdftex.def Info: Figures/sift2.jpg used on input line 57.
+(pdftex.def)             Requested size: 341.4261pt x 256.06956pt.
+)
 1: section
-[43] [44]
-Overfull \hbox (43.18953pt too wide) in paragraph at lines 113--114
-[]\T1/ppl/m/n/10.95 Sunil's tem-plate was made avail-able through [][]$\T1/pcr/
-m/n/10.95 http : / / www . LaTeXTemplates .
- []
-
-[45] [46] [47]
-Overfull \hbox (1.61105pt too wide) in paragraph at lines 197--198
-[]\T1/ppl/m/n/10.95 The list of sym-bols is split into the Ro-man and Greek al-
-pha-bets. Whereas
- []
-
-[48]
-Overfull \hbox (25.01874pt too wide) in paragraph at lines 219--220
-\T1/ppl/m/n/10.95 by re-plac-ing the \T1/pcr/m/sl/10.95 singlespacing \T1/ppl/m
-/n/10.95 with \T1/pcr/m/sl/10.95 onehalfspacing \T1/ppl/m/n/10.95 or \T1/pcr/m/
-sl/10.95 doublespacing\T1/ppl/m/n/10.95 . 
- []
+[21
 
 
-LaTeX Warning: Citation 'Reference1' on page 49 undefined on input line 229.
 
-
-LaTeX Warning: Citation 'Reference2' on page 49 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference1' on page 49 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference3' on page 49 undefined on input line 229.
-
-[49]
-Overfull \hbox (64.65005pt too wide) in paragraph at lines 260--260
-[]\T1/pcr/m/n/10 \caption{The effects of treatments X and Y on the four groups 
-studied.}[] 
- []
-
-
-Overfull \hbox (40.65005pt too wide) in paragraph at lines 260--260
-[]\T1/pcr/m/n/10 \tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment 
-Y} \\[] 
- []
-
-[50]
-Overfull \hbox (13.1396pt too wide) in paragraph at lines 292--292
-[]\T1/pcr/m/n/10.95 \caption[An Electron]{An electron (artist's impression).}[]
- 
- []
-
-File: Figures/Electron.pdf Graphic file (type pdf)
-<use Figures/Electron.pdf>
-Package pdftex.def Info: Figures/Electron.pdf used on input line 297.
-(pdftex.def)             Requested size: 398.33762pt x 284.52686pt.
-
-Overfull \hbox (36.98767pt too wide) in paragraph at lines 297--299
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[51] [52]
-Overfull \hbox (27.45943pt too wide) in paragraph at lines 345--346
-\T1/ppl/m/n/10.95 the Ta-ble of Con-tents is for-mat-ted is set within \T1/pcr/
-b/n/10.95 MastersDoctoralThesis.cls\T1/ppl/m/n/10.95 .
- []
-
-) [53]
+] [22 <./Figures/sift1.jpg> <./Figures/sift2.jpg>]
 \openout2 = `Chapters/c7.aux'.
 
- (./Chapters/c7.tex [54
+ (./Chapters/c7.tex
+Chapter 7.
+)
+1: section
+[23
 
 
 
 ]
-Chapter 7.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathinner' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\vbox' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 7.0pt
-(hyperref)                replaced by space on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\psi' on input line 32.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 32.
-
-1: section
-[55] [56] [57]
-Overfull \hbox (43.18953pt too wide) in paragraph at lines 118--119
-[]\T1/ppl/m/n/10.95 Sunil's tem-plate was made avail-able through [][]$\T1/pcr/
-m/n/10.95 http : / / www . LaTeXTemplates .
- []
-
-[58] [59] [60]
-Overfull \hbox (1.61105pt too wide) in paragraph at lines 202--203
-[]\T1/ppl/m/n/10.95 The list of sym-bols is split into the Ro-man and Greek al-
-pha-bets. Whereas
- []
-
-
-Overfull \hbox (25.01874pt too wide) in paragraph at lines 224--225
-\T1/ppl/m/n/10.95 by re-plac-ing the \T1/pcr/m/sl/10.95 singlespacing \T1/ppl/m
-/n/10.95 with \T1/pcr/m/sl/10.95 onehalfspacing \T1/ppl/m/n/10.95 or \T1/pcr/m/
-sl/10.95 doublespacing\T1/ppl/m/n/10.95 . 
- []
-
-[61]
-
-LaTeX Warning: Citation 'Reference1' on page 62 undefined on input line 234.
-
-
-LaTeX Warning: Citation 'Reference2' on page 62 undefined on input line 234.
-
-
-LaTeX Warning: Citation 'Reference1' on page 62 undefined on input line 234.
-
-
-LaTeX Warning: Citation 'Reference3' on page 62 undefined on input line 234.
-
-[62]
-Overfull \hbox (64.65005pt too wide) in paragraph at lines 265--265
-[]\T1/pcr/m/n/10 \caption{The effects of treatments X and Y on the four groups 
-studied.}[] 
- []
-
-
-Overfull \hbox (40.65005pt too wide) in paragraph at lines 265--265
-[]\T1/pcr/m/n/10 \tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment 
-Y} \\[] 
- []
-
-[63]
-Overfull \hbox (13.1396pt too wide) in paragraph at lines 297--297
-[]\T1/pcr/m/n/10.95 \caption[An Electron]{An electron (artist's impression).}[]
- 
- []
-
-File: Figures/Electron.pdf Graphic file (type pdf)
-<use Figures/Electron.pdf>
-Package pdftex.def Info: Figures/Electron.pdf used on input line 302.
-(pdftex.def)             Requested size: 398.33762pt x 284.52686pt.
-
-Overfull \hbox (36.98767pt too wide) in paragraph at lines 302--304
- [][] 
- []
-
-[64]
-Overfull \hbox (27.45943pt too wide) in paragraph at lines 350--351
-\T1/ppl/m/n/10.95 the Ta-ble of Con-tents is for-mat-ted is set within \T1/pcr/
-b/n/10.95 MastersDoctoralThesis.cls\T1/ppl/m/n/10.95 .
- []
-
-[65]) [66]
 \openout2 = `Chapters/c8.aux'.
 
- (./Chapters/c8.tex
+ (./Chapters/c8.tex [24
+
+
+
+]
 Chapter 8.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathinner' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\vbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 7.0pt
-(hyperref)                replaced by space on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\psi' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
-
+)
 1: section
-[67
-
-
-
-] [68]
-Overfull \hbox (43.18953pt too wide) in paragraph at lines 113--114
-[]\T1/ppl/m/n/10.95 Sunil's tem-plate was made avail-able through [][]$\T1/pcr/
-m/n/10.95 http : / / www . LaTeXTemplates .
- []
-
-[69] [70] [71]
-Overfull \hbox (1.61105pt too wide) in paragraph at lines 197--198
-[]\T1/ppl/m/n/10.95 The list of sym-bols is split into the Ro-man and Greek al-
-pha-bets. Whereas
- []
-
-[72]
-Overfull \hbox (25.01874pt too wide) in paragraph at lines 219--220
-\T1/ppl/m/n/10.95 by re-plac-ing the \T1/pcr/m/sl/10.95 singlespacing \T1/ppl/m
-/n/10.95 with \T1/pcr/m/sl/10.95 onehalfspacing \T1/ppl/m/n/10.95 or \T1/pcr/m/
-sl/10.95 doublespacing\T1/ppl/m/n/10.95 . 
- []
-
-
-LaTeX Warning: Citation 'Reference1' on page 73 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference2' on page 73 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference1' on page 73 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference3' on page 73 undefined on input line 229.
-
-[73]
-Overfull \hbox (64.65005pt too wide) in paragraph at lines 260--260
-[]\T1/pcr/m/n/10 \caption{The effects of treatments X and Y on the four groups 
-studied.}[] 
- []
-
-
-Overfull \hbox (40.65005pt too wide) in paragraph at lines 260--260
-[]\T1/pcr/m/n/10 \tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment 
-Y} \\[] 
- []
-
-[74]
-Overfull \hbox (13.1396pt too wide) in paragraph at lines 292--292
-[]\T1/pcr/m/n/10.95 \caption[An Electron]{An electron (artist's impression).}[]
- 
- []
-
-File: Figures/Electron.pdf Graphic file (type pdf)
-<use Figures/Electron.pdf>
-Package pdftex.def Info: Figures/Electron.pdf used on input line 297.
-(pdftex.def)             Requested size: 398.33762pt x 284.52686pt.
-
-Overfull \hbox (36.98767pt too wide) in paragraph at lines 297--299
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[75] [76]
-Overfull \hbox (27.45943pt too wide) in paragraph at lines 345--346
-\T1/ppl/m/n/10.95 the Ta-ble of Con-tents is for-mat-ted is set within \T1/pcr/
-b/n/10.95 MastersDoctoralThesis.cls\T1/ppl/m/n/10.95 .
- []
-
-) [77]
+[25]
 \openout2 = `Chapters/c9.aux'.
 
- (./Chapters/c9.tex [78
+ (./Chapters/c9.tex [26
 
 
 
 ]
 Chapter 9.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathinner' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\vbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 7.0pt
-(hyperref)                replaced by space on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\raise' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\p@' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\psi' on input line 27.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 27.
-
+)
 1: section
-[79] [80]
-Overfull \hbox (43.18953pt too wide) in paragraph at lines 113--114
-[]\T1/ppl/m/n/10.95 Sunil's tem-plate was made avail-able through [][]$\T1/pcr/
-m/n/10.95 http : / / www . LaTeXTemplates .
- []
-
-[81] [82] [83]
-Overfull \hbox (1.61105pt too wide) in paragraph at lines 197--198
-[]\T1/ppl/m/n/10.95 The list of sym-bols is split into the Ro-man and Greek al-
-pha-bets. Whereas
- []
-
-[84]
-Overfull \hbox (25.01874pt too wide) in paragraph at lines 219--220
-\T1/ppl/m/n/10.95 by re-plac-ing the \T1/pcr/m/sl/10.95 singlespacing \T1/ppl/m
-/n/10.95 with \T1/pcr/m/sl/10.95 onehalfspacing \T1/ppl/m/n/10.95 or \T1/pcr/m/
-sl/10.95 doublespacing\T1/ppl/m/n/10.95 . 
- []
-
-
-LaTeX Warning: Citation 'Reference1' on page 85 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference2' on page 85 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference1' on page 85 undefined on input line 229.
-
-
-LaTeX Warning: Citation 'Reference3' on page 85 undefined on input line 229.
-
-[85]
-Overfull \hbox (64.65005pt too wide) in paragraph at lines 260--260
-[]\T1/pcr/m/n/10 \caption{The effects of treatments X and Y on the four groups 
-studied.}[] 
- []
-
-
-Overfull \hbox (40.65005pt too wide) in paragraph at lines 260--260
-[]\T1/pcr/m/n/10 \tabhead{Groups} & \tabhead{Treatment X} & \tabhead{Treatment 
-Y} \\[] 
- []
-
-[86]
-Overfull \hbox (13.1396pt too wide) in paragraph at lines 292--292
-[]\T1/pcr/m/n/10.95 \caption[An Electron]{An electron (artist's impression).}[]
- 
- []
-
-File: Figures/Electron.pdf Graphic file (type pdf)
-<use Figures/Electron.pdf>
-Package pdftex.def Info: Figures/Electron.pdf used on input line 297.
-(pdftex.def)             Requested size: 398.33762pt x 284.52686pt.
-
-Overfull \hbox (36.98767pt too wide) in paragraph at lines 297--299
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[87] [88]
-Overfull \hbox (27.45943pt too wide) in paragraph at lines 345--346
-\T1/ppl/m/n/10.95 the Ta-ble of Con-tents is for-mat-ted is set within \T1/pcr/
-b/n/10.95 MastersDoctoralThesis.cls\T1/ppl/m/n/10.95 .
- []
-
-) [89]
+[27]
 \openout2 = `Appendices/AppendixA.aux'.
 
- (./Appendices/AppendixA.tex [90
+ (./Appendices/AppendixA.tex [28
 
 
 
@@ -4438,19 +3391,19 @@ b/n/10.95 MastersDoctoralThesis.cls\T1/ppl/m/n/10.95 .
 Appendix A.
 )
 1: section
-[91]
+[29]
 
-LaTeX Warning: Empty bibliography on input line 301.
+LaTeX Warning: Empty bibliography on input line 303.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 305.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 305.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 307.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 307.
 (./main.aux (./Chapters/c1.aux) (./Chapters/c2.aux) (./Chapters/c3.aux)
 (./Chapters/c4.aux) (./Chapters/c5.aux) (./Chapters/c6.aux) (./Chapters/c7.aux)
 (./Chapters/c8.aux) (./Chapters/c9.aux) (./Appendices/AppendixA.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 305.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 305.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 307.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 307.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7805C6FA4A698A2715D5B0509DB7BE9D;31766.
+(rerunfilecheck)             Checksum: BA35E2658247D1FF281C5A4F7E8B0E9C;9070.
 
 
 LaTeX Warning: There were undefined references.
@@ -4458,46 +3411,37 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43706 strings out of 493013
- 885895 string characters out of 6133328
- 1075634 words of memory out of 5000000
- 46085 multiletter control sequences out of 15000+600000
- 60958 words of font info for 119 fonts, out of 8000000 for 9000
+ 43100 strings out of 493013
+ 877301 string characters out of 6133328
+ 1074261 words of memory out of 5000000
+ 45794 multiletter control sequences out of 15000+600000
+ 48425 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,21n,82p,10377b,2246s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,20n,82p,10377b,2246s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/urw/courier/ucrbo8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
-rw/courier/ucrr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/couri
-er/ucrro8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/upl
-b8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (119 pages, 512903 bytes).
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/pa
+latino/uplri8a.pfb>
+Output written on main.pdf (55 pages, 640431 bytes).
 PDF statistics:
- 2124 PDF objects out of 2487 (max. 8388607)
- 1955 compressed objects within 20 object streams
- 529 named destinations out of 1000 (max. 500000)
- 1514 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 800 PDF objects out of 1000 (max. 8388607)
+ 718 compressed objects within 8 object streams
+ 234 named destinations out of 1000 (max. 500000)
+ 508 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -31,7 +31,7 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 		\qquad \qquad \qquad \quad \begin{pmatrix} c_{1(1)} , \dots , \dots , \dots , c_{1(n)} \end{pmatrix}\\
 		
 		$W$ =		\begin{pmatrix} c_{2(1)} \\ \vdots \\ \vdots \\ \vdots \\ \vdots \\c_{2(m)} \end{pmatrix}
-	\begin{pmatrix}
+		\begin{pmatrix}
 			s_{1,1}&   \dots&   \dots&   \dots& s_{1,m}\\
 			\vdots& \ddots &        &        & \vdots \\
 			\vdots&        & \ddots &        & \vdots  \\
@@ -123,15 +123,15 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 				%\node[vertex] (v30) at (0,-3) {$(0,-3)$};
 				\node[vertex] (v31) at (0,-2) {$(0,-2)$};
 				\node[vertex] (v32) at (0,-1) {$(0,-1)$};
-				\node[vertex] (v33) at (0,0) {$(0,0)$};
-				\node[vertex] (v34) at (0,1) {$(0,1)$};
+				\node[vertex] (v33) at (0,0) {\textcolor{green}{$(0,0)$}};
+				\node[vertex] (v34) at (0,1) {\textcolor{red}{$(0,1)$}};
 				\node[vertex] (v35) at (0,2) {$(0,2)$};
 				\node[vertex] (v36) at (0,3) {$(0,3)$};
 				%\node[vertex] (v40) at (1,-3) {$(1,-3)$};
 				\node[vertex] (v41) at (1,-2) {$(1,-2)$};
 				\node[vertex] (v42) at (1,-1) {$(1,-1)$};
 				\node[vertex] (v43) at (1,0) {$(1,0)$};
-				\node[vertex] (v44) at (1,1) {$(1,1)$};
+				\node[vertex] (v44) at (1,1) {\textcolor{blue}{$(1,1)$}};
 				\node[vertex] (v45) at (1,2) {$(1,2)$};
 				\node[vertex] (v46) at (1,3) {$(1,3)$};
 				%\node[vertex] (v50) at (2,-3) {$(2,-3)$};
@@ -150,7 +150,7 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 				\draw[edge] (v31) -- (v32) -- (v33) -- (v34) -- (v35) -- (v36);
 				\draw[edge] (v41) -- (v42) -- (v43) -- (v44) -- (v45) -- (v46);
 				\draw[edge] (v51) -- (v52) -- (v53) -- (v54) -- (v55) -- (v56);
-				\draw[edge] (v00) -- (v10) -- (v20) -- (v30) -- (v40) -- (v50);
+				%\draw[edge] (v00) -- (v10) -- (v20) -- (v30) -- (v40) -- (v50);
 				\draw[edge] (v01) -- (v11) -- (v21) -- (v31) -- (v41) -- (v51);
 				\draw[edge] (v02) -- (v12) -- (v22) -- (v32) -- (v42) -- (v52);
 				\draw[edge] (v03) -- (v13) -- (v23) -- (v33) -- (v43) -- (v53);
@@ -174,7 +174,9 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 		\captionsetup{width=1.2\linewidth}		
 		\caption[1D data sample coefficients calculation matrix]
 		{this matrix scheme describes a given data sample coefficients calculation according to its containing hypercube and simplex.The examined data sample is $(0.3 , 0.8)$, so its containing hypercube would be the cell between $[0,1]$. 
-		In this hypercube we search the containing simplex (triangle in 1D case), which occurs to be the upper triangle among the 2 main diagonal triangles. By assembling 3 sub-triangles using the data sample and the vertices we  may extract the proper coefficients for the ID vector. Each normalized sub-triangle surface represents the contrary vertex's coefficients. For example the \textcolor{blue}{blue} triangle surface represents the \textcolor{blue}{$(1,1)$} vertex's coefficient    }
+		In this hypercube we search the containing simplex (triangle in 1D case), which occurs to be the upper triangle among the 2 main diagonal triangles. By assembling 3 sub-triangles using the data sample and the vertices we  may extract the proper coefficients for the ID vector. Each normalized sub-triangle surface represents the contrary vertex's coefficients. For example the \textcolor{blue}{blue} triangle surface correlates with the \textcolor{blue}{$(1,1)$} vertex's coefficient , 
+		the \textcolor{green}{green} surface correlates with the \textcolor{green}{$(0,0)$} vertex's coefficient and
+		the \textcolor{red}{red} surface correlates with the \textcolor{red}{$(0,1)$} vertex's coefficient.}
 		
 
 		\end{figure} 
@@ -196,7 +198,7 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 			
 	\subsection{Assigning}
 	Now that we have ID coefficients (sparse) vector, we may assign it to the ID output vector shape.
-	ID output vector is sized by the flatten vector of the discretization matrix $W$, which may be flatten row-wise/column-wise.\\
+	ID output vector is sized by the flatten vector of the discretization matrix $W$, which may be flatten row-wise/column-wise \ref{flatt}.\\
 	Each vertex in the output vector receives the value calculated for its equivalent index at the opposite triangles surfaces phase.
 	
 
@@ -247,7 +249,7 @@ The selected coefficients calculation process for our embedding is the Barycentr
 		Assuming the vertices values are normalized to a “unit hypercube” - containing only $0/1$ values in elements, any vertex applies a permutation as follows:
 		
 		\begin{equation}
-		0 \leq p_{t(1)} \leq p_{t(1)} \leq \dots \leq p_{t(2n-1)} \leq p_{t(2n)} \leq 1}
+		0 \leq p_{t(1)} \leq p_{t(1)} \leq \dots \leq p_{t(2n-1)} \leq p_{t(2n)} \leq 1
 		\end{equation}
 		
 		http://www.mathpages.com/home/kmath664/kmath664.htm
@@ -302,7 +304,7 @@ The selected coefficients calculation process for our embedding is the Barycentr
 		\subsubsection{Efficient method - calculating Barycentric Coordinates (BCC)}
 		
 		A more efficient way (time complexity $O(n)$) providing the coefficients to a given point is by using barycentric coordinates of a point $\overrightarrow{p}$.
-		Given a point $\overrightarrow{p} \in \Re^{2n}$ , the following formulation applies under the assumption the hypercube bounding the point is mapped to a unit hypercube, the bounding simplex of the point may be:
+		Given a point $\overrightarrow{p} \in \Re^{2n}$ , the following formulation applies under the assumption the hypercube bounding the point is mapped to a unit hypercube, the bounding simplex of the point may be: \\ \\ 
 		
 		\begin{bmatrix} 0\\ 0\\ \vdots \\ 0\\ 0\\ \end{bmatrix} , 
 		\begin{bmatrix} 0\\ 0\\ \vdots \\ 0\\ 1\\ \end{bmatrix} , 
@@ -525,11 +527,59 @@ The selected coefficients calculation process for our embedding is the Barycentr
 	
 	
 	--insert figure Fig - embedding from matrix to sparse vector
-	 \\ \\ \\ 
 	
+	
+	\begin{figure} \label{flatt}
+	
+		\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/flatten}
+		\caption[flattening 2d matrix]
+		{flattening 2d matrix to row-wise 1d vector}
+	
+	\end{figure}
+			
 	The embedding process could be easily generalized if c is vectorized to values - set, then the dimension of $\alpha$ would be:\\ 
 	$\prod_{i=1}^{2n}c_i$ , which equivalent to the number of vertices in the “discretized” space of the problem.
 	In order to finally receive a distance/similarity/dis-similarity function, we apply inner product between $\alpha$  vector and a learned weights vector (equivalent to the $W$ matrix from the $1D$ scenario).
+	
+	
+	
+	\begin{algorithm}
+				\caption{Embedding Method for ID N-Dimensional Pairs dataset}
+				\begin{algorithmic}
+				 
+				
+				\REQUIRE $L$ sized, vectorized n-dimensional pairs dataset
+				\REQUIRE set of centers per dimension - $C$
+				\ENSURE $\overrightarrow{\phi}$: $L$ sized set, embedded, sparse vectors\\
+				
+				\STATE \textbf{Find centers vectors}
+				\STATE V shall be a set of centers - vectors
+				\FORALL{dim in $n$}  
+				\STATE $V_{dim} \leftarrow centers \quad vector \quad per \quad dim$
+				\ENDFOR
+				
+				\STATE \textbf{Find embedded coefficients for all dataset}
+				\STATE $\overrightarrow{\phi} = C^{2n}$ length empty $\overrightarrow{\phi}$ embedded vectors
+				\STATE concat all pairs into a single vector $\overrightarrow{p}$
+				\FORALL{$\overrightarrow{p}$ in $L$}
+				\STATE find $\overrightarrow{p}$ bounding hypercube 
+				\STATE find $\overrightarrow{p}$ bounding simplex (permutation method)
+				\STATE $\overrightarrow{\lambda} \leftarrow$ find $\overrightarrow{p}$ barycentric coefficients 
+				\STATE $\overrightarrow{\hat{\lambda}} \leftarrow$ normalize($\overrightarrow{\lambda}$)
+				\ENDFOR
+				\STATE \textbf{Assign}
+				\FORALL{$\overrightarrow{\phi}$ in $emb-set$}
+				\STATE $inds \leftarrow$ find vertices from hypercube and simplex locations
+				\FORALL{$i$ in $inds$}
+				\STATE $\overrightarrow{\phi}_{(i)} \leftarrow \overrightarrow{\hat{\lambda}}(j(i))$ -- j is the assigning function between the coef. vector and embedding vector
+				\ENDFOR
+				\ENDFOR
+				
+				\RETURN $\overrightarrow{\phi}$
+	
+				
+				\end{algorithmic}
+			\end{algorithm}
 	
 	
 
