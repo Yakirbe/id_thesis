@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.8.23)  30 AUG 2016 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.8.23)  31 AUG 2016 19:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3174,7 +3174,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 518--519
 
  []
 
-<Figures/flatten.jpg, id=581, 963.6pt x 722.7pt>
+<Figures/flatten.jpg, id=586, 963.6pt x 722.7pt>
 File: Figures/flatten.jpg Graphic file (type jpg)
  <use Figures/flatten.jpg>
 Package pdftex.def Info: Figures/flatten.jpg used on input line 534.
@@ -3300,6 +3300,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
+
+Package caption Warning: \label without proper reference on input line 532.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `flatt' on page 20 undefined on input line 95.
+
 ) [20]
 \openout2 = `Chapters/c6.aux'.
 
@@ -3330,13 +3337,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-<Figures/sift1.jpg, id=658, 1606.0pt x 602.25pt>
+<Figures/sift1.jpg, id=664, 1606.0pt x 602.25pt>
 File: Figures/sift1.jpg Graphic file (type jpg)
  <use Figures/sift1.jpg>
 Package pdftex.def Info: Figures/sift1.jpg used on input line 46.
 (pdftex.def)             Requested size: 452.9607pt x 169.86024pt.
 
-<Figures/sift2.jpg, id=659, 963.6pt x 722.7pt>
+<Figures/sift2.jpg, id=665, 963.6pt x 722.7pt>
 File: Figures/sift2.jpg Graphic file (type jpg)
  <use Figures/sift2.jpg>
 Package pdftex.def Info: Figures/sift2.jpg used on input line 57.
@@ -3352,24 +3359,211 @@ Package pdftex.def Info: Figures/sift2.jpg used on input line 57.
 
  (./Chapters/c7.tex
 Chapter 7.
-)
+! Missing } inserted.
+<inserted text> 
+                }
+l.46       {
+            \textcolor{red}{ +1 \: \: if \:  \overrightarrow{x_{pi1}}\:  and...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.47 
+     
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.60 {
+      \color{red}{ +1 \: \: otherwise} \\
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.61 
+     
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
 1: section
 [23
 
 
 
 ]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.86 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.86 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.87 \overrightarrow{w}
+                       ^{opt} , t^{opt} =\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.89 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.91 (\frac{1}{2}
+                 \left \|
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.91 (\frac{1}{2}
+                 \left \|
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.92 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.92 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.93 \overrightarrow{w}
+                        - \overrightarrow{w}^{reg} \right \|_2^2 + \\ C \sum...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra \right.
+\|->\delimiter "026B30D 
+                        
+l.93 ...ow{w} - \overrightarrow{w}^{reg} \right \|
+                                                  _2^2 + \\ C \sum_{i=1}^{k}...
+I'm ignoring a \right that had no matching \left.
+
+! Double superscript.
+l.93 ...w} - \overrightarrow{w}^{reg} \right \|_2^
+                                                  2 + \\ C \sum_{i=1}^{k}max...
+I treat `x^1^2' essentially like `x^1{}^2'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.94 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.97 \end{equation}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.97 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.97 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.97 \end{equation}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.97 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+) [24]
 \openout2 = `Chapters/c8.aux'.
 
- (./Chapters/c8.tex [24
+ (./Chapters/c8.tex
+Chapter 8.
+)
+1: section
+[25
 
 
 
 ]
-Chapter 8.
-)
-1: section
-[25]
 \openout2 = `Chapters/c9.aux'.
 
  (./Chapters/c9.tex [26
@@ -3402,9 +3596,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 307.
 (./Chapters/c8.aux) (./Chapters/c9.aux) (./Appendices/AppendixA.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 307.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 307.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BA35E2658247D1FF281C5A4F7E8B0E9C;9070.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: CAAD7EFF41C7E9E5ACB09579189CD043;9336
+(rerunfilecheck)             After:  9E43A58BB158F0F95C79BE23BAA9FA48;9587.
 
 LaTeX Warning: There were undefined references.
 
@@ -3416,32 +3616,41 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43100 strings out of 493013
- 877301 string characters out of 6133328
+ 43111 strings out of 493013
+ 877434 string characters out of 6133328
  1074261 words of memory out of 5000000
- 45794 multiletter control sequences out of 15000+600000
+ 45796 multiletter control sequences out of 15000+600000
  48425 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,20n,82p,10377b,2246s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2016/texmf-dist/font
-s/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
-/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/pa
-latino/uplri8a.pfb>
-Output written on main.pdf (55 pages, 640431 bytes).
+ 64i,21n,82p,10377b,2246s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{appendix.182} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.181} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.180} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/u
+rw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/pala
+tino/uplri8a.pfb>
+Output written on main.pdf (55 pages, 647320 bytes).
 PDF statistics:
- 800 PDF objects out of 1000 (max. 8388607)
- 718 compressed objects within 8 object streams
- 234 named destinations out of 1000 (max. 500000)
- 508 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 816 PDF objects out of 1000 (max. 8388607)
+ 734 compressed objects within 8 object streams
+ 243 named destinations out of 1000 (max. 500000)
+ 516 words of extra memory for PDF output out of 10000 (max. 10000000)
 

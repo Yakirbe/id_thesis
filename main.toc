@@ -58,6 +58,8 @@
 \contentsline {section}{\numberline {6.1}Definition}{21}{section.170}
 \contentsline {subsection}{\numberline {6.1.1}SIFT Example}{21}{subsection.172}
 \contentsline {chapter}{\numberline {7}Learning}{23}{chapter.175}
-\contentsline {chapter}{\numberline {8}Results}{25}{chapter.176}
-\contentsline {chapter}{\numberline {9}Conclusions and discussion}{27}{chapter.177}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{29}{appendix.178}
+\contentsline {section}{\numberline {7.1}Learning the Classification Function}{23}{section.176}
+\contentsline {section}{\numberline {7.2}Efficient Stochastic Gradient Descent}{24}{section.180}
+\contentsline {chapter}{\numberline {8}Experiments}{25}{chapter.182}
+\contentsline {chapter}{\numberline {9}Conclusions and discussion}{27}{chapter.183}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{29}{appendix.184}

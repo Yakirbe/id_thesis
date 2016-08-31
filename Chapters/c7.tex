@@ -2,15 +2,96 @@
 
 \chapter{Learning} % Main chapter title
 
-\label{Chapter7} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+\label{Chapter7} % For referencing the chapter elsewhere, use 
 
-%----------------------------------------------------------------------------------------
 
-% Define some commands to keep the formatting separated from the content 
-%\newcommand{\keyword}[1]{\textbf{#1}}
-%\newcommand{\tabhead}[1]{\textbf{#1}}
-%\newcommand{\code}[1]{\texttt{#1}}
-%\newcommand{\file}[1]{\texttt{\bfseries#1}}
-%\newcommand{\option}[1]{\texttt{\itshape#1}}
+In this section described the learning phase of the $IDDND$ method.\\
+Learning a single vectors dataset will be described further, since it is the simpler scenario.
+In general, since our method is embedding objects or object pairs to sparse vectors set, we can use this quality in order to accelerate learning phase of the process.
 
-%----------------------------------------------------------------------------------------
+
+\section{Learning the Classification Function}
+
+As described above (), our current method is handling similarity detection between two n-dimensional vectors. This can of course be generalized to any classification/clustering matter.
+
+Let X be a set of raw data vectors. Each vector in this set may represent a single object, for any type of classification analysis. 
+
+In this scenario we obtain object pairs similarity problem.
+Let us assign an indexing system for this labeled pairs dataset as follows:
+
+\begin{equation}
+P = \begin{bmatrix}
+p_{11} & p_{12}\\ 
+ \vdots & \vdots \\ 
+p_{i1} & p_{i2}\\ 
+ \vdots & \vdots \\ 
+p_{k1} & p_{k2}\\ 
+\end{bmatrix}
+\overrightarrow{y} = \begin{bmatrix}
+y_{1} \\ 
+ \vdots  \\ 
+y_{i} \\ 
+ \vdots  \\ 
+y_{k} \\ 
+\end{bmatrix}
+\end{equation}
+
+Where $P$ set refers to $X$ set indices and tghsgfds refers to the vectors label as follows:
+\definecolor{darkgreen}{RGB}{0, 140, 0}
+\begin{equation}
+y_{i} = \left\{
+\begin{array}{ll}
+     
+      {\textcolor{darkgreen}{ -1 \: \: if \:  \overrightarrow{x_{pi1}}\: and \: \overrightarrow{x_{pi2}} \:are\: similar} \\
+      {\textcolor{red}{ +1 \: \: if \:  \overrightarrow{x_{pi1}}\:  and \: \overrightarrow{x_{pi2}} \:are\: non-similar} \\
+
+\end{array} 
+\right.
+\end{equation}
+
+We define a classification (similarity) function:
+
+
+\begin{equation}
+similar(\overrightarrow{x_{1}} , \overrightarrow{x_{2}})= \left\{
+\begin{array}{ll}
+
+{\color{darkgreen}{ -1 \: \: if \:  d(\overrightarrow{x_{1}} , \overrightarrow{x_{2}})\,=\,IDD(\overrightarrow{x_{1}} , \overrightarrow{x_{2}})\cdot \overrightarrow{w} < t  } \\
+{\color{red}{ +1 \: \: otherwise} \\
+
+\end{array} 
+\right.
+\end{equation}
+
+Where A pair of vectors is similar if and only if their ID distance result is smaller than a threshold parameter (t).
+This function is identical to a classification function of a standard binary SVM classification method [80], which looks like the following:
+
+Where 
+t - threshold which learned by an optimization process
+- weight vector of the problem which is also learned by an optimization process.
+
+We now address describing the optimization of the learning step for achieving optimal model for a certain data set.
+
+
+
+\section{Efficient Stochastic Gradient Descent}
+
+Stochastic Gradient Descent (SGD) is a stochastic approximation of the gradient descent optimization method for minimizing an objective function that is written as a sum of differentiable functions.
+
+SGD is a simple yet very efficient approach to discriminative learning of linear classifiers under convex loss functions such as our learning function.
+
+As Shalev-Shwartz et al. POLA [67], we can learn our weights (including t parameter):
+
+\begin{equation}
+
+\overrightarrow{w}^{opt} , t^{opt} =\\ 
+\underset{\overrightarrow{w} , t}{argmin} 
+
+
+(\frac{1}{2}\left \| 
+
+\overrightarrow{w} - \overrightarrow{w}^{reg} \right \|_2^2 + \\ C \sum_{i=1}^{k}max(1-(IDD(\overrightarrow{x_{p_i1}} , \overrightarrow{x_{p_i1}}) \cdot \overrightarrow{w} - t)y_i , 0))
+
+
+
+\end{equation}
