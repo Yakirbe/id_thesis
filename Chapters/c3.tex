@@ -85,7 +85,7 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 	\newcommand{\MyNewVariable}{(0.3 , 0.8)}
 
 				
-	\begin{figure}[bt]
+	\begin{figure}[h]
 
 
 		\label{fig:32}  
@@ -445,9 +445,9 @@ The selected coefficients calculation process for our embedding is the Barycentr
 		for $\lambda_0$ we apply the final step expression:
 		
 		
-		\begin{equation}
-			\begin{align*}
-						
+	\begin{flushleft}
+			\begin{equation}
+		
 					\lambda_0 =	V_{[p,r^1,r^2,r^3,r^4]} = 
 					\begin{vmatrix}
 						1 & p_{1} &  p_{2}& p_{3} & p_{4}\\
@@ -461,10 +461,10 @@ The selected coefficients calculation process for our embedding is the Barycentr
 						p_2 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} - 
 						p_3 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} + 
 						p_4 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} \\ \\ 
-						
 						= 1 - p_4 - p_3 = 1 - (\lambda_1 + \lambda_2 + \lambda_3 + \lambda_4)
-			\end{align*}
+
 		\end{equation}
+	\end{flushleft}
 		
 		
 		final coefficient vector produced by volumes method would be:
@@ -529,7 +529,7 @@ The selected coefficients calculation process for our embedding is the Barycentr
 	--insert figure Fig - embedding from matrix to sparse vector
 	
 	
-	\begin{figure} \label{flatt}
+	\begin{figure}[h] \label{flatt}
 	
 		\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/flatten}
 		\caption[flattening 2d matrix]
@@ -581,6 +581,89 @@ The selected coefficients calculation process for our embedding is the Barycentr
 				\end{algorithmic}
 			\end{algorithm}
 	
+	
+\section{Non-euclidean non-embeddable Metrics example}
+
+Let us display an example of a useful application to IDDND method.
+As described in the introduction chapter{}, IDDND method overcomes two main issues:
+
+\begin{enumerate}
+	\item \textbf{distortion} issues cause when applying euclidean metrics on a given arbitrary dataset. 
+	\item \textbf{Metrics} are not necessarily applied on dissimilarities problems
+\end{enumerate}
+
+We demonstrate a theoretical use case constrained by those 2 conditions, and see how our method would overcome those and fits a proper model to a non-embeddable dataset.
+\\ \\ 
+\newcommand{\centert}{2.66}
+
+\begin{figure}[h]
+	\centering
+
+	\begin{tikzpicture}
+
+	\draw (0,0) node[anchor=north]{$\overrightarrow{x_2}$}
+	-- (8,0) node[anchor=north]{$\overrightarrow{x_3}$}
+	-- (4,6.928) node[anchor=south]{$\overrightarrow{x_1}$}
+	-- cycle;
+	
+	%\draw (4,\centert) node[anchor=north]{$\overrightarrow{x_0}$}
+	\draw (0,0) -- (4,\centert);
+	\draw (8,0) -- (4,\centert);
+	\draw (4,6.928) -- (4,\centert);
+	\node at (4.5,2.9) {$\overrightarrow{x_0}$};
+	
+	\node[green] at (1.8,3.7) {$2$};
+	\node[green] at (6.2,3.7) {$2$};
+	\node[green] at (4,-0.5) {$2$};
+	
+	\node[green] at (3.8,4.7) {$1$};
+	\node[green] at (2.2,1.8) {$1$};
+	\node[green] at (5.8,1.8) {$1$};
+	
+	\draw[black,fill=black] (0,0) circle (.5ex);
+	\draw[black,fill=black] (8,0) circle (.5ex);
+	\draw[black,fill=black] (4,6.928) circle (.5ex);
+	\draw[black,fill=black] (4,\centert) circle (.5ex);
+	
+	\end{tikzpicture}
+	
+	\caption[triangle non-embeddable dataset]
+	{this is a scheme of a non-embeddable dataset}
+	
+	\end{figure}
+	
+	This theoretical set form applies a non-euclidean embeddable metrics, which we now prove that a euclidean metrics is unable to embed it.
+	Based on euclidean metrics assumptions, assumed there is an integer $k$ , such that a function $f$ applies:
+	
+	\begin{equation}
+	f \: : \: \{  \overrightarrow{x_1}, \overrightarrow{x_2} , \overrightarrow{x_3} , \overrightarrow{x_4}\} \rightarrow \Re^k
+	\end{equation}
+	
+	Where $\overrightarrow{x_i}$ are samples from each one of data centers, and $f$ preserves the distances. \\ \\
+	
+    As triangle-inequality is tight for: $\overrightarrow{x_4} , \overrightarrow{x_1} , \overrightarrow{x_2}$ ,\\ \\
+	
+	$f(\overrightarrow{x_4}) ,f(\overrightarrow{x_1}) ,f(\overrightarrow{x_2})$ are collinear in $\Re^k$
+	
+	From set formation symmetry property, the same colinearity applies on:
+	
+	$f(\overrightarrow{x_3}) ,f(\overrightarrow{x_1}) ,f(\overrightarrow{x_2})$
+	
+	This common colinearity of those tuples leads to the following equation:
+	
+	$\left \| f(\overrightarrow{x_4}) - f(\overrightarrow{x_3})  \right \|_2 == 0$
+	
+	But this fact is contradicting that 
+	
+	$ d(\overrightarrow{x_4}\ , \overrightarrow{x_3}) = 2 $
+	
+	
+	
+
+
+
+
+
 	
 
 

@@ -1,97 +1,44 @@
 % Chapter 1
 
-\chapter{Learning} % Main chapter title
+\chapter{Memory Complexity} % Main chapter title
 
-\label{Chapter7} % For referencing the chapter elsewhere, use 
+\label{Chapter7}
 
-
-In this section described the learning phase of the $IDDND$ method.\\
-Learning a single vectors dataset will be described further, since it is the simpler scenario.
-In general, since our method is embedding objects or object pairs to sparse vectors set, we can use this quality in order to accelerate learning phase of the process.
+In this section we provide a method for applying dimensional reduction of the multidimensional scenario, by grouping significant small subsets of the data and concatenating them after embedding. 
 
 
-\section{Learning the Classification Function}
+\section{Definition}
 
-As described above (), our current method is handling similarity detection between two n-dimensional vectors. This can of course be generalized to any classification/clustering matter.
-
-Let X be a set of raw data vectors. Each vector in this set may represent a single object, for any type of classification analysis. 
-
-In this scenario we obtain object pairs similarity problem.
-Let us assign an indexing system for this labeled pairs dataset as follows:
+We define a generalized ID function by:
 
 \begin{equation}
-P = \begin{bmatrix}
-p_{11} & p_{12}\\ 
- \vdots & \vdots \\ 
-p_{i1} & p_{i2}\\ 
- \vdots & \vdots \\ 
-p_{k1} & p_{k2}\\ 
-\end{bmatrix}
-\overrightarrow{y} = \begin{bmatrix}
-y_{1} \\ 
- \vdots  \\ 
-y_{i} \\ 
- \vdots  \\ 
-y_{k} \\ 
-\end{bmatrix}
+ID_(\overrightarrow{x_1} , \overrightarrow{x_2} ; S) = [ ID(\overrightarrow{x_1}_[S_1],\overrightarrow{x_2}_[S_1]) , \dots , \dots , ID(\overrightarrow{x_1}_[S_g],\overrightarrow{x_2}_[S_g])  ]
 \end{equation}
 
-Where $P$ set refers to $X$ set indices and tghsgfds refers to the vectors label as follows:
-\definecolor{darkgreen}{RGB}{0, 140, 0}
-\begin{equation}
-y_{i} = \left\{
-\begin{array}{ll}
-     
-      {\textcolor{darkgreen}{ -1 \: \: if \:  \overrightarrow{x_{pi1}}\: and \: \overrightarrow{x_{pi2}} \:are\: similar} \\
-      {\textcolor{red}{ +1 \: \: if \:  \overrightarrow{x_{pi1}}\:  and \: \overrightarrow{x_{pi2}} \:are\: non-similar} \\
+where $S$ is the defined sub-domain group: \\ 
 
-\end{array} 
-\right.
-\end{equation}
+$\{S_i\}_{i=1}^g \qquad,\qquad S_i\subseteq [1, \dots , n] \qquad , \qquad g \in [1, \dots , n]$ \\ 
 
-We define a classification (similarity) function:
+Where $g$ represents a sub domain which extracts valid demandable information to the user. \\ 
 
+For example when applying ID embedding on \textbf{SIFT[]} descriptors, a certain user may involve only neighbor pairs, where another one may involve just bin-to-bin pairs.
 
-\begin{equation}
-similar(\overrightarrow{x_{1}} , \overrightarrow{x_{2}})= \left\{
-\begin{array}{ll}
+\subsection{SIFT Example}
 
-{\color{darkgreen}{ -1 \: \: if \:  d(\overrightarrow{x_{1}} , \overrightarrow{x_{2}})\,=\,IDD(\overrightarrow{x_{1}} , \overrightarrow{x_{2}})\cdot \overrightarrow{w} < t  } \\
-{\color{red}{ +1 \: \: otherwise} \\
+when applying ID on SIFT [] descriptors (for template matching),  n is 128, which causes time and memory complexity to be scaled by 1282=16384. 
+If one user desires, and physically ables to reduce this coefficient, we developed the following generalization.
 
-\end{array} 
-\right.
-\end{equation}
+\begin{figure} \label{s1}
+	    \centering
+		\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/sift1}
+		\caption[SIFT algorithm used for template matching]
+		{SIFT algorithm used for template matching. In this example each image is scanned and a set of keypoints (a significant point) is found, and for each keypoints a 3D features vector is calculated. These vectors are being compared between the images, and a similarity is measured among those sets. Here we see that there is a match between both Queen cards in both images, although there are size, orientation, and clearance differences}
+\end{figure}
+	
+\begin{figure} \label{s2}
+		\centering
+		\includegraphics[width=12cm,height=12cm,keepaspectratio]{Figures/sift2}
+		\caption[SIFT kp descriptor example]
+		{SIFT keypoint descriptor scheme. A 16x16 neighborhood around the keypoint is taken. It is divided into 16 sub-blocks of 4x4 size. For each sub-block, 8 bin orientation histogram is created. So a total of 128 bin values are available. It is represented as a vector to form keypoint descriptor. In addition to this, several measures are taken to achieve robustness against illumination changes, rotation etc.}
+\end{figure}
 
-Where A pair of vectors is similar if and only if their ID distance result is smaller than a threshold parameter (t).
-This function is identical to a classification function of a standard binary SVM classification method [80], which looks like the following:
-
-Where 
-t - threshold which learned by an optimization process
-- weight vector of the problem which is also learned by an optimization process.
-
-We now address describing the optimization of the learning step for achieving optimal model for a certain data set.
-
-
-
-\section{Efficient Stochastic Gradient Descent}
-
-Stochastic Gradient Descent (SGD) is a stochastic approximation of the gradient descent optimization method for minimizing an objective function that is written as a sum of differentiable functions.
-
-SGD is a simple yet very efficient approach to discriminative learning of linear classifiers under convex loss functions such as our learning function.
-
-As Shalev-Shwartz et al. POLA [67], we can learn our weights (including t parameter):
-
-\begin{equation}
-
-\overrightarrow{w}^{opt} , t^{opt} =\\ 
-\underset{\overrightarrow{w} , t}{argmin} 
-
-
-(\frac{1}{2}\left \| 
-
-\overrightarrow{w} - \overrightarrow{w}^{reg} \right \|_2^2 + \\ C \sum_{i=1}^{k}max(1-(IDD(\overrightarrow{x_{p_i1}} , \overrightarrow{x_{p_i1}}) \cdot \overrightarrow{w} - t)y_i , 0))
-
-
-
-\end{equation}

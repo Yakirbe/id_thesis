@@ -4,16 +4,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces discretization matrix}}{7}{figure.caption.71}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 1D data sample coefficients calculation matrix}}{15}{figure.caption.79}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces flattening 2d matrix}}{16}{figure.caption.110}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces discretization matrix}}{7}{figure.caption.69}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 1D data sample coefficients calculation matrix}}{16}{figure.caption.77}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces flattening 2d matrix}}{17}{figure.caption.108}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces triangle non-embeddable dataset}}{17}{figure.caption.135}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces discretization matrix}}{17}{figure.caption.136}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces discretization matrix}}{19}{figure.caption.139}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces flattening 2d matrix}}{22}{figure.caption.173}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces flattening 2d matrix}}{22}{figure.caption.174}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces SIFT algorithm used for template matching}}{26}{figure.caption.188}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces SIFT kp descriptor example}}{26}{figure.caption.189}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

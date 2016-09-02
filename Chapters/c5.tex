@@ -1,97 +1,140 @@
 % Chapter 1
 
-\chapter{Time Complexity} % Main chapter title
+\chapter{Learning} % Main chapter title
 
-\label{Chapter5} % For referencing the chapter elsewhere, use \ref{Chapter1} 
-
-%----------------------------------------------------------------------------------------
-
-% Define some commands to keep the formatting separated from the content 
-%\newcommand{\keyword}[1]{\textbf{#1}}
-%\newcommand{\tabhead}[1]{\textbf{#1}}
-%\newcommand{\code}[1]{\texttt{#1}}
-%\newcommand{\file}[1]{\texttt{\bfseries#1}}
-%\newcommand{\option}[1]{\texttt{\itshape#1}}
-
-%----------------------------------------------------------------------------------------
-Time complexity for each step of the IDDND function building is displayed in this section. 
-Learning / training timing was excluded and will be discussed at ()
+\label{Chapter5} % For referencing the chapter elsewhere, use 
 
 
-\section{Discretization}
-
-	Discretization implementation is not specified in this paper since we are using a OTS method such $k-means$ clustering algorithm, although This step may be applied by various methods. 
-	The common ones are k-means or their variation. We will try to refer to $k-means$ \ref{---} based methods.
-	Though the problem of finding the global optimum of the $k-means$ objective function:
-	
-	\begin{equation}
-	arg\min_s\sum_{i=1}^{k} \sum_{x_j \in S_i}^{}\|x_j - \mu_i \|^2
-	\end{equation}
-	
-	is NP-hard[].
-	
-	However, running a fixed number i of iterations of the standard algorithm consumes only: \\ \\ \\
-	\textbf{$O(i \dot k \dot n \dot d)$} \\ \\
-	Where:
-	i - convergence iterations \\
-	k - number of means \\
-	N - dataset samples \\
-	n - object dimension \\
-    
-    for n points in d dimensions
-	
+In this section described the learning phase of the $ID$ method.\\
+Our Learning section refers to the pairs embedding use case. 
+Learning a single vectors dataset will be described further, since it is the simpler scenario and quite similar.\\
+In general, since our method is embedding objects or object pairs to sparse vectors set, we can use this quality in order to accelerate learning phase of the process.
 
 
+\section{Learning the Classification Function}
 
-
-
-
-\section{Interpolation}
-
-As described above(), we divide the interpolation phase time complexity for several phases:
-
-
-
-
-\section{Find the bounding hypercube}
-
-Finding a given vector’s bounding box is actually finding a bounding pair for each element in this vector. Since the means vectors are sorted then this step takes n times (for n dimensions) $log(n)$ , which is the time complexity for binary search.
-In total, time complexity of this step:  
-
+As described above \ref{Chapter2}, our current method is handling similarity detection between two n-dimensional vectors. This can of course be generalized to any classification/clustering matter.
 \\
-\textbf{$O(nlog(n))$}
+Let $X$ be a set of raw data vectors. Each vector in this set may represent a single object, for any type of classification analysis. 
+\\
+In this scenario we obtain object pairs \textbf{similarity} problem.
+\\ \\Let us assign an indexing system for this labeled pairs dataset as follows:
+
+\begin{equation}
+P = \begin{bmatrix}
+p_{11} & p_{12}\\ 
+ \vdots & \vdots \\ 
+p_{i1} & p_{i2}\\ 
+ \vdots & \vdots \\ 
+p_{k1} & p_{k2}\\ 
+\end{bmatrix}
+\overrightarrow{y} = \begin{bmatrix}
+y_{1} \\ 
+ \vdots  \\ 
+y_{i} \\ 
+ \vdots  \\ 
+y_{k} \\ 
+\end{bmatrix}
+\end{equation}
+
+Where $P$ set refers to $X$ set indices and tghsgfds refers to the vectors label as follows:
+\definecolor{darkgreen}{RGB}{0, 140, 0}
+\begin{equation}
+y_{i} = \left\{
+\begin{array}{ll}
+     
+      \textcolor{darkgreen}{ -1 \: \: if \:  \overrightarrow{x_{pi1}}\: and \:1} , \overrightarrow{x_{pi2}} \:are\: similar} \\
+      \textcolor{red}{ +1 \: \: if \:  2} ; S) = [ ID(\overrightarrow{x_{pi1}}\:  and \: 1}_[S_1],\overrightarrow{x_{pi2}} \:are\: non-similar} \\
+
+\end{array} 
+\right.
+\end{equation}
+
+We define a classification (similarity) function:
+
+
+\begin{equation}
+similar(\overrightarrow{x_{1}} , _[S_g],\overrightarrow{x_{2}})= \left\{
+\begin{array}{ll}
+
+\color{darkgreen}{ -1 \: \: if \:  d(\overrightarrow{x_{1}} , \overrightarrow{x_{2}})\,=\,IDD(\overrightarrow{x_{1}} , \overrightarrow{x_{2}})\cdot \overrightarrow{w} < t  } \\
+\color{red}{ +1 \: \: otherwise} \\
+
+\end{array} 
+\right.
+\end{equation}
+
+Where a pair of vectors is similar if and only if their ID distance result is smaller than a given threshold parameter ($t$).
+This function is identical to a classification method of a standard binary SVM classification method [80], which looks like the following:
+\\ \\
+Where:\\ 
+$t$ - threshold which learned by an optimization process
+- weight vector of the problem which is also learned by an optimization process.
 \\
 
-
-\section{Find the bounding simplex}
-
-
-Finding the bounding simplex is equivalent to find an obeying permutation over the given vector.
-Time complexity for this step is therefore: \\$O(nlog(n))$\\. While using common sorting algorithms such Quicksort[]/Merge Sort[]/Timsort[].
+We now address describing ther optimization of the learning step for achieving optimal model for a certain data set.
 
 
 
+\subsection{Efficient Stochastic Gradient Descent}
+
+Stochastic Gradient Descent ($SGD$) is a stochastic approximation of the gradient descent optimization method for minimizing an objective function that is written as a sum of differentiable functions.
+
+$SGD$ is a simple yet very efficient approach to discriminative learning of linear classifiers under convex loss functions such as our learning function.
+
+As Shalev-Shwartz et al. POLA [67], we can learn our weights (including t parameter):
+
+\begin{equation}
+\overrightarrow{w}^{opt} , t^{opt} =\\ 
+\underset{\overrightarrow{w} , t}{argmin} (\frac{1}{2}\left \| \overrightarrow{w} - \overrightarrow{w}^{reg} \right \|_2^2 + C \sum_{i=1}^{k}max(1-(IDD(\overrightarrow{x_{p_i1}} , \overrightarrow{x_{p_i2}}) \cdot \overrightarrow{w} - t)y_i , 0)) \end{equation}
 
 
 
+Where:
+\begin{itemize}
+		\item $\overrightarrow{w}^{reg}$ represents a regularizer distance for the vertices, e.g. , $L^1$
+	\itehm $C$ represents a decay factor applied for convergence control in the optimization process.
+\end{itemize}
+
+Let us defined an optimized implementation adapted to the similarity problem.
+
+Naive implementation of Stochastic Gradient Descent [] will result in time complexity of $O(c^{2n})$  , \\
+due to regularizer appearance in the equation: 
 
 
-\section{ID coefficients extraction}
+\begin{equation}
+\frac{\partial\frac{1}{2}\frac{1}{k}\cdot
+	\left \|\overrightarrow{w} - \overrightarrow{w}^{reg}  \right \|_{2}^{2}
+}{\partial \overrightarrow{w}}  = \frac{1}{k}(\overrightarrow{w} -  \overrightarrow{w}^{reg})
+\end{equation}
 
-In the step, we take in matter only the second attitude shown above since it is faster.
-Computing the coefficients is also possible in $O(n)$.
-We can compute the first index in $O(n)$ and do additional $O(n)$ updates each with a time complexity of $O(1)$ for computing the other indices, so in total this step take only $O(n)$.
+We can use an \textbf{overcomplete} representation of the weights vector $\overrightarrow{w}$ in order to reduce time complexity of the regularizer to $O(1)$ and total running time of each $SGD$ step to $O(n)$ (similar trick was used by Shwartz et al. Pegasos paper[]):
 
-total time complexity for the interpolation step method is: \\
+\begin{equation}
+\overrightarrow{w} = \beta\cdot\hat{\overrightarrow{w}} + \gamma \cdot \overrightarrow{w}^{reg}
+\end{equation}
 
-$ O(nlog(n)) + O(nlog(n)) + O(n) = O(nlog(n)) $
+So instead of the common $SGD$ weights update:
 
+\begin{equation}
+\\ \overrightarrow{w}^{updated} = \overrightarrow{w} - \frac{\alpha}{tk}(
+\overrightarrow{w} - \overrightarrow{w}^{reg})
+\\ \\= (1-\frac{\alpha}{tk})\overrightarrow{w} + \frac{\alpha}{tk}\overrightarrow{w}^{reg}
+\end{equation}
 
+With the new representation we can write the updated weights as follow:
 
+\begin{equation}
+\\ \overrightarrow{w}^{updated} = (1-\frac{\alpha}{tk})(\beta \cdot \hat{\overrightarrow{w}} + \gamma \cdot \overrightarrow{w}^{reg}) +  \frac{\alpha}{tk}\overrightarrow{w}^{reg}
+\\\\= ((1-\frac{\alpha}{tk})\beta)\hat{\overrightarrow{w}} + 
+((1-\frac{\alpha}{tk})\gamma
++\frac{\alpha}{tk})\overrightarrow{w}^{reg}
+\end{equation}
 
+Which allows to separate both coefficients of the overcomplete representation:
 
-\section{Assigning}
-
-Data assigning of the sparse vector is purely flattening a matrix into a vector shape, which takes $O(1)$ \ref{flatt}
+\begin{equation}
+\beta^{updated} = (1-\frac{\alpha}{tk})\beta \:\:\:\: \gamma^{updated} = (1-\frac{\alpha}{tk})\gamma+\frac{\alpha}{tk}
+\end{equation}
 
 

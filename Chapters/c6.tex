@@ -1,6 +1,6 @@
 % Chapter 1
 
-\chapter{Memory Complexity} % Main chapter title
+\chapter{Time Complexity} % Main chapter title
 
 \label{Chapter6} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
@@ -14,49 +14,84 @@
 %\newcommand{\option}[1]{\texttt{\itshape#1}}
 
 %----------------------------------------------------------------------------------------
+Time complexity for each step of the IDDND function building is displayed in this section. 
+Learning / training timing was excluded and will be discussed at ()
 
 
-In this section we provide a method for applying dimensional reduction of the multidimensional scenario, by grouping significant small subsets of the data and concatenating them after embedding. 
+\section{Discretization}
 
-
-\section{Definition}
-
-We define a generalized ID function by:
-
-\begin{equation}
-ID_(\overrightarrow{x_1} , \overrightarrow{x_2} ; S) = [ ID(\overrightarrow{x_1}_[S_1],\overrightarrow{x_2}_[S_1]) , \dots , \dots , ID(\overrightarrow{x_1}_[S_g],\overrightarrow{x_2}_[S_g])  ]
-\end{equation}
-
-where $S$ is the defined sub-domain group: \\ 
-
-$\{S_i\}_{i=1}^g \qquad,\qquad S_i\subseteq [1, \dots , n] \qquad , \qquad g \in [1, \dots , n]$ \\ 
-
-Where $g$ represents a sub domain which extracts valid demandable information to the user. \\ \\ \\
-
-
-For example when applying ID embedding on \textbf{SIFT[]} descriptors, a certain user may involve only neighbor pairs, where another one may involve just bin-to-bin pairs.
-
-\subsection{SIFT Example}
-
-when applying ID on SIFT [] descriptors (for template matching),  n is 128, which causes time and memory complexity to be scaled by 1282=16384. 
-If one user desires, and physically ables to reduce this coefficient, we developed the following generalization.
-
-\begin{figure} \label{s1}
-	    \centering
-		\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/sift1}
-		\caption[flattening 2d matrix]
-		{flattening 2d matrix to row-wise 1d vector}
+	Discretization implementation is not specified in this paper since we are using a OTS method such $k-means$ clustering algorithm, although This step may be applied by various methods. 
+	The common ones are k-means or their variation. We will try to refer to $k-means$ \ref{---} based methods.
+	Though the problem of finding the global optimum of the $k-means$ objective function:
 	
-\end{figure}
+	\begin{equation}
+	arg\min_s\sum_{i=1}^{k} \sum_{x_j \in S_i}^{}\|x_j - \mu_i \|^2
+	\end{equation}
 	
+	is NP-hard[].
 	
+	However, running a fixed number i of iterations of the standard algorithm consumes only: \\ \\ \\
+	\textbf{$O(i \dot k \dot n \dot d)$} \\ \\
+	Where:
+	i - convergence iterations \\
+	k - number of means \\
+	N - dataset samples \\
+	n - object dimension \\
+    
+    for n points in d dimensions
 	
-\begin{figure} \label{s2}
-		\centering
-	
-		\includegraphics[width=12cm,height=12cm,keepaspectratio]{Figures/sift2}
-		\caption[flattening 2d matrix]
-		{flattening 2d matrix to row-wise 1d vector}
-	
-\end{figure}
+
+
+
+
+
+
+\section{Interpolation}
+
+As described above(), we divide the interpolation phase time complexity for several phases:
+
+
+
+
+\section{Find the bounding hypercube}
+
+Finding a given vector’s bounding box is actually finding a bounding pair for each element in this vector. Since the means vectors are sorted then this step takes n times (for n dimensions) $log(n)$ , which is the time complexity for binary search.
+In total, time complexity of this step:  
+
+\\
+\textbf{$O(nlog(n))$}
+\\
+
+
+\section{Find the bounding simplex}
+
+
+Finding the bounding simplex is equivalent to find an obeying permutation over the given vector.
+Time complexity for this step is therefore: \\$O(nlog(n))$\\. While using common sorting algorithms such Quicksort[]/Merge Sort[]/Timsort[].
+
+
+
+
+
+
+
+
+\section{ID coefficients extraction}
+
+In the step, we take in matter only the second attitude shown above since it is faster.
+Computing the coefficients is also possible in $O(n)$.
+We can compute the first index in $O(n)$ and do additional $O(n)$ updates each with a time complexity of $O(1)$ for computing the other indices, so in total this step take only $O(n)$.
+
+total time complexity for the interpolation step method is: \\
+
+$ O(nlog(n)) + O(nlog(n)) + O(n) = O(nlog(n)) $
+
+
+
+
+
+\section{Assigning}
+
+Data assigning of the sparse vector is purely flattening a matrix into a vector shape, which takes $O(1)$ \ref{flatt}
+
 
