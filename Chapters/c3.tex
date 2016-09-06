@@ -12,7 +12,7 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 \section{1D case}
 
 	Our method's objective is to find an embedding function such:
-	
+	\cite{einstein}
 	\begin{equation}
 		ID:\Re^n \times \Re^m \rightarrow \Re^d
 	\end{equation}
@@ -26,8 +26,8 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 	
 	\subsection{Discretization}
 
-	\begin{figure}
-		
+	\begin{}
+
 		\qquad \qquad \qquad \quad \begin{pmatrix} c_{1(1)} , \dots , \dots , \dots , c_{1(n)} \end{pmatrix}\\
 		
 		$W$ =		\begin{pmatrix} c_{2(1)} \\ \vdots \\ \vdots \\ \vdots \\ \vdots \\c_{2(m)} \end{pmatrix}
@@ -444,29 +444,27 @@ The selected coefficients calculation process for our embedding is the Barycentr
 		
 		for $\lambda_0$ we apply the final step expression:
 		
-		
-	\begin{flushleft}
-			\begin{equation}
-		
-					\lambda_0 =	V_{[p,r^1,r^2,r^3,r^4]} = 
-					\begin{vmatrix}
-						1 & p_{1} &  p_{2}& p_{3} & p_{4}\\
-						1 & 0 & 0 & 0 & 1\\ 
-						1 & 0 & 0 & 1 & 1\\ 
-						1 &  0  & 1 & 1 & 1 \\ 
-						1 & 0 & 1 & 1 & 1
-						\end{vmatrix} \\  \\ 
-						
-						= 1 - p_1 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} + 
-						p_2 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} - 
-						p_3 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} + 
-						p_4 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} \\ \\ 
-						= 1 - p_4 - p_3 = 1 - (\lambda_1 + \lambda_2 + \lambda_3 + \lambda_4)
 
-		\end{equation}
-	\end{flushleft}
-		
-		
+	\begin{equation} \label{eq1}
+	\begin{split}
+	\lambda_0 =	V_{[p,r^1,r^2,r^3,r^4]} = 
+	\begin{vmatrix}
+	1 & p_{1} &  p_{2}& p_{3} & p_{4}\\
+	1 & 0 & 0 & 0 & 1\\ 
+	1 & 0 & 0 & 1 & 1\\ 
+	1 &  0  & 1 & 1 & 1 \\ 
+	1 & 0 & 1 & 1 & 1
+	\end{vmatrix} 
+	\\ \\
+	= 1 - p_1 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} + 
+	p_2 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} - 
+	p_3 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} + 
+	p_4 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} \\ \\ 
+	= 1 - p_4 - p_3 = 1 - (\lambda_1 + \lambda_2 + \lambda_3 + \lambda_4)
+	\end{split}
+	\end{equation}
+
+	
 		final coefficient vector produced by volumes method would be:
 		
 		
@@ -628,30 +626,28 @@ We demonstrate a theoretical use case constrained by those 2 conditions, and see
 	\end{tikzpicture}
 	
 	\caption[triangle non-embeddable dataset]
-	{this is a scheme of a non-embeddable dataset}
+	{non-embeddable dataset scheme, describing a 2D triangled set, where 4 centers represents 4 data groups which their average distances shown in \textcolor{green}{green}}
 	
 	\end{figure}
 	
-	This theoretical set form applies a non-euclidean embeddable metrics, which we now prove that a euclidean metrics is unable to embed it.
-	Based on euclidean metrics assumptions, assumed there is an integer $k$ , such that a function $f$ applies:
+	This theoretical set form applies a non-euclidean embeddable metrics, which we now prove that a euclidean metrics is unable to embed it. \\ \\
+	Based on euclidean metrics assumptions, assumed there is an integer $k$ , such that a function $f$ applies: \\
 	
-	\begin{equation}
-	f \: : \: \{  \overrightarrow{x_1}, \overrightarrow{x_2} , \overrightarrow{x_3} , \overrightarrow{x_4}\} \rightarrow \Re^k
-	\end{equation}
+	$f \: : \: \{  \overrightarrow{x_1}, \overrightarrow{x_2} , \overrightarrow{x_3} , \overrightarrow{x_4}\} \rightarrow \Re^k$ \\
+		
+	Where $\overrightarrow{x_i}$ are samples from each one of data centers, and $f$ preserves the distances. \\
 	
-	Where $\overrightarrow{x_i}$ are samples from each one of data centers, and $f$ preserves the distances. \\ \\
+    As triangle-inequality is tight for: $\overrightarrow{x_4} , \overrightarrow{x_1} , \overrightarrow{x_2}$ ,\\
 	
-    As triangle-inequality is tight for: $\overrightarrow{x_4} , \overrightarrow{x_1} , \overrightarrow{x_2}$ ,\\ \\
-	
-	$f(\overrightarrow{x_4}) ,f(\overrightarrow{x_1}) ,f(\overrightarrow{x_2})$ are collinear in $\Re^k$
+	and $f(\overrightarrow{x_4}) ,f(\overrightarrow{x_1}) ,f(\overrightarrow{x_2})$ are collinear in $\Re^k$ \\ 
 	
 	From set formation symmetry property, the same colinearity applies on:
-	
-	$f(\overrightarrow{x_3}) ,f(\overrightarrow{x_1}) ,f(\overrightarrow{x_2})$
+		
+	$f(\overrightarrow{x_3}) ,f(\overrightarrow{x_1}) ,f(\overrightarrow{x_2})$ \\ 
 	
 	This common colinearity of those tuples leads to the following equation:
 	
-	$\left \| f(\overrightarrow{x_4}) - f(\overrightarrow{x_3})  \right \|_2 == 0$
+	$\left \| f(\overrightarrow{x_4}) - f(\overrightarrow{x_3})  \right \|_2 == 0$ \\
 	
 	But this fact is contradicting that 
 	

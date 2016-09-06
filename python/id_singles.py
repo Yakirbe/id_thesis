@@ -65,7 +65,7 @@ def interpolate(tr_ds_clf , tr_labels_clf):
         ds_sample["v_vec"] = v_vec
     
         label = tr_labels_clf[tr_ds_clf.index(v_vec)]
-        label_num = label
+        label_num = labels.index(label)
         
         ds_sample["label"] = label_num
         #print v_vec , label , label_num   
@@ -114,14 +114,13 @@ def interpolate(tr_ds_clf , tr_labels_clf):
     return ds_json
     
 
-def embed(dataset ,c_vec ):
-    
-    C = len(c_vec) - 2
+def embed(dataset , C = 4):
     
     print "embed..."
     ds_out = dataset
     
     for samp in range(len(dataset)):
+        #print samp
     
         emb_vec = [0.0]*len(c_vec)**(len(dataset[samp]["v_vec"]))
         
@@ -148,10 +147,7 @@ def embed(dataset ,c_vec ):
     
     return ds_out    
 
-
-num_per_cls = 2500
-C = 4
-###############################################################################
+        
 
 # labels indices
 
@@ -159,29 +155,6 @@ path_ims = "/home/yakir/idd/datasets/retargeting/"
 path_ims = "C:\ofir_stuff_idd\datasets\dataset-20110512"
 labels = sorted(os.listdir(path_ims))
 
-
-class ID:
-    
-    def __init__(ds = [] , grps = [] , pairs = True , C = 4 , d_min = 1000 ,
-                 d_max = -1, test_pr = 0.2 , min_max_margin = 0.01 , 
-                 c_vec = [] , tr_set = [] , te_set = [] , 
-                 labeled_size = 2500):
-        
-        self.ds = ds
-        self.grps = grps
-        self.pairs = pairs
-        self.C = C
-        self.d_min = d_min
-        self.d_max = d_max
-        self.test_pr = test_pr
-        self.min_max_margin = min_max_margin
-        self.labeled_size = labeled_size
-        self.c_vec = c_vec
-        self.tr_set = tr_set
-        self.te_set = te_set
-    
-    
-    
 # load dataset ----------------------------------------------------------------
         
 with open("fn.json") as f:
@@ -192,13 +165,13 @@ for d in ds:
     ds_new.append(json.loads(d.replace("'",'"')))
 
 ds_new = 5*ds_new
-
 # set groups for classification and pair matching tasks -----------------------
     
-grps_clf1 = [(95,96) , (29,26) , (88,87), (63,62) , (50,49)  , (42,43) , (60,61) , (90,92) , (40,41)]
-grps_clf2 = [(107,108) , (27,28) , (89,86) , (64,65) , (70,69)  , (44,45) , (50,51) , (93,91) , (40,41)]
-grps_clf = [ grps_clf1 , grps_clf2 ]
-
+grps_clf = []
+for i in range(40,43,4):
+    grps_clf.append((i,i+1,i+2,i+3))
+    
+        
 # set discrete extreme vals ---------------------------------------------------
 
 dis_min = 1000
@@ -213,62 +186,31 @@ for i in range(len(ds_new)):
         
 # classification --------------------------------------------------------------
 
-#get pairs of sims-diffs
-
-sims = []
-difs = []
-
-stop_sim = False
-stop_dif = False
-
-while (not stop_dif) or (not stop_sim):
+# separate to train-test
     
-    v1 = random.choice(ds_new)
-    v2 = random.choice(ds_new)
-    
-    if v1 == v2:
-        continue
+test_pr = 0.2
+tr_set = []
+te_set = []
+for d in ds_new:
+    if random.uniform(0,1) <= test_pr:
+        te_set.append(d)
     else:
-        if v1["label"] == v2["label"]: 
-            if not stop_sim:
-                sims.append((v1["vec"] , v2["vec"] , -1))
-                if len(sims) >= num_per_cls:
-                    stop_sim = True
-        else:
-            if not stop_dif:
-                difs.append((v1["vec"] , v2["vec"] , 1))
-                if len(difs) >= num_per_cls:
-                    stop_dif = True
+        tr_set.append(d)
+        
+# shuffle
+tr_set = random.sample(tr_set , len(tr_set))
+te_set = random.sample(te_set , len(te_set))
 
-ds_out = sims+difs
-ds_out = random.sample(ds_out , len(ds_out))
+# generate dataset (train and test sets)
 
+
+
+#grp_ind = 0
 tr_grp = []
 te_grp = []
 
-pairs_len = 6
-
-grps_clf[0] = grps_clf[0][:pairs_len]
-grps_clf[1] = grps_clf[1][:pairs_len]
-for g1 in grps_clf[0]:
-    g2 = grps_clf[1][grps_clf[0].index(g1)]
-    ds_out_pairs = []
+for grp_ind in range(len(grps_clf)):
     
-    #get group indices data
-    ds_out_pairs =  []
-    for d in ds_out:
-        sample = [d[0][g1[0]] , d[0][g1[1]] , d[1][g2[0]] , d[1][g2[1]]]
-        ds_out_pairs.append({"vec":sample , "label":d[2]})
-        
-    # separate to train-test
-    
-    test_pr = 0.2
-    
-    te_set = ds_out_pairs[:int(test_pr*len(ds_out_pairs))]
-    tr_set = ds_out_pairs[int(test_pr*len(ds_out_pairs)):]
-
-    # generate dataset (train and test sets)
-
     tr_ds_clf = []
     tr_labels_clf = []
 
@@ -276,17 +218,22 @@ for g1 in grps_clf[0]:
     te_labels_clf = []
     
     for i in range(len(tr_set)):
-        v = tr_set[i]["vec"]
+        samp_vec = tr_set[i]["vec"]
         tr_labels_clf.append(str(tr_set[i]["label"]))
+        v = [samp_vec[s] for s in grps_clf[grp_ind]]
         tr_ds_clf.append(v)
         
+        
     for i in range(len(te_set)):
-        v = te_set[i]["vec"]
+        samp_vec = te_set[i]["vec"]
         te_labels_clf.append(str(te_set[i]["label"]))
+        v = [samp_vec[s] for s in grps_clf[grp_ind]]
         te_ds_clf.append(v)
+
 
     # generate dis vecs
         
+    C = 6 
     kmeans_flag = True     
     min_max_margin = 0.01         
     if kmeans_flag:
@@ -298,7 +245,15 @@ for g1 in grps_clf[0]:
         c_vec = sorted([cv[0] for cv in c_vec])
         c_vec.insert(0 , dis_min -min_max_margin)
         c_vec.append(dis_max + min_max_margin)
+        #c_vec[0] -= min_max_margin
+        #c_vec[-1] += min_max_margin
+        
+    #else:
+    #    self.c_max += self.min_max_margin
+    #    self.c_min -= self.min_max_margin
+    #    c_vec = list(np.linspace(self.c_min , self.c_max , self.C))
     print "c vector genarated\n"   
+
 
     # interpolation ---------------------------------------------------------------
     
@@ -309,27 +264,29 @@ for g1 in grps_clf[0]:
     
     # embed -----------------------------------------------------------------------
     
-    train_ds_json = embed(train_ds_json ,c_vec)
-    test_ds_json = embed(test_ds_json ,c_vec)
+    train_ds_json = embed(train_ds_json , C)
+    test_ds_json = embed(test_ds_json , C)
     
     tr_grp.append(train_ds_json)
     te_grp.append(test_ds_json)
 
+
 #concat groups
 
-# train set
-tr_grp_emb = [[]]*np.min([len(vr) for vr in tr_grp])
-tr_grp_label = [0]*np.min([len(ve) for ve in tr_grp])
+#train set
+
+tr_grp_emb = [[]]*len(tr_grp[0])
+tr_grp_label = [-1]*len(tr_grp[0])
 
 for g in tr_grp:
     for i in range(len(tr_grp_emb)):
         tr_grp_emb[i] = tr_grp_emb[i] + list(g[i]["embedded"].toarray()[0])
         tr_grp_label[i] = g[i]["label"]
         
-# test set
+#test set
 
-te_grp_emb = [[]]*np.min([len(v) for v in te_grp])
-te_grp_label = [0]*np.min([len(v) for v in te_grp])
+te_grp_emb = [[]]*len(te_grp[0])
+te_grp_label = [-1]*len(te_grp[0])
         
 for g in te_grp:
     for i in range(len(te_grp_emb)):
@@ -343,7 +300,7 @@ print "training..."
 X_tr = [s for s in tr_grp_emb]
 Y_tr = [s for s in tr_grp_label]
 
-clf = svm.SVC(C = 1e5 , decision_function_shape='ovo' , kernel='rbf' , cache_size  = 200)
+clf = svm.SVC(C = 1e5 , decision_function_shape='ovr' , kernel='rbf' , cache_size  = 200)
 clf.fit(X_tr, Y_tr) 
 
 print "training done\n"
@@ -375,4 +332,14 @@ print "false positive = " , fp , "of" , tst_set
 print "tp % = " , 100*tp/tst_set
 print "fp % = " , 100*fp/tst_set
 print "testing done\n\n\n\n"
+#
+#
+#
+#cons = test_ds_json[0]["label"]
+
+#for s in test_ds_json:
+#    
+#    if s["label"] == cons:
+#        print s["v_vec"] , s["coef_vec"] , s["label"]
+
 

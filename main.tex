@@ -24,21 +24,44 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{algorithm}% http://ctan.org/pkg/algorithm
 \usepackage{enumitem}
 \usepackage{tikz}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsopn}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+\usepackage{psfrag}
+\usepackage[b]{esvect}
+\usepackage{framed,color}
 \setcounter{secnumdepth}{5} % seting level of numbering (default for "report" is 3). With ''-1'' you have non number also for chapters
+
+
+
+
 %\setcounter{tocdepth}{5} % if you want all the levels in your table of contents
-
-
 %\usepackage[noend]{algpseudocode}
+
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
 
+
 \usepackage{palatino} % Use the Palatino font by default
 \usepackage{caption}
-\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+%\usepackage[style=numeric,firstinits=true]{biblatex}
 
-\addbibresource{example.bib} % The filename of the bibliography
+\usepackage[backend=bibtex,natbib=true, bibstyle=authoryear, citestyle=authoryear-comp]{biblatex}
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
@@ -301,8 +324,35 @@ $\omega$ & angular frequency & \si{\radian} \\
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
-\printbibliography[heading=bibintoc]
 
+\begin{thebibliography}{99}
+	
+	\bibitem{HB98} Huynen, M.~A. and Bork, P. 1998. Measuring genome evolution. {\em
+		Proceedings of the National Academy of Sciences USA}
+	95:5849--5856.
+	
+	\bibitem{CA} Caprara, A. 1997. Sorting by reversals is difficult. In: {\em
+		Proceedings of the First Annual International Conference on Computational
+		Molecular Biology (RECOMB 97),} New York: ACM.  pp. 75-83.
+	
+	\bibitem{MSW00}McLysaght, A., Seoighe, C. and Wolfe, K.~H. 2000. High frequency
+	of inversions during eukaryote gene order evolution.     In Sankoff, D. and
+	Nadeau, J.~H., editors, {\em Comparative Genomics},  Dordrecht, NL: Kluwer
+	Academic Press. pp. 47--58.
+	
+	\bibitem{Rei91} Reinelt, G. 1991. {\em The Traveling Salesman - Computational
+		Solutions for TSP Applications.} Berlin: Springer Verlag.
+	\bibitem{retargeting} {5} @article{Rubinstein10Comparative,
+		author = {Rubinstein, Michael and Gutierrez, Diego and Sorkine, Olga and Shamir, Ariel},
+		title = {A Comparative Study of Image Retargeting},
+		journal = {ACM Transactions on Graphics (Proc. SIGGRAPH Asia)},
+		year = {2010},
+		volume = {29},
+		number = {6},
+		pages = {160:1--160:10},
+	}
+
+\end{thebibliography}
 %----------------------------------------------------------------------------------------
 
 \end{document}  

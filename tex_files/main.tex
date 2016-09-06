@@ -1,0 +1,24 @@
+\documentclass[11pt]{article}
+
+\title{Multiple Bibliographies with \texttt{multibib}}
+\author{LianTze Lim}
+\date{}
+
+\usepackage[resetlabels,labeled]{multibib}
+
+%% The new list's label is "New" and will be titled "The other list".
+%% To put cites into this list, use \citeNew.
+\newcites{New}{The other list}
+
+\begin{document}
+
+\maketitle
+
+\cite{Miller1995WordNet:English} and \cite{Pulli2012Real-timeOpenCV} were published later th
+
+bibliographystyle{plain}
+\usepackage{biblatex}
+
+\addbibresource{references.bib}
+
+\end{document}
