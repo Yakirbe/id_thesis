@@ -245,13 +245,6 @@ for grp_ind in range(len(grps_clf)):
         c_vec = sorted([cv[0] for cv in c_vec])
         c_vec.insert(0 , dis_min -min_max_margin)
         c_vec.append(dis_max + min_max_margin)
-        #c_vec[0] -= min_max_margin
-        #c_vec[-1] += min_max_margin
-        
-    #else:
-    #    self.c_max += self.min_max_margin
-    #    self.c_min -= self.min_max_margin
-    #    c_vec = list(np.linspace(self.c_min , self.c_max , self.C))
     print "c vector genarated\n"   
 
 
