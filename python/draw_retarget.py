@@ -82,26 +82,35 @@ for a in att_dict:
 # plot
 plt.close("all")  
     
-N = len(att_dict)
-taus = [att_dict[a]["tau_avg"] for a in att_dict]
+#N = len(att_dict)
+N = len([value for key, value in data["butterfly"]["D"].iteritems()])
 
+taus = []
+for op in op_list:
+    taus.append(data["butterfly"]["D"][op])
+#taus = [att_dict[a]["tau_avg"] for a in att_dict]
+#taus = [value for key, value in data["butterfly"]["D"].iteritems()]
+#taus = [value for value in data["butterfly"]["usr"]]
 mean = np.mean(taus)
 std = np.std(taus)
 
 print "taus =" , taus
 print "mean =", mean
 print "std =", std
-ticks = tuple([a.replace("\\","\\n") for a in att_dict])
-
+#ticks = tuple([a.replace("\\","\\n") for a in att_dict])
+ticks = tuple(value for value in data["butterfly"]["D"])
+ticks = op_list
 ind = np.arange(N)  # the x locations for the groups
 width = 0.35       # the width of the bars
 
 fig, ax = plt.subplots()
-rects1 = ax.bar(ind, taus, width, color='r')
+rects1 = ax.bar(ind, taus, width, color='blue')
 
 # add some text for labels, title and axes ticks
-ax.set_ylabel('avg taus')
-ax.set_title('average tau values')
+#ax.set_ylabel('avg taus')
+#ax.set_title('average tau values')
+ax.set_ylabel('similarity')
+ax.set_title('butterfly image results')
 ax.set_xticks(ind + 0.175)
 ax.set_xticklabels(ticks , fontsize=14)
 

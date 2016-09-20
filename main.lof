@@ -15,7 +15,15 @@
 \contentsline {figure}{\numberline {7.1}{\ignorespaces SIFT algorithm used for template matching}}{26}{figure.caption.186}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces SIFT kp descriptor example}}{26}{figure.caption.187}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces image retargeting example}}{27}{figure.caption.191}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces image single sift descriptor}}{28}{figure.caption.193}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces image retargeting example}}{27}{figure.caption.189}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces image single sift descriptor}}{28}{figure.caption.191}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces butterfly similarity results}}{30}{figure.caption.197}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces C = 2 , G = 2 , k = 3}}{30}{figure.caption.198}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces c2g2kinf}}{31}{figure.caption.199}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces c6g2kinf}}{31}{figure.caption.200}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces butterfly similarity results}}{32}{figure.caption.201}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces butterfly similarity results}}{32}{figure.caption.202}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces butterfly similarity results}}{33}{figure.caption.203}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces butterfly similarity results}}{33}{figure.caption.204}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
