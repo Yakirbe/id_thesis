@@ -50,11 +50,19 @@ def find_files_list(dis , pat):
 
 
 # Initiate SIFT detector
-sift = cv2.SIFT()    
+#sift = cv2.SIFT()    
     
 path_ims = "/home/yakir/idd/datasets/retargeting/"
+path_ims = "../../datasets/retargeting/"
 im_list = find_files_list(path_ims , "*.png")
+
+im_list_short = [x.split("\\")[-1] for x in im_list]
+
+#with open ("test.txt","w")as fp:
+#   for line in im_list_short:
+#       fp.write(line+"\n")
     
+print im_list_short
 labels = sorted(os.listdir(path_ims))
 ds = []
 

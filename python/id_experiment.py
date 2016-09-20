@@ -64,7 +64,7 @@ def interpolate(tr_ds_clf , tr_labels_clf):
     
         ds_sample["v_vec"] = v_vec
     
-        label = tr_labels_clf[tr_ds_clf.index(v_vec)]
+        label = int(tr_labels_clf[tr_ds_clf.index(v_vec)])
         label_num = labels.index(label)
         
         ds_sample["label"] = label_num
@@ -153,8 +153,8 @@ def embed(dataset , C = 4):
 
 path_ims = "/home/yakir/idd/datasets/retargeting/"
 path_ims = "../../datasets/retargeting/dataset-20110512"
-labels = sorted(os.listdir(path_ims))
-
+labels_names = sorted(os.listdir(path_ims))
+labels = range(38)
 # load dataset ----------------------------------------------------------------
         
 with open("fn.json") as f:
@@ -168,10 +168,11 @@ for d in ds:
 # set groups for classification and pair matching tasks -----------------------
     
 grps_clf = []
-for i in range(40,43,4):
+for i in range(20,80,4):
     grps_clf.append((i,i+1,i+2,i+3))
     
-        
+grps_clf = grps_clf[:]
+C = 2
 # set discrete extreme vals ---------------------------------------------------
 
 dis_min = 1000
@@ -188,21 +189,24 @@ for i in range(len(ds_new)):
 
 # separate to train-test
     
-test_pr = 0.2
 tr_set = []
 te_set = []
-for d in ds_new:
-    if random.uniform(0,1) <= test_pr:
-        te_set.append(d)
-    else:
-        tr_set.append(d)
-        
-# shuffle
-tr_set = random.sample(tr_set , len(tr_set))
-te_set = random.sample(te_set , len(te_set))
+ops_set = []
+labels_names = []
+i = 0
+for d in data:
+    tr_set.append({"vec":data[d]["ref"] , "label":i})
 
+    for v in [value for key, value in data[d]["ref_8"].iteritems()]:
+        te_set.append({"vec":v , "label":i})
+    for k in [key for key, value in data[d]["ref_8"].iteritems()]:
+        ops_set.append(k)
+        labels_names.append(d)
+    i += 1
 # generate dataset (train and test sets)
-
+tr_set = 100*tr_set
+tr_set = random.sample(tr_set , len(tr_set))
+#te_set = random.sample(te_set , len(te_set))
 
 
 #grp_ind = 0
@@ -233,7 +237,7 @@ for grp_ind in range(len(grps_clf)):
 
     # generate dis vecs
         
-    C = 6 
+   
     kmeans_flag = True     
     min_max_margin = 0.01         
     if kmeans_flag:
@@ -285,6 +289,7 @@ for g in te_grp:
     for i in range(len(te_grp_emb)):
         te_grp_emb[i] = te_grp_emb[i] + list(g[i]["embedded"].toarray()[0])
         te_grp_label[i] = g[i]["label"]
+        
     
     
 # train -----------------------------------------------------------------------
@@ -309,31 +314,27 @@ X_te = [te_grp_emb[samp] for samp in range(len(te_grp_emb))]
 Y_te = [te_grp_label[samp] for samp in range(len(te_grp_label))]
 
 tst_set = len(X_te)
-tp = 0.0
-fp = 0.0
+
+avg_dis = 0.0
+i = 0
 for x in X_te:
+    print
     
-    if X_te.index(x)%2 == 0:
-        print  X_te.index(x) , "done from" , len(X_te)
-        print  Y_te[X_te.index(x)] , clf.predict([x])[0]
+    dis = np.abs(Y_te[i] - clf.predict([x])[0])
+    avg_dis += dis
+    op = ops_set[i]
+    data[labels_names[i]]["D"][op] = dis
+    
+    
+    
+    if i%2 == 0:
+        print  i , "done from" , len(X_te)
+        print  Y_te[i] , clf.predict([x])[0]
+        print "distance = ", dis
+    
         
-#    if Y_te[X_te.index(x)] == clf.predict([x])[0]:
-#        tp += 1
-#    else:
-#        fp += 1
-#print "true positive = " , tp , "of" , tst_set
-#print "false positive = " , fp , "of" , tst_set
-#print "tp % = " , 100*tp/tst_set
-#print "fp % = " , 100*fp/tst_set
-#print "testing done\n\n\n\n"
-#
-#
-#
-#cons = test_ds_json[0]["label"]
+    i += 1
+print "avg dis = ", avg_dis/len(X_te)        
 
-#for s in test_ds_json:
-#    
-#    if s["label"] == cons:
-#        print s["v_vec"] , s["coef_vec"] , s["label"]
-
-
+with open("data.json" , "w") as f:
+    f.write(str(data))

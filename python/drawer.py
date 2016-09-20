@@ -19,8 +19,8 @@ import json
 #cv2.imwrite("butterfly_sift.png",image)
 
 
-with open("pairs_res.json","w") as f:
-    json.dump(results , f)
+#with open("pairs_res.json","w") as f:
+#    json.dump(results , f)
 
 #vec_inds = range(128)
 #neightbors = [57, 58, 59, 60, 61, 62, 63]
