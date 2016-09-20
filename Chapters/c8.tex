@@ -63,6 +63,7 @@ SVR model was trained with RBF kernel \cite{rbf}, and $C = 1e5$.
 \section{results}
 
 Let us observe the results of $ID$ similarity method with the various parameters. 
+As seen in \ref{k-inf} and \ref{k-3}, $ID$ metrics have outperformed almost all previous metrics in terms of correlation ($-1 \leq \tau \leq 1$) between metrics similarity and users correlation votes.
 
 
 \begin{table}[h]
@@ -114,11 +115,28 @@ Let us observe the results of $ID$ similarity method with the various parameters
 			\caption{Rank correlation with respect to the three highest rank results, including new $ID$ $(k = 3)$} 
 		\end{table}
 		
+		
+		
+This basic fact verifies our correctness of our multidimensional $ID$ embedding method, as well as its sub-sampling grouping method for memory saving.
+As described in \cite{retargeting}, SIFTflow \cite{siftflow} and EMD \cite{EMD} both relies on spatial descriptors, which may be most similar to human eye-brain interpretations of a difference/similarity among pairs of images. \\
+		
+		%-------------------------------------------------------------------------------------
+		
 		\begin{figure}[h] \label{bf_id}
 			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/bf_id}
 			\caption[butterfly similarity results]
 			{butterfly similarity results}
 		\end{figure}
+		
+		\begin{figure}[h] \label{bf_usr}
+			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/bf_usr}
+			\caption[butterfly similarity users votes]
+			{butterfly similarity users votes}
+		\end{figure}
+		
+In figures \ref{bf_id},\ref{bf_usr}, we demonstrate $ID$ similarity results on the butterfly image \ref{single_sift}, in comparison to the users votes. As seen on the similarity graph, some retargeting methods such warp \cite{warp} may have not that good similarity result in relation to the reference image, but in this scenario we observed the relative results of the ranking of all methods between users votes and our $ID$ metric.
+		
+		%-------------------------------------------------------------------------------------
 		
 		\begin{figure}[h] \label{c2g2k3}
 			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/c2g2k3}
@@ -132,34 +150,46 @@ Let us observe the results of $ID$ similarity method with the various parameters
 			{c2g2kinf}
 		\end{figure}
 		
+		%-------------------------------------------------------------------------------------
+		
+		\begin{figure}[h] \label{c6g2k3}
+			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/c6g2kinf}
+			\caption[c6g2kinf]
+			{c6g2kinf}
+		\end{figure}
+		
 		\begin{figure}[h] \label{c6g2kinf}
 			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/c6g2kinf}
 			\caption[c6g2kinf]
 			{c6g2kinf}
 		\end{figure}
 		
-		\begin{figure}[h] \label{bf_id}
-			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/bf_id}
-			\caption[butterfly similarity results]
-			{butterfly similarity results}
+		
+		%-------------------------------------------------------------------------------------
+		
+		\begin{figure}[h] \label{c6g5k3}
+			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/c6g5k3}
+			\caption[c6g5k3]
+			{c6g5k3}
 		\end{figure}
 		
-		\begin{figure}[h] \label{bf_id}
-			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/bf_id}
-			\caption[butterfly similarity results]
-			{butterfly similarity results}
+		\begin{figure}[h] \label{c6g5kinf}
+			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/c6g5kinf}
+			\caption[c6g5kinf]
+			{c6g5kinf}
 		\end{figure}
 		
-		\begin{figure}[h] \label{bf_id}
-			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/bf_id}
-			\caption[butterfly similarity results]
-			{butterfly similarity results}
+	
+		%-------------------------------------------------------------------------------------
+		
+		\begin{figure}[h] \label{c2g15k3}
+			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/c2g15k3}
+			\caption[c2g15k3]
+			{c2g15k3}
 		\end{figure}
 		
-		\begin{figure}[h] \label{bf_id}
-			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/bf_id}
-			\caption[butterfly similarity results]
-			{butterfly similarity results}
+		\begin{figure}[h] \label{c2g15kinf}
+			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/c2g15kinf}
+			\caption[c2g15kinf]
+			{c2g15kinf}
 		\end{figure}
-		
-		
