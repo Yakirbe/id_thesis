@@ -65,5 +65,5 @@
 \contentsline {section}{\numberline {8.2}Similarity with ID}{28}{section.189}
 \contentsline {section}{\numberline {8.3}parameters}{28}{section.190}
 \contentsline {section}{\numberline {8.4}results}{29}{section.191}
-\contentsline {chapter}{\numberline {9}Conclusions and discussion}{35}{chapter.204}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{37}{appendix.205}
+\contentsline {chapter}{\numberline {9}Conclusions and discussion}{37}{chapter.204}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{39}{appendix.205}
