@@ -162,6 +162,7 @@ class ID:
         self.ds = ds_out
         
         
+        
     def main_sngl_run(self):
         
         tr_set = []
@@ -530,7 +531,7 @@ for i in range(40,60,4):
 # labels indices
 
 path_ims = "/home/yakir/idd/datasets/retargeting/"
-path_ims = "C:\ofir_stuff_idd\datasets\dataset-20110512"
+#path_ims = "C:\ofir_stuff_idd\datasets\dataset-20110512"
 labels = sorted(os.listdir(path_ims))
 
 C_list = range(2,12,2)
