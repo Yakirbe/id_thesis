@@ -2,9 +2,7 @@
 
 
 from keras import backend as K
-import theano
 import theano.tensor as T
-
 from sklearn.datasets import make_blobs
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
@@ -49,13 +47,15 @@ def get_opt_k(X ,max_range):
     
 
 
-def cosine_(y_true, y_pred):
-    y_true = 200*K.l2_normalize(y_true, axis=-1)
+def custom_(y_true, y_pred):
+    C = 1
+    
+    y_true = K.l2_normalize(y_true, axis=-1)
     y_pred = K.l2_normalize(y_pred, axis=-1)
     return -K.mean(y_true * y_pred, axis=-1)
 
     
-sess = tf.Session()    
+sess = K.tensorflow_backend.tf.Session()    
 K.set_session(sess)
 
 y_true = K.variable(value=np.random.rand(10))
@@ -64,8 +64,10 @@ ans1 = objectives.hinge(y_true,y_pred)
 ans2 = objectives.mean_absolute_error(y_true,y_pred)
 ans3 = objectives.mean_squared_error(y_true,y_pred)
 ans4 = objectives.poisson(y_true,y_pred)
-ans5 = cosine_(y_true,y_pred)
+ans5 = custom_(y_true,y_pred)
 with sess.as_default():
+    print type(y_true)
+    print type(y_pred)
     print y_pred.eval()
     print y_true.eval()
     print ans1.eval()

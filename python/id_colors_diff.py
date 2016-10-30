@@ -197,7 +197,6 @@ for d in ds_new:
 
 ds = random.sample(ds , len(ds))
 
-C = 2
 # set discrete extreme vals ---------------------------------------------------
 
 dis_min = 1000
@@ -216,12 +215,12 @@ for i in range(len(ds)):
     
 tr_set = []
 te_set = []
-ops_set = []
-labels_names = []
 
 # generate dataset (train and test sets)
-tr_set = random.sample(ds , int(0.8*len(ds)))
-te_set = random.sample(ds , int(0.2*len(ds)))
+
+rate_tr = 0.8
+tr_set = ds[:int(rate_tr*len(ds))]
+te_set = ds[int(rate_tr*len(ds)):]
 
 
 # generate dis vecs
@@ -284,39 +283,40 @@ for i in range(len(test_ds_json)):
     
 # train -----------------------------------------------------------------------
     
-print "training..."
+
 X_tr = [s for s in tr_emb]
 Y_tr = [s for s in tr_lab]
 
-#clf = svm.SVR(C = 1e5 , decision_function_shape='ovr' , kernel='rbf' , cache_size  = 200)
-clf = svm.SVR(C = 1e5 ,  kernel='linear' , cache_size  = 200)
-clf.fit(X_tr, Y_tr) 
-
-print "training done\n"
-
-
-# test ------------------------------------------------------------------------
-
-        
-print "testing..."
-
+#
+#print "training..."
+#clf = svm.SVR(C = 1e5 ,  kernel='linear' , cache_size  = 200)
+#clf.fit(X_tr, Y_tr) 
+#
+#print "training done\n"
+#
+#
+## test ------------------------------------------------------------------------
+#
+#        
+#print "testing..."
+#
 X_te = [s for s in te_emb]
 Y_te = [s for s in te_lab]
-
-tst_set = len(X_te)
-
-avg_dis = 0.0
-i = 0
-for x in X_te:
-    print
-    
-    dis = np.abs(Y_te[i] - clf.predict([x])[0])
-    avg_dis += dis
-    
-    if i%2 == 0:
-        print  i , "done from" , len(X_te)
-        print  Y_te[i] , clf.predict([x])[0]
-        print "distance = ", dis
-    i+=1
-print "avg dis = ", avg_dis/len(X_te)        
+#
+#tst_set = len(X_te)
+#
+#avg_dis = 0.0
+#i = 0
+#for x in X_te:
+#    print
+#    
+#    dis = np.abs(Y_te[i] - clf.predict([x])[0])
+#    avg_dis += dis
+#    
+#    if i%2 == 0:
+#        print  i , "done from" , len(X_te)
+#        print  Y_te[i] , clf.predict([x])[0]
+#        print "distance = ", dis
+#    i+=1
+#print "avg dis = ", avg_dis/len(X_te)        
 
