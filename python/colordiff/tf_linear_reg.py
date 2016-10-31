@@ -36,8 +36,8 @@ Y = tf.placeholder("float")
 w = tf.Variable(np.zeros(len(trX[0,:]) , dtype = np.float32), name="weights") # create a shared variable (like theano.shared) for the weight matrix
 y_model = model(X, w)
 
-beta = 16000
-learning_rate = 0.005
+beta = 15000
+learning_rate = 0.05
 n_samples = len(X_tr)
 
 # Loss function using L2 Regularization
@@ -64,7 +64,6 @@ with tf.Session() as sess:
             
         W = np.asarray(w.eval())
         find_non_zero(W)
-        
         
         
 avg_dis = 0.0

@@ -94,8 +94,10 @@ def interpolate(tr_ds_clf , cvecs):
         #print v_vec , label , label_num   
         
         lows = []
+        
+        v_ind = 0
         for v_i in v_vec["vec"]:
-            c_vec = cvecs[v_vec["vec"].index(v_i)]
+            c_vec = cvecs[v_ind]
             low_bound = np.argmin([np.abs(x - v_i) for x in c_vec])
             
             if v_i < c_vec[low_bound] and low_bound <> 0:
@@ -103,13 +105,17 @@ def interpolate(tr_ds_clf , cvecs):
                 
             lows.append(low_bound)
             
+            v_ind += 1 
         ds_sample["lows"] = lows
-    
         ##find hypercube
         hypercube = []
+        
+        l_ind = 0
         for l in lows:
-            c_vec = cvecs[lows.index(l)]
+            c_vec = cvecs[l_ind]
             hypercube.append([c_vec[l] ,c_vec[l + 1]])
+            
+            l_ind += 1
         ds_sample["hypercube"] = hypercube
         #dataset_labeled[samp]["cube"] = cube
                                         
@@ -123,6 +129,8 @@ def interpolate(tr_ds_clf , cvecs):
         coef_vec = list(np.linalg.solve(np.transpose(np.asarray(ref[1:])) , n_vec))
         coef_vec.insert( 0 , 1 - sum(coef_vec) )
         
+        assert all(i >= 0.0 for i in coef_vec)
+        assert np.abs(np.sum(coef_vec) - 1.0) < 0.0000000001 , "sum is not 1, but:{}".format(str(np.sum(coef_vec)))
         ds_sample["refs"] = ref
         ds_sample["coef_vec"] = coef_vec
         #print  ds_sample["coef_vec"] , ds_sample["label"]
@@ -137,6 +145,7 @@ def interpolate(tr_ds_clf , cvecs):
     
     return ds_json
     
+    
 
 def embed(dataset ,cvecs):
     
@@ -144,9 +153,14 @@ def embed(dataset ,cvecs):
     ds_out = dataset
     
     for samp in range(len(dataset)):
-        #print samp
+        
+#        if samp%100 == 0:
+#            print dataset[samp]["coef_vec"]
+#            print dataset[samp]["v_vec"]
+#            print 
+        
         C = max([len(cv) for cv in cvecs])
-        emb_vec = [0.0]*len(c_vec)**(len(dataset[samp]["v_vec"]))
+        emb_vec = [0.0]*C**(len(dataset[samp]["v_vec"]))
         
         refs_bounded = []
         
@@ -157,7 +171,11 @@ def embed(dataset ,cvecs):
             ind = 0
             for i in range(len(refs_bounded[0])-1): 
                 ind += C*refs_bounded[j][i]
+                #print j,i,ind
+                
             ind += refs_bounded[j][-1]
+            #print ind
+            #print
             
             emb_vec[ind] = dataset[samp]["coef_vec"][j]
         emb_vec = csr_matrix(emb_vec , dtype=np.float64)
@@ -190,11 +208,12 @@ for d in ds:
 ds_new = ds_new[0]    
 ds= []
 for d in ds_new:
-    ds.append({"vec":d["v1"] + d["v2"] , "label":d["dis"]})
-#ds_new = 5*ds_new
-# set groups for classification and pair matching tasks -----------------------
+    vec_app = d["v1"] + d["v2"]
+    vec_app = [int(255*el) for el in vec_app]
+    ds.append({"vec":vec_app , "label":d["dis"]})
     
 
+#shuffle
 ds = random.sample(ds , len(ds))
 
 # set discrete extreme vals ---------------------------------------------------
@@ -208,6 +227,8 @@ for i in range(len(ds)):
         
     if dis_min > np.min(ds[i]["vec"]):
         dis_min = np.min(ds[i]["vec"])
+        
+print "dismin = {} , dismax = {}".format(dis_min,dis_max)
         
 # classification --------------------------------------------------------------
 
@@ -226,14 +247,14 @@ te_set = ds[int(rate_tr*len(ds)):]
 # generate dis vecs
    
 kmeans_flag = True     
-min_max_margin = 0.01         
+min_max_margin = 0.01       
+  
 if kmeans_flag:
     cvecs = []
     for dim in range(len(ds[0]["vec"])):
         X = []
         for t in tr_set:
             X.append([t["vec"][dim]])
-            
             
         ds_temp =(np.array(X).reshape(-1, 1))
         X = np.asarray(X)
@@ -243,10 +264,12 @@ if kmeans_flag:
         c_vec = (k_means.cluster_centers_)
         
         c_vec = sorted([cv[0] for cv in c_vec])
-        c_vec.insert(0 , dis_min -min_max_margin)
+        c_vec.insert(0 , dis_min - min_max_margin)
         c_vec.append(dis_max + min_max_margin)
         
         cvecs.append(c_vec)
+        
+print cvecs        
 print "c vector genarated\n"   
 
 
@@ -283,9 +306,25 @@ for i in range(len(test_ds_json)):
     
 # train -----------------------------------------------------------------------
     
-
+def remove_zero_col(X_tr):
+    
+    X_tr = np.asarray(X_tr)
+    X_temp = X_tr.transpose()
+    X_temp = X_temp[~(X_temp==0).all(1)]
+    X_temp = X_temp.transpose()
+    X_tr = X_temp.tolist()
+    
+    return X_tr
+    
+    
+    
 X_tr = [s for s in tr_emb]
 Y_tr = [s for s in tr_lab]
+
+X_tr = remove_zero_col(X_tr)
+
+
+
 
 #
 #print "training..."
@@ -302,7 +341,10 @@ Y_tr = [s for s in tr_lab]
 #
 X_te = [s for s in te_emb]
 Y_te = [s for s in te_lab]
-#
+
+
+X_te = remove_zero_col(X_te)
+
 #tst_set = len(X_te)
 #
 #avg_dis = 0.0
