@@ -30,7 +30,7 @@ def baseline_model(lendim):
 
 
 
-def trainmodel(lendim):
+def trainmodel(lendim ,X_train, y_train ):
     model = baseline_model(lendim)
     
     #train
@@ -50,7 +50,7 @@ y_test = Y_te
 lendim = len(X_test[0])
 
 #score = model.evaluate(X_test, y_test, batch_size=223)
-model = trainmodel(lendim)
+model = trainmodel(lendim , X_train, y_train)
 #model = load_model("linreg.hdf5")
 #load model
 test_el = np.asarray(X_test[0])
@@ -58,7 +58,7 @@ test_el = np.asarray(X_test[0])
 
 
 avg_dis = 0.0
-for i in range(223):
+for i in range(len(Y_te)):
     print i
     testel = np.reshape(X_test[i] , (1,lendim))
     find_non_zero(list(testel[0]))

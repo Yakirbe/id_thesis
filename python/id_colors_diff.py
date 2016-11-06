@@ -324,6 +324,28 @@ Y_tr = [s for s in tr_lab]
 X_tr = remove_zero_col(X_tr)
 
 
+def zero_pad_lower(X_tr ,X_te):
+    
+    l1 = len(X_te[0]) 
+    l2 = len(X_tr[0])
+    
+    print l1, l2
+    if l1  ==  l2:
+        print "equal"
+        return X_tr ,X_te
+    elif l1 > l2:
+        xout = []
+        for x in X_tr:
+            xout.append(x + [0.0]*int(l1-l2))
+        print "l1>l2"
+        return xout ,X_te    
+    elif l2 > l1:
+        xout = []
+        for x in X_te:
+            xout.append(x + [0.0]*int(l2-l1))        
+        print "l2>l1"
+        return X_tr ,xout        
+    
 
 
 #
@@ -345,6 +367,9 @@ Y_te = [s for s in te_lab]
 
 X_te = remove_zero_col(X_te)
 
+X_tr ,X_te = zero_pad_lower(X_tr ,X_te)
+
+print len(X_te[0]) , len(X_tr[0])
 #tst_set = len(X_te)
 #
 #avg_dis = 0.0
