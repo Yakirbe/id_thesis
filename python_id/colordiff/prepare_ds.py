@@ -11,6 +11,7 @@ from colormath.color_objects import LabColor, sRGBColor
 from colormath.color_diff import delta_e_cie1976, delta_e_cie1994, \
     delta_e_cie2000, delta_e_cmc
 
+import json
 
 def get_color_list(string):
     
@@ -37,7 +38,7 @@ def get_rgb_label_set(kd_d  , refs_d , th = 5):
             color1_srgb = convert_color(color1, sRGBColor, illuminant='D65')
             de_c2k =  delta_e_cie2000(color1, color2)
             im_num = i%len(refs_d)
-            if de_c2k <= th and j == im_num:
+            if de_c2k <= th:# and j == im_num:
                 tot +=1
                 final_set.append({"v1":color1_srgb.get_value_tuple(),"v2":color2_srgb.get_value_tuple(),"dis":de_c2k})
                 print "tot = {}".format(tot)
@@ -65,6 +66,18 @@ fl_km = get_rgb_label_set(km_d , refs_d)
 fl_kd = get_rgb_label_set(kd_d , refs_d)
 fl_nc = get_rgb_label_set(nc_d , refs_d)
 fl_sd= get_rgb_label_set(sd_d , refs_d)
+    
 
+final_set_fw = fl_km + fl_kd + fl_nc# + fl_sd    
+with open("rgb_set_tr_cam.json" , "w") as f:
+    for samp in final_set_fw:
+        json.dump(samp,f)#f.write(samp)
+        f.write("\n")
+    
+final_set_te_fw = fl_sd    
+with open("rgb_set_te_cam.json" , "w") as f:
+    for samp in final_set_te_fw:
+        json.dump(samp,f)#f.write(samp)
+        f.write("\n")
 
 
