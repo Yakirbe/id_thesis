@@ -105,45 +105,11 @@ we now describe our results as compared to the original paper results as describ
 
 Unseen camera case was taken as assigning one of the cameras involved in dataset generation as test set, where the other 3 functions as train set.
 
+MSE =  1.01540043528
+MaE =  0.828675364942
+stress =  26.6200528459
 
-	\subsubsection{Dataset properties}
-	
-		From a total 13500 patches pairs set, the divided train-test sets amounts are:
-		\begin{itemize}
-			\item \textbf{train set size} = $8084$ 
-			\item \textbf{test set size} = $5416$ (Sony DCR-SR32 camera set)
-		\end{itemize}
-		
-		train/set ration = $3/2$
-
-	\subsubsection{Centers locations}
-	
-	Centers locations are shown as extracted via cross-validation for finding optimal number of centers per dimension, and k-means for extracting centers values. \\
-	k-means actually found only the inner centers, since the outer centers are fixed bounds.\\
-
-
-	$
-	\begin{matrix}  \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \qquad \quad  c_3 \qquad \quad c_4 \qquad \quad c_5 \quad \end{matrix}\\
-			
-	
-	\begin{pmatrix}
-			     -0.01 &     -0.01 &    -0.01 & -0.01   & -0.01   & -0.01    \\
-				100.46 &   116.35 &    82.81 &    95.72 & 115.95 & 88.81     \\
-				153.96 &   140.96 &   126.01 &   159.54 & 143.60 & 143.38    \\
-				       &          &   147.80 &          &        &             \\
-	     		 255.01 &  255.01 &   255.01 &   255.01 &  255.01 &  255.01 & \\
-			\end{pmatrix}
-	$ 
-\\
-	
-
-	As seen in centers list, edges are equal per dimension $[-0.01 , 255.01]$ for data bounding.\\
-	
-	
-	$p-value = 4.5 \cdot 10 ^{-05}$
-% %	
-	
-	
+Ttest_1sampResult(statistic=-2.2106047816052437, pvalue=0.027146795573210682)
 	
 
 \subsection{Unseen Camera}
