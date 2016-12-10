@@ -5,6 +5,7 @@ from keras.regularizers import *
 from keras.optimizers import *
 import numpy as np
 from keras.models import load_model
+from scipy import stats
 
 
 
@@ -56,8 +57,8 @@ y_test = Y_te
 lendim = len(X_test[0])
 
 #score = model.evaluate(X_test, y_test, batch_size=223)
-model = trainmodel(lendim , X_train, y_train)
-#model = load_model("linreg.hdf5")
+#model = trainmodel(lendim , X_train, y_train)
+model = load_model("linreg.hdf5")
 #load model
 test_el = np.asarray(X_test[0])
 
@@ -66,20 +67,18 @@ test_el = np.asarray(X_test[0])
 avg_dis = 0.0
 min_pred = 1000
 max_pred = -1000
+
+y_pred = []
 for i in range(len(Y_te)):
-    print i
     testel = np.reshape(X_test[i] , (1,lendim))
     #find_non_zero(list(testel[0]))
-    print y_test[i] ,  model.predict(testel)[0][0]
-    print
+    y_pred.append(model.predict(testel)[0][0])
     avg_dis += np.abs(model.predict(testel)[0][0]- y_test[i])
-    if model.predict(testel)[0][0] > max_pred:
-        max_pred = model.predict(testel)[0][0]
-    if model.predict(testel)[0][0] < min_pred:
-        min_pred = model.predict(testel)[0][0]
+    
 
     
 avg_dis = avg_dis/len(X_te)
 print "avg dis = ", avg_dis
-print "min_pred = " , min_pred
-print "max_pred = " , max_pred
+
+m = np.mean(y_test)
+print stats.ttest_1samp(y_pred, m)

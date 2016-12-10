@@ -24,7 +24,7 @@ def zero_pad(X_tr , max_len = -1):
     
     
 relevant_path = "../sets_jsons/"
-relevant_path = "../sets_jsons_cam/"
+#relevant_path = "../sets_jsons_cam/"
 included_extenstions = ['json']
 file_names = sorted([fn for fn in os.listdir(relevant_path)
               if any(fn.endswith(ext) for ext in included_extenstions)])
