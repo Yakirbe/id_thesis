@@ -133,7 +133,7 @@ Unseen camera case was assembled by a certain percentage of all data set as trai
 				\item \textbf{test set size} = $2700$
 			\end{itemize}
 			
-			train/set ration = $4/1$
+			train/set ratio = $4/1$
 			
 		\subsubsection{Centers locations}
 		
@@ -181,7 +181,7 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 			\item \textbf{test set size} = $5416$ (Sony DCR-SR32 camera set)
 		\end{itemize}
 		
-		train/set ration = $3/2$
+		train/set ratio = $3/2$
 
 	\subsubsection{Centers locations}
 	
@@ -220,6 +220,14 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 
 
 \subsection{Comparison}
+Let us treat our results versus the original paper's results.
+\ref{original paper results} shows results for either camera/color scenarios, for both model assessment tools - MAE, STRESS. \\
+
+The \ref{original paper results} charts' x - axes describes the number of clusters been used in their embedding algorithm. \\
+
+Their minimal values on both scenarios are > 0.9 for MAE and > 40 for STRESS, where our results are < 0.85 for MAE and < 30 for STRESS, all for a $p - value$ with a similar magnitude to theirs. \\
+
+As clearly seen, our results outperforms their error scores.
 
 
 \begin{figure}[h] \label{original paper results}
