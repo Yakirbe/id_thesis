@@ -6,7 +6,7 @@
 
 In this chapter we display a novel usage of our new the $ID$ attributes and qualities.
 
-Here we will use our $ID$ method in order to obtain a perceptual colors distance metric learning, which is a high demanded function in computer vision region. Our examination is based and referring to \cite{perp_color}, which developed a local metric for this problem. 
+Here we will use our $ID$ method in order to obtain a perceptual colors distance metric learning, which is a high demanded function in computer vision region. Our examination is based and referring to \cite{perp_color}, which developed a local metric embedding method for this problem. 
 
 This set of experiments tries to adapt a perceptual color difference metrics, based on various color samples originated from several cameras, angles, illuminations etc.
 \\
@@ -62,7 +62,7 @@ Then, $ID$ learning method will try to learn some similarity models according to
 \end{itemize}
 
 \subsection{Interpolation}
-Data dimension is of course $n=3$ (for lab/RGB \cite{RGB} coordinates), and for an object pair the dimension is $2n=6$.
+Data dimension in our scenarios is of course $n=3$ (for lab/RGB \cite{RGB} coordinates), and for an object pair the dimension is $2n=6$. \\
 As described in \ref{Chapter3}, interpolation is performed dimension-wise along the training set, after selecting data center per dimension by manual/automatic method.
 \\
 In our experiment we have selected an automatic cross validation \cite{cross validation} method for assessing the optimal number of centers per dimension, and find those by using k-means \cite{kmeans} algorithm.
@@ -101,14 +101,13 @@ Where n is dataset size. \\
 
 STRESS index is measured as follows:
 \begin{equation}
-STRESS = \sqrt{100 \cdot \dfrac{\sum_{i}{(y^{pred}_i - F \cdot y^{test}_i)^2}}{\sum_{i}{F^2 \cdot (y^{test}_i)^2 }}}
+STRESS = \sqrt{100 \cdot \dfrac{\sum\limits_{i}{(y^{pred}_i - F \cdot y^{test}_i)^2}}{\sum\limits_{i}^{}{F^2 \cdot (y^{test}_i)^2 }}}
 \end{equation}
 
 Where F factor is assembled as:
 \begin{equation}
-F = \dfrac{\sum_{i}{(y^{pred}_i)^2}}{\sum_{i}{y^{test}_i \cdot y^{pred}_i }}
+F = \dfrac{\sum\limits_{i}{(y^{pred}_i)^2}}{\sum\limits_{i}{y^{test}_i \cdot y^{pred}_i }}
 \end{equation}
-
 
 
 
@@ -120,7 +119,7 @@ F = \dfrac{\sum_{i}{(y^{pred}_i)^2}}{\sum_{i}{y^{test}_i \cdot y^{pred}_i }}
 
 we now describe our results as compared to the original paper results as described in \ref{original paper results}
 
-% %
+
 \subsection{Unseen Colors}
 
 Unseen camera case was assembled by a certain percentage of all data set as train set, and the rest as test set. In this experiment we have taken the train set size to be $80 \%$ of the total data set.
@@ -153,19 +152,19 @@ Unseen camera case was assembled by a certain percentage of all data set as trai
 		     		 255.01 &  255.01 &   255.01 &   255.01 &  255.01 &  255.01 & \\
 				\end{pmatrix}$\\
 
-		
+
 		In this scenario, there are 4 extracted centers per dimension besides the $3^{rd}$ one, which has 7 extracted centers. This difference may be since its ($3^{rd}$ dimension of the paired vector) variance is much higher than the rest.
 
-	\subsubsection{Experiment Numbers}	
+	\subsubsection{Experiment Figures}
+	
+	Our model provides the following figures:
+
 	\begin{itemize}
 	\item 	p-value = $3.9 \cdot 10 ^{-03}$
 	\item 	STRESS = $26.62$
 	\item 	MAE = $0.80$
 	
 	\end{itemize}
-
-
-
 
 
 \subsection{Unseen Camera}
@@ -186,11 +185,11 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 	\subsubsection{Centers locations}
 	
 	Centers locations are shown as extracted via cross-validation for finding optimal number of centers per dimension, and k-means for extracting centers values. \\
-	k-means actually found only the inner centers, since the outer centers are fixed bounds.\\
+	k-means actually found only the inner centers, since the outer centers are fixed bounds.
 
 
 	$
-	\begin{matrix}  \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \qquad \quad  c_3 \qquad \quad c_4 \qquad \quad c_5 \quad \end{matrix}\\
+	\begin{matrix}  \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \qquad \quad  c_3 \qquad \quad c_4 \qquad \quad c_5 \quad \end{matrix}
 			
 	
 	\begin{pmatrix}
@@ -206,7 +205,8 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 
 	As seen in centers list, edges are equal per dimension $[-0.01 , 255.01]$ for data bounding.\\
 	
-	\subsubsection{Experiment Numbers}	
+	\subsubsection{Experiment Figures}	
+	Our model provides the following figures:	
 	\begin{itemize}
 	\item 	p-value = $4.5 \cdot 10 ^{-05}$
 	\item 	STRESS = $25.59$
@@ -214,21 +214,12 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 	
 	\end{itemize}
 
-
+%
 \\
 
 
 
 \subsection{Comparison}
-Let us treat our results versus the original paper's results.
-\ref{original paper results} shows results for either camera/color scenarios, for both model assessment tools - MAE, STRESS. \\
-
-The \ref{original paper results} charts' x - axes describes the number of clusters been used in their embedding algorithm. \\
-
-Their minimal values on both scenarios are > 0.9 for MAE and > 40 for STRESS, where our results are < 0.85 for MAE and < 30 for STRESS, all for a $p - value$ with a similar magnitude to theirs. \\
-
-As clearly seen, our results outperforms their error scores.
-
 
 \begin{figure}[h] \label{original paper results}
 			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/original_paper_results}
@@ -239,4 +230,21 @@ As clearly seen, our results outperforms their error scores.
 			the STRESS baseline of $\Delta E_{00}$ . For the sake of readability, we have not plotted the
 			mean baseline of $\Delta E_{00}$ at 1.70.}
 \end{figure}
+
+
+Let us treat our results versus the original paper's results.
+\ref{original paper results} shows results for either camera/color scenarios, for both model assessment tools - MAE, STRESS. \\
+The \ref{original paper results} charts' x - axes describes the number of clusters been used in their embedding algorithm. \\
+Their minimal values on both scenarios are $> 0.9$ for MAE and $> 40$ for STRESS, where our results are $< 0.85$ for MAE and $< 30$ for STRESS, all for a $p - value$ with a similar magnitude to theirs. \\
+As clearly seen, our results applies the following conditions:
+\begin{itemize}
+\item Outperforming reference original paper error scores
+\item Small p-values which proves the validity of our method, since there is a reasonable assumption that our models provide close dataset approximation
+\end{itemize}
+
+This information officially confirms the assumption that our method is valid to work with in terms of reliability. In the following chapter we will discuss the further explorations should be performed to examine the rest of performance criterias mentioned above.
+
+
+
+
 
