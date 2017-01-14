@@ -2,33 +2,23 @@
 
 \chapter{Time Complexity} % Main chapter title
 
-\label{Chapter6} % For referencing the chapter elsewhere, use \ref{Chapter1} 
-
+\label{Chapter6} 
 %----------------------------------------------------------------------------------------
-
-% Define some commands to keep the formatting separated from the content 
-%\newcommand{\keyword}[1]{\textbf{#1}}
-%\newcommand{\tabhead}[1]{\textbf{#1}}
-%\newcommand{\code}[1]{\texttt{#1}}
-%\newcommand{\file}[1]{\texttt{\bfseries#1}}
-%\newcommand{\option}[1]{\texttt{\itshape#1}}
-
-%----------------------------------------------------------------------------------------
-Time complexity for each step of the IDDND function building is displayed in this section. 
-Learning / training timing was excluded and will be discussed at ()
+Time complexity for each step of the $IDDND$ function building is displayed in this section. 
+Learning / training timing was excluded and will be discussed at chapter \ref{Chapter8}
 
 
 \section{Discretization}
 
 	Discretization implementation is not specified in this paper since we are using a OTS method such $k-means$ clustering algorithm, although This step may be applied by various methods. 
-	The common ones are k-means or their variation. We will try to refer to $k-means$ \ref{---} based methods.
-	Though the problem of finding the global optimum of the $k-means$ objective function:
+	The common ones are k-means or their variation. Here we refer to $k-means$ \cite{kmeans} based methods.
+	Even though the problem of finding the global optimum of the $k-means$ objective function:
 	
 	\begin{equation}
 	arg\min_s\sum_{i=1}^{k} \sum_{x_j \in S_i}^{}\|x_j - \mu_i \|^2
 	\end{equation}
 	
-	is NP-hard[].
+	is NP-hard[]. \\
 	
 	However, running a fixed number i of iterations of the standard algorithm consumes only: \\ \\ \\
 	\textbf{$O(i \dot k \dot n \dot d)$} \\ \\
@@ -41,39 +31,24 @@ Learning / training timing was excluded and will be discussed at ()
     for n points in d dimensions
 	
 
-
-
-
-
-
 \section{Interpolation}
 
-As described above(), we divide the interpolation phase time complexity for several phases:
+As described above \ref{Chapter3}, we divide the interpolation phase time complexity for several phases:
 
 
 
 
 \section{Find the bounding hypercube}
 
-Finding a given vector’s bounding box is actually finding a bounding pair for each element in this vector. Since the means vectors are sorted then this step takes n times (for n dimensions) $log(n)$ , which is the time complexity for binary search.
-In total, time complexity of this step:  
-
-\\
-\textbf{$O(nlog(n))$}
-\\
+	Find a given vector’s bounding box is actually find a bounding pair for each element in this vector. Since the means vectors are sorted then this step takes n times (for n dimensions) $log(n)$ , which is the time complexity for binary search. In total, time complexity of this step is $O(nlog(n))$
+	\break
 
 
 \section{Find the bounding simplex}
 
 
 Finding the bounding simplex is equivalent to find an obeying permutation over the given vector.
-Time complexity for this step is therefore: \\$O(nlog(n))$\\. While using common sorting algorithms such Quicksort[]/Merge Sort[]/Timsort[].
-
-
-
-
-
-
+Time complexity for this step is therefore: $O(nlog(n))$\\. While using common sorting algorithms such Quicksort \cite{quicksort}/Merge Sort\cite{mergesort}/Timsort[\cite{timsort}.
 
 
 \section{ID coefficients extraction}
@@ -87,11 +62,8 @@ total time complexity for the interpolation step method is: \\
 $ O(nlog(n)) + O(nlog(n)) + O(n) = O(nlog(n)) $
 
 
-
-
-
 \section{Assigning}
 
-Data assigning of the sparse vector is purely flattening a matrix into a vector shape, which takes $O(1)$ \ref{flatt}
+Data assigning of the sparse vector is purely flattening a matrix into a vector shape, which takes $O(1)$ \ref{fig:33}
 
 

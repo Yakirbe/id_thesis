@@ -28,7 +28,7 @@ We begin by dataset discretization, which is equivalent in all the use cases dis
 Dataset is being discretized by performing clustering on its dimensions and find C centers for discretization. This step should maintain the dataset extreme values within the extreme values of the C vector (so in the interpolation phase there will be valid values for all data elements \ref{fig:4.1}.
 
 
-\begin{figure} \label{fig:4.1}
+\begin{figure} 
 \centering
 		
 		\begin{pmatrix} v_1 ,  v_2 , \dots , \dots , v_{n-1}, v_n} \end{pmatrix}\\
@@ -43,6 +43,7 @@ Dataset is being discretized by performing clustering on its dimensions and find
 		\end{pmatrix}
 		\caption[discretization matrix]
 		{discretization points set $W$ as built from a single dimensional dataset. this set is vectors' length may vary among dimensions}
+\label{fig:4.1}		
 \end{figure}
 
 

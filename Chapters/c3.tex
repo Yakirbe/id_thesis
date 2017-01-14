@@ -26,11 +26,11 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 	
 	\subsection{Discretization}
 
-	\begin{}
+%	\begin{}
 
-		\qquad \qquad \qquad \quad \begin{pmatrix} c_{1(1)} , \dots , \dots , \dots , c_{1(n)} \end{pmatrix}\\
+	$	\qquad \qquad \qquad \quad \begin{pmatrix} c_{1(1)} , \dots , \dots , \dots , c_{1(n)} \end{pmatrix}\\
 		
-		$W$ =		\begin{pmatrix} c_{2(1)} \\ \vdots \\ \vdots \\ \vdots \\ \vdots \\c_{2(m)} \end{pmatrix}
+		W =		\begin{pmatrix} c_{2(1)} \\ \vdots \\ \vdots \\ \vdots \\ \vdots \\c_{2(m)} \end{pmatrix}
 		\begin{pmatrix}
 			s_{1,1}&   \dots&   \dots&   \dots& s_{1,m}\\
 			\vdots& \ddots &        &        & \vdots \\
@@ -38,13 +38,13 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 			\vdots&        &        & \ddots & \vdots  \\
 			\vdots&        &        &        & \vdots  \\
 			s_{n,1}  & \dots  & \dots  & \dots  & s_{n,m}
-		\end{pmatrix}
+		\end{pmatrix} $ \\ 
 		\caption[discretization matrix]
 		{discretization matrix $W$ as built from 2 vectors $c_1 , c_2$. this matrix is 2D as it is an outcome of 2 - 1D vectors discretization processes}
 	\end{figure}
 
 	
-	as described in \ref{Chapter2} 1D-IDD describes bin-to-bin distance between two samples from single dimensional spaces. Each dimension is clustered and sorted into $C_i$ - dimensional: $\overrightarrow{c} \in \Re^{C_i}$ vector.
+	as described in \ref{Chapter2}, $1D-IDD$ describes bin-to-bin distance between two samples from single dimensional spaces. Each dimension is clustered and sorted into $C_i$ - dimensional: $\overrightarrow{c} \in \Re^{C_i}$ vector.
 	The vector's pair defines the shape of a distance matrix $W \in \Re^{C_i \times C_j}$ , where each element $W_i,j$ describes the distance between two cluster centers form vectors - $v_a , v_b$ \\
 	
 	
@@ -65,7 +65,15 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 		$a , b$ are parametrization function for both $\alpha , W$
 		$t$ is the scanning index for all arguments among this expression
 	\end{itemize}
-		
+	
+	\begin{figure}
+	  \centering
+	  	\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/flatten}
+
+	  \caption{Close-up of a gull}
+	  \label{fig:gull}
+	\end{figure}
+	Figure \ref{fig:gull} shows a photograph of a gull.	
 	Please notice that there are only 4 elements different than zero at $\alpha$, so this expression represents the non-zero elements only provides value to $1DIDD$ expression \\
 	
 	$a,b$ parameterizations are described as:
@@ -83,12 +91,8 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 		
 		
 	\newcommand{\MyNewVariable}{(0.3 , 0.8)}
-
 				
 	\begin{figure}[h]
-
-
-		\label{fig:32}  
 			\centering
 			\scalebox{0.6}
 			{
@@ -178,7 +182,7 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 		the \textcolor{green}{green} surface correlates with the \textcolor{green}{$(0,0)$} vertex's coefficient and
 		the \textcolor{red}{red} surface correlates with the \textcolor{red}{$(0,1)$} vertex's coefficient.}
 		
-
+		\label{fig:32}
 		\end{figure} 
 		
 		
@@ -186,7 +190,7 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 		
 		
 		
-		
+
 		For a given data pair, bounding square (2D-cube) is assembles from the clusters vectors per feature.
 		this square is divided into 2 triangles (simplices) along its main diagonal, as described in figure \ref{fig:32}.
 		
@@ -198,7 +202,7 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 			
 	\subsection{Assigning}
 	Now that we have ID coefficients (sparse) vector, we may assign it to the ID output vector shape.
-	ID output vector is sized by the flatten vector of the discretization matrix $W$, which may be flatten row-wise/column-wise \ref{flatt}.\\
+	ID output vector is sized by the flatten vector of the discretization matrix $W$, which may be flatten row-wise/column-wise \ref{fig:33}.\\
 	Each vertex in the output vector receives the value calculated for its equivalent index at the opposite triangles surfaces phase.
 	
 
@@ -306,12 +310,12 @@ The selected coefficients calculation process for our embedding is the Barycentr
 		A more efficient way (time complexity $O(n)$) providing the coefficients to a given point is by using barycentric coordinates of a point $\overrightarrow{p}$.
 		Given a point $\overrightarrow{p} \in \Re^{2n}$ , the following formulation applies under the assumption the hypercube bounding the point is mapped to a unit hypercube, the bounding simplex of the point may be: \\ \\ 
 		
-		\begin{bmatrix} 0\\ 0\\ \vdots \\ 0\\ 0\\ \end{bmatrix} , 
+$		\begin{bmatrix} 0\\ 0\\ \vdots \\ 0\\ 0\\ \end{bmatrix} , 
 		\begin{bmatrix} 0\\ 0\\ \vdots \\ 0\\ 1\\ \end{bmatrix} , 
 		\dots , 
 		\begin{bmatrix} 0\\ 1\\ \vdots \\ 1\\ 1\\ \end{bmatrix} , 
 		\begin{bmatrix} 1\\ 1\\ \vdots \\ 1\\ 1\\ \end{bmatrix}
-		
+$		
 		
 		so the equation we shall use is this:
 		
@@ -418,11 +422,12 @@ The selected coefficients calculation process for our embedding is the Barycentr
 		
 		
 		$\lambda_1$:\\
-				
+		
 		\begin{equation}
-		\begin{align*}
+		\begin{align*}		
+
 		
-		
+			
 			\lambda_1 =	V_{[r^0,p,r^2,r^3,r^4]} = 
 			\begin{vmatrix}
 				1 & 0 & 0 & 0 & 0\\ 
@@ -431,41 +436,42 @@ The selected coefficients calculation process for our embedding is the Barycentr
 				1 &  0  & 1 & 1 & 1 \\ 
 				1 & 0 & 1 & 1 & 1
 				\end{vmatrix} \\  \\ 
-				
 				= p_1 \cdot \begin{vmatrix} 0 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 1 & 1 \\ \end{vmatrix} - 
 				p_2 \cdot \begin{vmatrix} 0 & 1 & 1 \\ 0 & 1 & 1 \\ 1 & 1 & 1 \\ \end{vmatrix} + 
 				p_3 \cdot \begin{vmatrix} 0 & 0 & 1 \\0 & 1 & 1 \\ 1 & 1 & 1 \\ \end{vmatrix} - 
 				p_4 \cdot \begin{vmatrix} 0 & 0 & 1 \\ 0 & 1 & 1 \\ 1 & 1 & 1 \\ \end{vmatrix} \\ \\ 
-				
 				= p_4 - p_3 = p_4 - (\lambda_2 + \lambda_3 + \lambda_4)
 		\end{align*}
-		\end{equation}	
+		\end{equation}
 		
 		
-		for $\lambda_0$ we apply the final step expression:
+\break
+for $\lambda_0$ we apply the final step expression:
 		
 
-	\begin{equation} \label{eq1}
-	\begin{split}
+	\begin{equation} 
+	\begin{align*}		
+	\label{eq1}
+
 	\lambda_0 =	V_{[p,r^1,r^2,r^3,r^4]} = 
 	\begin{vmatrix}
-	1 & p_{1} &  p_{2}& p_{3} & p_{4}\\
-	1 & 0 & 0 & 0 & 1\\ 
-	1 & 0 & 0 & 1 & 1\\ 
-	1 &  0  & 1 & 1 & 1 \\ 
-	1 & 0 & 1 & 1 & 1
+		1 & p_{1} &  p_{2}& p_{3} & p_{4}\\
+		1 & 0 & 0 & 0 & 1\\ 
+		1 & 0 & 0 & 1 & 1\\ 
+		1 &  0  & 1 & 1 & 1 \\ 
+		1 & 0 & 1 & 1 & 1
 	\end{vmatrix} 
 	\\ \\
-	= 1 - p_1 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} + 
-	p_2 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} - 
-	p_3 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} + 
-	p_4 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} \\ \\ 
-	= 1 - p_4 - p_3 = 1 - (\lambda_1 + \lambda_2 + \lambda_3 + \lambda_4)
-	\end{split}
-	\end{equation}
+		= 1 - p_1 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} + 
+		p_2 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} - 
+		p_3 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} + 
+		p_4 \cdot \begin{vmatrix} 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 1 & 1 \\ \end{vmatrix} \\ \\ 
+		= 1 - p_4 - p_3 = 1 - (\lambda_1 + \lambda_2 + \lambda_3 + \lambda_4)
 
+	\end{align*}	
+	\end{equation}
 	
-		final coefficient vector produced by volumes method would be:
+		Final coefficients vector produced by volumes method would be:
 		
 		
 		\begin{equation}
@@ -527,19 +533,17 @@ The selected coefficients calculation process for our embedding is the Barycentr
 	--insert figure Fig - embedding from matrix to sparse vector
 	
 	
-	\begin{figure}[h] \label{flatt}
-	
+	\begin{figure}[h] 	
 		\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/flatten}
 		\caption[flattening 2d matrix]
 		{flattening 2d matrix to row-wise 1d vector}
-	
+	\label{fig:33}	
 	\end{figure}
 			
 	The embedding process could be easily generalized if c is vectorized to values - set, then the dimension of $\alpha$ would be:\\ 
 	$\prod_{i=1}^{2n}c_i$ , which equivalent to the number of vertices in the “discretized” space of the problem.
 	In order to finally receive a distance/similarity/dis-similarity function, we apply inner product between $\alpha$  vector and a learned weights vector (equivalent to the $W$ matrix from the $1D$ scenario).
-	
-	
+
 	
 	\begin{algorithm}
 				\caption{Embedding Method for ID N-Dimensional Pairs dataset}
@@ -579,7 +583,7 @@ The selected coefficients calculation process for our embedding is the Barycentr
 				\end{algorithmic}
 			\end{algorithm}
 	
-	
+\break	
 \section{Non-euclidean non-embeddable Metrics example}
 
 Let us display an example of a useful application to IDDND method.

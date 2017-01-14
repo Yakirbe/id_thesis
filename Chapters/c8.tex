@@ -69,7 +69,7 @@ In our experiment we have selected an automatic cross validation \cite{cross val
 \\
 For this number of extracted centers we add 2 extreme points for applying proper interpolation for data values beyond limits of the discovered centers.
 \\
-Now that we have found data centers for each dimension we apply our interpolation method \ref{interpolation pairs} on our data (on both train-test sets) and extract a $\overrightarrow{a} \in \Re^6$ coefficient vector per color patches pair, which is ready to be embedded.
+Now that we have found data centers for each dimension we apply our interpolation method \ref{Chapter3} on our data (on both train-test sets) and extract a $\overrightarrow{a} \in \Re^6$ coefficient vector per color patches pair, which is ready to be embedded.
 
 
 \subsection{Embedding}
@@ -217,7 +217,7 @@ $ $
 
 \subsection{Comparison}
 
-\begin{figure}[h] \label{original paper results}
+\begin{figure}[h] 
 			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/original_paper_results}
 			\caption[orig res]
 			{Generalization of the learned metrics to new colors; (b) Generalization of
@@ -225,15 +225,14 @@ $ $
 			values as a function of the number of clusters. The horizontal dashed line represents
 			the STRESS baseline of $\Delta E_{00}$ . For the sake of readability, we have not plotted the
 			mean baseline of $\Delta E_{00}$ at 1.70.}
+\label{original paper results}			
 \end{figure}
 
 
 Let us treat our results versus the original paper's results.\\
 
 While \cite{prep_color} (regression) method
-
-
-\ref{original paper results} shows results for either camera/color scenarios, for both model assessment tools - MAE, STRESS. \\
+\ref{original paper results} shows results for either camera/color scenarios for both model assessment tools - MAE, STRESS. \\
 The \ref{original paper results} charts' x - axes describes the number of clusters been used in their embedding algorithm. \\
 Their minimal values on both scenarios\textbf{ are > 0.9 for MAE and > 40 for STRESS}, where our results \textbf{ are < 0.85 for MAE and < 30 for STRESS}, all for a $p - value$ with a similar magnitude to theirs. \\
 As clearly seen, our results applies the following conditions:
@@ -242,7 +241,7 @@ As clearly seen, our results applies the following conditions:
 \item Small p-values which proves the validity of our method, since there is a reasonable assumption that our models provide close dataset approximation
 \end{itemize}
 
-This information officially confirms the assumption that our method is valid to work with in terms of reliability. In the following chapter we will discuss the further explorations should be performed to examine the rest of performance criterias mentioned above.
+This information is a meaningful confirmation of the assumption that our method is valid to work with in terms of reliability. In the following chapter we will discuss the further explorations should be performed to examine the rest of performance criterias mentioned above.
 
 
 
