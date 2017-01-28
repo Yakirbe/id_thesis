@@ -14,7 +14,7 @@ def find_non_zero(W):
         if np.abs(W[i]) >0.000000001:
             print i , W[i]
             
-            
+v            
             
             
 def baseline_model(lendim):

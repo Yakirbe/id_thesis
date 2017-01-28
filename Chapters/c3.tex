@@ -1,4 +1,3 @@
-% Chapter 1
 
 \chapter{Interpolated Discretized object pairs embedding} % Main chapter title
 
@@ -7,7 +6,7 @@
 We now describe the Interpolated Discretized Distances (IDD) embedding method.
 As mentioned above, this method uniqueness is applying an embedding method that treats each pair as a \textbf{joint} object in its problem.
 This method may fit any two-objects task such similarity/matching problems etc. 
-Let us initiate by presenting the original single dimensional (IDD-1D) work[], then the expansion of this work into multidimensional (IDD-ND) scenario - general distance embedding is described.
+Let us initiate by presenting the original single dimensional (IDD-1D) work \cite{ofir thesis}, then the expansion of this work into multidimensional (IDD-ND) scenario - general distance embedding is described.
 
 \section{1D case}
 
@@ -211,7 +210,7 @@ Let us initiate by presenting the original single dimensional (IDD-1D) work[], t
 
 We now address describing the generalization of the single dimension IDD method to n-dimensional object pairs embedding. \\
 For this we should adapt a different embedding attitude, since it should obtain multi-dimensional embedding, unlike the triangles relative surfaces process performed in the 1d scenario.  \\
-The selected coefficients calculation process for our embedding is the Barycentric (center of mass) Coordinates [] of a given vector in a 2n dimensional space (2n since we embed pairs of objects for distance/similarity calculation).
+The selected coefficients calculation process for our embedding is the Barycentric (center of mass) Coordinates \cite{bcc} of a given vector in a 2n dimensional space (2n since we embed pairs of objects for distance/similarity calculation).
 
 	\subsection{Definition}
 	
@@ -256,8 +255,7 @@ The selected coefficients calculation process for our embedding is the Barycentr
 		0 \leq p_{t(1)} \leq p_{t(1)} \leq \dots \leq p_{t(2n-1)} \leq p_{t(2n)} \leq 1
 		\end{equation}
 		
-		http://www.mathpages.com/home/kmath664/kmath664.htm
-		
+		\cite{http://www.mathpages.com/home/kmath664/kmath664.htm}
 		
 		where:\\
 		$t_{(i)}$ is a permutation function.
@@ -274,7 +272,6 @@ The selected coefficients calculation process for our embedding is the Barycentr
 		Next phase is calculating the relative volumes (equivalent to 1 dimensional relative surfaces) of all sub simplices. 
 		\\Given a simplex assembled from $T = 2n+1$ set of vertices, which bounds a point $\overrightarrow{p}$, we calculate the volumes of T sub-simplices, so every simplex is assembled from $T-1$ vertices plus $\overrightarrow{p}$. 
 		\\These normalized volumes represents the coefficients of the missing (or counter in the T space) vertex.
-		
 		
 		
 		\subsubsection{Simplex Volume Calculation}
@@ -473,7 +470,6 @@ for $\lambda_0$ we apply the final step expression:
 	
 		Final coefficients vector produced by volumes method would be:
 		
-		
 		\begin{equation}
 			\begin{bmatrix}
 			\lambda_0 \\
@@ -491,7 +487,7 @@ for $\lambda_0$ we apply the final step expression:
 		\end{equation}
 		
 	
-	\begin{table}[]
+	\begin{table}
 	\centering
 	\label{t1}
 	\begin{tabular}{|c|c|c|c|}

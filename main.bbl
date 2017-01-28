@@ -6,15 +6,15 @@
 % This file may safely be deleted. It will be recreated as
 % required.
 %
-\begingroup
-\makeatletter
-\@ifundefined{ver@biblatex.sty}
-  {\@latex@error
-     {Missing 'biblatex' package}
-     {The bibliography requires the 'biblatex' package.}
-      \aftergroup\endinput}
-  {}
-\endgroup
-
-\sortlist[entry]{nyt/global/}\endsortlist
-\endinput
+%\begingroup
+%\makeatletter
+%\@ifundefined{ver@biblatex.sty}
+%  {\@latex@error
+%     {Missing 'biblatex' package}
+%     {The bibliography requires the 'biblatex' package.}
+%      \aftergroup\endinput}
+%  {}
+%\endgroup
+%
+%\sortlist[entry]{nyt/global/}\endsortlist
+%\endinput
