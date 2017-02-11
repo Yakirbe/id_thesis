@@ -16,6 +16,7 @@ plt.close("all")
 import json
 import shutil
 
+#%%
 
 
     
@@ -301,9 +302,9 @@ if __name__ == "__main__":
     
     # labels indices
     
-    data_fn = "/home/yakir/idd/tex_thesis/id_thesis/python_id/colordiff/rgb_set_fw.json"
-    tr_fn = "/home/yakir/idd/tex_thesis/id_thesis/python_id/colordiff/rgb_set_tr_cam.json"
-    te_fn = "/home/yakir/idd/tex_thesis/id_thesis/python_id/colordiff/rgb_set_te_cam.json"
+    data_fn = "/home/yakir/idd/id_thesis/python_id/colordiff/rgb_set_fw.json"
+    tr_fn = "/home/yakir/idd/id_thesis/python_id/colordiff/rgb_set_tr_cam.json"
+    te_fn = "/home/yakir/idd/id_thesis/python_id/colordiff/rgb_set_te_cam.json"
     # load dataset ----------------------------------------------------------------
             
     with open(data_fn) as f:
