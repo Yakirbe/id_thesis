@@ -38,15 +38,15 @@ fn0 = relevant_path + file_names[0]
 
 with open(fn0) as f:
     data = json.load(f)
-        
     X_tr.extend(data["X_tr"])
     X_te.extend(data["X_te"])
     Y_tr.extend(data["Y_tr"])
     Y_te.extend(data["Y_te"])
     
+    
 for fn in file_names[1:]:
     print relevant_path + fn
-    
+    print len(X_tr[0])
     with open( relevant_path + fn) as f:
         data = json.load(f)
         
@@ -58,6 +58,12 @@ for fn in file_names[1:]:
 
 X_tr = zero_pad(X_tr)
 X_te = zero_pad(X_te)
+
+
+print "training data length:"
+print len(X_tr[0])
+print len(X_te[0])
+
 
 
 #X_combined = X_tr + X_te

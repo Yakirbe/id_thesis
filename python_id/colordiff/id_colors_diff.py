@@ -393,6 +393,7 @@ if __name__ == "__main__":
         te_lab = []
         for i in range(len(test_ds_json)):
             x = list(test_ds_json[i]["embedded"].toarray()[0])
+            print len(x)
             argmax = [indx for indx, j in enumerate(x) if j <> 0][-1]
             x = x[:(argmax + 1)]
             te_emb.append(x)
@@ -421,43 +422,10 @@ if __name__ == "__main__":
         
         js_fn = "../sets_jsons/{}_{}.json".format(str(start),str(stop))
         if os.path.exists(js_fn):
-            shutil.rmtree(js_fn)
+#            shutil.rmtree(js_fn)
+            os.remove(js_fn)
         with open(  js_fn,"w") as f:
             json.dump(json_out,f)
     
                 
         del X_tr , Y_tr , X_te , Y_te
-    
-    #%%
-    ## train-----------------------------------------------------------------------
-    #print "training..."
-    #clf = svm.SVR(C = 1e5 ,  kernel='linear' , cache_size  = 200)
-    #clf.fit(X_tr, Y_tr) 
-    #
-    #print "training done\n"
-    #
-    #
-    ## test------------------------------------------------------------------------
-    #
-    #        
-    #print "testing..."
-    #
-    #
-    #
-    #tst_set = len(X_te)
-    #
-    #avg_dis = 0.0
-    #i = 0
-    #for x in X_te:
-    #    print
-    #    
-    #    dis = np.abs(Y_te[i] - clf.predict([x])[0])
-    #    avg_dis += dis
-    #    
-    #    if i%2 == 0:
-    #        print  i , "done from" , len(X_te)
-    #        print  Y_te[i] , clf.predict([x])[0]
-    #        print "distance = ", dis
-    #    i+=1
-    #print "avg dis = ", avg_dis/len(X_te)        
-    
