@@ -66,6 +66,11 @@ Data dimension in our scenarios is of course $n=3$ (for lab/RGB \cite{RGB} coord
 As described in \ref{Chapter3}, interpolation is performed dimension-wise along the training set, after selecting data center per dimension by manual/automatic method.
 \\
 In our experiment we have selected an automatic cross validation \cite{cross validation} method for assessing the optimal number of centers per dimension, and find those by using k-means \cite{kmeans} algorithm.
+
+cross validation process:
+\begin{algorithm}
+	split data into 10 chunks
+\end{algorithm}
 \\
 For this number of extracted centers we add 2 extreme points for applying proper interpolation for data values beyond limits of the discovered centers.
 \\
@@ -81,12 +86,17 @@ Since our embedded vectors are sparse formed, a massive dimensional reduction wa
 
 \subsection{Learning}
 Learning is performed as a linear regression model training.
-We learn by using SGD \cite{SGD} learning algorithm, and with a MAE \cite{MAE} loss function.
-We also applied a standard Tichonov \cite{Tichonov} regularizer on the learning process as described in the learning chapter \ref{Chapter6}.
+We learn by using \textbf{Stochastic Gradient Descent} \cite{SGD} optimiztation algorithm. \\
+Loss function of the training process would be a generalized Mean Average Error \cite{MAE} loss function, constrained by our semi-metrics critireas for model divergence as described above \ref{Chapter3}.
+We also applied a standard Ridge \cite{Ridge} regularizer on the learning process as described in the learning chapter \ref{Chapter6}.
 \cite{retargeting} \cite{einstein}
 
+\begin{equation}
+Loss(w)=\lambda\norm{w}^2 + \frac{1}{n}\sum_{i=0}^{i=n} |w^T x_i - y_i|
+\end{equation}
+
 \subsection{Assessment}
-Assessment is operated following two criterias:
+Assessment is operated following two criteria:
 \begin{itemize}
 \item \textbf{MAE} - Mean Absolute Error
 \item \textbf{STRESS} - Standardized Residual Sum of Squares \cite{STRESS} \\
@@ -144,11 +154,8 @@ Unseen camera case was assembled by a certain percentage of all data set as trai
 		
 		\begin{pmatrix}
 				     0.0 &     0.0 &    0.0 & 0.0   & 0.0   & 0.0   \\
-					100.78 &   116.35 &    81.09 &    100.02 & 116.53 & 93.74   \\
-					153.59 &   140.96 &   97.78 &   159.02 & 144.20 & 136.93    \\
-					       &          &  114.13 &          &        &           \\
-					       &          &   131.81 &          &        &          \\				       
-					       &          &   151.10 &          &        &          \\				       
+					100.78 &   116.35 &    114.13 &    100.02 & 116.53 & 93.74   \\
+					153.59 &   140.96 &   131.81 &    159.02 & 144.20 & 136.93    \\
 		     		 255.0 &  255.0 &   255.0 &   255.0 &  255.0 &  255.0 & \\
 				\end{pmatrix}$\\
 $ $
@@ -194,9 +201,8 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 	
 	\begin{pmatrix}
 			     0.0 &     0.0 &    0.0 & 0.0   & 0.0   & 0.0    \\
-				100.46 &   116.35 &    82.81 &    95.72 & 115.95 & 88.81     \\
-				153.96 &   140.96 &   126.01 &   159.54 & 143.60 & 143.38    \\
-				       &          &   147.80 &          &        &             \\
+				100.46 &   116.35 &    111.81 &    95.72 & 115.95 & 88.81     \\
+				153.96 &   140.96 &   146.01 &   159.54 & 143.60 & 143.38    \\
 	     		 255.0 &  255.0 &   255.0 &   255.0 &  255.0 &  255.0 & \\
 			\end{pmatrix}
 	$ 

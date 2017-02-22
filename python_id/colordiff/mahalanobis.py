@@ -9,13 +9,11 @@ from sklearn.metrics.pairwise import chi2_kernel
 from scipy.spatial.distance import euclidean
 
 
-
 X = []
 Y = []
 for d in ds_tr:
     X.append(d["vec"])
     Y.append(d["label"])
-    
     
 X_test = []
 Y_test = []
