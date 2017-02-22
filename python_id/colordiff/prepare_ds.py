@@ -4,13 +4,13 @@ This module shows some examples of Delta E calculations of varying types.
 
 # Does some sys.path manipulation so we can run examples in-place.
 # noinspection PyUnresolvedReferences
-import example_config
+#import example_config
 from skimage import io, color
 from colormath.color_conversions import convert_color
 from colormath.color_objects import LabColor, sRGBColor
 from colormath.color_diff import delta_e_cie1976, delta_e_cie1994, \
     delta_e_cie2000, delta_e_cmc
-
+import random
 import json
 
 def get_color_list(string):
@@ -42,42 +42,72 @@ def get_rgb_label_set(kd_d  , refs_d , th = 5):
                 tot +=1
                 final_set.append({"v1":color1_srgb.get_value_tuple(),"v2":color2_srgb.get_value_tuple(),"dis":de_c2k})
                 print "tot = {}".format(tot)
-                print "rgb:", sRGBColor(kd_d[i][0] , kd_d[i][1] , kd_d[i][2])
-                print "color1 lab:" , color1.get_value_tuple()
-                print "color2 lab:" , color2.get_value_tuple()
-                print j , im_num ,":"
-                print "de_c2k: %.3f" % de_c2k , "\n"
+#                print "rgb:", sRGBColor(kd_d[i][0] , kd_d[i][1] , kd_d[i][2])
+#                print "color1 lab:" , color1.get_value_tuple()
+#                print "color2 lab:" , color2.get_value_tuple()
+#                print j , im_num ,":"
+#                print "de_c2k: %.3f" % de_c2k , "\n"
                 
     return final_set
 
-# get ref table
 
-refs_d = get_color_list(refs)
+
+def prep_ds(refs  , km , kd , nc , sd , cam = False , fw = True):
+    # get ref table
     
-#get compare tables
+    refs_d = get_color_list(refs)
+        
+    #get compare tables
+        
+    km_d = get_color_list(km)
+    kd_d = get_color_list(kd)
+    nc_d = get_color_list(nc)
+    sd_d = get_color_list(sd)
     
-km_d = get_color_list(km)
-kd_d = get_color_list(kd)
-nc_d = get_color_list(nc)
-sd_d = get_color_list(sd)
-
-
-fl_km = get_rgb_label_set(km_d , refs_d)
-fl_kd = get_rgb_label_set(kd_d , refs_d)
-fl_nc = get_rgb_label_set(nc_d , refs_d)
-fl_sd= get_rgb_label_set(sd_d , refs_d)
     
-
-final_set_fw = fl_km + fl_kd + fl_nc# + fl_sd    
-with open("rgb_set_tr_cam.json" , "w") as f:
-    for samp in final_set_fw:
-        json.dump(samp,f)#f.write(samp)
-        f.write("\n")
+    fl_km = get_rgb_label_set(km_d , refs_d)
+    fl_kd = get_rgb_label_set(kd_d , refs_d)
+    fl_nc = get_rgb_label_set(nc_d , refs_d)
+    fl_sd= get_rgb_label_set(sd_d , refs_d)
     
-final_set_te_fw = fl_sd    
-with open("rgb_set_te_cam.json" , "w") as f:
-    for samp in final_set_te_fw:
-        json.dump(samp,f)#f.write(samp)
-        f.write("\n")
+    if cam:
+        
+        if fw:
+            fn_out = "rgb_set_{}_cam_furnsworth.json"
+        else:
+            fn_out = "rgb_set_{}_cam_munswell.json"
+    
+        #camera ds prep    
+        final_set_tr = fl_km + fl_kd + fl_nc# + fl_sd    
+        final_set_te = fl_sd    
+    else:
+        if fw:
+            fn_out = "rgb_set_{}_furnsworth.json"
+        else:
+            fn_out = "rgb_set_{}_munswell.json"
+    
+        #camera ds prep    
+        final_set = fl_km + fl_kd + fl_nc + fl_sd    
+        final_set = random.sample(final_set , len(final_set))
+        final_set_tr = final_set[:0.8*len(final_set)]
+        final_set_te = final_set[:0.8*len(final_set)]
+        del final_set
+    
+    #regular ds prep    
+    
+    with open(fn_out.format("tr") , "w") as f:
+        for samp in final_set_tr:
+            json.dump(samp,f)#f.write(samp)
+            f.write("\n")
+        
+    final_set_te_fw = fl_sd    
+    with open(fn_out.format("te") , "w") as f:
+        for samp in final_set_te:
+            json.dump(samp,f)#f.write(samp)
+            f.write("\n")
 
-
+if __name__ == "__main__":
+    import munswell as mw
+    refs = mw.refs
+    sd = mw.sd ; nc = mw.nc ; km = mw.km ; kd = mw.kd
+    prep_ds(refs  , km , kd , nc , sd)

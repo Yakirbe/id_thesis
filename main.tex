@@ -56,11 +56,8 @@ headsepline, % Uncomment to get a line under the header
 
 \usepackage{palatino} % Use the Palatino font by default
 \usepackage{caption}
-%\usepackage[style=numeric,firstinits=true]{biblatex}
-
-\usepackage[backend=bibtex,natbib=true, bibstyle=authoryear, citestyle=authoryear-comp]{biblatex}
-
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+
 
 
 %----------------------------------------------------------------------------------------
@@ -113,7 +110,16 @@ headsepline, % Uncomment to get a line under the header
 
 
 
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\bibliographystyle{elsarticle-num}
+%\bibliography{idrefs}
+%% `Elsevier LaTeX' style
+\usepackage[backend=bibtex,style=numeric]{biblatex}
+\addbibresource{idrefs.bib}
 
+%------------------------------------------------------------------------
 \begin{document}
 
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
@@ -301,6 +307,9 @@ The acknowledgments and the people to thank go here, don't forget to include you
 
 \dedicatory{/Dedicated to/To my\ldots} 
 
+
+
+
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------
@@ -334,40 +343,14 @@ The acknowledgments and the people to thank go here, don't forget to include you
 \include{Appendices/AppendixA}
 %\include{Appendices/AppendixB}
 %\include{Appendices/AppendixC}
+\section*{References}
+As first example citation here is \cite{cover_trees}. 
+Here is another example citation \cite{sift_lowe}
 
-%----------------------------------------------------------------------------------------
-%	BIBLIOGRAPHY
-%----------------------------------------------------------------------------------------
 
 
-\begin{thebibliography}{99}
-	
-	\bibitem{HB98} Huynen, M.~A. and Bork, P. 1998. Measuring genome evolution. {\em
-		Proceedings of the National Academy of Sciences USA}
-	95:5849--5856.
-	
-	\bibitem{CA} Caprara, A. 1997. Sorting by reversals is difficult. In: {\em
-		Proceedings of the First Annual International Conference on Computational
-		Molecular Biology (RECOMB 97),} New York: ACM.  pp. 75-83.
-	
-	\bibitem{MSW00}McLysaght, A., Seoighe, C. and Wolfe, K.~H. 2000. High frequency
-	of inversions during eukaryote gene order evolution.     In Sankoff, D. and
-	Nadeau, J.~H., editors, {\em Comparative Genomics},  Dordrecht, NL: Kluwer
-	Academic Press. pp. 47--58.
-	
-	\bibitem{Rei91} Reinelt, G. 1991. {\em The Traveling Salesman - Computational
-		Solutions for TSP Applications.} Berlin: Springer Verlag.
-	\bibitem{retargeting} {5} @article{Rubinstein10Comparative,
-		author = {Rubinstein, Michael and Gutierrez, Diego and Sorkine, Olga and Shamir, Ariel},
-		title = {A Comparative Study of Image Retargeting},
-		journal = {ACM Transactions on Graphics (Proc. SIGGRAPH Asia)},
-		year = {2010},
-		volume = {29},
-		number = {6},
-		pages = {160:1--160:10},
-	}
-
-\end{thebibliography}
-%----------------------------------------------------------------------------------------
+\printbibliography
+%-------------------------------------------------------------------------------
 
 \end{document}  
+

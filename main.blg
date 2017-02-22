@@ -1,37 +1,40 @@
 This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
-The style file: biblatex.bst
+The style file: elsarticle-num.bst
+Illegal, another \bibstyle command---line 20 of file main.aux
+ : \bibstyle
+ :          {biblatex}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: Chapters/c1.aux
 A level-1 auxiliary file: Chapters/c2.aux
 A level-1 auxiliary file: Chapters/c3.aux
+White space in argument---line 41 of file main.aux
+ : \citation{ofir
+ :                thesis}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: Chapters/c4.aux
 A level-1 auxiliary file: Chapters/c5.aux
 A level-1 auxiliary file: Chapters/c6.aux
 A level-1 auxiliary file: Chapters/c7.aux
 A level-1 auxiliary file: Chapters/c8.aux
-White space in argument---line 69 of file main.aux
+White space in argument---line 91 of file main.aux
  : \citation{cross
  :                 validation}
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: Chapters/c9.aux
 A level-1 auxiliary file: Appendices/AppendixA.aux
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=20001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: main-blx.bib
+Warning--entry type for "biblatex-control" isn't style-file defined
+--line 9 of file main-blx.bib
+Database file #2: idrefs.bib
 Warning--I didn't find a database entry for "einstein"
+Warning--I didn't find a database entry for "bcc"
+Warning--I didn't find a database entry for "http://www.mathpages.com/home/kmath664/kmath664.htm"
+Warning--I didn't find a database entry for "kmeans"
+Warning--I didn't find a database entry for "quicksort"
+Warning--I didn't find a database entry for "mergesort"
+Warning--I didn't find a database entry for "timsort"
 Warning--I didn't find a database entry for "perp_color"
 Warning--I didn't find a database entry for "MAE"
 Warning--I didn't find a database entry for "STRESS"
@@ -39,52 +42,51 @@ Warning--I didn't find a database entry for "furnsworth"
 Warning--I didn't find a database entry for "lab"
 Warning--I didn't find a database entry for "CIELAB"
 Warning--I didn't find a database entry for "RGB"
-Warning--I didn't find a database entry for "kmeans"
 Warning--I didn't find a database entry for "SGD"
-Warning--I didn't find a database entry for "MSE"
 Warning--I didn't find a database entry for "Tichonov"
-Biblatex version: 3.3
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 1 entry,
-            6256 wiz_defined-function locations,
-            1205 strings with 8781 characters,
-and the built_in function-call counts, 1203 in all, are:
-= -- 58
-> -- 52
-< -- 1
-+ -- 37
-- -- 22
-* -- 24
-:= -- 275
-add.period$ -- 0
-call.type$ -- 1
-change.case$ -- 0
-chr.to.int$ -- 30
-cite$ -- 0
-duplicate$ -- 11
-empty$ -- 86
-format.name$ -- 0
-if$ -- 265
+Warning--I didn't find a database entry for "retargeting"
+Warning--I didn't find a database entry for "prep_color"
+Warning--all relevant fields are empty in biblatex-control
+Warning--empty pages in cover_trees
+You've used 3 entries,
+            2937 wiz_defined-function locations,
+            714 strings with 5628 characters,
+and the built_in function-call counts, 579 in all, are:
+= -- 33
+> -- 15
+< -- 0
++ -- 7
+- -- 4
+* -- 20
+:= -- 86
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 2
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 22
+empty$ -- 85
+format.name$ -- 5
+if$ -- 152
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 20
-num.names$ -- 0
-pop$ -- 40
+int.to.str$ -- 3
+missing$ -- 2
+newline$ -- 17
+num.names$ -- 2
+pop$ -- 25
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 67
+skip$ -- 53
 stack$ -- 0
-substring$ -- 110
-swap$ -- 1
-text.length$ -- 14
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
-top$ -- 1
-type$ -- 22
-warning$ -- 0
-while$ -- 45
-width$ -- 0
-write$ -- 20
-(There was 1 error message)
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 2
+width$ -- 4
+write$ -- 26
+(There were 3 error messages)

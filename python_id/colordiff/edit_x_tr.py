@@ -22,56 +22,47 @@ def zero_pad(X_tr , max_len = -1):
     
     return x_out
     
-    
-relevant_path = "../sets_jsons/"
-#relevant_path = "../sets_jsons_cam/"
-included_extenstions = ['json']
-file_names = sorted([fn for fn in os.listdir(relevant_path)
-              if any(fn.endswith(ext) for ext in included_extenstions)])
 
-X_tr = []                  
-X_te = []
-Y_tr = []
-Y_te = []
-
-fn0 = relevant_path + file_names[0]
-
-with open(fn0) as f:
-    data = json.load(f)
-    X_tr.extend(data["X_tr"])
-    X_te.extend(data["X_te"])
-    Y_tr.extend(data["Y_tr"])
-    Y_te.extend(data["Y_te"])
+def arrange_x():
+    relevant_path = "../sets_jsons/"
+    #relevant_path = "../sets_jsons_cam/"
+    included_extenstions = ['json']
+    file_names = sorted([fn for fn in os.listdir(relevant_path)
+                  if any(fn.endswith(ext) for ext in included_extenstions)])
     
+    X_tr = []                  
+    X_te = []
+    Y_tr = []
+    Y_te = []
     
-for fn in file_names[1:]:
-    print relevant_path + fn
-    print len(X_tr[0])
-    with open( relevant_path + fn) as f:
+    fn0 = relevant_path + file_names[0]
+    
+    with open(fn0) as f:
         data = json.load(f)
-        
         X_tr.extend(data["X_tr"])
         X_te.extend(data["X_te"])
         Y_tr.extend(data["Y_tr"])
         Y_te.extend(data["Y_te"])
+        
+        
+    for fn in file_names[1:]:
+        print relevant_path + fn
+        print len(X_tr[0])
+        with open( relevant_path + fn) as f:
+            data = json.load(f)
+            
+            X_tr.extend(data["X_tr"])
+            X_te.extend(data["X_te"])
+            Y_tr.extend(data["Y_tr"])
+            Y_te.extend(data["Y_te"])
+        
     
-
-X_tr = zero_pad(X_tr)
-X_te = zero_pad(X_te)
-
-
-print "training data length:"
-print len(X_tr[0])
-print len(X_te[0])
-
-
-
-#X_combined = X_tr + X_te
-#X_combined = remove_zero_col(X_combined)
-#        
-#rate_tr = 0.8
-#len_ds = 13500        
-#X_tr = X_combined[:int(rate_tr*len_ds)]
-#X_te = X_combined[int(rate_tr*len_ds):]    
-#        
-#X_tr ,X_te = zero_pad_lower(X_tr ,X_te)
+    X_tr = zero_pad(X_tr)
+    X_te = zero_pad(X_te)
+    
+    
+    print "training data length:"
+    print len(X_tr[0])
+    print len(X_te[0])
+    
+    return X_tr , X_te , Y_tr , Y_te

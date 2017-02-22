@@ -1,20 +1,18 @@
-% $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.7 $
-% Do not modify the above lines!
-%
-% This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated as
-% required.
-%
-%\begingroup
-%\makeatletter
-%\@ifundefined{ver@biblatex.sty}
-%  {\@latex@error
-%     {Missing 'biblatex' package}
-%     {The bibliography requires the 'biblatex' package.}
-%      \aftergroup\endinput}
-%  {}
-%\endgroup
-%
-%\sortlist[entry]{nyt/global/}\endsortlist
-%\endinput
+\begin{thebibliography}{1}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{biblatex-control}
+
+
+\bibitem{cover_trees}
+A.~Beygelzimer, S.~Kakade, J.~Langford, Cover trees for nearest neighbor, in:
+  ICML, 2006.
+
+\bibitem{sift_lowe}
+D.~Lowe, Distinctive image features from scale-invariant keypoints, IJCV.
+
+\end{thebibliography}

@@ -231,7 +231,7 @@ def embed(dataset ,cvecs):
 def gen_C_set(tr_set , dis_min , dis_max , vec_len = 1000 , min_max_margin = 0.01):
     
     kmeans_flag = True     
-    min_max_margin = 0.01       
+    min_max_margin = 0.0       
       
     if kmeans_flag:
         cvecs = []
@@ -242,7 +242,8 @@ def gen_C_set(tr_set , dis_min , dis_max , vec_len = 1000 , min_max_margin = 0.0
                 
             ds_temp =(np.array(X).reshape(-1, 1))
             X = np.asarray(X)
-            C = get_opt_k(X ,6)
+            C = get_opt_k(X ,3)
+            print dim , "centers num = " , C
             k_means = cluster.KMeans(C)
             k_means.fit(np.asarray(ds_temp))
             c_vec = (k_means.cluster_centers_)
@@ -297,7 +298,8 @@ def get_start_stop(len_ds = 13500, length = 1000):
     
 #%%
     
-    
+def embed_ds_main():
+    return 
 if __name__ == "__main__":
     
     # labels indices
@@ -355,9 +357,7 @@ if __name__ == "__main__":
         tr_set = ds_set[:int(rate_tr*len(ds_set))]
         te_set = ds_set[int(rate_tr*len(ds_set)):]
         
-        
-        
-        # interpolation ---------------------------------------------------------------
+        # interpolation -------------------------------------------------------
         
         print "interpolate.........."
         
@@ -365,7 +365,7 @@ if __name__ == "__main__":
         test_ds_json = interpolate(te_set , cvecs)
         print "Done!\n"
         
-        # embed -----------------------------------------------------------------------
+        # embed ---------------------------------------------------------------
         
         train_ds_json = embed(train_ds_json , cvecs)
         test_ds_json = embed(test_ds_json , cvecs)
@@ -393,12 +393,12 @@ if __name__ == "__main__":
         te_lab = []
         for i in range(len(test_ds_json)):
             x = list(test_ds_json[i]["embedded"].toarray()[0])
-            print len(x)
+            
             argmax = [indx for indx, j in enumerate(x) if j <> 0][-1]
             x = x[:(argmax + 1)]
             te_emb.append(x)
             te_lab.append(test_ds_json[i]["label"])
-            
+        print "vector length = " , len(x)
         print "test set done!"
         
         del test_ds_json

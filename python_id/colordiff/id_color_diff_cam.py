@@ -316,13 +316,120 @@ def arrange_ds(ds_fn):
     return ds        
     
 #%%
+
+def embed_main(tr_fn , te_fn):
+
+    # load dataset ----------------------------------------------------------------
+    
+    ds_tr = arrange_ds(tr_fn)
+    ds_te = arrange_ds(te_fn)
+    #shuffle
+    ds_tr = random.sample(ds_tr , len(ds_tr))
+    ds_te = random.sample(ds_tr , len(ds_te))
+    
+    ds_c_vec = random.sample(ds_tr,5000)
+    print "ds samples for c vec gen and shuffled\n"
+    # set discrete extreme vals ---------------------------------------------------
+        
+    #dis_min,dis_max = set_min_man(ds_c_vec , dis_max = -1 , dis_min = 1000)
+    dis_min = 0
+    dis_max = 255
+    # generate dis vecs
+        
+    cvecs = gen_C_set(ds_c_vec , dis_min , dis_max , vec_len = len(ds_tr[0]["vec"]) , min_max_margin = 0.01)    
+    del ds_c_vec
+    
+#%%
+    
+    tr_sets , te_sets = get_start_stop_cam(ds_tr , ds_te)
     
     
+#%%    
+    for t_i in range(len(tr_sets)):
+        
+        tr_set = tr_sets[t_i]
+        te_set = te_sets[t_i]
+        
+        # interpolation ---------------------------------------------------------------
+        
+        print "interpolate.........."
+        
+        train_ds_json = interpolate(tr_set , cvecs)
+        test_ds_json = interpolate(te_set , cvecs)
+        print "Done!\n"
+        
+        # embed -----------------------------------------------------------------------
+        
+        train_ds_json = embed(train_ds_json , cvecs)
+        test_ds_json = embed(test_ds_json , cvecs)
+        print "Done!\n"
+        
+        print "start arranging datasets:"
+        
+        print "convert to dense form"
+        #train set
+        
+        tr_emb = []
+        tr_lab = []
+        for i in range(len(train_ds_json)):
+            x = list(train_ds_json[i]["embedded"].toarray()[0])
+            argmax = [indx for indx, j in enumerate(x) if j <> 0][-1]
+            x = x[:(argmax + 1)]
+            tr_emb.append(x)
+            tr_lab.append(train_ds_json[i]["label"])
+        
+        del train_ds_json
+        print "train set done!"        
+        #test set
+                
+        te_emb = []
+        te_lab = []
+        for i in range(len(test_ds_json)):
+            x = list(test_ds_json[i]["embedded"].toarray()[0])
+            argmax = [indx for indx, j in enumerate(x) if j <> 0][-1]
+            x = x[:(argmax + 1)]
+            te_emb.append(x)
+            te_lab.append(test_ds_json[i]["label"])
+            
+        print "test set done!"
+        
+        del test_ds_json
+        print "Done!\n"
+        
+        # prepare sets-----------------------------------------------------------------
+        print "convert to sets and remove zero columns"
+        X_tr = [s for s in tr_emb]
+        Y_tr = [s for s in tr_lab]
+        del tr_emb
+        
+        X_te = [s for s in te_emb]
+        Y_te = [s for s in te_lab]
+        del te_emb
+        
+        print len(X_te[0]) , len(X_tr[0])
+        print "Done!\n"
+        
+        
+        json_out = {"X_tr":X_tr , "X_te":X_te , "Y_tr":Y_tr , "Y_te":Y_te}
+        
+        js_fn = "../sets_jsons_cam/{}.json".format(str(t_i))
+        
+        if not os.path.exists(os.path.dirname(js_fn)):
+            os.makedirs(os.path.dirname(js_fn))
+        with open(js_fn , "w") as f:
+            json.dump(json_out,f)
+    
+                
+        del X_tr , Y_tr , X_te , Y_te
+      
+    
+    
+    
+#%%
 if __name__ == "__main__":
     
     # labels indices
     
-    data_fn = "/home/yakir/idd/tex_thesis/id_thesis/python_id/colordiff/rgb_set_fw.json"
     tr_fn = "/home/yakir/idd/tex_thesis/id_thesis/python_id/colordiff/rgb_set_tr_cam.json"
     te_fn = "/home/yakir/idd/tex_thesis/id_thesis/python_id/colordiff/rgb_set_te_cam.json"
     # load dataset ----------------------------------------------------------------
@@ -429,3 +536,9 @@ if __name__ == "__main__":
                 
         del X_tr , Y_tr , X_te , Y_te
   
+  
+  
+if __name__ == "__main__":
+    tr_fn = "/home/yakir/idd/tex_thesis/id_thesis/python_id/colordiff/rgb_set_tr_cam.json"
+    te_fn = "/home/yakir/idd/tex_thesis/id_thesis/python_id/colordiff/rgb_set_te_cam.json"
+    embed_main(tr_fn , te_fn)
