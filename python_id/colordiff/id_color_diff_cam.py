@@ -76,25 +76,39 @@ def norm_vec( v_vec , cube):
         return n_vec
         
         
-        
-def get_opt_k(X ,max_range):
+def group(lst, div):
+    lst = [ lst[i:i + len(lst)/div] for i in range(0, len(lst), len(lst)/div) ] #Subdivide list.
+    if len(lst) > div: # If it is an uneven list.
+        lst[div-1].extend(sum(lst[div:],[])) # Take the last part of the list and append it to the last equal division.
+    return lst[:div] #Return the list up to that point.
+
+            
+def get_opt_k(X ,max_range, iters = 5):
+    import itertools
     range_n_clusters = range(2,max_range)
     max_sil = -1
     max_n = 0
-    for n_clusters in range_n_clusters:
-        # Initialize the clusterer with n_clusters value and a random generator
-        # seed of 10 for reproducibility.
-        clusterer = KMeans(n_clusters=n_clusters, random_state=10)
-        cluster_labels = clusterer.fit_predict(X)
     
-        # The silhouette_score gives the average value for all the samples.
-        # This gives a perspective into the density and separation of the formed clusters
+    grps = group(X,iters)
+
+    for n_clusters in range_n_clusters:
+        c_max = 0
+        for g in grps:
+            l = [sub for sub in grps if sub <> g]
+            xtr = list(itertools.chain.from_iterable(l))
+            # Initialize the clusterer with n_clusters value and a random generator
+            # seed of 10 for reproducibility.
+            clusterer = KMeans(n_clusters=n_clusters, random_state=10)
+            cluster_labels = clusterer.fit_predict(xtr)
         
-        silhouette_avg = silhouette_score(X, cluster_labels)
-       
-        if max_sil<silhouette_avg:
+            # The silhouette_score gives the average value for all the samples.
+            # This gives a perspective into the density and separation of the formed clusters
             
-           max_sil = silhouette_avg 
+            silhouette_avg = silhouette_score(g, cluster_labels)
+            c_max += silhouette_avg
+        if max_sil<c_max:
+            
+           max_sil = c_max 
            max_n = n_clusters
            
     return max_n
