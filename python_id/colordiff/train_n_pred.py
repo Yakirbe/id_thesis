@@ -21,6 +21,10 @@ def  dice(y_true, y_pred):
     # Technically this is the negative of the Sorensen-Dice index. This is done for
     # minimization purposes
     return -(2*K.sum(y_int) / (K.sum(y_true) + K.sum(y_pred)))
+
+def id_loss(y_true, y_pred):
+    orig = 
+    
     
 
 def baseline_model(lendim):
@@ -31,7 +35,7 @@ def baseline_model(lendim):
     model.add(Dense(1, init='normal' , W_constraint = nonneg() , activation='linear'))
     # Compile model
     sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-    model.compile(loss='mae', optimizer=sgd)
+    model.compile(loss=id_loss, optimizer=sgd)
     return model
 
 

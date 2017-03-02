@@ -90,11 +90,12 @@ def get_opt_k(X ,max_range, iters = 5):
     max_n = 0
     
     grps = group(X,iters)
-
+    
     for n_clusters in range_n_clusters:
         c_max = 0
-        for g in grps:
-            l = [sub for sub in grps if sub <> g]
+        for i in range(len(grps)):
+            g = grps[0]            
+            l = grps.pop(0)
             xtr = list(itertools.chain.from_iterable(l))
             # Initialize the clusterer with n_clusters value and a random generator
             # seed of 10 for reproducibility.
@@ -201,11 +202,11 @@ def interpolate(tr_ds_clf , cvecs):
     
     
 
-def embed(dataset ,cvecs):
+def embed(dataset ,tr_ds,cvecs):
     
     print "embed..."
     ds_out = dataset
-    
+    ind_s = 0
     for samp in range(len(dataset)):
         
 #        if samp%100 == 0:
@@ -234,7 +235,7 @@ def embed(dataset ,cvecs):
             emb_vec[ind] = dataset[samp]["coef_vec"][j]
         emb_vec = csr_matrix(emb_vec , dtype=np.float64)
         ds_out[samp]["embedded"] = emb_vec
-            
+        ind_s += 1
     print "dataset embedded\n"
     
     return ds_out    
@@ -256,7 +257,7 @@ def gen_C_set(tr_set , dis_min , dis_max , vec_len = 3 , min_max_margin = 0.0):
                 
             ds_temp =(np.array(X).reshape(-1, 1))
             X = np.asarray(X)
-            C = get_opt_k(X ,6)
+            C = 2#get_opt_k(X ,6)
             k_means = cluster.KMeans(C)
             k_means.fit(np.asarray(ds_temp))
             c_vec = (k_means.cluster_centers_)
@@ -365,7 +366,7 @@ def embed_main(tr_fn , te_fn):
         
         tr_set = tr_sets[t_i]
         te_set = te_sets[t_i]
-        
+        print tr_set[:2]
         # interpolation ---------------------------------------------------------------
         
         print "interpolate.........."
@@ -376,8 +377,8 @@ def embed_main(tr_fn , te_fn):
         
         # embed -----------------------------------------------------------------------
         
-        train_ds_json = embed(train_ds_json , cvecs)
-        test_ds_json = embed(test_ds_json , cvecs)
+        train_ds_json = embed(train_ds_json ,tr_set, cvecs)
+        test_ds_json = embed(test_ds_json ,te_set, cvecs)
         print "Done!\n"
         
         print "start arranging datasets:"
@@ -388,7 +389,7 @@ def embed_main(tr_fn , te_fn):
         tr_emb = []
         tr_lab = []
         for i in range(len(train_ds_json)):
-            x = list(train_ds_json[i]["embedded"].toarray()[0])
+            x = list(train_ds_json[i]["embedded"].toarray()[0]) + tr_set[i]["vec"]
             argmax = [indx for indx, j in enumerate(x) if j <> 0][-1]
             x = x[:(argmax + 1)]
             tr_emb.append(x)
@@ -401,7 +402,7 @@ def embed_main(tr_fn , te_fn):
         te_emb = []
         te_lab = []
         for i in range(len(test_ds_json)):
-            x = list(test_ds_json[i]["embedded"].toarray()[0])
+            x = list(test_ds_json[i]["embedded"].toarray()[0]) + te_set[i]["vec"]
             argmax = [indx for indx, j in enumerate(x) if j <> 0][-1]
             x = x[:(argmax + 1)]
             te_emb.append(x)
