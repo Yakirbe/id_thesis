@@ -149,18 +149,18 @@ Unseen camera case was assembled by a certain percentage of all data set as trai
 		Centers locations are shown as extracted via cross-validation for finding optimal number of centers per dimension, and k-means for extracting centers values. \\
 		k-means actually found only the inner centers, since the outer centers are fixed bounds.\\
 		
-		$\begin{matrix}  \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \qquad \quad  c_3 \qquad \quad c_4 \qquad \quad c_5 \quad \end{matrix}\\
+		$\begin{matrix}  \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \end{matrix}\\
 				
 		
 		\begin{pmatrix}
-				     0.0 &     0.0 &    0.0 & 0.0   & 0.0   & 0.0   \\
-					100.78 &   116.35 &    114.13 &    100.02 & 116.53 & 93.74   \\
-					153.59 &   140.96 &   131.81 &    159.02 & 144.20 & 136.93    \\
-		     		 255.0 &  255.0 &   255.0 &   255.0 &  255.0 &  255.0 & \\
+				     0.0 &     0.0 &    0.0\\
+					84.5 &   80.35 &    83.13 \\
+					161.59 &   140.96 &   138.81\\
+		     		 255.0 &  255.0 &   255.0 \\
 				\end{pmatrix}$\\
 $ $
 
-		In this scenario, there are 4 extracted centers per dimension besides the $3^{rd}$ one, which has 7 extracted centers. This difference may be since its ($3^{rd}$ dimension of the paired vector) variance is much higher than the rest.
+		In this scenario, there are 4 extracted centers per dimension.
 
 	\subsubsection{Experiment Figures}
 	
@@ -196,17 +196,15 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 
 
 	$
-	\begin{matrix}  \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \qquad \quad  c_3 \qquad \quad c_4 \qquad \quad c_5 \quad \end{matrix}
+	\begin{matrix}  \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \end{matrix}
 			
 	
-	\begin{pmatrix}
-			     0.0 &     0.0 &    0.0 & 0.0   & 0.0   & 0.0    \\
-				100.46 &   116.35 &    111.81 &    95.72 & 115.95 & 88.81     \\
-				153.96 &   140.96 &   146.01 &   159.54 & 143.60 & 143.38    \\
-	     		 255.0 &  255.0 &   255.0 &   255.0 &  255.0 &  255.0 & \\
-			\end{pmatrix}
-	$ 
-\\
+		\begin{pmatrix}
+		0.0 &     0.0 &    0.0\\
+		80.6 &   90.55 &    84.43 \\
+		151.29 &   160.98 &   158.21\\
+		255.0 &  255.0 &   255.0 \\
+		\end{pmatrix}$\\
 $ $
 	
 
