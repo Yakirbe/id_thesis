@@ -389,9 +389,11 @@ def embed_main(tr_fn , te_fn):
         tr_emb = []
         tr_lab = []
         for i in range(len(train_ds_json)):
-            x = list(train_ds_json[i]["embedded"].toarray()[0]) + tr_set[i]["vec"]
+            x = list(train_ds_json[i]["embedded"].toarray()[0]) 
             argmax = [indx for indx, j in enumerate(x) if j <> 0][-1]
             x = x[:(argmax + 1)]
+            x = tr_set[i]["vec"] + x
+            print x
             tr_emb.append(x)
             tr_lab.append(train_ds_json[i]["label"])
         
@@ -402,9 +404,10 @@ def embed_main(tr_fn , te_fn):
         te_emb = []
         te_lab = []
         for i in range(len(test_ds_json)):
-            x = list(test_ds_json[i]["embedded"].toarray()[0]) + te_set[i]["vec"]
+            x = list(test_ds_json[i]["embedded"].toarray()[0])
             argmax = [indx for indx, j in enumerate(x) if j <> 0][-1]
             x = x[:(argmax + 1)]
+            x = te_set[i]["vec"] + x
             te_emb.append(x)
             te_lab.append(test_ds_json[i]["label"])
             
@@ -426,7 +429,8 @@ def embed_main(tr_fn , te_fn):
         print len(X_te[0]) , len(X_tr[0])
         print "Done!\n"
         
-        
+        print "xte = "
+        print X_te[:2]
         json_out = {"X_tr":X_tr , "X_te":X_te , "Y_tr":Y_tr , "Y_te":Y_te}
         
         js_fn = "../sets_jsons_cam/{}.json".format(str(t_i))

@@ -1,16 +1,18 @@
 import numpy as np
 from metric_learn import LMNN , LSML_Supervised
 from sklearn.datasets import load_iris
-#
-#iris_data = load_iris()
-#X_iris = iris_data['data']
-#Y_iris = iris_data['target']
-#
-#lmnn = LMNN(k=5, learn_rate=1e-6)
-#lmnn.fit(X, Y)#, verbose=False)
+import json
 
 
+relevant_path = "../sets_jsons/"
+#relevant_path = "../sets_jsons_cam/"
+included_extenstions = ['json']
+file_names = sorted([fn for fn in os.listdir(relevant_path)
+              if any(fn.endswith(ext) for ext in included_extenstions)])
 
+   
 
-lsml = LSML_Supervised(num_constraints=200)
-lsml.fit(X, Y)
+fn0 = relevant_path + file_names[0]
+
+with open(fn0) as f:
+    data = json.load(f)

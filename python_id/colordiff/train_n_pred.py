@@ -22,9 +22,6 @@ def  dice(y_true, y_pred):
     # minimization purposes
     return -(2*K.sum(y_int) / (K.sum(y_true) + K.sum(y_pred)))
 
-def id_loss(y_true, y_pred):
-    orig = 
-    
     
 
 def baseline_model(lendim):

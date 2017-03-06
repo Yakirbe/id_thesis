@@ -19,12 +19,12 @@ if __name__ == "__main__":
     cam = True
 
     #load datasets
-    refs = ds.refs
-    sd = ds.sd ; nc = ds.nc ; km = ds.km ; kd = ds.kd
-    prep_ds(refs  , km , kd , nc , sd , cam = cam , fw = fw)
-    tr_fn = "rgb_set_tr_cam_furnsworth.json"
-    te_fn = "rgb_set_te_cam_furnsworth.json"
-    cvecs = embed_main(tr_fn , te_fn)
+    #refs = ds.refs
+    #sd = ds.sd ; nc = ds.nc ; km = ds.km ; kd = ds.kd
+    #prep_ds(refs  , km , kd , nc , sd , cam = cam , fw = fw)
+    #tr_fn = "rgb_set_tr_cam_furnsworth.json"
+    #te_fn = "rgb_set_te_cam_furnsworth.json"
+    #cvecs = embed_main(tr_fn , te_fn)
     X_tr , X_te , Y_tr , Y_te = arrange_x()
-    model = train_id(X_tr , Y_tr)
-    pred_id(model , X_te , Y_te)
+    #model = train_id(X_tr , Y_tr)
+    #pred_id(model , X_te , Y_te)
