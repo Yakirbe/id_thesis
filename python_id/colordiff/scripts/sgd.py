@@ -5,30 +5,30 @@ import numpy as np
 import argparse
 
 def sigmoid_activation(x):
-	# compute and return the sigmoid activation value for a
-	# given input value
-	return 1.0 / (1 + np.exp(-x))
+    # compute and return the sigmoid activation value for a
+    # given input value
+    return 1.0 / (1 + np.exp(-x))
 
 def next_batch(X, y, batchSize):
-	# loop over our dataset `X` in mini-batches of size `batchSize`
-	for i in np.arange(0, X.shape[0], batchSize):
-		# yield a tuple of the current batched data and labels
-		yield (X[i:i + batchSize], y[i:i + batchSize])
+    # loop over our dataset `X` in mini-batches of size `batchSize`
+    for i in np.arange(0, X.shape[0], batchSize):
+        # yield a tuple of the current batched data and labels
+        yield (X[i:i + batchSize], y[i:i + batchSize])
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-e", "--epochs", type=float, default=100,
-	help="# of epochs")
+    help="# of epochs")
 ap.add_argument("-a", "--alpha", type=float, default=0.01,
-	help="learning rate")
+    help="learning rate")
 ap.add_argument("-b", "--batch-size", type=int, default=32,
-	help="size of SGD mini-batches")
+    help="size of SGD mini-batches")
 args = vars(ap.parse_args())
 
 # generate a 2-class classification problem with 400 data points,
 # where each data point is a 2D feature vector
-(X, y) = make_blobs(n_samples=400, n_features=2, centers=2,
-	cluster_std=2.5, random_state=95)
+(X, y) = make_blobs(n_samples=400, n_features=6, centers=5,
+    cluster_std=2.5, random_state=95)
 
 
 # insert a column of 1's as the first entry in the feature
@@ -47,14 +47,15 @@ lossHistory = []
 
 # loop over the desired number of epochs
 for epoch in np.arange(0, args["epochs"]):
-	# initialize the total loss for the epoch
-    	epochLoss = []
+    # initialize the total loss for the epoch
+    epochLoss = []
  
-	# loop over our data in batches
-	for (batchX, batchY) in next_batch(X, y, args["batch_size"]):
-		#preds = sigmoid_activation(batchX.dot(W))
-         preds = batchX.dot(W)
-         error = preds - batchY
+    # loop over our data in batches
+    for (batchX, batchY) in next_batch(X, y, args["batch_size"]):
+       
+        preds = sigmoid_activation(batchX.dot(W))
+#        preds = batchX.dot(W)
+        error = preds - batchY
 
         loss = np.sum(error ** 2)
         epochLoss.append(loss)
@@ -68,9 +69,9 @@ for epoch in np.arange(0, args["epochs"]):
         print gradient
         print loss, epoch
  
-	# update our loss history list by taking the average loss
-	# across all batches
-	lossHistory.append(np.average(epochLoss))
+    # update our loss history list by taking the average loss
+    # across all batches
+    lossHistory.append(np.average(epochLoss))
     
     
     
