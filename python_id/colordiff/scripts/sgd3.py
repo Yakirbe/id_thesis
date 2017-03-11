@@ -42,13 +42,13 @@ def coefficients_sgd(train, l_rate, n_epoch):
         sum_error = 0
         for row in train:
             pair = row[:6]
-            del row[:6]
-            yhat = predict(row, coef)
-            error = yhat - row[-1] + L2(pair)
+            emb_vec = row[6:]
+            yhat = predict(emb_vec, coef)
+            error = yhat - emb_vec[-1] + L2(pair)
             sum_error += error**2
             coef[0] = coef[0] - l_rate * error
-            for i in range(len(row)-1):
-                coef[i + 1] = coef[i + 1] - l_rate * error * row[i]
+            for i in range(len(emb_vec)-1):
+                coef[i + 1] = coef[i + 1] - l_rate * error * emb_vec[i]
         print('>epoch=%d, lrate=%.3f, error=%.3f' % (epoch, l_rate, sum_error))
         print 
     return coef
@@ -56,9 +56,8 @@ def coefficients_sgd(train, l_rate, n_epoch):
 # Calculate coefficients
 dataset = gen_ds()
 l_rate = 0.001
-n_epoch = 5
+n_epoch = 50
 w = coefficients_sgd(dataset, l_rate, n_epoch)
-print(w)
 
     
     
