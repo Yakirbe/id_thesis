@@ -47,7 +47,7 @@ def get_rgb_label_set(kd_d  , refs_d , th = 5):
 #                print "color2 lab:" , color2.get_value_tuple()
 #                print j , im_num ,":"
 #                print "de_c2k: %.3f" % de_c2k , "\n"
-                if tot == 200:
+                if tot == 500:
                     return final_set
 
 
