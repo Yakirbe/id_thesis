@@ -67,6 +67,7 @@ def test(test, labels, w, method = "L2"):
     avg = 0.0
     i = 0
     for t in test:
+        pair = t[:6]
         sample = t[6:]
         y_pred = np.dot(sample, w)
         y_true = labels[i]
@@ -82,7 +83,7 @@ if __name__ == "__main__":
     # Calculate coefficients
     l_rate = 0.001
     n_epoch = 300000
-    w = train(X_tr,Y_tr, l_rate, n_epoch)
+    #w = train(X_tr,Y_tr, l_rate, n_epoch)
     l2_error = test(X_te, Y_te, w)
     #l2_error = test(X_tr, Y_tr, w)
     print l2_error
