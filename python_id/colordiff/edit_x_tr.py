@@ -24,22 +24,19 @@ def zero_pad(X_tr , max_len = -1):
     
 
 def arrange_x():
-    relevant_path = "../sets_jsons/"
     relevant_path = "../sets_jsons_cam/"
     included_extenstions = ['json']
     file_names = sorted([fn for fn in os.listdir(relevant_path)
                   if any(fn.endswith(ext) for ext in included_extenstions)])
     
-   
-    
     fn0 = relevant_path + file_names[0]
     
     with open(fn0) as f:
         data = json.load(f)
-    X_tr = [data["X_tr"]]
-    X_te = [data["X_te"]]
-    Y_tr = [data["Y_tr"]]
-    Y_te = [data["Y_te"]]
+    X_tr = data["X_tr"]
+    X_te = data["X_te"]
+    Y_tr = data["Y_tr"]
+    Y_te = data["Y_te"]
     print X_tr[0]
     for fn in file_names[1:]:
         print relevant_path + fn
