@@ -84,7 +84,7 @@ Since our embedded vectors are sparse formed, a massive dimensional reduction wa
 
 \subsection{Learning}
 Learning is performed as a linear regression model training.
-We learn by using \textbf{Stochastic Gradient Descent} \cite{SGD} optimiztation algorithm. \\
+We learn by using \textbf{Stochastic Gradient Descent} \cite{SGD} optimization algorithm. \\
 Loss function of the training process would be a generalized Mean Average Error \cite{MAE} loss function, constrained by our semi-metrics critireas for model divergence as described above \ref{Chapter3}.
 We also applied a standard Ridge \cite{Ridge} regularizer on the learning process as described in the learning chapter \ref{Chapter6}.
 \cite{retargeting} \cite{einstein}
@@ -94,10 +94,9 @@ Loss(w)=\lambda\norm{w}^2 + \frac{1}{n}\sum_{i=0}^{i=n} |w^T x_i - y_i|
 \end{equation}
 
 \subsection{Assessment}
-Assessment is operated following two criteria:
+Assessment is operated following criteria:
 \begin{itemize}
 \item \textbf{MAE} - Mean Absolute Error
-\item \textbf{STRESS} - Standardized Residual Sum of Squares \cite{STRESS} \\
 \end{itemize}
 
 MAE index is measured as:
@@ -107,17 +106,6 @@ MAE = \frac{1}{n} \cdot \sum_{i = 1}^{n}{|y^{pred}_i - y^{test}_i|}
 
 Where n is dataset size. \\
 
-STRESS index is measured as follows:
-\begin{equation}
-STRESS = \sqrt{100 \cdot \dfrac{\sum\limits_{i}{(y^{pred}_i - F \cdot y^{test}_i)^2}}{\sum\limits_{i}^{}{F^2 \cdot (y^{test}_i)^2 }}}
-\end{equation}
-
-Where F factor is assembled as:
-\begin{equation}
-F = \dfrac{\sum\limits_{i}{(y^{pred}_i)^2}}{\sum\limits_{i}{y^{test}_i \cdot y^{pred}_i }}
-\end{equation}
-
-
 
 
 
@@ -125,14 +113,21 @@ F = \dfrac{\sum\limits_{i}{(y^{pred}_i)^2}}{\sum\limits_{i}{y^{test}_i \cdot y^{
 
 \section{Results}
 
-we now describe our results as compared to the original paper results as described in \ref{original paper results}
+we now describe our results as compared to the original paper results as described in \ref{original paper results}.
+We display the experiments for each data splitting (camera/color), where in each data section, we display 2 modeling modes:
+\begin{itemize}
+	\item \textbf{fixed number of centers} - inspection of our embedding with several number of centers, along all data dimensions
+	\item \textbf{cross-validated number of centers} - automated number of centers genarated by cross validation algorithm described in {]}
+\end{itemize}
 
 
-\subsection{Unseen Colors}
+
+\subsection{cross-validated number of centers}
+\subsubsection{Unseen Colors}
 
 Unseen camera case was assembled by a certain percentage of all data set as train set, and the rest as test set. In this experiment we have taken the train set size to be $80 \%$ of the total data set.
 		
-		\subsubsection{Dataset properties}
+		\subsubsubsection{Dataset properties}
 		
 			From a total 13500 patches pairs set, the divided train-test sets amounts are:
 			\begin{itemize}
@@ -142,7 +137,7 @@ Unseen camera case was assembled by a certain percentage of all data set as trai
 			
 			train/set ratio = $4/1$
 			
-		\subsubsection{Centers locations}
+		\subsubsubsection{Centers locations}
 		
 		Centers locations are shown as extracted via cross-validation for finding optimal number of centers per dimension, and k-means for extracting centers values. \\
 		k-means actually found only the inner centers, since the outer centers are fixed bounds.\\
@@ -160,7 +155,7 @@ $ $
 
 		In this scenario, there are 4 extracted centers per dimension.
 
-	\subsubsection{Experiment Figures}
+	\subsubsubsection{Experiment Figures}
 	
 	Our model provides the following figures:
 
@@ -172,12 +167,12 @@ $ $
 	\end{itemize}
 
 
-\subsection{Unseen Camera}
+\subsubsection{Unseen Camera}
 
 Unseen camera scenario was assembled by assigning one of the cameras involved in dataset generation as test set, where the other 3 functions as train set.
 
 
-	\subsubsection{Dataset properties}
+	\subsubsubsection{Dataset properties}
 	
 		From a total 13500 patches pairs set, the divided train-test sets amounts are:
 		\begin{itemize}
@@ -187,7 +182,7 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 		
 		train/set ratio = $3/2$
 
-	\subsubsection{Centers locations}
+	\subsubsubsection{Centers locations}
 	
 	Centers locations are shown as extracted via cross-validation \cite{cross_val}. for finding optimal number of centers per dimension, and k-means for extracting centers values. \\
 	k-means actually found only the inner centers, since the outer centers are fixed bounds.
@@ -208,7 +203,7 @@ $ $
 
 	As seen in centers list, edges are equal per dimension $[-0.01 , 255.01]$ for data bounding.\\
 	
-	\subsubsection{Experiment Figures}	
+	\subsubsubsection{Experiment Figures}	
 	Our model provides the following figures:	
 	\begin{itemize}
 	\item 	p-value = $4.5 \cdot 10 ^{-05}$
@@ -217,7 +212,7 @@ $ $
 	
 	\end{itemize}
 
-\subsection{Comparison}
+\subsubsection{Comparison}
 
 \begin{figure}[h] 
 			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/original_paper_results}

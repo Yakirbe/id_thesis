@@ -394,7 +394,6 @@ def embed_main(tr_fn , te_fn, c):
             argmax = [indx for indx, j in enumerate(x) if j <> 0][-1]
             x = x[:(argmax + 1)]
             x = tr_set[i]["vec"] + x
-            print x
             tr_emb.append(x)
             tr_lab.append(train_ds_json[i]["label"])
         
@@ -415,7 +414,6 @@ def embed_main(tr_fn , te_fn, c):
         print "test set done!"
         
         del test_ds_json
-        print "Done!\n"
         
         # prepare sets-----------------------------------------------------------------
         print "convert to sets and remove zero columns"
@@ -430,8 +428,6 @@ def embed_main(tr_fn , te_fn, c):
         print len(X_te[0]) , len(X_tr[0])
         print "Done!\n"
         
-        print "xte = "
-        print X_te[:2]
         json_out = {"X_tr":X_tr , "X_te":X_te , "Y_tr":Y_tr , "Y_te":Y_te}
         
         js_fn = "../sets_jsons_cam/{}.json".format(str(t_i))
