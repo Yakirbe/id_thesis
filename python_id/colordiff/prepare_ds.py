@@ -24,7 +24,6 @@ def get_color_list(string):
 
 
 def get_rgb_label_set(kd_d  , refs_d , th = 4):
-    print "started!"
     
     final_set = []
     # Color to be compared to the reference.
