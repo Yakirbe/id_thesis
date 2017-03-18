@@ -42,6 +42,8 @@ def run_idd(cam = False, fw = True, c = ""):
     print "c = ", c
 
 if __name__ == "__main__":
-    for c in range(2,5):
+    for c in range(2,6):
         run_idd(cam = False, fw = True, c = c)
+    for c in range(2,6):
+        run_idd(cam = True, fw = True, c = c)
     
