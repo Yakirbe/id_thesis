@@ -242,7 +242,7 @@ def embed(dataset ,tr_ds,cvecs):
 
 
 
-def gen_C_set(tr_set , dis_min , dis_max , vec_len = 3 , min_max_margin = 0.0):
+def gen_C_set(tr_set , dis_min , dis_max , vec_len = 3 , min_max_margin = 0.0, c = ""):
     
     kmeans_flag = True     
     
@@ -257,7 +257,8 @@ def gen_C_set(tr_set , dis_min , dis_max , vec_len = 3 , min_max_margin = 0.0):
                 
             ds_temp =(np.array(X).reshape(-1, 1))
             X = np.asarray(X)
-            C = 2#get_opt_k(X ,6)
+            if c:
+                C = c#get_opt_k(X ,6)
             k_means = cluster.KMeans(C)
             k_means.fit(np.asarray(ds_temp))
             c_vec = (k_means.cluster_centers_)
@@ -333,7 +334,7 @@ def arrange_ds(ds_fn):
     
 #%%
 
-def embed_main(tr_fn , te_fn):
+def embed_main(tr_fn , te_fn, c):
 
     # load dataset ----------------------------------------------------------------
     
@@ -353,7 +354,7 @@ def embed_main(tr_fn , te_fn):
     dis_max = 255
     # generate dis vecs
         
-    cvecs = gen_C_set(ds_c_vec , dis_min , dis_max , vec_len = len(ds_tr[0]["vec"]) , min_max_margin = 0.0)    
+    cvecs = gen_C_set(ds_c_vec , dis_min , dis_max , vec_len = len(ds_tr[0]["vec"]) , min_max_margin = 0.0, c=c)
     del ds_c_vec
     
 #%%

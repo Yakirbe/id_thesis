@@ -23,7 +23,8 @@ def get_color_list(string):
 
 
 
-def get_rgb_label_set(kd_d  , refs_d , th = 5):
+def get_rgb_label_set(kd_d  , refs_d , th = 4):
+    print "started!"
     
     final_set = []
     # Color to be compared to the reference.
@@ -41,7 +42,8 @@ def get_rgb_label_set(kd_d  , refs_d , th = 5):
             if de_c2k <= th:# and j == im_num:
                 tot +=1
                 final_set.append({"v1":color1_srgb.get_value_tuple(),"v2":color2_srgb.get_value_tuple(),"dis":de_c2k})
-                print "tot = {}".format(tot)
+                if tot %400 == 0:
+                    print "tot = {}".format(tot)
 #                print "rgb:", sRGBColor(kd_d[i][0] , kd_d[i][1] , kd_d[i][2])
 #                print "color1 lab:" , color1.get_value_tuple()
 #                print "color2 lab:" , color2.get_value_tuple()
@@ -89,8 +91,8 @@ def prep_ds(refs  , km , kd , nc , sd , cam = False , fw = True):
         #camera ds prep    
         final_set = fl_km + fl_kd + fl_nc + fl_sd    
         final_set = random.sample(final_set , len(final_set))
-        final_set_tr = final_set[:0.8*len(final_set)]
-        final_set_te = final_set[:0.8*len(final_set)]
+        final_set_tr = final_set[:int(0.8*len(final_set))]
+        final_set_te = final_set[int(0.8*len(final_set)):]
         del final_set
     
     #regular ds prep    
