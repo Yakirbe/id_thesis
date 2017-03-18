@@ -74,8 +74,9 @@
 \contentsline {subsection}{\numberline {8.2.1}cross-validated number of centers}{34}{subsection.210}
 \contentsline {subsubsection}{\numberline {8.2.1.1}Unseen Colors}{34}{subsubsection.211}
 \contentsline {subsubsection}{\numberline {8.2.1.2}Unseen Camera}{35}{subsubsection.212}
-\contentsline {subsubsection}{\numberline {8.2.1.3}Comparison}{36}{subsubsection.213}
-\contentsline {chapter}{\numberline {9}Conclusions and discussion}{37}{chapter.215}
-\contentsline {section}{\numberline {9.1}Summary}{37}{section.216}
-\contentsline {section}{\numberline {9.2}further exploration}{38}{section.220}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{39}{appendix.221}
+\contentsline {subsection}{\numberline {8.2.2}fixed number of centers}{36}{subsection.213}
+\contentsline {subsection}{\numberline {8.2.3}Comparison}{36}{subsection.214}
+\contentsline {chapter}{\numberline {9}Conclusions and discussion}{39}{chapter.216}
+\contentsline {section}{\numberline {9.1}Summary}{39}{section.217}
+\contentsline {section}{\numberline {9.2}further exploration}{40}{section.221}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{41}{appendix.222}

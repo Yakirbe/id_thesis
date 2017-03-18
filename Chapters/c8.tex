@@ -107,10 +107,6 @@ MAE = \frac{1}{n} \cdot \sum_{i = 1}^{n}{|y^{pred}_i - y^{test}_i|}
 Where n is dataset size. \\
 
 
-
-
-
-
 \section{Results}
 
 we now describe our results as compared to the original paper results as described in \ref{original paper results}.
@@ -147,8 +143,9 @@ Unseen camera case was assembled by a certain percentage of all data set as trai
 		
 		\begin{pmatrix}
 				     0.0 &     0.0 &    0.0\\
-					84.5 &   80.35 &    83.13 \\
-					161.59 &   140.96 &   138.81\\
+					44.5 &   30.35 &    43.13 \\
+					84.4 &   80.28 &    83.43 \\
+					161.59 &   150.96 &   168.81\\
 		     		 255.0 &  255.0 &   255.0 \\
 				\end{pmatrix}$\\
 $ $
@@ -161,7 +158,6 @@ $ $
 
 	\begin{itemize}
 	\item 	p-value = $3.9 \cdot 10 ^{-03}$
-	\item 	STRESS = $26.62$
 	\item 	MAE = $0.80$
 	
 	\end{itemize}
@@ -194,8 +190,9 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 	
 		\begin{pmatrix}
 		0.0 &     0.0 &    0.0\\
-		80.6 &   90.55 &    84.43 \\
-		151.29 &   160.98 &   158.21\\
+		50.6 &   90.55 &    84.43 \\
+		101.54 &    &   \\		
+		171.29 &   160.98 &   158.21\\
 		255.0 &  255.0 &   255.0 \\
 		\end{pmatrix}$\\
 $ $
@@ -207,22 +204,27 @@ $ $
 	Our model provides the following figures:	
 	\begin{itemize}
 	\item 	p-value = $4.5 \cdot 10 ^{-05}$
-	\item 	STRESS = $25.59$
 	\item 	MAE = $0.79$
 	
 	\end{itemize}
 
-\subsubsection{Comparison}
+
+
+\subsection{fixed number of centers}
+
+
+
+\subsection{Comparison}
 
 \begin{figure}[h] 
-			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/original_paper_results}
-			\caption[orig res]
-			{Generalization of the learned metrics to new colors; (b) Generalization of
-			the learned metrics to new cameras. For (a) and (b), we plotted the Mean and STRESS
-			values as a function of the number of clusters. The horizontal dashed line represents
-			the STRESS baseline of $\Delta E_{00}$ . For the sake of readability, we have not plotted the
-			mean baseline of $\Delta E_{00}$ at 1.70.}
-\label{original paper results}			
+	\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/original_paper_results}
+	\caption[orig res]
+	{Generalization of the learned metrics to new colors; (b) Generalization of
+		the learned metrics to new cameras. For (a) and (b), we plotted the Mean and STRESS
+		values as a function of the number of clusters. The horizontal dashed line represents
+		the STRESS baseline of $\Delta E_{00}$ . For the sake of readability, we have not plotted the
+		mean baseline of $\Delta E_{00}$ at 1.70.}
+	\label{original paper results}			
 \end{figure}
 
 
@@ -234,13 +236,8 @@ The \ref{original paper results} charts' x - axes describes the number of cluste
 Their minimal values on both scenarios\textbf{ are > 0.9 for MAE and > 40 for STRESS}, where our results \textbf{ are < 0.85 for MAE and < 30 for STRESS}, all for a $p - value$ with a similar magnitude to theirs. \\
 As clearly seen, our results applies the following conditions:
 \begin{itemize}
-\item Outperforming reference original paper error scores
-\item Small p-values which proves the validity of our method, since there is a reasonable assumption that our models provide close dataset approximation
+	\item Outperforming reference original paper error scores
+	\item Small p-values which proves the validity of our method, since there is a reasonable assumption that our models provide close dataset approximation
 \end{itemize}
 
 This information is a meaningful confirmation of the assumption that our method is valid to work with in terms of reliability. In the following chapter we will discuss the further explorations should be performed to examine the rest of performance criterias mentioned above.
-
-
-
-
-
