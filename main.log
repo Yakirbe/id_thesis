@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.28)  18 MAR 2017 20:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.28)  18 MAR 2017 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2579,7 +2579,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-<Figures/flatten.jpg, id=614, 631.60968pt x 301.8778pt>
+<Figures/flatten.jpg, id=624, 631.60968pt x 301.8778pt>
 File: Figures/flatten.jpg Graphic file (type jpg)
 
 <use Figures/flatten.jpg>
@@ -3282,13 +3282,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--74
 
 
 
-]) [24]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 144--150
+
+ []
+
+[24]
+! Extra }, or forgotten $.
+l.174 ...\overrightarrow{x_{pi2}} \:are\: similar}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.175 ... ID(\overrightarrow{x_{pi1}}\:  and \: 1}
+                                                  _[S_1],\overrightarrow{x_{...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.175 ...rrightarrow{x_{pi2}} \:are\: non-similar}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--202
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--202
+
+ []
+
+[25]) [26]
 \openout2 = `Chapters/c6.aux'.
 
  (./Chapters/c6.tex
 Chapter 6.
 
-LaTeX Warning: Citation 'kmeans' on page 25 undefined on input line 14.
+LaTeX Warning: Citation 'kmeans' on page 27 undefined on input line 14.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
@@ -3333,13 +3376,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--45
  []
 
 
-LaTeX Warning: Citation 'quicksort' on page 25 undefined on input line 51.
+LaTeX Warning: Citation 'quicksort' on page 27 undefined on input line 51.
 
 
-LaTeX Warning: Citation 'mergesort' on page 25 undefined on input line 51.
+LaTeX Warning: Citation 'mergesort' on page 27 undefined on input line 51.
 
 
-LaTeX Warning: Citation 'timsort' on page 25 undefined on input line 51.
+LaTeX Warning: Citation 'timsort' on page 27 undefined on input line 51.
 
 
 Overfull \hbox (87.85649pt too wide) in paragraph at lines 50--52
@@ -3348,7 +3391,7 @@ Overfull \hbox (87.85649pt too wide) in paragraph at lines 50--52
  []
 
 1: section
-[25
+[27
 
 
 
@@ -3357,7 +3400,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-) [26]
+) [28]
 \openout2 = `Chapters/c7.aux'.
 
  (./Chapters/c7.tex
@@ -3377,33 +3420,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-<Figures/sift1.jpg, id=774, 1606.0pt x 602.25pt>
+<Figures/sift1.jpg, id=803, 1606.0pt x 602.25pt>
 File: Figures/sift1.jpg Graphic file (type jpg)
  <use Figures/sift1.jpg>
 Package pdftex.def Info: Figures/sift1.jpg used on input line 33.
 (pdftex.def)             Requested size: 452.9607pt x 169.86024pt.
 
-<Figures/sift10.jpg, id=775, 642.4pt x 321.2pt>
+<Figures/sift10.jpg, id=804, 642.4pt x 321.2pt>
 File: Figures/sift10.jpg Graphic file (type jpg)
  <use Figures/sift10.jpg>
 Package pdftex.def Info: Figures/sift10.jpg used on input line 40.
 (pdftex.def)             Requested size: 341.4408pt x 170.7204pt.
 )
 1: section
-[27
+[29
 
 
 
-] [28 <./Figures/sift1.jpg> <./Figures/sift10.jpg>]
+] [30 <./Figures/sift1.jpg> <./Figures/sift10.jpg>]
 \openout2 = `Chapters/c8.aux'.
 
  (./Chapters/c8.tex
 Chapter 8.
 
-LaTeX Warning: Citation 'perp_color' on page 29 undefined on input line 9.
+LaTeX Warning: Citation 'perp_color' on page 31 undefined on input line 9.
 
 
-LaTeX Warning: Citation 'c2lm' on page 29 undefined on input line 9.
+LaTeX Warning: Citation 'c2lm' on page 31 undefined on input line 9.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--13
@@ -3411,13 +3454,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
  []
 
 
-LaTeX Warning: Citation 'MAE' on page 29 undefined on input line 14.
+LaTeX Warning: Citation 'MAE' on page 31 undefined on input line 14.
 
 
-LaTeX Warning: Citation 'STRESS' on page 29 undefined on input line 14.
+LaTeX Warning: Citation 'STRESS' on page 31 undefined on input line 14.
 
 
-LaTeX Warning: Citation 'furnsworth' on page 29 undefined on input line 22.
+LaTeX Warning: Citation 'furnsworth' on page 31 undefined on input line 22.
 
 
 Overfull \hbox (23.07747pt too wide) in paragraph at lines 22--23
@@ -3425,7 +3468,7 @@ Overfull \hbox (23.07747pt too wide) in paragraph at lines 22--23
 unsell 100 hue-test set [[]]. 
  []
 
-<Figures/set_ds.jpg, id=786, 2054.67625pt x 2054.67625pt>
+<Figures/set_ds.jpg, id=815, 2054.67625pt x 2054.67625pt>
 File: Figures/set_ds.jpg Graphic file (type jpg)
 
 <use Figures/set_ds.jpg>
@@ -3436,12 +3479,12 @@ Package pdftex.def Info: Figures/set_ds.jpg used on input line 28.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation 'lab' on page 29 undefined on input line 33.
+LaTeX Warning: Citation 'lab' on page 31 undefined on input line 33.
 
 
-LaTeX Warning: Citation 'CIELAB' on page 29 undefined on input line 34.
+LaTeX Warning: Citation 'CIELAB' on page 31 undefined on input line 34.
 
-<Figures/patch_positions.jpg, id=787, 167.4255pt x 113.9457pt>
+<Figures/patch_positions.jpg, id=816, 167.4255pt x 113.9457pt>
 File: Figures/patch_positions.jpg Graphic file (type jpg)
 
 <use Figures/patch_positions.jpg>
@@ -3452,38 +3495,38 @@ Package pdftex.def Info: Figures/patch_positions.jpg used on input line 38.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 1: section
-[29
+[31
 
 
 
 ]
 
-LaTeX Warning: Citation 'RGB' on page 30 undefined on input line 65.
+LaTeX Warning: Citation 'RGB' on page 32 undefined on input line 65.
 
 
-LaTeX Warning: Citation 'cross validation' on page 30 undefined on input line 6
+LaTeX Warning: Citation 'cross validation' on page 32 undefined on input line 6
 8.
 
 
-LaTeX Warning: Citation 'kmeans' on page 30 undefined on input line 68.
+LaTeX Warning: Citation 'kmeans' on page 32 undefined on input line 68.
 
-[30 <./Figures/set_ds.jpg>]
+[32 <./Figures/set_ds.jpg>]
 
-LaTeX Warning: Citation 'SGD' on page 31 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'MAE' on page 31 undefined on input line 90.
+LaTeX Warning: Citation 'SGD' on page 33 undefined on input line 89.
 
 
-LaTeX Warning: Citation 'Ridge' on page 31 undefined on input line 91.
+LaTeX Warning: Citation 'MAE' on page 33 undefined on input line 90.
 
 
-LaTeX Warning: Citation 'retargeting' on page 31 undefined on input line 92.
+LaTeX Warning: Citation 'Ridge' on page 33 undefined on input line 91.
 
 
-LaTeX Warning: Citation 'einstein' on page 31 undefined on input line 92.
+LaTeX Warning: Citation 'retargeting' on page 33 undefined on input line 92.
 
-[31 <./Figures/patch_positions.jpg>]
+
+LaTeX Warning: Citation 'einstein' on page 33 undefined on input line 92.
+
+[33 <./Figures/patch_positions.jpg>]
 ! Undefined control sequence.
 l.95 Loss(w)=\lambda\norm
                          {w}^2 + \frac{1}{n}\sum_{i=0}^{i=n} |w^T x_i - y_i|
@@ -3494,7 +3537,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation 'STRESS' on page 32 undefined on input line 102.
+LaTeX Warning: Citation 'STRESS' on page 34 undefined on input line 102.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
@@ -3506,7 +3549,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
-[32]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 149--151
 
  []
@@ -3568,9 +3611,9 @@ Overfull \hbox (0.27495pt too wide) in paragraph at lines 179--180
  []
 
 
-LaTeX Warning: Citation 'cross_val' on page 33 undefined on input line 194.
+LaTeX Warning: Citation 'cross_val' on page 35 undefined on input line 194.
 
-[33]
+[35]
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -3621,7 +3664,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
-<Figures/original_paper_results.jpg, id=820, 500.46976pt x 407.72325pt>
+<Figures/original_paper_results.jpg, id=848, 500.46976pt x 407.72325pt>
 File: Figures/original_paper_results.jpg Graphic file (type jpg)
 
 <use Figures/original_paper_results.jpg>
@@ -3638,12 +3681,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--237
  []
 
 
-LaTeX Warning: Citation 'prep_color' on page 34 undefined on input line 238.
+LaTeX Warning: Citation 'prep_color' on page 36 undefined on input line 238.
 
-) [34] [35 <./Figures/original_paper_results.jpg>]
+) [36] [37 <./Figures/original_paper_results.jpg>]
 \openout2 = `Chapters/c9.aux'.
 
- (./Chapters/c9.tex [36
+ (./Chapters/c9.tex [38
 
 
 
@@ -3671,7 +3714,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
  []
 
 
-LaTeX Warning: Citation 'SGD' on page 37 undefined on input line 24.
+LaTeX Warning: Citation 'SGD' on page 39 undefined on input line 24.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
@@ -3689,31 +3732,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
  []
 
 
-LaTeX Warning: Citation 'perp_color' on page 37 undefined on input line 30.
+LaTeX Warning: Citation 'perp_color' on page 39 undefined on input line 30.
 
 1: section
-[37]) [38]
+[39]) [40]
 \openout2 = `Appendices/AppendixA.aux'.
 
  (./Appendices/AppendixA.tex
 Appendix A.
 )
 1: section
-[39
+[41
 
 
 
 ]
 
-LaTeX Warning: Citation 'cover_trees' on page 40 undefined on input line 347.
+LaTeX Warning: Citation 'cover_trees' on page 42 undefined on input line 347.
 
 
-LaTeX Warning: Citation 'sift_lowe' on page 40 undefined on input line 348.
+LaTeX Warning: Citation 'sift_lowe' on page 42 undefined on input line 348.
 
 
 LaTeX Warning: Empty bibliography on input line 352.
 
-[40
+[42
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 355.
@@ -3724,7 +3767,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 355.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 355.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 355.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0B669DD8828A3FC313130A6993043339;12183.
+(rerunfilecheck)             Checksum: B5AD568D82709F84187370DCF2211090;12829.
 
 
 LaTeX Warning: There were undefined references.
@@ -3739,10 +3782,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45319 strings out of 493013
- 906560 string characters out of 6133328
- 1095739 words of memory out of 5000000
- 47887 multiletter control sequences out of 15000+600000
+ 45334 strings out of 493013
+ 906736 string characters out of 6133328
+ 1095740 words of memory out of 5000000
+ 47889 multiletter control sequences out of 15000+600000
  50785 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,20n,83p,10377b,2242s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3762,10 +3805,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf
 onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
 /palatino/uplri8a.pfb>
-Output written on main.pdf (58 pages, 1892919 bytes).
+Output written on main.pdf (60 pages, 1899690 bytes).
 PDF statistics:
- 974 PDF objects out of 1000 (max. 8388607)
- 884 compressed objects within 9 object streams
- 276 named destinations out of 1000 (max. 500000)
- 691 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1007 PDF objects out of 1200 (max. 8388607)
+ 914 compressed objects within 10 object streams
+ 289 named destinations out of 1000 (max. 500000)
+ 707 words of extra memory for PDF output out of 10000 (max. 10000000)
 

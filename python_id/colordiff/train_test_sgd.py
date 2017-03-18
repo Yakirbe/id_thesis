@@ -61,8 +61,8 @@ def train(train, labels, l_rate, n_epoch, weight = ""):
                 #coef[i + 1] = np.max(0.0,coef[i + 1] - l_rate * error * emb_vec[i])
                 coef[i + 1] =coef[i + 1] - l_rate * error * emb_vec[i]
             index += 1
-        print('epoch=%d, lrate=%.3f, error=%.3f' % (epoch, l_rate, sum_error))
-        print
+        #print('epoch=%d, lrate=%.3f, error=%.3f' % (epoch, l_rate, sum_error))
+        #print
     return coef
     
     
