@@ -67,16 +67,16 @@
 \contentsline {subsection}{\numberline {8.1.1}Dataset}{31}{subsection.199}
 \contentsline {subsection}{\numberline {8.1.2}Models to train}{31}{subsection.202}
 \contentsline {subsection}{\numberline {8.1.3}Interpolation}{32}{subsection.203}
-\contentsline {subsection}{\numberline {8.1.4}Embedding}{33}{subsection.204}
-\contentsline {subsection}{\numberline {8.1.5}Learning}{33}{subsection.205}
-\contentsline {subsection}{\numberline {8.1.6}Assessment}{34}{subsection.207}
-\contentsline {section}{\numberline {8.2}Results}{34}{section.209}
-\contentsline {subsection}{\numberline {8.2.1}cross-validated number of centers}{34}{subsection.210}
-\contentsline {subsubsection}{\numberline {8.2.1.1}Unseen Colors}{34}{subsubsection.211}
-\contentsline {subsubsection}{\numberline {8.2.1.2}Unseen Camera}{35}{subsubsection.212}
-\contentsline {subsection}{\numberline {8.2.2}fixed number of centers}{36}{subsection.213}
-\contentsline {subsection}{\numberline {8.2.3}Comparison}{36}{subsection.214}
-\contentsline {chapter}{\numberline {9}Conclusions and discussion}{39}{chapter.216}
-\contentsline {section}{\numberline {9.1}Summary}{39}{section.217}
-\contentsline {section}{\numberline {9.2}further exploration}{40}{section.221}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{41}{appendix.222}
+\contentsline {subsection}{\numberline {8.1.4}Embedding}{34}{subsection.226}
+\contentsline {subsection}{\numberline {8.1.5}Learning}{34}{subsection.227}
+\contentsline {subsection}{\numberline {8.1.6}Assessment}{35}{subsection.229}
+\contentsline {section}{\numberline {8.2}Results}{35}{section.231}
+\contentsline {subsection}{\numberline {8.2.1}cross-validated number of centers}{35}{subsection.232}
+\contentsline {subsubsection}{\numberline {8.2.1.1}Unseen Colors}{35}{subsubsection.233}
+\contentsline {subsubsection}{\numberline {8.2.1.2}Unseen Camera}{36}{subsubsection.234}
+\contentsline {subsection}{\numberline {8.2.2}fixed number of centers}{36}{subsection.235}
+\contentsline {subsection}{\numberline {8.2.3}Comparison}{36}{subsection.236}
+\contentsline {chapter}{\numberline {9}Conclusions and discussion}{39}{chapter.238}
+\contentsline {section}{\numberline {9.1}Summary}{39}{section.239}
+\contentsline {section}{\numberline {9.2}further exploration}{40}{section.243}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{41}{appendix.244}
