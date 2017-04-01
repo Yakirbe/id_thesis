@@ -107,6 +107,263 @@ headsepline, % Uncomment to get a line under the header
 {2cm}{2cm}{0.3cm}
 
 
+% TOGGLES: paper, presentation
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Method specifics
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ourmethodfull}{Interpolated Discretized Embedding}
+\newcommand{\ope}{\ensuremath{\text{ID}}} %
+\newcommand{\opeoutputrange}{[0,1]} % 
+
+\newcommand{\obja}{o_{\; \!_1}}
+\newcommand{\objb}{o_{\; \!_2}}
+\newcommand{\objc}{o_{\; \!_3}}
+\newcommand{\dist}{d}
+
+\newcommand{\goodmark}{\textcolor{green}}
+\newcommand{\badmark}{\textcolor{red}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% paper
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% single vectors
+\newcommand{\xvfeaturei}{x_i}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\IDwebpage}{\url{http://www.ariel.ac.il/sites/ofirpele/ID/}}
+
+\newcommand{\xnovec}{x}
+\newcommand{\xa}{x_1}
+\newcommand{\xb}{x_2}
+\newcommand{\xc}{x_3}
+\newcommand{\xd}{x_4}
+\newcommand{\xend}{x_\examplesnum}
+\newcommand{\xdimend}{x_\vecdim}
+\newcommand{\xan}{\hat{x}_1}
+\newcommand{\xbn}{\hat{x}_2}
+\newcommand{\xvv}{\vv{x}}
+\newcommand{\xva}{\vv{\xa}}
+\newcommand{\xvb}{\vv{\xb}}
+\newcommand{\xvc}{\vv{\xc}}
+\newcommand{\xvd}{\vv{\xd}}
+\newcommand{\xvend}{\vv{\xend}}
+\newcommand{\xacolored}{\textcolor{myorange} \xa}
+\newcommand{\xbcolored}{\textcolor{myorange} \xb}
+\newcommand{\xvaacolored}{\textcolor{myorange} \xva}
+\newcommand{\xvbcolored}{\textcolor{myorange} \xvb}
+\newcommand{\xvai}{\xva[i]}
+\newcommand{\xvbi}{\xvb[i]}
+\newcommand{\xvaone}{\vv{x_{1}}[1]}
+\newcommand{\xvbone}{\vv{x_{2}}[1]}
+\newcommand{\xvatwo}{\vv{x_{1}}[2]}
+\newcommand{\xvbtwo}{\vv{x_{2}}[2]}
+\newcommand{\xvalast}{\vv{x_{1}}[\vecdim]}
+\newcommand{\xvblast}{\vv{x_{2}}[\vecdim]}
+
+\newcommand{\lowb}{l}
+\newcommand{\upb}{u}
+\newcommand{\realsb}{[\lowb,\upb]}
+
+\newcommand{\vecdim}{n}
+\newcommand{\newdim}{m}
+
+\newcommand{\w}{\vv{w}} % learned parameters
+\newcommand{\wi}{\w_i}
+\newcommand{\wpp}{w_p}
+\newcommand{\wj}{\w_j}
+
+\newcommand{\maxdiscretepoints}{c}
+%newcommand{\discretepointsmatrix}{V}
+
+\newcommand{\xv}{\vv{x}}
+\newcommand{\twovecdim}{z} % the dimension of the hypercube that we dissect
+
+\newcommand{\groupofgroupsofindices}{\mathcal{S}}
+\newcommand{\numberofgroups}{g}
+\newcommand{\onegroup}{S_i}
+\newcommand{\onegroupfirst}{S_1}
+\newcommand{\onegrouplast}{S_\numberofgroups}
+
+\newcommand{\examplesnum}{u}
+\newcommand{\pairsnum}{k}
+\newcommand{\pairsindex}{p}
+\newcommand{\examplesmatrixvar}{X}
+\newcommand{\pairsmatrixvar}{P}
+\newcommand{\simlabel}{y}
+
+% TODO: change \xv_1 to \xva and \xv_\examplesmatrixvar to \xvend
+\newcommand{\examplesmatrix}{
+	\examplesmatrixvar = 
+	\begin{bmatrix} 
+		\xva \\
+		\vdots \\
+		\xvend
+	\end{bmatrix}
+}
+\newcommand{\pairsmatrix}{
+	\pairsmatrixvar = 
+	\begin{bmatrix} 
+		\pairsindex_{11} & \pairsindex_{12} \\
+		\vdots \\
+		\pairsindex_{i1} & \pairsindex_{i2} \\
+		\vdots \\
+		\pairsindex_{\pairsnum 1} & \pairsindex_{\pairsnum 2}
+	\end{bmatrix}
+}
+\newcommand{\simlabelvec}{
+	\vv{y}=
+	\begin{bmatrix}
+		\simlabel_1 \\
+		\vdots \\
+		\simlabel_i \\
+		\vdots \\
+		\simlabel_\pairsnum
+	\end{bmatrix}
+}
+
+\newcommand{\xvpairsindexifirst}{\vv{x_{\pairsindex_{i1}}}}
+\newcommand{\xvpairsindexisecond}{\vv{x_{\pairsindex_{i2}}}}
+
+\newcommand{\thresh}{t}
+
+\newcommand{\wopt}{\w^{\text{opt}}}
+\newcommand{\threshopt}{\thresh^{\text{opt}}}
+\newcommand{\wreg}{\w^{\text{reg}}} % regularizer w
+\newcommand{\wadd}{\w'} % learned addition to wreg
+\newcommand{\distreg}{\dist^{\text{reg}}}
+
+\newcommand{\learningreg}{\frac{1}{2}||\w-\wreg||_2^2}
+\newcommand{\learningregtwo}{\frac{1}{2}||\wadd||_2^2}
+
+\newcommand{\learnedwinnewwrep}{\hat{\w}}
+% If changing here beta and gamma need to do it in slides too (change to macro)!
+\newcommand{\newwrep}{\beta \learnedwinnewwrep + \gamma \wreg}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\titletext}{\ourmethodfull{} of Single Vectors and Vector Pairs for Classification, Metric Learning and Distance Approximation}
+\newcommand{\authorfirst}{Ofir Pele}
+\newcommand{\authorslast}{Yakir Ben-Aliz}
+\newcommand{\cybercenter}{Center for Cyber Technology}
+\newcommand{\departmentone}{Department of Computer Science}
+\newcommand{\departmenttwo}{Department of Electrical and Electronics Engineering}
+\newcommand{\university}{Ariel University}
+\newcommand{\correspondingemail}{\url{ofir.pele@g.ariel.ac.il}}
+
+% Presentation title
+\iftoggle{presentation}{
+	\title{\titletext}
+	%\subtitle{subtitle}
+	\author{\authorfirst \\ \scriptsize{joint work with: \authorslast}}
+	\date{}
+	\institute{\vskip1ex 
+		\departmentone{} \& 
+		\\
+		\departmenttwo
+		\\ 
+		\university \\
+		email: \correspondingemail }
+}{}
+
+% Paper title
+\iftoggle{paper}{
+}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% General
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% erasing with strikethrough
+\newcommand\mysout{\bgroup\markoverwith {{\rule[.5ex]{1pt}{1pt}}}\ULon}
+%{\textcolor{white}{\rule[.5ex]{1pt}{1pt}}}\ULon}
+
+\newcommand{\ie}{\emph{i.e.\@ }}
+\newcommand{\eg}{\emph{e.g.\@ }}
+\newcommand{\etal}{et al.\@ }
+\newcommand{\naive}{na\"{\i}ve}
+\newcommand{\algoRefText}{Alg.\@ }
+\newcommand{\algosRefText}{Algs.\@ }
+\newcommand{\figRefText}{Fig.\@ }
+\newcommand{\figsRefText}{Figs.\@ }
+\newcommand{\eqRefText}{Eq.\@ }
+\newcommand{\eqsRefText}{Eqs.\@ }
+\newcommand{\secRefText}{Sec.\@ }
+
+\newcommand{\psfragcct}[1]{\psfrag{#1}[c][c]{\tiny #1}}
+
+\newcommand{\field}[1]{\mathbb{#1}}
+\newcommand{\reals}{\field{R}}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+
+\newcommand{\lone}{L^1}
+\newcommand{\ltwo}{L^2}
+\newcommand{\mycomment}[1]{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% beamer related
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iftoggle{presentation}{
+	\definecolor{myorange}{rgb}{1,0.6,0}
+	\definecolor{mycyan}{rgb}{0,1,1}
+	\definecolor{mydarkgreen}{rgb}{0,0.2,0}
+	\definecolor{mydarkergreen}{rgb}{0,0.1,0}
+	
+	\usecolortheme{progressbar}
+	\tolerance=1000
+	\definecolor{tableShade}{HTML}{787878}
+	\definecolor{tableShade2}{HTML}{606060}
+	\setbeamersize{text margin left=.5cm,text margin right=.5cm}
+	\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{items}[circle] % ball problem with colors
+	\setbeamercolor*{item}{fg=darkgray}
+	
+	%pdftops -f 13 -l 13 -eps a.pdf 1.eps
+	\newcommand{\epsslidew}[1]{{
+			\setbeamercolor{background canvas}{bg=}
+			\vspace*{-7mm}    
+			\begin{frame}[t,plain]
+				\hspace*{-5mm}
+				\includegraphics[width=\paperwidth]{#1}
+			\end{frame}
+		}}
+		\newcommand{\epsslide}[1]{{
+				\vspace*{-7mm}    
+				\begin{frame}[t,plain]
+					\hspace*{-5mm}
+					\includegraphics[width=\paperwidth]{#1}
+				\end{frame}
+			}}
+			
+			%\usefonttheme[onlymath]{serif} 
+			\newcommand{\myitemizebegin}{\begin{itemize}[<+->]} % similar to \item <1-> one \item <2-> two
+				
+				\newcommand{\myitem}{\vskip10pt \item}
+				\newcommand{\mysection}[1]{\section{#1} \frame[t,plain]{\frametitle{Outline}\tableofcontents[currentsection]}}
+				\newcommand{\mybeginblock}{\begin{shaded}{}}
+					\newcommand{\myendblock}{\end{shaded}}
+				
+				\setbeamercolor*{item}{fg=darkgray}
+				\providecommand{\alert}[1]{\textbf{#1}}
+				\setbeamertemplate{items}[circle] % ball problem with colors
+				\setbeamertemplate{navigation symbols}{}
+				
+				
+				\tolerance=1000
+				\definecolor{tableShade}{HTML}{787878}
+				\definecolor{tableShade2}{HTML}{606060}
+				\setbeamersize{text margin left=.5cm,text margin right=.5cm}
+			}{}
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY

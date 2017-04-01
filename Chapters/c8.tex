@@ -89,30 +89,25 @@ In our experiment we have selected cross validation \cite{cross validation} over
 			\STATE $C$ $\leftarrow$ $c$
 			\ENDIF
 		\ENDFOR	
-
-		
-
-		\RETURN $C$
-		
+		\RETURN $C$	
 		
 	\end{algorithmic}
 \end{algorithm}	
 
 
-For this number of extracted centers we add 2 extreme points for applying proper interpolation for data values beyond limits of the discovered centers.
+For the selected number of extracted centers we add 2 extreme points for applying proper interpolation for data values beyond limits of the discovered centers.
 \\
 Now that we have found data centers for each dimension we apply our interpolation method \ref{Chapter3} on our data (on both train-test sets) and extract a $\overrightarrow{a} \in \Re^6$ coefficient vector per color patches pair, which is ready to be embedded.
 
 
 \subsection{Embedding}
-Embedding is performed by applying an embedding of the coefficient vectors on a sparse form such $\overrightarrow{e} \in \Re^{\prod_{i=1}^{2n}{length(\overrightarrow{c_i})}}$ , where $n = 3$.
+Our dataset is now embedded by applying an embedding of the coefficient vectors on a sparse form such $\overrightarrow{e} \in \Re^{\prod_{i=1}^{2n}{length(\overrightarrow{c_i})}}$ , where $n = 3$.
 Each coefficient vector element is assigned to the exact simplex index in the $\overrightarrow{e}$ embedded vector.
 \\
 For memory savings purposes, we have eliminated all zeroed columns along the entire dataset.
-Since our embedded vectors are sparse formed, a massive dimensional reduction was performed by removing those zero - columns, so over $90 \% $ of the sample vectors elements to be total zeroed so final actual dimension of our sets were almost always $ \le 100$. In our experiments actual non-zero features were $109/1176$, which are $9.2 \%$ from initial sparse feature vector dimensions.
 
 \subsection{Learning}
-Learning is performed as a linear regression model training.
+Learning phase is performed on a linear regression model training process.
 We learn by using \textbf{Stochastic Gradient Descent} \cite{SGD} optimization algorithm. \\
 Loss function of the training process would be a generalized Mean Average Error \cite{MAE} loss function, constrained by our semi-metrics critireas for model divergence as described above \ref{Chapter3}.
 We also applied a standard Ridge \cite{Ridge} regularizer on the learning process as described in the learning chapter \ref{Chapter6}.
