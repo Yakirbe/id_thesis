@@ -68,7 +68,6 @@ def train(train, labels, l_rate, n_epoch, weight = ""):
     
 def test(test, labels, w, method = "L2"):
     
-    avg = 0.0
     i = 0
     yp_l = []
     yt_l = []
@@ -80,16 +79,11 @@ def test(test, labels, w, method = "L2"):
         yt_l.append(y_true)
         yp_l.append(y_pred)
         #print "pred = ", y_pred , "true = ", y_true
-        if method == "L2":
-            error = (y_pred - y_true + 0.001*L2(pair))**2 
-            avg += error
-        elif method == "L1":
-            error = np.abs(y_pred - y_true + 0.001*L2(pair))
-            avg += error
         i += 1
-    print "hand made =",  avg/len(test)
     print "mse =",  mean_squared_error(yt_l, yp_l)
     print "mae =",  mean_absolute_error(yt_l, yp_l)
+    errors = [mean_absolute_error(yt_l, yp_l) ,mean_squared_error(yt_l, yp_l)]
+    return errors
 
 
 if __name__ == "__main__":
