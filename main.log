@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.28)  1 APR 2017 14:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.28)  1 APR 2017 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2569,7 +2569,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-<Figures/flatten.jpg, id=606, 631.60968pt x 301.8778pt>
+<Figures/flatten.jpg, id=636, 631.60968pt x 301.8778pt>
 File: Figures/flatten.jpg Graphic file (type jpg)
 
 <use Figures/flatten.jpg>
@@ -3410,13 +3410,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-<Figures/sift1.jpg, id=784, 1606.0pt x 602.25pt>
+<Figures/sift1.jpg, id=815, 1606.0pt x 602.25pt>
 File: Figures/sift1.jpg Graphic file (type jpg)
  <use Figures/sift1.jpg>
 Package pdftex.def Info: Figures/sift1.jpg used on input line 33.
 (pdftex.def)             Requested size: 452.9607pt x 169.86024pt.
 
-<Figures/sift10.jpg, id=785, 642.4pt x 321.2pt>
+<Figures/sift10.jpg, id=816, 642.4pt x 321.2pt>
 File: Figures/sift10.jpg Graphic file (type jpg)
  <use Figures/sift10.jpg>
 Package pdftex.def Info: Figures/sift10.jpg used on input line 40.
@@ -3459,7 +3459,7 @@ Overfull \hbox (23.07747pt too wide) in paragraph at lines 19--20
 unsell 100 hue-test set [[]]. 
  []
 
-<Figures/set_ds.jpg, id=797, 2054.67625pt x 2054.67625pt>
+<Figures/set_ds.jpg, id=827, 2054.67625pt x 2054.67625pt>
 File: Figures/set_ds.jpg Graphic file (type jpg)
 
 <use Figures/set_ds.jpg>
@@ -3475,7 +3475,7 @@ LaTeX Warning: Citation 'lab' on page 31 undefined on input line 30.
 
 LaTeX Warning: Citation 'CIELAB' on page 31 undefined on input line 31.
 
-<Figures/patch_positions.jpg, id=798, 167.4255pt x 113.9457pt>
+<Figures/patch_positions.jpg, id=828, 167.4255pt x 113.9457pt>
 File: Figures/patch_positions.jpg Graphic file (type jpg)
 
 <use Figures/patch_positions.jpg>
@@ -3501,76 +3501,49 @@ LaTeX Warning: Citation 'cross validation' on page 32 undefined on input line 6
 
 LaTeX Warning: Citation 'kmeans' on page 32 undefined on input line 65.
 
-[32 <./Figures/set_ds.jpg>] [33]
+[32 <./Figures/set_ds.jpg>]
 
-LaTeX Warning: Citation 'SGD' on page 34 undefined on input line 120.
-
-
-LaTeX Warning: Citation 'MAE' on page 34 undefined on input line 121.
+LaTeX Warning: Citation 'SGD' on page 33 undefined on input line 116.
 
 
-LaTeX Warning: Citation 'Ridge' on page 34 undefined on input line 122.
+LaTeX Warning: Citation 'MAE' on page 33 undefined on input line 117.
 
 
-LaTeX Warning: Citation 'retargeting' on page 34 undefined on input line 123.
+LaTeX Warning: Citation 'Ridge' on page 33 undefined on input line 118.
 
 
-LaTeX Warning: Citation 'einstein' on page 34 undefined on input line 123.
+LaTeX Warning: Citation 'retargeting' on page 33 undefined on input line 119.
 
-! Undefined control sequence.
-l.126 	Loss(w)=\lambda\norm
-                           {w}^2 + \frac{1}{n}\sum_{i=0}^{i=n} |w^T x_i - y_i|
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-[34 <./Figures/patch_positions.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+LaTeX Warning: Citation 'einstein' on page 33 undefined on input line 119.
+
+[33 <./Figures/patch_positions.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-! Undefined control sequence.
-l.159 		\subsubsubsection
-                         {Dataset properties}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.169 		\subsubsubsection
-                         {Centers locations}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.175 
+l.172 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.177 		\begin{pmatrix}
+l.174 		\begin{pmatrix}
                        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3578,7 +3551,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.183 				\end{pmatrix}
+l.180 				\end{pmatrix}
                        $\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3589,61 +3562,30 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.185 
+l.181 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--185
-$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--185
+Underfull \hbox (badness 10000) in paragraph at lines 174--181
 
  []
 
-! Undefined control sequence.
-l.188 	\subsubsubsection
-                        {Experiment Figures}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-[35]
-Overfull \hbox (0.27495pt too wide) in paragraph at lines 201--202
+Overfull \hbox (0.27495pt too wide) in paragraph at lines 197--198
 []\T1/ppl/m/n/10.95 Unseen cam-era sce-nario was as-sem-bled by as-sign-ing one
  of the cam-eras in-volved in dataset
  []
 
-! Undefined control sequence.
-l.204 	\subsubsubsection
-                        {Dataset properties}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[35]
 
-! Undefined control sequence.
-l.214 	\subsubsubsection
-                        {Centers locations}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation 'cross_val' on page 36 undefined on input line 216.
+LaTeX Warning: Citation 'cross_val' on page 36 undefined on input line 212.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.222 
+l.218 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3651,7 +3593,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.224 		\begin{pmatrix}
+l.220 		\begin{pmatrix}
                        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3659,7 +3601,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.230 		\end{pmatrix}
+l.226 		\end{pmatrix}
                      $\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3670,53 +3612,39 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.232 
+l.227 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--232
-$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--232
+Underfull \hbox (badness 10000) in paragraph at lines 220--227
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
-! Undefined control sequence.
-l.236 	\subsubsubsection
-                        {Experiment Figures}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-<Figures/original_paper_results.jpg, id=849, 500.46976pt x 407.72325pt>
+<Figures/original_paper_results.jpg, id=874, 500.46976pt x 407.72325pt>
 File: Figures/original_paper_results.jpg Graphic file (type jpg)
 
 <use Figures/original_paper_results.jpg>
 Package pdftex.def Info: Figures/original_paper_results.jpg used on input line 
-253.
+247.
 (pdftex.def)             Requested size: 419.10114pt x 341.43378pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
 
-LaTeX Warning: Citation 'prep_color' on page 36 undefined on input line 266.
+LaTeX Warning: Citation 'prep_color' on page 36 undefined on input line 260.
 
 [36]) [37 <./Figures/original_paper_results.jpg>]
 \openout2 = `Chapters/c9.aux'.
@@ -3802,13 +3730,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 324B103D1D6569D0D07F56219F815F67;12315.
+(rerunfilecheck)             Checksum: 0F631D217767E30FA8C208D8C965D973;13238.
 
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
@@ -3820,10 +3745,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45347 strings out of 493013
- 906890 string characters out of 6133328
+ 45355 strings out of 493013
+ 907010 string characters out of 6133328
  1095763 words of memory out of 5000000
- 47886 multiletter control sequences out of 15000+600000
+ 47893 multiletter control sequences out of 15000+600000
  50785 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,20n,83p,10377b,2242s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3843,10 +3768,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf
 onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw
 /palatino/uplri8a.pfb>
-Output written on main.pdf (60 pages, 1899956 bytes).
+Output written on main.pdf (60 pages, 1900813 bytes).
 PDF statistics:
- 1010 PDF objects out of 1200 (max. 8388607)
- 917 compressed objects within 10 object streams
- 305 named destinations out of 1000 (max. 500000)
- 675 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1035 PDF objects out of 1200 (max. 8388607)
+ 942 compressed objects within 10 object streams
+ 306 named destinations out of 1000 (max. 500000)
+ 723 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -90,22 +90,29 @@ def get_opt_k(X ,max_range, iters = 5):
     max_n = 0
     
     grps = group(X,iters)
-    
+    print grps
     for n_clusters in range_n_clusters:
         c_max = 0
         for i in range(len(grps)):
-            g = grps[0]            
-            l = grps.pop(0)
-            xtr = list(itertools.chain.from_iterable(l))
+            g = grps[i]
+            grps_tmp = copy.copy(grps)
+            grps_tmp.remove(g)
+            print g
+            print grps_tmp
+            
+            xtr = list(itertools.chain.from_iterable(grps_tmp))
+            xtr = [[x] for x in xtr]
+            print xtr
             # Initialize the clusterer with n_clusters value and a random generator
             # seed of 10 for reproducibility.
             clusterer = KMeans(n_clusters=n_clusters, random_state=10)
             cluster_labels = clusterer.fit_predict(xtr)
+            print cluster_labels
         
             # The silhouette_score gives the average value for all the samples.
             # This gives a perspective into the density and separation of the formed clusters
             
-            silhouette_avg = silhouette_score(g, cluster_labels)
+            silhouette_avg = silhouette_score(np.ndarray(g), cluster_labels)
             c_max += silhouette_avg
         if max_sil<c_max:
             
@@ -447,4 +454,5 @@ def embed_main(tr_fn , te_fn, c):
 if __name__ == "__main__":
     tr_fn = "/home/yakir/idd/tex_thesis/id_thesis/python_id/colordiff/rgb_set_tr_cam.json"
     te_fn = "/home/yakir/idd/tex_thesis/id_thesis/python_id/colordiff/rgb_set_te_cam.json"
-    embed_main(tr_fn , te_fn)
+    #embed_main(tr_fn , te_fn)
+    get_opt_k([1,2,3,3,2,2,1,3,2,7,6,5,4,4,3,3,4,5,6,7,8,89,8,7,7],3)

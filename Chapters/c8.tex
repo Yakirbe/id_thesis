@@ -60,43 +60,39 @@ Then, $ID$ learning method will try to learn some similarity models according to
 
 \subsection{Interpolation}
 Data dimension in our scenarios is of course $n=3$ (for lab/RGB \cite{RGB} coordinates), and for an object pair the dimension is $2n=6$. \\
-As described in \ref{Chapter3}, interpolation is performed dimension-wise along the training set, after selecting data center per dimension by manual/automatic method.
+As described in \ref{Chapter3}, interpolation is performed dimension-wise along the training set, after selecting data center per dimension by manual or automatic (k-means) method.
 \\
-In our experiment we have selected an automatic cross validation \cite{cross validation} method for assessing the optimal number of centers per dimension, and find those by using k-means \cite{kmeans} algorithm.
+In our experiment we have selected cross validation \cite{cross validation} over certain fold number of our dataset for assessing the optimal number of centers per dimension, and find those by using k-means \cite{kmeans} algorithm.
 
 
 \begin{algorithm}
-	\caption{cross-validation algorithm for single dimension centers extraction}
+	\caption{cross-validation (cv) algorithm for single dimension centers extraction}
 	\begin{algorithmic}		
 		
-		\REQUIRE $L$ sized, vectorized n-dimensional dataset
-		\REQUIRE set of centers per dimension - $C$
-		\ENSURE $\overrightarrow{\phi}$: $L$ sized set, embedded, sparse vectors\\
+		\REQUIRE $\overrightarrow{v}$: single dimension from a given dataset 
+		\REQUIRE $k$: number of folds for cv operation
+		\REQUIRE $\overrightarrow{c_{range}}$: range of output centers to look in
+		\ENSURE $n$: number of optimal centers\\
+		\STATE $groups \leftarrow$ split $\overrightarrow{v}$ into $k$ even segments
+		\FORALL{$c$ in $\overrightarrow{c_{range}}$}  
+		\STATE $c_{max} \leftarrow 0$  
+		\FORALL{$i$ in $k$}
 		
-		\STATE \textbf{Find centers vectors}
-		\STATE V shall be a set of centers - vectors
-		\FORALL{dim in $n$}  
-		\STATE $V_{dim} \leftarrow centers \quad vector \quad per \quad dim$
+		\STATE $test group$ $\leftarrow$ $groups[i]$
+		\STATE $train group$ $\leftarrow$ $groups[!=i]$		
+		\STATE $clusters$ $\leftarrow$ k-means($train group$)
+		\STATE $score$ $\leftarrow$ silhouette($test group$, $clusters$)\\
+		\STATE $c_{max}$ += $score$
 		\ENDFOR
+			\IF{$score$<$c_{max}$}
+			\STATE $score_{max}$ $\leftarrow$ $c_{max}$
+			\STATE $C$ $\leftarrow$ $c$
+			\ENDIF
+		\ENDFOR	
+
 		
-		\STATE \textbf{Find embedded coefficients for all dataset}
-		\STATE $\overrightarrow{\phi} = C^{n}$ length empty $\overrightarrow{\phi}$ embedded vectors
-		
-		\FORALL{$\overrightarrow{p}$ in $L$}
-		\STATE find $\overrightarrow{p}$ bounding hypercube 
-		\STATE find $\overrightarrow{p}$ bounding simplex (permutation method)
-		\STATE $\overrightarrow{\lambda} \leftarrow$ find $\overrightarrow{p}$ barycentric coefficients 
-		\STATE $\overrightarrow{\hat{\lambda}} \leftarrow$ normalize($\overrightarrow{\lambda}$)
-		\ENDFOR
-		\STATE \textbf{Assign}
-		\FORALL{$\overrightarrow{\phi}$ in $emb-set$}
-		\STATE $inds \leftarrow$ find vertices from hypercube and simplex locations
-		\FORALL{$i$ in $inds$}
-		\STATE $\overrightarrow{\phi}_{(i)} \leftarrow \overrightarrow{\hat{\lambda}}(j(i))$ -- j is the assigning function between the coef. vector and embedding vector
-		\ENDFOR
-		\ENDFOR
-		
-		\RETURN $\overrightarrow{\phi}$
+
+		\RETURN $C$
 		
 		
 	\end{algorithmic}
@@ -121,6 +117,7 @@ We learn by using \textbf{Stochastic Gradient Descent} \cite{SGD} optimization a
 Loss function of the training process would be a generalized Mean Average Error \cite{MAE} loss function, constrained by our semi-metrics critireas for model divergence as described above \ref{Chapter3}.
 We also applied a standard Ridge \cite{Ridge} regularizer on the learning process as described in the learning chapter \ref{Chapter6}.
 \cite{retargeting} \cite{einstein}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
 
 \begin{equation}
 	Loss(w)=\lambda\norm{w}^2 + \frac{1}{n}\sum_{i=0}^{i=n} |w^T x_i - y_i|
@@ -151,12 +148,12 @@ We display the experiments for each data splitting (camera/color), where in each
 
 
 
-\subsection{cross-validated number of centers}
-\subsubsection{Unseen Colors}
+\section{cross-validated number of centers}
+\subsection{Unseen Colors}
 
 Unseen camera case was assembled by a certain percentage of all data set as train set, and the rest as test set. In this experiment we have taken the train set size to be $80 \%$ of the total data set.
 		
-		\subsubsubsection{Dataset properties}
+		\subsubsection{Dataset properties}
 		
 			From a total 13500 patches pairs set, the divided train-test sets amounts are:
 			\begin{itemize}
@@ -166,7 +163,7 @@ Unseen camera case was assembled by a certain percentage of all data set as trai
 			
 			train/set ratio = $4/1$
 			
-		\subsubsubsection{Centers locations}
+		\subsubsection{Centers locations}
 		
 		Centers locations are shown as extracted via cross-validation for finding optimal number of centers per dimension, and k-means for extracting centers values. \\
 		k-means actually found only the inner centers, since the outer centers are fixed bounds.\\
@@ -181,11 +178,10 @@ Unseen camera case was assembled by a certain percentage of all data set as trai
 					161.59 &   150.96 &   168.81\\
 		     		 255.0 &  255.0 &   255.0 \\
 				\end{pmatrix}$\\
-$ $
 
 		In this scenario, there are 4 extracted centers per dimension.
 
-	\subsubsubsection{Experiment Figures}
+	\subsubsection{Experiment Figures}
 	
 	Our model provides the following figures:
 
@@ -196,12 +192,12 @@ $ $
 	\end{itemize}
 
 
-\subsubsection{Unseen Camera}
+\subsection{Unseen Camera}
 
 Unseen camera scenario was assembled by assigning one of the cameras involved in dataset generation as test set, where the other 3 functions as train set.
 
 
-	\subsubsubsection{Dataset properties}
+	\subsubsection{Dataset properties}
 	
 		From a total 13500 patches pairs set, the divided train-test sets amounts are:
 		\begin{itemize}
@@ -211,7 +207,7 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 		
 		train/set ratio = $3/2$
 
-	\subsubsubsection{Centers locations}
+	\subsubsection{Centers locations}
 	
 	Centers locations are shown as extracted via cross-validation \cite{cross_val}. for finding optimal number of centers per dimension, and k-means for extracting centers values. \\
 	k-means actually found only the inner centers, since the outer centers are fixed bounds.
@@ -228,12 +224,10 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 		171.29 &   160.98 &   158.21\\
 		255.0 &  255.0 &   255.0 \\
 		\end{pmatrix}$\\
-$ $
-	
 
 	As seen in centers list, edges are equal per dimension $[0.0 , 255.0]$ for data bounding.\\
 	
-	\subsubsubsection{Experiment Figures}	
+	\subsubsection{Experiment Figures}	
 	Our model provides the following figures:	
 	\begin{itemize}
 	\item 	p-value = $4.5 \cdot 10 ^{-05}$
@@ -243,11 +237,11 @@ $ $
 
 
 
-\subsection{fixed number of centers}
+\section{fixed number of centers}
 
 
 
-\subsection{Comparison}
+\section{Comparison}
 
 \begin{figure}[h] 
 	\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/original_paper_results}
