@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Feb 22 16:17:49 2017
-
 @author: yakir
 """
+
+import json
 from prepare_ds import prep_ds
 from edit_x_tr import arrange_x
 from id_color_diff_cam import embed_main, arrange_ds
@@ -18,7 +19,6 @@ def run_idd(cam = False, fw = True, c = ""):
     else:
         import furnsworth as ds
     # select experiment type - cam
-    cam = False
 
     #load datasets
     refs = ds.refs
@@ -37,13 +37,15 @@ def run_idd(cam = False, fw = True, c = ""):
     l_rate = 0.01
     n_epoch = 5000
     w = train(X_tr,Y_tr, l_rate, n_epoch, weight = "")
-    l2_error = test(X_te, Y_te, w,method = "L1")
+    errors = test(X_te, Y_te, w,method = "L2")
     print "cam = ", cam
     print "c = ", c
+    return errors
 
 if __name__ == "__main__":
+    out = {"cam":{}, "color":{}}
     for c in range(2,6):
-        run_idd(cam = False, fw = True, c = c)
+        out["color"][c] = run_idd(cam = False, fw = True, c = c)
     for c in range(2,6):
-        run_idd(cam = True, fw = True, c = c)
+        out["cam"][c] = run_idd(cam = True, fw = True, c = c)
     
