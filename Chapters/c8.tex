@@ -96,7 +96,7 @@ In our experiment we have selected cross validation \cite{cross validation} over
 \end{algorithm}	
 
 
-For the selected number of extracted centers we add 2 extreme points for applying proper interpolation for data values beyond limits of the discovered centers.
+For the selected number of extracted centers we add two extreme points for applying proper interpolation for data values beyond limits of the discovered centers.
 \\
 Now that we have found data centers for each dimension we apply our interpolation method \ref{Chapter3} on our data (on both train-test sets) and extract a $\overrightarrow{a} \in \Re^6$ coefficient vector per color patches pair, which is ready to be embedded.
 
@@ -114,21 +114,21 @@ Loss function of the training process would be a generalized Mean Average Error 
 
 \vskip30pt
 \subsection{Assessment}
-Assessment is operated following criteria:
+Models assessment is applied by following criteria:
 \begin{itemize}
 \item \textbf{MAE} - Mean Absolute Error
 \end{itemize}
 
-MAE index is measured as:
+The test set of each experiment is processed by our embedding method and a  distance figure is calculated. This figure $y_i^{test}$ is being compared to the predicted label for each sample by assembling the MAE index:
 \begin{equation}
 MAE = \frac{1}{n} \cdot \sum_{i = 1}^{n}{|y^{pred}_i - y^{test}_i|}
 \end{equation}
-Where n is dataset size. \\
+Where n is test set size. \\
 
 
 \section{Results}
 
-we now describe our results as compared to the original paper results as described in \ref{original paper results}.
+Let us describe our results as compared to the original paper results as described in \ref{original paper results}.
 We display the experiments for each data splitting (camera/color). 
 These experiments are performed using the cross validation algorithm mentioned above.
 
