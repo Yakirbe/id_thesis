@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.18)  12 APR 2017 15:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.18)  13 APR 2017 13:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3619,7 +3619,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 LaTeX Warning: Citation 'perp_color' on page 39 undefined on input line 30.
 
 1: section
-[39]) [40]
+[39]
+
+LaTeX Warning: Citation 'perp_color' on page 40 undefined on input line 40.
+
+
+Overfull \hbox (1.70377pt too wide) in paragraph at lines 40--41
+[]\T1/ppl/b/n/10.95 Memory \T1/ppl/m/n/10.95 con-sump-tion may be ob-served amo
+ng var-i-ous em-bed-ding method in-clude ours,
+ []
+
+
+Overfull \hbox (10.68257pt too wide) in paragraph at lines 40--41
+\T1/ppl/m/n/10.95 while us-ing our mem-ory sav-ing tips at chap-ter [][]6[][], 
+where in our method (and in [[]],
+ []
+
+
+LaTeX Warning: Citation 'orig paper' on page 40 undefined on input line 42.
+
+) [40]
 \openout2 = `Appendices/AppendixA.aux'.
 
  (./Appendices/AppendixA.tex
@@ -3667,10 +3686,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred when \iftrue on line 378 was incomplete) 
 Here is how much of TeX's memory you used:
- 44035 strings out of 493029
- 874459 string characters out of 6136234
- 963478 words of memory out of 5000000
- 46582 multiletter control sequences out of 15000+600000
+ 44036 strings out of 493029
+ 874464 string characters out of 6136234
+ 963533 words of memory out of 5000000
+ 46583 multiletter control sequences out of 15000+600000
  54200 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,20n,83p,10377b,2242s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3692,10 +3711,10 @@ latino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/esvect/vect10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
-Output written on main.pdf (60 pages, 1781974 bytes).
+Output written on main.pdf (60 pages, 1782840 bytes).
 PDF statistics:
- 1025 PDF objects out of 1200 (max. 8388607)
- 930 compressed objects within 10 object streams
+ 1027 PDF objects out of 1200 (max. 8388607)
+ 932 compressed objects within 10 object streams
  296 named destinations out of 1000 (max. 500000)
  694 words of extra memory for PDF output out of 10000 (max. 10000000)
 

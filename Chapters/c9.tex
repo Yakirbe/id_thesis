@@ -32,11 +32,14 @@ Chapter \ref{Chapter8} examines our $IDD$ method on e test case displayed by \ci
 \break
 \section{further exploration}
 
-This work displays a continuous non-linear embedding method for any desired classification/regression task. In chapter \ref{Chapter8} we displayed an accuracy exploration of our method, on the object pairs embedding scenario. \\In addition to this examination, the following objectives may be observed:
+This work displays a continuous non-linear embedding method for any desired classification/regression task. In chapter \ref{Chapter8} we displayed an accuracy exploration of our method, on the object pairs embedding scenario. \vskip10pt
+In addition to this examination, the following objectives may be observed:
+
 \begin{itemize}
-	\item memory 
-	\item time	
-	\item full application example
-	\item single objects embedding
+	\item \textbf{various centers per dimension} may be a good valuation of the optimal condition per problem, in case cross validation may treat single dimension at a time. By optimizing several dimensions in one shot, one can decide of a fixed number of centers for all dimensions, which may be still optimized in matters of accuracy, time and memory.
+	\item \textbf{Memory} consumption may be observed among various embedding method include ours, while using our memory saving tips at chapter \ref{Chapter6}, where in our method (and in \cite{perp_color}, number of centers/clusters is a valid argument to parameterize in this kind of comparison)
+	\item \textbf{time} complexity may also taken in comparison among various object-embedding methods, while using our chapter \ref{Chapter7} theories.
+	\item \textbf{end-to-end application embedding} such image segmentation as shown in \cite{orig paper}, may assist evaluating this method
+	\item \textbf{single objects embedding} may also be inspected for some classification/regression task, again with all parameters mentioned above (accuracy, time, memory)
 \end{itemize}
 
