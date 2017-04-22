@@ -98,11 +98,11 @@ In our experiment we have selected cross validation \cite{cross validation} over
 
 For the selected number of extracted centers we add two extreme points for applying proper interpolation for data values beyond limits of the discovered centers.
 \\
-Now that we have found data centers for each dimension we apply our interpolation method \ref{Chapter3} on our data (on both train-test sets) and extract a $\overrightarrow{a} \in \Re^6$ coefficient vector per color patches pair, which is ready to be embedded.
+Now that we have found data centers for each dimension we apply our interpolation method \ref{Chapter3} on our data (on both train-test sets) and extract a $\overrightarrow{a} \in \Re^3$ coefficient vector per color patches pair, which is ready to be embedded.
 
 
 \subsection{Embedding}
-Our dataset is now embedded by applying an embedding of the coefficient vectors on a sparse form such $\overrightarrow{e} \in \Re^{\prod_{i=1}^{2n}{length(\overrightarrow{c_i})}}$ , where $n = 3$.
+Our dataset is now embedded by applying an embedding of the coefficient vectors on a sparse form such $\overrightarrow{e} \in \Re^{\prod_{i=1}^{n}{length(\overrightarrow{c_i})}}$ , where $n = 3$.
 Each coefficient vector element is assigned to the exact simplex index in the $\overrightarrow{e}$ embedded vector.
 \\
 For memory savings purposes, we have eliminated all zeroed columns along the entire dataset.
