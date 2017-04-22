@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.18)  22 APR 2017 14:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.18)  22 APR 2017 15:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3539,21 +3539,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
+<Figures/orig_paper_charts.png, id=857, 757.83125pt x 386.44376pt>
+File: Figures/orig_paper_charts.png Graphic file (type png)
 
-! LaTeX Error: File `Figures/orig_paper_charts' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.228 ...epaspectratio]{Figures/orig_paper_charts}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[36]
+<use Figures/orig_paper_charts.png>
+Package pdftex.def Info: Figures/orig_paper_charts.png used on input line 228.
+(pdftex.def)             Requested size: 452.96773pt x 230.98354pt.
+ [36]
 Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
@@ -3567,7 +3559,7 @@ Overfull \hbox (1.7906pt too wide) in paragraph at lines 245--246
 ters based on our train-ing set solely. 
  []
 
-) [37]
+) [37 <./Figures/orig_paper_charts.png>]
 \openout2 = `Chapters/c9.aux'.
 
  (./Chapters/c9.tex [38
@@ -3686,10 +3678,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  )
 (\end occurred when \iftrue on line 378 was incomplete) 
 Here is how much of TeX's memory you used:
- 44036 strings out of 493029
- 874464 string characters out of 6136234
+ 44029 strings out of 493029
+ 874553 string characters out of 6136234
  963533 words of memory out of 5000000
- 46583 multiletter control sequences out of 15000+600000
+ 46587 multiletter control sequences out of 15000+600000
  54200 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,20n,83p,10377b,2242s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3711,10 +3703,10 @@ latino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/esvect/vect10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
-Output written on main.pdf (60 pages, 1782625 bytes).
+Output written on main.pdf (60 pages, 1824003 bytes).
 PDF statistics:
- 1027 PDF objects out of 1200 (max. 8388607)
+ 1028 PDF objects out of 1200 (max. 8388607)
  932 compressed objects within 10 object streams
  296 named destinations out of 1000 (max. 500000)
- 694 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 699 words of extra memory for PDF output out of 10000 (max. 10000000)
 
