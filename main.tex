@@ -42,6 +42,8 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{psfrag}
 \usepackage[b]{esvect}
 \usepackage{framed,color}
+\usepackage{cite}
+
 \setcounter{secnumdepth}{5} % seting level of numbering (default for "report" is 3). With ''-1'' you have non number also for chapters
 
 
@@ -250,27 +252,9 @@ headsepline, % Uncomment to get a line under the header
 \newcommand{\cybercenter}{Center for Cyber Technology}
 \newcommand{\departmentone}{Department of Computer Science}
 \newcommand{\departmenttwo}{Department of Electrical and Electronics Engineering}
-\newcommand{\university}{Ariel University}
 \newcommand{\correspondingemail}{\url{ofir.pele@g.ariel.ac.il}}
 
-% Presentation title
-\iftoggle{presentation}{
-	\title{\titletext}
-	%\subtitle{subtitle}
-	\author{\authorfirst \\ \scriptsize{joint work with: \authorslast}}
-	\date{}
-	\institute{\vskip1ex 
-		\departmentone{} \& 
-		\\
-		\departmenttwo
-		\\ 
-		\university \\
-		email: \correspondingemail }
-}{}
 
-% Paper title
-\iftoggle{paper}{
-}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -308,71 +292,11 @@ headsepline, % Uncomment to get a line under the header
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% beamer related
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iftoggle{presentation}{
-	\definecolor{myorange}{rgb}{1,0.6,0}
-	\definecolor{mycyan}{rgb}{0,1,1}
-	\definecolor{mydarkgreen}{rgb}{0,0.2,0}
-	\definecolor{mydarkergreen}{rgb}{0,0.1,0}
-	
-	\usecolortheme{progressbar}
-	\tolerance=1000
-	\definecolor{tableShade}{HTML}{787878}
-	\definecolor{tableShade2}{HTML}{606060}
-	\setbeamersize{text margin left=.5cm,text margin right=.5cm}
-	\setbeamertemplate{navigation symbols}{}
-	\setbeamertemplate{items}[circle] % ball problem with colors
-	\setbeamercolor*{item}{fg=darkgray}
-	
-	%pdftops -f 13 -l 13 -eps a.pdf 1.eps
-	\newcommand{\epsslidew}[1]{{
-			\setbeamercolor{background canvas}{bg=}
-			\vspace*{-7mm}    
-			\begin{frame}[t,plain]
-				\hspace*{-5mm}
-				\includegraphics[width=\paperwidth]{#1}
-			\end{frame}
-		}}
-		\newcommand{\epsslide}[1]{{
-				\vspace*{-7mm}    
-				\begin{frame}[t,plain]
-					\hspace*{-5mm}
-					\includegraphics[width=\paperwidth]{#1}
-				\end{frame}
-			}}
-			
-			%\usefonttheme[onlymath]{serif} 
-			\newcommand{\myitemizebegin}{\begin{itemize}[<+->]} % similar to \item <1-> one \item <2-> two
-				
-				\newcommand{\myitem}{\vskip10pt \item}
-				\newcommand{\mysection}[1]{\section{#1} \frame[t,plain]{\frametitle{Outline}\tableofcontents[currentsection]}}
-				\newcommand{\mybeginblock}{\begin{shaded}{}}
-					\newcommand{\myendblock}{\end{shaded}}
-				
-				\setbeamercolor*{item}{fg=darkgray}
-				\providecommand{\alert}[1]{\textbf{#1}}
-				\setbeamertemplate{items}[circle] % ball problem with colors
-				\setbeamertemplate{navigation symbols}{}
-				
-				
-				\tolerance=1000
-				\definecolor{tableShade}{HTML}{787878}
-				\definecolor{tableShade2}{HTML}{606060}
-				\setbeamersize{text margin left=.5cm,text margin right=.5cm}
-			}{}
-			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
-%----------------------------------------------------------------------------------------
-\bibliographystyle{elsarticle-num}
-\bibliography{idrefs}
-% `Elsevier LaTeX' style
-\usepackage[backend=bibtex,style=numeric]{biblatex}
-\addbibresource{idrefs.bib}
+%---------------------------------------------------------------------------
 
 %------------------------------------------------------------------------
 \begin{document}
@@ -595,7 +519,7 @@ The acknowledgments and the people to thank go here, don't forget to include you
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
-\include{Appendices/AppendixA}
+%\include{Appendices/AppendixA}
 %\include{Appendices/AppendixB}
 %\include{Appendices/AppendixC}
 \section*{References}
@@ -603,7 +527,8 @@ As first example citation here is \cite{cover_trees}.
 Here is another example citation \cite{sift_lowe}
 
 
-\printbibliography
+\bibliography{idrefs}{}
+\bibliographystyle{plain}
 
 %-------------------------------------------------------------------------------
 

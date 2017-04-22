@@ -1,6 +1,5 @@
-\defcounter {refsection}{0}\relax 
 \select@language {english}
-\contentsline {algorithm}{\numberline {1}{\ignorespaces Embedding Method - General\relax }}{6}{algorithm.39}
-\contentsline {algorithm}{\numberline {2}{\ignorespaces Embedding Method for ID N-Dimensional Pairs dataset\relax }}{17}{algorithm.106}
-\contentsline {algorithm}{\numberline {3}{\ignorespaces Embedding Method for ID N-Dimensional single vectors dataset\relax }}{22}{algorithm.138}
-\contentsline {algorithm}{\numberline {4}{\ignorespaces cross-validation (cv) algorithm for single dimension centers extraction\relax }}{34}{algorithm.197}
+\contentsline {algorithm}{\numberline {1}{\ignorespaces Embedding Method - General\relax }}{6}{algorithm.1}
+\contentsline {algorithm}{\numberline {2}{\ignorespaces Embedding Method for ID N-Dimensional Pairs dataset\relax }}{17}{algorithm.2}
+\contentsline {algorithm}{\numberline {3}{\ignorespaces Embedding Method for ID N-Dimensional single vectors dataset\relax }}{22}{algorithm.3}
+\contentsline {algorithm}{\numberline {4}{\ignorespaces cross-validation (cv) algorithm for single dimension centers extraction\relax }}{34}{algorithm.4}
