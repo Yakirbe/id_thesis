@@ -1,4 +1,3 @@
-% Chapter 1
 
 \chapter{Learning} % Main chapter title
 
@@ -37,7 +36,7 @@ y_{k} \\
 \end{bmatrix}
 \end{equation}
 
-Where $P$ set refers to $X$ set indices and tghsgfds refers to the vectors label as follows:
+Where $P$ set refers to $X$ set indices and $\overrightarrow{y}$ refers to the vectors label as follows:
 \definecolor{darkgreen}{RGB}{0, 140, 0}
 \begin{equation}
 y_{i} = \left\{
@@ -65,24 +64,24 @@ similar(\overrightarrow{x_{1}} , _[S_g],\overrightarrow{x_{2}})= \left\{
 \end{equation}
 
 Where a pair of vectors is similar if and only if their ID distance result is smaller than a given threshold parameter ($t$).
-This function is identical to a classification method of a standard binary SVM classification method [80], which looks like the following:
+This function is identical to a classification method of a standard binary SVM classification method \cite{suykens1999least}, which looks like the following:
 \\ \\
 Where:\\ 
 $t$ - threshold which learned by an optimization process
 - weight vector of the problem which is also learned by an optimization process.
 \\
 
-We now address describing ther optimization of the learning step for achieving optimal model for a certain data set.
+We now address describing their optimization of the learning step for achieving optimal model for a certain data set.
 
 
 
 \subsection{Efficient Stochastic Gradient Descent}
 
-Stochastic Gradient Descent ($SGD$) is a stochastic approximation of the gradient descent optimization method for minimizing an objective function that is written as a sum of differentiable functions.
+Stochastic Gradient Descent ($SGD$) \cite{SGD} is a stochastic approximation of the gradient descent optimization method for minimizing an objective function that is written as a sum of differentiable functions.
 
 $SGD$ is a simple yet very efficient approach to discriminative learning of linear classifiers under convex loss functions such as our learning function.
 
-As Shalev-Shwartz et al. POLA [67], we can learn our weights (including t parameter):
+As Shalev-Shwartz et al. POLA \cite{shalev2004online}, we can learn our weights (including t parameter):
 
 \begin{equation}
 \overrightarrow{w}^{opt} , t^{opt} =\\ 
@@ -98,7 +97,7 @@ Where:
 
 Let us defined an optimized implementation adapted to the similarity problem.
 
-Naive implementation of Stochastic Gradient Descent [] will result in time complexity of $O(c^{2n})$  , \\
+Naive implementation of Stochastic Gradient Descent will result in time complexity of $O(c^{2n})$  , \\
 due to regularizer appearance in the equation: 
 
 
@@ -108,7 +107,7 @@ due to regularizer appearance in the equation:
 }{\partial \overrightarrow{w}}  = \frac{1}{k}(\overrightarrow{w} -  \overrightarrow{w}^{reg})
 \end{equation}
 
-We can use an \textbf{overcomplete} representation of the weights vector $\overrightarrow{w}$ in order to reduce time complexity of the regularizer to $O(1)$ and total running time of each $SGD$ step to $O(n)$ (similar trick was used by Shwartz et al. Pegasos paper[]):
+We can use an \textbf{overcomplete} representation of the weights vector $\overrightarrow{w}$ in order to reduce time complexity of the regularizer to $O(1)$ and total running time of each $SGD$ step to $O(n)$ (similar trick was used by Shwartz et al. Pegasos paper \cite{shalev2007pegasos}:
 
 \begin{equation}
 \overrightarrow{w} = \beta\cdot\hat{\overrightarrow{w}} + \gamma \cdot \overrightarrow{w}^{reg}
@@ -138,11 +137,6 @@ Which allows to separate both coefficients of the overcomplete representation:
 \end{equation}
 
 \vskip20pt
-
-
-
-
-
 
 
 

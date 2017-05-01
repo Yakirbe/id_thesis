@@ -4,17 +4,6 @@
 
 \label{Chapter2} % For referencing the chapter elsewhere, use \ref{Chapter1} 
 
-%----------------------------------------------------------------------------------------
-
-% Define some commands to keep the formatting separated from the content 
-%\newcommand{\keyword}[1]{\textbf{#1}}
-%\newcommand{\tabhead}[1]{\textbf{#1}}
-%\newcommand{\code}[1]{\texttt{#1}}
-%\newcommand{\file}[1]{\texttt{\bfseries#1}}
-%\newcommand{\option}[1]{\texttt{\itshape#1}}
-
-%----------------------------------------------------------------------------------------
-
 We now describe the general embedding process for both single objects and object pairs. This is the core process applied on several tasks in our work, such classification, regression, pairs matching etc.
 Our embedding method is assembled from three main phases:
 
@@ -33,7 +22,7 @@ Let us assume we have a very high ordered vectors to classify, for example a 1G 
 For that reason we downscale problems’ dimensions by discretizing the dataset in the following \textbf{dimension-wise} method:
 Each dimension in dataset is clustered and sorted into $C_i$ - dimensional $\overrightarrow{v} \in \Re^{C_i}$ vector.\\
 Any common clustering method may benefit in this, with one exception:
-The extremum points of the sorted discretized vector must surround the extremum values of the dataset.
+The extrema points of the sorted discretized vector must surround the extrema values of the dataset.
 
 \section{Interpolation}
 
@@ -47,7 +36,7 @@ For this purpose we perform interpolation of the given data sample features, whe
 \end{enumerate}
 \section{Assigning}
 
-This phase assigns the coefficients computed in the last phase, in their proper locations among the embedded (sparsed) vector.
+This phase assigns the coefficients computed in the last phase, in their proper locations among the embedded (sparse) vector.
 
 In the following sections we describe specifically each nuance of each sub-domain of the method. Please notice that the most detailed sub-method in this work is the multidimensional IDD pairs embedding, since it is the most innovative section in this work in our opinion.
 
