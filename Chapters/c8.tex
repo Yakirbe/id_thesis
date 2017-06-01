@@ -86,7 +86,20 @@ Each coefficient vector element is assigned to the exact simplex index in the $\
 \subsection{Learning}
 Learning phase is performed on a linear regression model training process.
 As described on \ref{learn_regression}, we learn by using \textbf{Stochastic Gradient Descent} \cite{SGD} optimization algorithm, regularized by a known distance such $\lone$. \\
-Loss function of the training process would be a generalized Mean Average Error \cite{MAE} loss function, constrained by our semi-metrics critireas for model divergence as described above \ref{Chapter3}.
+Loss function of the training process would be a generalized Mean Average Error \cite{MAE} loss function, constrained by our semi-metrics critireas for model divergence as described in the learning chapter \ref{Chapter5}:
+\begin{equation}
+\wopt & = \\
+& \argmin_{\wadd} 
+\Bigg( 
+\learningregtwo + 
+\\
+& C \sum_{i=1}^{\pairsnum}
+\Big(
+\distreg(\xvpairsindexifirst,\xvpairsindexisecond) + 
+\ope(\xvpairsindexifirst,\xvpairsindexisecond) \cdot \wadd - \\
+& \simlabel_i\Big)^2
+\Bigg)
+\end{equation}
 
 
 \subsection{Assessment}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.18)  1 JUN 2017 13:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.18)  1 JUN 2017 13:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3084,20 +3084,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
+! Misplaced alignment tab character &.
+l.91 \wopt &
+             = \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--103
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.92 &
+       \argmin_{\wadd}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.96 &
+       C \sum_{i=1}^{\pairsnum}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.100 &
+        \simlabel_i\Big)^2
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.132 	\begin{matrix}
+l.145 	\begin{matrix}
                        \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \end{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3105,7 +3151,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.132 ...\qquad c_1 \quad  \qquad c_2 \end{matrix}
+l.145 ...\qquad c_1 \quad  \qquad c_2 \end{matrix}
                                                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3114,14 +3160,14 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.135 	\begin{pmatrix}
+l.148 	\begin{pmatrix}
                       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3129,7 +3175,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.141 	\end{pmatrix}
+l.154 	\end{pmatrix}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3138,7 +3184,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (0.27495pt too wide) in paragraph at lines 159--160
+Overfull \hbox (0.27495pt too wide) in paragraph at lines 172--173
 []\T1/ppl/m/n/10.95 Unseen cam-era sce-nario was as-sem-bled by as-sign-ing one
  of the cam-eras in-volved in dataset
  []
@@ -3147,7 +3193,7 @@ Overfull \hbox (0.27495pt too wide) in paragraph at lines 159--160
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.178 	\begin{matrix}
+l.191 	\begin{matrix}
                        \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \end{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3155,7 +3201,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.178 ...\qquad c_1 \quad  \qquad c_2 \end{matrix}
+l.191 ...\qquad c_1 \quad  \qquad c_2 \end{matrix}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3166,7 +3212,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.181 		\begin{pmatrix}
+l.194 		\begin{pmatrix}
                        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3174,7 +3220,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.187 	\end{pmatrix}
+l.200 	\end{pmatrix}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3183,23 +3229,23 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--189
+Underfull \hbox (badness 10000) in paragraph at lines 194--202
 
  []
 
-<Figures/orig_paper_charts.png, id=917, 757.83125pt x 386.44376pt>
+<Figures/orig_paper_charts.png, id=918, 757.83125pt x 386.44376pt>
 File: Figures/orig_paper_charts.png Graphic file (type png)
 
 <use Figures/orig_paper_charts.png>
-Package pdftex.def Info: Figures/orig_paper_charts.png used on input line 204.
+Package pdftex.def Info: Figures/orig_paper_charts.png used on input line 217.
 (pdftex.def)             Requested size: 452.96773pt x 230.98354pt.
  [37]
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
 
-Overfull \hbox (1.7906pt too wide) in paragraph at lines 221--222
+Overfull \hbox (1.7906pt too wide) in paragraph at lines 234--235
 []\T1/ppl/m/n/10.95 Overfitting avoid-ance by ap-ply-ing cross val-i-dated cen-
 ters based on our train-ing set solely. 
  []
@@ -3273,8 +3319,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7AF6C9842BCCAAF255EF1413A5EBA74E;5689.
  ) 
 Here is how much of TeX's memory you used:
- 36549 strings out of 493029
- 756899 string characters out of 6136234
+ 36550 strings out of 493029
+ 756913 string characters out of 6136234
  778908 words of memory out of 5000000
  39128 multiletter control sequences out of 15000+600000
  54200 words of font info for 117 fonts, out of 8000000 for 9000
@@ -3297,10 +3343,10 @@ mf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect/v
 ect10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
-Output written on main.pdf (60 pages, 1774804 bytes).
+Output written on main.pdf (60 pages, 1775349 bytes).
 PDF statistics:
- 1093 PDF objects out of 1200 (max. 8388607)
- 998 compressed objects within 10 object streams
- 322 named destinations out of 1000 (max. 500000)
+ 1094 PDF objects out of 1200 (max. 8388607)
+ 999 compressed objects within 10 object streams
+ 323 named destinations out of 1000 (max. 500000)
  686 words of extra memory for PDF output out of 10000 (max. 10000000)
 
