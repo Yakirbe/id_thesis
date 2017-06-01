@@ -31,11 +31,11 @@ For each color patch, a $L^*A^*B^*$ \cite{lab} coordinates are given.
 Since the pairs of patches should be close by their CIELAB \cite{CIELAB} coordinates in order to adapt a good color difference assessment, a set in the final dataset is only a set of patches, where its CIELAB euclidean distance is relatively close, i.e. $\Delta E \leq 5$ .
 
 
-\begin{figure}[H] \label{patch_positions}
-			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/patch_positions}
-			\caption[color patches order in every samples image]
-			{patches order}
-\end{figure}
+%\begin{figure}[H] \label{patch_positions}
+%			\includegraphics[width=\linewidth,height=12cm,keepaspectratio]{Figures/patch_positions}
+%			\caption[color patches order in every samples image]
+%			{patches order}
+%\end{figure}
 
 
 \subsection{Models to train}
@@ -65,35 +65,7 @@ As described in \ref{Chapter3}, interpolation is performed dimension-wise along 
 In our experiment we have selected cross validation \cite{cross_val} over certain fold number of our dataset for assessing the optimal number of centers per dimension, and find those by using k-means \cite{kmeans} algorithm.
 
 
-\begin{algorithm}[H]
-	\caption{cross-validation (cv) algorithm for single dimension centers extraction}
-	\begin{algorithmic}		
-		
-		\REQUIRE $\overrightarrow{v}$: single dimension from a given dataset 
-		\REQUIRE $k$: number of folds for cv operation
-		\REQUIRE $\overrightarrow{c_{range}}$: range of output centers to look in
-		\ENSURE $n$: number of optimal centers\\
-		\STATE $groups \leftarrow$ split $\overrightarrow{v}$ into $k$ even segments
-		\FORALL{$c$ in $\overrightarrow{c_{range}}$}  
-		\STATE $c_{max} \leftarrow 0$  
-		\FORALL{$i$ in $k$}
-		
-		\STATE $test group$ $\leftarrow$ $groups[i]$
-		\STATE $train group$ $\leftarrow$ $groups[!=i]$		
-		\STATE $clusters$ $\leftarrow$ k-means($train group$)
-		\STATE $score$ $\leftarrow$ silhouette($test group$, $clusters$)\\
-		\STATE $c_{max}$ += $score$
-		\ENDFOR
-			\IF{$score$<$c_{max}$}
-			\STATE $score_{max}$ $\leftarrow$ $c_{max}$
-			\STATE $C$ $\leftarrow$ $c$
-			\ENDIF
-		\ENDFOR	
-		\RETURN $C$	
-		
-	\end{algorithmic}
-	\label{cross_validation}
-\end{algorithm}	
+
 
 
 For the selected number of extracted centers we add two extreme points for applying proper interpolation for data values beyond limits of the discovered centers.
@@ -102,17 +74,21 @@ Now that we have found data centers for each dimension we apply our interpolatio
 
 
 \subsection{Embedding}
-Our dataset is now embedded by applying an embedding of the coefficient vectors on a sparse form such $\overrightarrow{e} \in \Re^{\prod_{i=1}^{n}{length(\overrightarrow{c_i})}}$ , where $n = 3$.
+Our dataset is now embedded by applying an embedding of the coefficient vectors on a sparse form such: 
+\vskip5pt
+$\overrightarrow{e} \in \Re^{2\prod_{i=1}^{n}{length(\overrightarrow{c_i})}}$ 
+\vskip5pt
+where $n = 3$.
+\vskip5pt
 Each coefficient vector element is assigned to the exact simplex index in the $\overrightarrow{e}$ embedded vector.
 \\
-For memory savings purposes, we have eliminated all zeroed columns along the entire dataset.
 
 \subsection{Learning}
 Learning phase is performed on a linear regression model training process.
 As described on \ref{learn_regression}, we learn by using \textbf{Stochastic Gradient Descent} \cite{SGD} optimization algorithm, regularized by a known distance such $\lone$. \\
 Loss function of the training process would be a generalized Mean Average Error \cite{MAE} loss function, constrained by our semi-metrics critireas for model divergence as described above \ref{Chapter3}.
 
-\vskip30pt
+
 \subsection{Assessment}
 Models assessment is applied by following criteria:
 \begin{itemize}
@@ -165,7 +141,7 @@ Unseen color case was assembled by a certain percentage of all data set as train
 	\end{pmatrix}
 	
 	\vskip10pt
-	In this scenario, there are 4 extracted centers per dimension.
+
 
 	\subsubsection{Experiment Figures}
 	
@@ -211,7 +187,7 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 	\end{pmatrix}
 	\\
 
-	As seen in centers list, edges are equal per dimension $[0.0 , 255.0]$ for data bounding.\\
+	As seen in centers list, edges are equal per dimension $[0.0 , 255.0]$ for data bounding.
 	
 	\subsubsection{Experiment Figures}	
 	Our model provides the following figures:	

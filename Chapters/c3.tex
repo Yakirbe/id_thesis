@@ -226,6 +226,45 @@ The selected coefficients calculation process for our embedding is the Barycentr
 	$C$ may vary among dimensions. This step is equivalent to the 1D scenario.
 	At the 1D scenario, a 2D matrix was generated, which represents the distance between a pair of elements.
 	
+	at this stage, we may use several methods for discovering optimal number of centers per dimension:
+	
+	\begin{itemize}
+		\item cross validation on k-folded data \cite{cross_val}. a decribed algorithm is described below \ref{cross_validation}.
+		\item manual selection - dimension independent
+	\end{itemize}
+	
+		
+	\begin{algorithm}[H]
+		\caption{cross-validation (cv) algorithm for single dimension centers extraction}
+		\begin{algorithmic}		
+			
+			\REQUIRE $\overrightarrow{v}$: single dimension from a given dataset 
+			\REQUIRE $k$: number of folds for cv operation
+			\REQUIRE $\overrightarrow{c_{range}}$: range of output centers to look in
+			\ENSURE $n$: number of optimal centers\\
+			\STATE $groups \leftarrow$ split $\overrightarrow{v}$ into $k$ even segments
+			\FORALL{$c$ in $\overrightarrow{c_{range}}$}  
+			\STATE $c_{max} \leftarrow 0$  
+			\FORALL{$i$ in $k$}
+			
+			\STATE $test group$ $\leftarrow$ $groups[i]$
+			\STATE $train group$ $\leftarrow$ $groups[!=i]$		
+			\STATE $clusters$ $\leftarrow$ k-means($train group$)
+			\STATE $score$ $\leftarrow$ silhouette($test group$, $clusters$)\\
+			\STATE $c_{max}$ += $score$
+			\ENDFOR
+			\IF{$score$<$c_{max}$}
+			\STATE $score_{max}$ $\leftarrow$ $c_{max}$
+			\STATE $C$ $\leftarrow$ $c$
+			\ENDIF
+			\ENDFOR	
+			\RETURN $C$	
+			
+		\end{algorithmic}
+		\label{cross_validation}
+	\end{algorithm}	
+	
+	
 	Now we address the n-dimensional scenario, by obtaining a $2n$ dimensional tensor, representing the distance between a pair of n dimensional vectors.
 	
 	\subsection{Interpolation}

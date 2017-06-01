@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.18)  1 MAY 2017 11:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.18)  1 JUN 2017 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2116,7 +2116,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-<Figures/flatten.jpg, id=634, 631.60968pt x 301.8778pt>
+<Figures/flatten.jpg, id=632, 631.60968pt x 301.8778pt>
 File: Figures/flatten.jpg Graphic file (type jpg)
 
 <use Figures/flatten.jpg>
@@ -2142,67 +2142,67 @@ Overfull \hbox (11.95175pt too wide) in paragraph at lines 210--213
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 235--237
+Underfull \hbox (badness 10000) in paragraph at lines 274--276
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 306--308
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--308
-
- []
-
-[13]
-
-! Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.385 		\end{align*}
-                    
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.400 		\end{align*}
-                    
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 345--347
 
  []
 
 
-! Package amsmath Error: Erroneous nesting of equation structures;
-(amsmath)                trying to recover with `aligned'.
+Underfull \hbox (badness 10000) in paragraph at lines 345--347
 
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.416 		\end{align*}
-                    
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.424 		\end{align*}
+                    
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.439 		\end{align*}
+                    
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
+
+ []
+
+
+! Package amsmath Error: Erroneous nesting of equation structures;
+(amsmath)                trying to recover with `aligned'.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.455 		\end{align*}
+                    
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
 
  []
 
@@ -2211,7 +2211,7 @@ Runaway argument?
 ! Paragraph ended before \align* was complete.
 <to be read again> 
                    \par 
-l.424 
+l.463 
       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -2220,7 +2220,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.424 
+l.463 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2228,7 +2228,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.424 
+l.463 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2239,7 +2239,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.424 
+l.463 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2250,7 +2250,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \par 
-l.424 
+l.463 
       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -2258,7 +2258,7 @@ So I shall assume that you typed `$$' both times.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.427 			\lambda
+l.466 			\lambda
                 _1 =	V_{[r^0,p,r^2,r^3,r^4]} =
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2266,7 +2266,7 @@ you left one out. Proceed, with fingers crossed.
 ! Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
-l.440 		\end{align*}
+l.479 		\end{align*}
                     
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2277,7 +2277,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
-l.440 		\end{align*}
+l.479 		\end{align*}
                     
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2285,7 +2285,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.440 		\end{align*}
+l.479 		\end{align*}
                     
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2293,7 +2293,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.440 		\end{align*}
+l.479 		\end{align*}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2301,10 +2301,11 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+[15]
 ! Extra }, or forgotten \endgroup.
 \math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
                                                   
-l.440 		\end{align*}
+l.479 		\end{align*}
                     
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2315,7 +2316,7 @@ deleted material, e.g., by typing `I$}'.
 ! Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.440 		\end{align*}
+l.479 		\end{align*}
                     
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2323,7 +2324,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra }, or forgotten \endgroup.
 \endalign ->\math@cr \black@ \totwidth@ \egroup 
                                                 \ifingather@ \restorealignst...
-l.440 		\end{align*}
+l.479 		\end{align*}
                     
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2332,13 +2333,13 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-! LaTeX Error: \begin{equation} on input line 422 ended by \end{align*}.
+! LaTeX Error: \begin{equation} on input line 461 ended by \end{align*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.440 		\end{align*}
+l.479 		\end{align*}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2347,7 +2348,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.440 		\end{align*}
+l.479 		\end{align*}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2358,7 +2359,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.440 		\end{align*}
+l.479 		\end{align*}
                     
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -2370,7 +2371,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.441 		\end{equation}
+l.480 		\end{equation}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2379,7 +2380,7 @@ or  <return>  to continue without it.
 ! You can't use `\eqno' in horizontal mode.
 \endmathdisplay@a ...\df@tag \@empty \else \veqno 
                                                   \alt@tag \df@tag \fi \ifx ...
-l.441 		\end{equation}
+l.480 		\end{equation}
                       
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2393,7 +2394,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.441 		\end{equation}
+l.480 		\end{equation}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2402,7 +2403,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.441 		\end{equation}
+l.480 		\end{equation}
                       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2413,7 +2414,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.441 		\end{equation}
+l.480 		\end{equation}
                       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -2421,17 +2422,17 @@ So I shall assume that you typed `$$' both times.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.441 		\end{equation}
+l.480 		\end{equation}
                       
 Things are pretty mixed up, but I think the worst is over.
 
-[15]
+[16]
 Runaway argument?
  \label {eq1} 
 ! Paragraph ended before \align* was complete.
 <to be read again> 
                    \par 
-l.451 
+l.490 
       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -2440,7 +2441,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.451 
+l.490 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2448,7 +2449,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.451 
+l.490 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2459,7 +2460,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.451 
+l.490 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2470,7 +2471,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \par 
-l.451 
+l.490 
       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -2478,7 +2479,7 @@ So I shall assume that you typed `$$' both times.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.452 	\lambda
+l.491 	\lambda
               _0 =	V_{[p,r^1,r^2,r^3,r^4]} =
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2486,7 +2487,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.466 
+l.505 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2494,7 +2495,7 @@ you left one out. Proceed, with fingers crossed.
 ! Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
-l.467 	\end{align*}
+l.506 	\end{align*}
                    
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -2505,7 +2506,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
-l.467 	\end{align*}
+l.506 	\end{align*}
                    
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2513,7 +2514,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.467 	\end{align*}
+l.506 	\end{align*}
                    
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2521,7 +2522,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra }, or forgotten \endgroup.
 \endalign ->\math@cr \black@ \totwidth@ \egroup 
                                                 \ifingather@ \restorealignst...
-l.467 	\end{align*}
+l.506 	\end{align*}
                    
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2530,13 +2531,13 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-! LaTeX Error: \begin{equation} on input line 448 ended by \end{align*}.
+! LaTeX Error: \begin{equation} on input line 487 ended by \end{align*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.467 	\end{align*}
+l.506 	\end{align*}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2545,7 +2546,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.467 	\end{align*}
+l.506 	\end{align*}
                    
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2556,7 +2557,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.467 	\end{align*}
+l.506 	\end{align*}
                    
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -2568,7 +2569,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.468 	\end{equation}
+l.507 	\end{equation}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2577,7 +2578,7 @@ or  <return>  to continue without it.
 ! You can't use `\eqno' in horizontal mode.
 \endmathdisplay@a ...\df@tag \@empty \else \veqno 
                                                   \alt@tag \df@tag \fi \ifx ...
-l.468 	\end{equation}
+l.507 	\end{equation}
                      
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -2591,7 +2592,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.468 	\end{equation}
+l.507 	\end{equation}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2600,7 +2601,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.468 	\end{equation}
+l.507 	\end{equation}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2611,7 +2612,7 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.468 	\end{equation}
+l.507 	\end{equation}
                      
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
@@ -2619,43 +2620,43 @@ So I shall assume that you typed `$$' both times.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.468 	\end{equation}
+l.507 	\end{equation}
                      
 Things are pretty mixed up, but I think the worst is over.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 508--513
+Underfull \hbox (badness 10000) in paragraph at lines 547--552
 
  []
 
 
-Overfull \hbox (2.59729pt too wide) in paragraph at lines 515--516
+Overfull \hbox (2.59729pt too wide) in paragraph at lines 554--555
 []\T1/ppl/m/n/10.95 and for $\OML/cmm/m/it/10.95 ^^U[]$ \T1/ppl/m/n/10.95 sim-p
 ly ap-ply the fi-nal step which pro-vides \T1/ppl/b/n/10.95 iden-ti-cal \T1/ppl
 /m/n/10.95 re-sult to the vol-ume method: 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--518
+Underfull \hbox (badness 10000) in paragraph at lines 556--557
 
  []
 
-[16]
+[17]
 File: Figures/flatten.jpg Graphic file (type jpg)
  <use Figures/flatten.jpg>
-Package pdftex.def Info: Figures/flatten.jpg used on input line 532.
+Package pdftex.def Info: Figures/flatten.jpg used on input line 571.
 (pdftex.def)             Requested size: 452.97568pt x 216.49968pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 592--595
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 631--634
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--595
+Underfull \hbox (badness 10000) in paragraph at lines 631--634
 
  []
 
@@ -2663,49 +2664,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 592--595
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 632--634
+Underfull \hbox (badness 10000) in paragraph at lines 671--673
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 632--634
+Underfull \hbox (badness 10000) in paragraph at lines 671--673
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 635--636
+Underfull \hbox (badness 10000) in paragraph at lines 674--675
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--638
+Underfull \hbox (badness 10000) in paragraph at lines 676--677
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--640
+Underfull \hbox (badness 10000) in paragraph at lines 678--679
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--642
+Underfull \hbox (badness 10000) in paragraph at lines 680--681
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 645--646
+Underfull \hbox (badness 10000) in paragraph at lines 684--685
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--650
+Underfull \hbox (badness 10000) in paragraph at lines 688--689
 
  []
 
-) [18] [19] [20]
+) [19] [20] [21]
 \openout2 = `Chapters/c4.aux'.
 
- (./Chapters/c4.tex
+ (./Chapters/c4.tex [22
+
+
+
+]
 Chapter 4.
 ! Missing $ inserted.
 <inserted text> 
@@ -2755,11 +2760,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 1: section
-[21
-
-
-
-]) [22]
+[23]) [24]
 \openout2 = `Chapters/c5.aux'.
 
  (./Chapters/c5.tex
@@ -2807,7 +2808,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--73
  []
 
 1: section
-[23
+[25
 
 
 
@@ -2816,7 +2817,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--148
 
  []
 
-[24]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
@@ -2962,10 +2963,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-) [25]
+) [27]
 \openout2 = `Chapters/c6.aux'.
 
- (./Chapters/c6.tex [26
+ (./Chapters/c6.tex [28
 
 
 
@@ -3014,12 +3015,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--45
  []
 
 1: section
-[27]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-) [28]
+) [30]
 \openout2 = `Chapters/c7.aux'.
 
  (./Chapters/c7.tex
@@ -3039,24 +3040,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-<Figures/sift1.jpg, id=832, 1606.0pt x 602.25pt>
+<Figures/sift1.jpg, id=857, 1606.0pt x 602.25pt>
 File: Figures/sift1.jpg Graphic file (type jpg)
  <use Figures/sift1.jpg>
 Package pdftex.def Info: Figures/sift1.jpg used on input line 33.
 (pdftex.def)             Requested size: 452.9607pt x 169.86024pt.
 
-<Figures/sift10.jpg, id=833, 642.4pt x 321.2pt>
+<Figures/sift10.jpg, id=858, 642.4pt x 321.2pt>
 File: Figures/sift10.jpg Graphic file (type jpg)
  <use Figures/sift10.jpg>
 Package pdftex.def Info: Figures/sift10.jpg used on input line 40.
 (pdftex.def)             Requested size: 341.4408pt x 170.7204pt.
 )
 1: section
-[29
+[31
 
 
 
-] [30 <./Figures/sift1.jpg> <./Figures/sift10.jpg>]
+] [32 <./Figures/sift1.jpg> <./Figures/sift10.jpg>]
 \openout2 = `Chapters/c8.aux'.
 
  (./Chapters/c8.tex
@@ -3066,7 +3067,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
-<Figures/set_ds.jpg, id=850, 2054.67625pt x 2054.67625pt>
+<Figures/set_ds.jpg, id=876, 2054.67625pt x 2054.67625pt>
 File: Figures/set_ds.jpg Graphic file (type jpg)
 
 <use Figures/set_ds.jpg>
@@ -3074,30 +3075,29 @@ Package pdftex.def Info: Figures/set_ds.jpg used on input line 25.
 (pdftex.def)             Requested size: 341.42105pt x 341.42105pt.
 
 1: section
-[31
+[33
 
 
 
-] <Figures/patch_positions.jpg, id=862, 167.4255pt x 113.9457pt>
-File: Figures/patch_positions.jpg Graphic file (type jpg)
-
-<use Figures/patch_positions.jpg>
-Package pdftex.def Info: Figures/patch_positions.jpg used on input line 35.
-(pdftex.def)             Requested size: 453.01799pt x 308.31293pt.
- [32 <./Figures/set_ds.jpg>] [33 <./Figures/patch_positions.jpg>] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+] [34 <./Figures/set_ds.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--154
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
+
+ []
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 128--130
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.156 	\begin{matrix}
+l.132 	\begin{matrix}
                        \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \end{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3105,7 +3105,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.156 ...\qquad c_1 \quad  \qquad c_2 \end{matrix}
+l.132 ...\qquad c_1 \quad  \qquad c_2 \end{matrix}
                                                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3114,14 +3114,14 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.159 	\begin{pmatrix}
+l.135 	\begin{pmatrix}
                       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3129,7 +3129,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.165 	\end{pmatrix}
+l.141 	\end{pmatrix}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3137,16 +3137,17 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[35]
-Overfull \hbox (0.27495pt too wide) in paragraph at lines 183--184
+
+Overfull \hbox (0.27495pt too wide) in paragraph at lines 159--160
 []\T1/ppl/m/n/10.95 Unseen cam-era sce-nario was as-sem-bled by as-sign-ing one
  of the cam-eras in-volved in dataset
  []
 
+[36]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.202 	\begin{matrix}
+l.178 	\begin{matrix}
                        \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \end{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3154,7 +3155,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.202 ...\qquad c_1 \quad  \qquad c_2 \end{matrix}
+l.178 ...\qquad c_1 \quad  \qquad c_2 \end{matrix}
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3165,7 +3166,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.205 		\begin{pmatrix}
+l.181 		\begin{pmatrix}
                        
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3173,7 +3174,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.211 	\end{pmatrix}
+l.187 	\end{pmatrix}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3182,40 +3183,31 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--213
+Underfull \hbox (badness 10000) in paragraph at lines 181--189
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
-
- []
-
-<Figures/orig_paper_charts.png, id=913, 757.83125pt x 386.44376pt>
+<Figures/orig_paper_charts.png, id=917, 757.83125pt x 386.44376pt>
 File: Figures/orig_paper_charts.png Graphic file (type png)
 
 <use Figures/orig_paper_charts.png>
-Package pdftex.def Info: Figures/orig_paper_charts.png used on input line 228.
+Package pdftex.def Info: Figures/orig_paper_charts.png used on input line 204.
 (pdftex.def)             Requested size: 452.96773pt x 230.98354pt.
- [36]
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+ [37]
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
 
-Overfull \hbox (1.7906pt too wide) in paragraph at lines 245--246
+Overfull \hbox (1.7906pt too wide) in paragraph at lines 221--222
 []\T1/ppl/m/n/10.95 Overfitting avoid-ance by ap-ply-ing cross val-i-dated cen-
 ters based on our train-ing set solely. 
  []
 
-) [37 <./Figures/orig_paper_charts.png>]
+) [38 <./Figures/orig_paper_charts.png>]
 \openout2 = `Chapters/c9.aux'.
 
- (./Chapters/c9.tex [38
-
-
-
-]
+ (./Chapters/c9.tex
 Chapter 9.
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--19
@@ -3254,7 +3246,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
  []
 
 1: section
-[39]
+[39
+
+
+
+]
 Overfull \hbox (1.70377pt too wide) in paragraph at lines 40--41
 []\T1/ppl/b/n/10.95 Memory \T1/ppl/m/n/10.95 con-sump-tion may be ob-served amo
 ng var-i-ous em-bed-ding method in-clude ours,
@@ -3277,10 +3273,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7AF6C9842BCCAAF255EF1413A5EBA74E;5689.
  ) 
 Here is how much of TeX's memory you used:
- 36556 strings out of 493029
- 757079 string characters out of 6136234
- 779983 words of memory out of 5000000
- 39133 multiletter control sequences out of 15000+600000
+ 36549 strings out of 493029
+ 756899 string characters out of 6136234
+ 778908 words of memory out of 5000000
+ 39128 multiletter control sequences out of 15000+600000
  54200 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,20n,79p,10377b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3301,10 +3297,10 @@ mf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect/v
 ect10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
-Output written on main.pdf (60 pages, 1834788 bytes).
+Output written on main.pdf (60 pages, 1774804 bytes).
 PDF statistics:
- 1094 PDF objects out of 1200 (max. 8388607)
+ 1093 PDF objects out of 1200 (max. 8388607)
  998 compressed objects within 10 object streams
- 323 named destinations out of 1000 (max. 500000)
- 691 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 322 named destinations out of 1000 (max. 500000)
+ 686 words of extra memory for PDF output out of 10000 (max. 10000000)
 

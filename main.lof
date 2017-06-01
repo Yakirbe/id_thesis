@@ -3,18 +3,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Close-up of a gull\relax }}{10}{figure.caption.9}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 1D data sample coefficients calculation matrix}}{19}{figure.caption.10}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces flattening 2d matrix}}{20}{figure.caption.12}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces triangle non-embeddable dataset}}{20}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 1D data sample coefficients calculation matrix}}{20}{figure.caption.10}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces flattening 2d matrix}}{21}{figure.caption.12}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces triangle non-embeddable dataset}}{21}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces discretization matrix}}{21}{figure.caption.14}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces discretization matrix}}{23}{figure.caption.14}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces SIFT algorithm used for template matching}}{30}{figure.caption.15}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces SIFT kp descriptor example}}{30}{figure.caption.16}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces SIFT algorithm used for template matching}}{32}{figure.caption.15}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces SIFT kp descriptor example}}{32}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces set ds}}{32}{figure.caption.17}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces color patches order in every samples image}}{33}{figure.caption.18}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces orig res}}{37}{figure.caption.19}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces set ds}}{34}{figure.caption.17}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces orig res}}{38}{figure.caption.18}
 \addvspace {10\p@ }
