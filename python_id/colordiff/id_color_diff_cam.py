@@ -333,7 +333,7 @@ def arrange_ds(ds_fn):
     ds= []
     for d in ds_new:
         vec_app = d["v1"] + d["v2"]
-        vec_app = [int(255*el) for el in vec_app]
+#        vec_app = [int(255*el) for el in vec_app]
         ds.append({"vec":vec_app , "label":d["dis"]})
     
     print "done!\n"
@@ -341,7 +341,7 @@ def arrange_ds(ds_fn):
     
 #%%
 
-def embed_main(tr_fn , te_fn, c):
+def embed_main(tr_fn , te_fn, c, cam = True):
 
     # load dataset ----------------------------------------------------------------
     
@@ -351,7 +351,6 @@ def embed_main(tr_fn , te_fn, c):
     ds_tr = random.sample(ds_tr , len(ds_tr))
     ds_te = random.sample(ds_tr , len(ds_te))
     
-    #ds_c_vec = random.sample(ds_tr,5000)
     ds_c_vec = random.sample(ds_tr,len(ds_tr))
     print "ds samples for c vec gen and shuffled\n"
     # set discrete extreme vals ---------------------------------------------------
@@ -364,17 +363,12 @@ def embed_main(tr_fn , te_fn, c):
     cvecs = gen_C_set(ds_c_vec , dis_min , dis_max , vec_len = len(ds_tr[0]["vec"]) , min_max_margin = 0.0, c=c)
     del ds_c_vec
     
-#%%
-    
     tr_sets , te_sets = get_start_stop_cam(ds_tr , ds_te)
     
-    
-#%%    
     for t_i in range(len(tr_sets)):
         
         tr_set = tr_sets[t_i]
         te_set = te_sets[t_i]
-        print tr_set[:2]
         # interpolation ---------------------------------------------------------------
         
         print "interpolate.........."
@@ -384,7 +378,7 @@ def embed_main(tr_fn , te_fn, c):
         print "Done!\n"
         
         # embed -----------------------------------------------------------------------
-        
+        print "embed.............."
         train_ds_json = embed(train_ds_json ,tr_set, cvecs)
         test_ds_json = embed(test_ds_json ,te_set, cvecs)
         print "Done!\n"
@@ -400,6 +394,7 @@ def embed_main(tr_fn , te_fn, c):
             x = list(train_ds_json[i]["embedded"].toarray()[0]) 
             argmax = [indx for indx, j in enumerate(x) if j <> 0][-1]
             x = x[:(argmax + 1)]
+            x = [float("%.4f"%el) for el in x]
             x = tr_set[i]["vec"] + x
             tr_emb.append(x)
             tr_lab.append(train_ds_json[i]["label"])
@@ -414,6 +409,7 @@ def embed_main(tr_fn , te_fn, c):
             x = list(test_ds_json[i]["embedded"].toarray()[0])
             argmax = [indx for indx, j in enumerate(x) if j <> 0][-1]
             x = x[:(argmax + 1)]
+            x = [float("%.4f"%el) for el in x]
             x = te_set[i]["vec"] + x
             te_emb.append(x)
             te_lab.append(test_ds_json[i]["label"])
@@ -432,23 +428,22 @@ def embed_main(tr_fn , te_fn, c):
         Y_te = [s for s in te_lab]
         del te_emb
         
-        print len(X_te[0]) , len(X_tr[0])
         print "Done!\n"
         
         json_out = {"X_tr":X_tr , "X_te":X_te , "Y_tr":Y_tr , "Y_te":Y_te}
-        
-        js_fn = "../sets_jsons_cam/{}.json".format(str(t_i))
+        if cam:
+            js_fn = "../sets_jsons_cam/{}.json".format(str(t_i))
+        else:
+            js_fn = "../sets_jsons/{}.json".format(str(t_i))
         
         if not os.path.exists(os.path.dirname(js_fn)):
             os.makedirs(os.path.dirname(js_fn))
         with open(js_fn , "w") as f:
             json.dump(json_out,f)
-    
-                
         del X_tr , Y_tr , X_te , Y_te
     return cvecs
       
-    
+#%%    
     
   
 if __name__ == "__main__":

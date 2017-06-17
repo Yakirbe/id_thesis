@@ -23,7 +23,7 @@ def get_color_list(string):
 
 
 
-def get_rgb_label_set(kd_d  , refs_d , th = 4):
+def get_rgb_label_set(kd_d  , refs_d , th = 4, ds_size = 500):
     
     final_set = []
     # Color to be compared to the reference.
@@ -40,22 +40,28 @@ def get_rgb_label_set(kd_d  , refs_d , th = 4):
             im_num = i%len(refs_d)
             if de_c2k <= th:# and j == im_num:
                 tot +=1
-                final_set.append({"v1":color1_srgb.get_value_tuple(),"v2":color2_srgb.get_value_tuple(),"dis":de_c2k})
-                if tot %400 == 0:
-                    print "tot = {}".format(tot)
+                v1 = [int(255*el) for el in color1_srgb.get_value_tuple()]
+                v2 = [int(255*el) for el in color2_srgb.get_value_tuple()]
+                final_set.append({"v1":v1,"v2":v2,"dis":de_c2k})
+                if tot %100 == 0:
+#                    print de_c2k
+#                    print "color1 lab:" , color1_srgb.get_value_tuple()
+#                    print "color2 lab:" , color2_srgb.get_value_tuple()
+                    print "total ds = {}".format(tot)
+                    
 #                print "rgb:", sRGBColor(kd_d[i][0] , kd_d[i][1] , kd_d[i][2])
-#                print "color1 lab:" , color1.get_value_tuple()
-#                print "color2 lab:" , color2.get_value_tuple()
+                
 #                print j , im_num ,":"
 #                print "de_c2k: %.3f" % de_c2k , "\n"
-                if tot == 500:
+                if tot == ds_size:
+                    print "got", ds_size, "samples"
                     return final_set
 
 
 
 def prep_ds(refs  , km , kd , nc , sd , cam = False , fw = True):
     # get ref table
-    
+    print "preparing dataset from files,", cam, fw
     refs_d = get_color_list(refs)
         
     #get compare tables
@@ -65,15 +71,15 @@ def prep_ds(refs  , km , kd , nc , sd , cam = False , fw = True):
     nc_d = get_color_list(nc)
     sd_d = get_color_list(sd)
     
-    
     fl_km = get_rgb_label_set(km_d , refs_d)
     fl_kd = get_rgb_label_set(kd_d , refs_d)
     fl_nc = get_rgb_label_set(nc_d , refs_d)
     fl_sd= get_rgb_label_set(sd_d , refs_d)
     
     if cam:
-        
+        print "cam"
         if fw:
+            print "fw"
             fn_out = "rgb_set_{}_cam_furnsworth.json"
         else:
             fn_out = "rgb_set_{}_cam_munswell.json"
@@ -82,9 +88,11 @@ def prep_ds(refs  , km , kd , nc , sd , cam = False , fw = True):
         final_set_tr = fl_km + fl_kd + fl_nc# + fl_sd    
         final_set_te = fl_sd    
     else:
+        print "no cam"
         if fw:
             fn_out = "rgb_set_{}_furnsworth.json"
         else:
+            print "no fw"
             fn_out = "rgb_set_{}_munswell.json"
     
         #camera ds prep    
@@ -95,13 +103,13 @@ def prep_ds(refs  , km , kd , nc , sd , cam = False , fw = True):
         del final_set
     
     #regular ds prep    
+    print "writing 2 files:{}",fn_out
     
     with open(fn_out.format("tr") , "w") as f:
         for samp in final_set_tr:
             json.dump(samp,f)#f.write(samp)
             f.write("\n")
         
-    final_set_te_fw = fl_sd    
     with open(fn_out.format("te") , "w") as f:
         for samp in final_set_te:
             json.dump(samp,f)#f.write(samp)

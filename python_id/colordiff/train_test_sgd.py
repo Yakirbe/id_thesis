@@ -39,22 +39,25 @@ def gen_ds(d_num = 5000, n_feat = 100):
         return dataset
     
 # Estimate linear regression coefficients using stochastic gradient descent
-def train(train, labels, l_rate, n_epoch, weight = ""):
+def train(tr_data, labels, l_rate, n_epoch, weight = "", reg = ""):
     if weight:
         coef = weight
     else:
-        coef = [0.0 for i in range(len(train[0])-6)]
+        coef = [0.0 for i in range(len(tr_data[0])-6)]
     for epoch in range(n_epoch):
 #        if epoch > 500:
 #            l_rate = l_rate*0.1
         sum_error = 0
         index = 0
-        for row in train:
+        for row in tr_data:
             l = labels[index]
             pair = row[:6]
+            #print pair
             emb_vec = row[6:]
             yhat = predict(emb_vec, coef)
-            error = yhat - l + 0.001*L2(pair)
+            if not reg:
+                rg = L2(pair) 
+            error = yhat - l + rg
             sum_error += error**2
             coef[0] = coef[0] - l_rate * error *emb_vec[0]
             for i in range(len(emb_vec)-1):
