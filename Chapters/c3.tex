@@ -6,12 +6,11 @@
 We now describe the Interpolated Discretized Distances (IDD) embedding method.
 As mentioned above, this method uniqueness is applying an embedding method that treats each pair as a \textbf{joint} object in its problem.
 This method may fit any two-objects task such similarity/matching problems etc. 
-Let us initiate by presenting the original single dimensional (IDD-1D) work \cite{ofir thesis}, then the expansion of this work into multidimensional (IDD-ND) scenario - general distance embedding is described.
+Let us initiate by presenting the original single dimensional (IDD-1D) work \cite{ofirpelethesis}, then the expansion of this work into multidimensional (IDD-ND) scenario - general distance embedding is described.
 
 \section{1D case}
 
 	Our method's objective is to find an embedding function such:
-	\cite{einstein}
 	\begin{equation}
 		ID:\Re^n \times \Re^m \rightarrow \Re^d
 	\end{equation}
@@ -227,6 +226,45 @@ The selected coefficients calculation process for our embedding is the Barycentr
 	$C$ may vary among dimensions. This step is equivalent to the 1D scenario.
 	At the 1D scenario, a 2D matrix was generated, which represents the distance between a pair of elements.
 	
+	at this stage, we may use several methods for discovering optimal number of centers per dimension:
+	
+	\begin{itemize}
+		\item cross validation on k-folded data \cite{cross_val}. a decribed algorithm is described below \ref{cross_validation}.
+		\item manual selection - dimension independent
+	\end{itemize}
+	
+		
+	\begin{algorithm}[H]
+		\caption{cross-validation (cv) algorithm for single dimension centers extraction}
+		\begin{algorithmic}		
+			
+			\REQUIRE $\overrightarrow{v}$: single dimension from a given dataset 
+			\REQUIRE $k$: number of folds for cv operation
+			\REQUIRE $\overrightarrow{c_{range}}$: range of output centers to look in
+			\ENSURE $n$: number of optimal centers\\
+			\STATE $groups \leftarrow$ split $\overrightarrow{v}$ into $k$ even segments
+			\FORALL{$c$ in $\overrightarrow{c_{range}}$}  
+			\STATE $c_{max} \leftarrow 0$  
+			\FORALL{$i$ in $k$}
+			
+			\STATE $test group$ $\leftarrow$ $groups[i]$
+			\STATE $train group$ $\leftarrow$ $groups[!=i]$		
+			\STATE $clusters$ $\leftarrow$ k-means($train group$)
+			\STATE $score$ $\leftarrow$ silhouette($test group$, $clusters$)\\
+			\STATE $c_{max}$ += $score$
+			\ENDFOR
+			\IF{$score$<$c_{max}$}
+			\STATE $score_{max}$ $\leftarrow$ $c_{max}$
+			\STATE $C$ $\leftarrow$ $c$
+			\ENDIF
+			\ENDFOR	
+			\RETURN $C$	
+			
+		\end{algorithmic}
+		\label{cross_validation}
+	\end{algorithm}	
+	
+	
 	Now we address the n-dimensional scenario, by obtaining a $2n$ dimensional tensor, representing the distance between a pair of n dimensional vectors.
 	
 	\subsection{Interpolation}
@@ -255,7 +293,7 @@ The selected coefficients calculation process for our embedding is the Barycentr
 		0 \leq p_{t(1)} \leq p_{t(1)} \leq \dots \leq p_{t(2n-1)} \leq p_{t(2n)} \leq 1
 		\end{equation}
 		
-		\cite{http://www.mathpages.com/home/kmath664/kmath664.htm}
+		\cite{sippl1986cayley}
 		
 		where:\\
 		$t_{(i)}$ is a permutation function.
@@ -641,11 +679,11 @@ We demonstrate a theoretical use case constrained by those 2 conditions, and see
 	
 	and $f(\overrightarrow{x_4}) ,f(\overrightarrow{x_1}) ,f(\overrightarrow{x_2})$ are collinear in $\Re^k$ \\ 
 	
-	From set formation symmetry property, the same colinearity applies on:
+	From set formation symmetry property, the same co-linearity applies on:
 		
 	$f(\overrightarrow{x_3}) ,f(\overrightarrow{x_1}) ,f(\overrightarrow{x_2})$ \\ 
 	
-	This common colinearity of those tuples leads to the following equation:
+	This common co-linearity of those tuples leads to the following equation:
 	
 	$\left \| f(\overrightarrow{x_4}) - f(\overrightarrow{x_3})  \right \|_2 == 0$ \\
 	
@@ -653,15 +691,3 @@ We demonstrate a theoretical use case constrained by those 2 conditions, and see
 	
 	$ d(\overrightarrow{x_4}\ , \overrightarrow{x_3}) = 2 $
 	
-	
-	
-
-
-
-
-
-	
-
-
-
-

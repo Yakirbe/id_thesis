@@ -1,85 +1,82 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
 \select@language {english}
 \contentsline {chapter}{Abstract}{iii}{section*.1}
 \contentsline {chapter}{Acknowledgements}{v}{section*.2}
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.10}
-\contentsline {section}{\numberline {1.1}Metrics}{1}{section.11}
-\contentsline {subsection}{\numberline {1.1.1}Definition}{1}{subsection.12}
-\contentsline {subsection}{\numberline {1.1.2}Metrics Properties}{2}{subsection.14}
-\contentsline {subsubsection}{\numberline {1.1.2.1}Non-negativity}{2}{subsubsection.15}
-\contentsline {subsubsection}{\numberline {1.1.2.2}Identity of Indiscernibles}{2}{subsubsection.17}
-\contentsline {subsubsection}{\numberline {1.1.2.3}Symmetry}{2}{subsubsection.19}
-\contentsline {subsubsection}{\numberline {1.1.2.4}Sub-additivity (Triangle Inequality)}{2}{subsubsection.21}
-\contentsline {subsection}{\numberline {1.1.3}Semi-metrics}{2}{subsection.23}
-\contentsline {subsection}{\numberline {1.1.4}Pseudo-metrics}{3}{subsection.24}
-\contentsline {section}{\numberline {1.2}Metric Learning}{3}{section.26}
-\contentsline {section}{\numberline {1.3}Bin-to-Bin \& Cross-Bin Metrics}{3}{section.27}
-\contentsline {section}{\numberline {1.4}Mahalanobis Distance}{3}{section.28}
-\contentsline {section}{\numberline {1.5}Related Work}{4}{section.31}
-\contentsline {section}{\numberline {1.6}Contribution}{4}{section.32}
-\contentsline {chapter}{\numberline {2}ID Embedding}{5}{chapter.33}
-\contentsline {section}{\numberline {2.1}Discretization}{5}{section.34}
-\contentsline {section}{\numberline {2.2}Interpolation}{5}{section.35}
-\contentsline {section}{\numberline {2.3}Assigning}{5}{section.38}
-\contentsline {chapter}{\numberline {3}Interpolated Discretized object pairs embedding}{9}{chapter.61}
-\contentsline {section}{\numberline {3.1}1D case}{9}{section.62}
-\contentsline {subsection}{\numberline {3.1.1}Discretization}{9}{subsection.65}
-\contentsline {subsection}{\numberline {3.1.2}Interpolation}{10}{subsection.66}
-\contentsline {subsubsection}{\numberline {3.1.2.1}Interpolation Coefficients extraction - 1D}{11}{subsubsection.73}
-\contentsline {subsection}{\numberline {3.1.3}Assigning}{11}{subsection.75}
-\contentsline {section}{\numberline {3.2}multidimensional case}{11}{section.76}
-\contentsline {subsection}{\numberline {3.2.1}Definition}{11}{subsection.77}
-\contentsline {subsection}{\numberline {3.2.2}Discretization}{12}{subsection.79}
-\contentsline {subsection}{\numberline {3.2.3}Interpolation}{12}{subsection.80}
-\contentsline {subsubsection}{\numberline {3.2.3.1}find bounding hypercube}{12}{subsubsection.82}
-\contentsline {subsubsection}{\numberline {3.2.3.2}find bounding simplex}{12}{subsubsection.83}
-\contentsline {subsubsection}{\numberline {3.2.3.3}calculate sub-volumes of all simplices involved}{12}{subsubsection.85}
-\contentsline {subsubsection}{\numberline {3.2.3.4}Simplex Volume Calculation}{13}{subsubsection.86}
-\contentsline {subsubsection}{\numberline {3.2.3.5}Efficient method - calculating Barycentric Coordinates (BCC)}{13}{subsubsection.89}
-\contentsline {subsubsection}{\numberline {3.2.3.6}O(n) solution}{14}{subsubsection.91}
-\contentsline {subsubsection}{\numberline {3.2.3.7}Methods identity for n=2}{14}{subsubsection.94}
-\contentsline {subsubsection}{\numberline {3.2.3.8}Volumes method}{14}{subsubsection.95}
-\contentsline {subsubsection}{\numberline {3.2.3.9}Recursive method}{16}{subsubsection.103}
-\contentsline {subsection}{\numberline {3.2.4}Assigning}{17}{subsection.104}
-\contentsline {section}{\numberline {3.3}Non-euclidean non-embeddable Metrics example}{18}{section.129}
-\contentsline {chapter}{\numberline {4}Interpolated Discretized Single objects Embedding}{21}{chapter.133}
-\contentsline {section}{\numberline {4.1}Discretization}{21}{section.134}
-\contentsline {section}{\numberline {4.2}Interpolation}{21}{section.136}
-\contentsline {section}{\numberline {4.3}Assigning}{22}{section.137}
-\contentsline {chapter}{\numberline {5}Learning}{23}{chapter.160}
-\contentsline {section}{\numberline {5.1}Learning Binary Classification Function}{23}{section.161}
-\contentsline {subsection}{\numberline {5.1.1}Efficient Stochastic Gradient Descent}{24}{subsection.165}
-\contentsline {section}{\numberline {5.2}Learning Regression Function for similarity/distance problems}{25}{section.172}
-\contentsline {chapter}{\numberline {6}Time Complexity}{27}{chapter.176}
-\contentsline {section}{\numberline {6.1}Discretization}{27}{section.177}
-\contentsline {section}{\numberline {6.2}Interpolation}{27}{section.179}
-\contentsline {section}{\numberline {6.3}Find the bounding hypercube}{27}{section.180}
-\contentsline {section}{\numberline {6.4}Find the bounding simplex}{28}{section.181}
-\contentsline {section}{\numberline {6.5}ID coefficients extraction}{28}{section.182}
-\contentsline {section}{\numberline {6.6}Assigning}{28}{section.183}
-\contentsline {chapter}{\numberline {7}Memory Complexity}{29}{chapter.184}
-\contentsline {section}{\numberline {7.1}Definition}{29}{section.185}
-\contentsline {subsection}{\numberline {7.1.1}SIFT Example}{29}{subsection.187}
-\contentsline {chapter}{\numberline {8}Experiments}{31}{chapter.190}
-\contentsline {section}{\numberline {8.1}Experiment Procedure}{31}{section.191}
-\contentsline {subsection}{\numberline {8.1.1}Dataset}{31}{subsection.192}
-\contentsline {subsection}{\numberline {8.1.2}Models to train}{33}{subsection.195}
-\contentsline {subsection}{\numberline {8.1.3}Interpolation}{33}{subsection.196}
-\contentsline {subsection}{\numberline {8.1.4}Embedding}{34}{subsection.214}
-\contentsline {subsection}{\numberline {8.1.5}Learning}{34}{subsection.215}
-\contentsline {subsection}{\numberline {8.1.6}Assessment}{35}{subsection.216}
-\contentsline {section}{\numberline {8.2}Results}{35}{section.218}
-\contentsline {subsection}{\numberline {8.2.1}Unseen Colors}{35}{subsection.219}
-\contentsline {subsubsection}{\numberline {8.2.1.1}Dataset properties}{35}{subsubsection.220}
-\contentsline {subsubsection}{\numberline {8.2.1.2}Centers locations}{35}{subsubsection.221}
-\contentsline {subsubsection}{\numberline {8.2.1.3}Experiment Figures}{36}{subsubsection.222}
-\contentsline {subsection}{\numberline {8.2.2}Unseen Camera}{36}{subsection.223}
-\contentsline {subsubsection}{\numberline {8.2.2.1}Dataset properties}{36}{subsubsection.224}
-\contentsline {subsubsection}{\numberline {8.2.2.2}Centers locations}{36}{subsubsection.225}
-\contentsline {subsubsection}{\numberline {8.2.2.3}Experiment Figures}{36}{subsubsection.226}
-\contentsline {section}{\numberline {8.3}Comparison}{37}{section.227}
-\contentsline {chapter}{\numberline {9}Conclusions and discussion}{39}{chapter.229}
-\contentsline {section}{\numberline {9.1}Summary}{39}{section.230}
-\contentsline {section}{\numberline {9.2}further exploration}{40}{section.234}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{41}{appendix.235}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Metrics}{2}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Definition}{2}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Metrics Properties}{2}{subsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.2.1}Non-negativity}{2}{subsubsection.1.1.2.1}
+\contentsline {subsubsection}{\numberline {1.1.2.2}Identity of Indiscernibles}{2}{subsubsection.1.1.2.2}
+\contentsline {subsubsection}{\numberline {1.1.2.3}Symmetry}{2}{subsubsection.1.1.2.3}
+\contentsline {subsubsection}{\numberline {1.1.2.4}Sub-additivity (Triangle Inequality)}{2}{subsubsection.1.1.2.4}
+\contentsline {subsection}{\numberline {1.1.3}Semi-metrics}{3}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Pseudo-metrics}{3}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}Metric Learning}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Bin-to-Bin \& Cross-Bin Metrics}{3}{section.1.3}
+\contentsline {section}{\numberline {1.4}Mahalanobis Distance}{3}{section.1.4}
+\contentsline {section}{\numberline {1.5}Related Work}{4}{section.1.5}
+\contentsline {section}{\numberline {1.6}Contribution}{4}{section.1.6}
+\contentsline {chapter}{\numberline {2}ID Embedding}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Discretization}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Interpolation}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Assigning}{5}{section.2.3}
+\contentsline {chapter}{\numberline {3}Interpolated Discretized object pairs embedding}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}1D case}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Discretization}{9}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Interpolation}{10}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Interpolation Coefficients extraction - 1D}{11}{subsubsection.3.1.2.1}
+\contentsline {subsection}{\numberline {3.1.3}Assigning}{11}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}multidimensional case}{11}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Definition}{11}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Discretization}{12}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Interpolation}{12}{subsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.3.1}find bounding hypercube}{13}{subsubsection.3.2.3.1}
+\contentsline {subsubsection}{\numberline {3.2.3.2}find bounding simplex}{13}{subsubsection.3.2.3.2}
+\contentsline {subsubsection}{\numberline {3.2.3.3}calculate sub-volumes of all simplices involved}{13}{subsubsection.3.2.3.3}
+\contentsline {subsubsection}{\numberline {3.2.3.4}Simplex Volume Calculation}{13}{subsubsection.3.2.3.4}
+\contentsline {subsubsection}{\numberline {3.2.3.5}Efficient method - calculating Barycentric Coordinates (BCC)}{14}{subsubsection.3.2.3.5}
+\contentsline {subsubsection}{\numberline {3.2.3.6}O(n) solution}{14}{subsubsection.3.2.3.6}
+\contentsline {subsubsection}{\numberline {3.2.3.7}Methods identity for n=2}{15}{subsubsection.3.2.3.7}
+\contentsline {subsubsection}{\numberline {3.2.3.8}Volumes method}{15}{subsubsection.3.2.3.8}
+\contentsline {subsubsection}{\numberline {3.2.3.9}Recursive method}{17}{subsubsection.3.2.3.9}
+\contentsline {subsection}{\numberline {3.2.4}Assigning}{18}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Non-euclidean non-embeddable Metrics example}{19}{section.3.3}
+\contentsline {chapter}{\numberline {4}Interpolated Discretized Single objects Embedding}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Discretization}{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}Interpolation}{23}{section.4.2}
+\contentsline {section}{\numberline {4.3}Assigning}{24}{section.4.3}
+\contentsline {chapter}{\numberline {5}Learning}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}Learning Binary Classification Function}{25}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Efficient Stochastic Gradient Descent}{26}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Learning Regression Function for similarity/distance problems}{27}{section.5.2}
+\contentsline {chapter}{\numberline {6}Time Complexity}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}Discretization}{29}{section.6.1}
+\contentsline {section}{\numberline {6.2}Interpolation}{29}{section.6.2}
+\contentsline {section}{\numberline {6.3}Find the bounding hypercube}{29}{section.6.3}
+\contentsline {section}{\numberline {6.4}Find the bounding simplex}{30}{section.6.4}
+\contentsline {section}{\numberline {6.5}ID coefficients extraction}{30}{section.6.5}
+\contentsline {section}{\numberline {6.6}Assigning}{30}{section.6.6}
+\contentsline {chapter}{\numberline {7}Memory Complexity}{31}{chapter.7}
+\contentsline {section}{\numberline {7.1}Definition}{31}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}SIFT Dimensions Demonstration}{31}{subsection.7.1.1}
+\contentsline {chapter}{\numberline {8}Experiments}{33}{chapter.8}
+\contentsline {section}{\numberline {8.1}Experiment Procedure}{33}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Dataset}{33}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Models to train}{34}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}Interpolation}{35}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Embedding}{35}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}Learning}{35}{subsection.8.1.5}
+\contentsline {subsection}{\numberline {8.1.6}Assessment}{35}{subsection.8.1.6}
+\contentsline {section}{\numberline {8.2}Results}{36}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Unseen Colors}{36}{subsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.1.1}Dataset properties}{36}{subsubsection.8.2.1.1}
+\contentsline {subsubsection}{\numberline {8.2.1.2}Centers locations}{36}{subsubsection.8.2.1.2}
+\contentsline {subsubsection}{\numberline {8.2.1.3}Experiment Figures}{36}{subsubsection.8.2.1.3}
+\contentsline {subsection}{\numberline {8.2.2}Unseen Camera}{37}{subsection.8.2.2}
+\contentsline {subsubsection}{\numberline {8.2.2.1}Dataset properties}{37}{subsubsection.8.2.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2.2}Centers locations}{37}{subsubsection.8.2.2.2}
+\contentsline {subsubsection}{\numberline {8.2.2.3}Experiment Figures}{37}{subsubsection.8.2.2.3}
+\contentsline {section}{\numberline {8.3}Comparison}{38}{section.8.3}
+\contentsline {chapter}{\numberline {9}Conclusions and discussion}{39}{chapter.9}
+\contentsline {section}{\numberline {9.1}Summary}{39}{section.9.1}
+\contentsline {section}{\numberline {9.2}further exploration}{40}{section.9.2}
