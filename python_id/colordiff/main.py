@@ -5,7 +5,7 @@ Created on Wed Feb 22 16:17:49 2017
 """
 
 import json
-from prepare_ds import prep_ds
+from prepare_ds import prep_ds, de_pair
 from edit_x_tr import arrange_x
 from id_color_diff_cam import embed_main, arrange_ds
 from train_test_sgd import train , test
@@ -39,13 +39,17 @@ def run_idd(cam = False, fw = True, c = ""):
     errors = test(X_te, Y_te, w, method = "L2")
     print "cam = ", cam
     print "c = ", c
-    return errors
+    return {"err":errors,"c":c}
 
 if __name__ == "__main__":
     out = {"cam":{}, "color":{}}
     #for _ in range(10):
-    for c in range(2,3):
+    for c in range(2,9):
         out["color"][c] = run_idd(cam = False, fw = True, c = c)
+<<<<<<< HEAD
     for c in range(2,3):
+=======
+    for c in range(2,9):
+>>>>>>> 9e89fafcff4033420920eb4eaba6d32ce40184a5
         out["cam"][c] = run_idd(cam = True, fw = True, c = c)
         
