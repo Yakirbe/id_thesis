@@ -32,10 +32,9 @@ def run_idd(cam = False, fw = True, c = ""):
         
     cvecs = embed_main(tr_fn , te_fn, c, cam = cam)
     X_tr , X_te , Y_tr , Y_te = arrange_x(cam = cam)
-    #return X_tr , X_te , Y_tr , Y_te
     # Calculate coefficients
-    l_rate = 0.01
-    n_epoch = 5
+    l_rate = 0.1
+    n_epoch = 50
     w = train(X_tr,Y_tr, l_rate, n_epoch, weight = "", reg = "")
     errors = test(X_te, Y_te, w, method = "L2")
     print "cam = ", cam
@@ -47,6 +46,6 @@ if __name__ == "__main__":
     #for _ in range(10):
     for c in range(2,3):
         out["color"][c] = run_idd(cam = False, fw = True, c = c)
-#    for c in range(2,3):
-#        out["cam"][c] = run_idd(cam = True, fw = True, c = c)
+    for c in range(2,3):
+        out["cam"][c] = run_idd(cam = True, fw = True, c = c)
         

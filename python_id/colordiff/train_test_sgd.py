@@ -54,17 +54,16 @@ def train(tr_data, labels, l_rate, n_epoch, weight = "", reg = ""):
             pair = row[:6]
             #print pair
             emb_vec = row[6:]
-            yhat = predict(emb_vec, coef)
+            yhat = np.dot(emb_vec, coef)
             if not reg:
                 rg = L2(pair) 
-            error = yhat - l + rg
+            error = yhat - l + 0.01*rg
             sum_error += error**2
-            coef[0] = coef[0] - l_rate * error *emb_vec[0]
-            for i in range(len(emb_vec)-1):
+            for i in range(len(emb_vec)):
                 #coef[i + 1] = np.max(0.0,coef[i + 1] - l_rate * error * emb_vec[i])
-                coef[i + 1] =coef[i + 1] - l_rate * error * emb_vec[i]
+                coef[i] =coef[i] - l_rate * error * emb_vec[i]
             index += 1
-        #print('epoch=%d, lrate=%.3f, error=%.3f' % (epoch, l_rate, sum_error))
+        print('epoch=%d, lrate=%.3f, error=%.3f' % (epoch, l_rate, sum_error))
         #print
     return coef
     
@@ -77,7 +76,8 @@ def test(test, labels, w, method = "L2"):
     for t in test:
         pair = t[:6]
         sample = t[6:]
-        y_pred = np.dot(sample, w)
+        rg = L2(pair) 
+        y_pred = np.dot(sample, w) + 0.01*rg
         y_true = labels[i]
         yt_l.append(y_true)
         yp_l.append(y_pred)

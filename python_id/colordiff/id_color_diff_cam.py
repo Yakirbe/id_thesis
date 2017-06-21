@@ -336,7 +336,6 @@ def arrange_ds(ds_fn):
 #        vec_app = [int(255*el) for el in vec_app]
         ds.append({"vec":vec_app , "label":d["dis"]})
     
-    print "done!\n"
     return ds        
     
 #%%
@@ -375,15 +374,10 @@ def embed_main(tr_fn , te_fn, c, cam = True):
         
         train_ds_json = interpolate(tr_set , cvecs)
         test_ds_json = interpolate(te_set , cvecs)
-        print "Done!\n"
         
         # embed -----------------------------------------------------------------------
-        print "embed.............."
         train_ds_json = embed(train_ds_json ,tr_set, cvecs)
         test_ds_json = embed(test_ds_json ,te_set, cvecs)
-        print "Done!\n"
-        
-        print "start arranging datasets:"
         
         print "convert to dense form"
         #train set
@@ -428,7 +422,7 @@ def embed_main(tr_fn , te_fn, c, cam = True):
         Y_te = [s for s in te_lab]
         del te_emb
         
-        print "Done!\n"
+        print "Done!"
         
         json_out = {"X_tr":X_tr , "X_te":X_te , "Y_tr":Y_tr , "Y_te":Y_te}
         if cam:
