@@ -39,6 +39,7 @@ Since the pairs of patches should be close by their CIELAB \cite{CIELAB} coordin
 
 
 \subsection{Models to train}
+\label{color_cam}
 Then, $ID$ learning method will try to learn some similarity models according to a couple of test conditions:
 
 \begin{itemize}
@@ -117,9 +118,14 @@ Where n is test set size. \\
 
 \section{Results}
 
-Let us describe our results as compared to the original paper results as described in \ref{original paper results}.
+Let us describe our results being compared to the original paper results as described in \ref{original paper results}.
 We display the experiments for each data splitting (camera/color). 
-These experiments are performed using the cross validation algorithm mentioned above.
+Our experiments performed by applying cross validation algorithm mentioned at  \ref{cross_validation}.
+Let us observe the experiments performed on data splits described \ref{color_cam}:
+\begin{itemize}
+	\item \textbf{unseen colors}
+	\item \textbf{unseen camera}
+\end{itemize}
 
 
 \subsection{Unseen Colors}
