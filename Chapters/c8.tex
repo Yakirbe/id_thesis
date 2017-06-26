@@ -88,19 +88,19 @@ Each coefficient vector element is assigned to the exact simplex index in the $\
 Learning phase is performed on a linear regression model training process.
 As described on \ref{learn_regression}, we learn by using \textbf{Stochastic Gradient Descent} \cite{SGD} optimization algorithm, regularized by a known distance such $\lone$. \\
 Loss function of the training process would be a generalized Mean Average Error \cite{MAE} loss function, constrained by our semi-metrics critireas for model divergence as described in the learning chapter \ref{Chapter5}:
-%\begin{equation}
-%\wopt & = \\
-%& \argmin_{\wadd} 
-%\Bigg( 
-%\learningregtwo + 
-%\\
-%& C \sum_{i=1}^{\pairsnum}
-%\Big(
-%\distreg(\xvpairsindexifirst,\xvpairsindexisecond) + 
-%\ope(\xvpairsindexifirst,\xvpairsindexisecond) \cdot \wadd - \\
-%& \simlabel_i\Big)^2
-%\Bigg)
-%\end{equation}
+\begin{equation}
+\wopt & = \\
+& \argmin_{\wadd} 
+\Bigg( 
+\learningregtwo + 
+\\
+& C \sum_{i=1}^{\pairsnum}
+\Big(
+\distreg(\xvpairsindexifirst,\xvpairsindexisecond) + 
+\ope(\xvpairsindexifirst,\xvpairsindexisecond) \cdot \wadd - \\
+& \simlabel_i\Big)^2
+\Bigg)
+\end{equation}
 
 
 \subsection{Assessment}
@@ -117,11 +117,11 @@ Where n is test set size.
 MSE = \frac{1}{n} \cdot \sum_{i = 1}^{n}{(y^{pred}_i - y^{test}_i)^2}
 \end{equation}
 
-\item \textbf{$\Delta E$} - Mean Squared Error
+\item \textbf{$\Delta E$} - LAB colors distance metrics
+$\Delta E$ metrics applied with MAE data assessment, where basic distance calculation is performed as:
 \begin{equation}
-MAE = \frac{1}{n} \cdot \sum_{i = 1}^{n}{|y^{pred}_i - y^{test}_i|}
+\Delta E = \sqrt{ (L_1-L_2)^2+(A_1-A_2)^2+(B_1-B_2)^2}}
 \end{equation}
-Where n is test set size.
 
 \end{itemize}
 
@@ -191,11 +191,16 @@ Unseen color case was assembled by a certain percentage of all data set as train
 	
 	Our model provides the following figures:
 
-	\begin{itemize}
-	\item 	p-value = $3.9 \cdot 10 ^{-03}$
-	\item 	MAE = $0.80$
-	
-	\end{itemize}
+	\begin{table}[H]
+		\centering
+		\label{color_res1}
+		\begin{tabular}{|c|c|}
+			\textbf{MAE} & 6.33 &  \hline 
+			\textbf{MSE} & 4.65 & \hline
+			\textbf{$\Delta E$} & 5.33 & \hline
+		\end{tabular}
+		\caption{results of cv centers extraction over unseen colors dataset}
+	\end{table}
 
 
 \item Unseen Camera
@@ -207,18 +212,13 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 	\subsubsection{Dataset properties}
 	
 		From a total 13500 patches pairs set, the divided train-test sets amounts are:
-		\begin{itemize}
-			\item \textbf{train set size} = $8084$ 
-			\item \textbf{test set size} = $5416$ (Sony DCR-SR32 camera set)
-		\end{itemize}
-		
+				
 		\begin{table}[H]
 			\centering
 			\label{test_train2}
 			\begin{tabular}{|c|c|c|}
 				\hline
-				\textbf{set} & \textbf{size} & \textbf{cameras} \\ \hline \textbf{train} & \textbf{8084} & \textbf{Kodak DCS Pro 14n, Konica Minolta Dimage Z3,
-					Nikon Coolpix S6150} \\ \hline
+				\textbf{set} & \textbf{size} & \textbf{cameras} \\ \hline \textbf{train} & \textbf{8084} & \textbf{Kodak DCS Pro 14n, Konica Minolta Dimage Z3,	Nikon Coolpix S6150} \\ \hline
 				\textbf{test} & \textbf{5416} & \textbf{Sony DCR-SR32}\\ \hline
 			\end{tabular}
 			\caption{train/set ratio = $3/2$}
@@ -232,7 +232,6 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 
 	\vskip30pt
 	\begin{matrix}  \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \end{matrix}
-			
 	
 		\begin{pmatrix}
 		0.0 &     0.0 &    0.0\\
@@ -247,24 +246,48 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 	
 	\subsubsection{Experiment Figures}	
 	Our model provides the following figures:	
-	\begin{itemize}
-	\item 	p-value = $4.5 \cdot 10 ^{-05}$
-	\item 	MAE = $0.79$
-	
-	\end{itemize}
+	\begin{table}[H]
+		\centering
+		\label{color_res2}
+		\begin{tabular}{|c|c|}
+			\textbf{MAE} & 6.33 &  \hline 
+			\textbf{MSE} & 4.65 & \hline
+			\textbf{$\Delta E$} & 5.33 & \hline
+		\end{tabular}
+		\caption{results of cv centers extraction over unseen cameras dataset}
+	\end{table}
 
 \end{itemize}
 
 
 \subsection{Regularizers Comparison}
 
+\begin{figure}[H] 
+	\includegraphics[width=\linewidth,height=10cm,keepaspectratio]{Figures/regs}
+	\caption[orig res]
+	{original paper test loss charts, as function of cluster numbers}
+	\label{original paper results}			
+\end{figure}
 
 
 \subsection{Train/Test sets Comparison}
 
+\begin{figure}[H] 
+	\includegraphics[width=\linewidth,height=10cm,keepaspectratio]{Figures/train_test}
+	\caption[orig res]
+	{original paper test loss charts, as function of cluster numbers}
+	\label{original paper results}			
+\end{figure}
+
 
 \subsection{Unseen colors/Unseen camera sets Comparison}
 
+\begin{figure}[H] 
+	\includegraphics[width=\linewidth,height=10cm,keepaspectratio]{Figures/color_cam}
+	\caption[orig res]
+	{original paper test loss charts, as function of cluster numbers}
+	\label{original paper results}			
+\end{figure}
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.28)  26 JUN 2017 10:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.28)  26 JUN 2017 11:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1846,7 +1846,17 @@ Package csquotes Info: ... found 'babel' package.
 
 (./main.aux (./Chapters/c1.aux) (./Chapters/c2.aux) (./Chapters/c3.aux)
 (./Chapters/c4.aux) (./Chapters/c5.aux) (./Chapters/c6.aux) (./Chapters/c7.aux)
-(./Chapters/c8.aux) (./Chapters/c9.aux))
+(./Chapters/c8.aux
+
+LaTeX Warning: Label `original paper results' multiply defined.
+
+
+LaTeX Warning: Label `original paper results' multiply defined.
+
+
+LaTeX Warning: Label `original paper results' multiply defined.
+
+) (./Chapters/c9.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 299.
@@ -2122,7 +2132,10 @@ Type  H <return>  for immediate help.
 l.139 ...ar transformation before applying the ℓ
                                                   2 norm. They showed excell...
 
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 
 ! Package inputenc Error: Unicode char χ (U+3C7)
 (inputenc)                not set up for use with LaTeX.
@@ -2134,7 +2147,10 @@ Type  H <return>  for immediate help.
 l.144 ... both the Mahalanobis distance and the χ
                                                    2 distance. A QC distance...
 
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 
 ! Package inputenc Error: Unicode char χ (U+3C7)
 (inputenc)                not set up for use with LaTeX.
@@ -2146,7 +2162,10 @@ Type  H <return>  for immediate help.
 l.144 ...s limitation is that it can only model χ
                                                    2 -like distances. In add...
 
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ) [4]
 \openout2 = `Chapters/c2.aux'.
 
@@ -2180,7 +2199,9 @@ Chapter 3.
                 $
 l.30 
      
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
@@ -2191,26 +2212,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
                 $
 l.31 		W =		\begin{pmatrix}
                             c_{2(1)} \\ \vdots \\ \vdots \\ \vdots \\ \vdots...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-? 
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.31 ... \vdots \\ \vdots \\c_{2(m)} \end{pmatrix}
                                                   
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.32 		\begin{pmatrix}
                       
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.39 		\end{pmatrix}
                      $ \\
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 
 ! Package caption Error: \caption outside float.
 
@@ -2220,13 +2254,20 @@ Type  H <return>  for immediate help.
                                                   
 l.40 		\caption
                [discretization matrix]
-? 
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.42 	\end{figure}
                   
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 31--42
 
@@ -2237,19 +2278,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--42
                                                   \color@endbox 
 l.42 	\end{figure}
                   
-? 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
 ! Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
 l.42 	\end{figure}
                   
-? 
+Things are pretty mixed up, but I think the worst is over.
+
 ! Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
 l.42 	\end{figure}
                   
-? 
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
 
 ! LaTeX Error: \begin{document} ended by \end{figure}.
 
@@ -2259,13 +2305,17 @@ Type  H <return>  for immediate help.
                                                   
 l.42 	\end{figure}
                   
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.42 	\end{figure}
                   
-? 
+Things are pretty mixed up, but I think the worst is over.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
@@ -2277,7 +2327,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-<Figures/flatten.jpg, id=646, 631.60968pt x 301.8778pt>
+<Figures/flatten.jpg, id=656, 631.60968pt x 301.8778pt>
 File: Figures/flatten.jpg Graphic file (type jpg)
 
 <use Figures/flatten.jpg>
@@ -2328,7 +2378,9 @@ Type  H <return>  for immediate help.
                                                   
 l.424 		\end{align*}
                     
-? 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -2339,7 +2391,9 @@ Type  H <return>  for immediate help.
                                                   
 l.439 		\end{align*}
                     
-? 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 443--444
 
@@ -2355,7 +2409,9 @@ Type  H <return>  for immediate help.
                                                   
 l.455 		\end{align*}
                     
-? 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 459--460
 
@@ -2368,80 +2424,125 @@ Runaway argument?
                    \par 
 l.463 
       
-? 
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.463 
       
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
 l.463 
       
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
 l.463 
       
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Display math should end with $$.
 <to be read again> 
                    \par 
 l.463 
       
-? 
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.466 			\lambda
                 _1 =	V_{[r^0,p,r^2,r^3,r^4]} =
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ! Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
 l.479 		\end{align*}
                     
-? 
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
 l.479 		\end{align*}
                     
-? 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.479 		\end{align*}
                     
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ! Missing } inserted.
 <inserted text> 
                 }
 l.479 		\end{align*}
                     
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 [15]
 ! Extra }, or forgotten \endgroup.
 \math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
                                                   
 l.479 		\end{align*}
                     
-? 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
 ! Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
 l.479 		\end{align*}
                     
-? 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
 ! Extra }, or forgotten \endgroup.
 \endalign ->\math@cr \black@ \totwidth@ \egroup 
                                                 \ifingather@ \restorealignst...
 l.479 		\end{align*}
                     
-? 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
 
 ! LaTeX Error: \begin{equation} on input line 461 ended by \end{align*}.
 
@@ -2451,19 +2552,29 @@ Type  H <return>  for immediate help.
                                                   
 l.479 		\end{align*}
                     
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.479 		\end{align*}
                     
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
 l.479 		\end{align*}
                     
-? 
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
 
 ! LaTeX Error: Bad math environment delimiter.
 
@@ -2473,13 +2584,20 @@ Type  H <return>  for immediate help.
                                                   
 l.480 		\end{equation}
                       
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! You can't use `\eqno' in horizontal mode.
 \endmathdisplay@a ...\df@tag \@empty \else \veqno 
                                                   \alt@tag \df@tag \fi \ifx ...
 l.480 		\end{equation}
                       
-? 
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
 
 ! LaTeX Error: \begin{document} ended by \end{equation}.
 
@@ -2489,25 +2607,36 @@ Type  H <return>  for immediate help.
                                                   
 l.480 		\end{equation}
                       
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.480 		\end{equation}
                       
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
 l.480 		\end{equation}
                       
-? 
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.480 		\end{equation}
                       
-? 
+Things are pretty mixed up, but I think the worst is over.
+
 [16]
 Runaway argument?
  \label {eq1} 
@@ -2516,67 +2645,102 @@ Runaway argument?
                    \par 
 l.490 
       
-? 
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.490 
       
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
 l.490 
       
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
 l.490 
       
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Display math should end with $$.
 <to be read again> 
                    \par 
 l.490 
       
-? 
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.491 	\lambda
               _0 =	V_{[p,r^1,r^2,r^3,r^4]} =
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.505 
       
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ! Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
 l.506 	\end{align*}
                    
-? 
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
 l.506 	\end{align*}
                    
-? 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
 ! Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
 l.506 	\end{align*}
                    
-? 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
 ! Extra }, or forgotten \endgroup.
 \endalign ->\math@cr \black@ \totwidth@ \egroup 
                                                 \ifingather@ \restorealignst...
 l.506 	\end{align*}
                    
-? 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
 
 ! LaTeX Error: \begin{equation} on input line 487 ended by \end{align*}.
 
@@ -2586,19 +2750,29 @@ Type  H <return>  for immediate help.
                                                   
 l.506 	\end{align*}
                    
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.506 	\end{align*}
                    
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
 l.506 	\end{align*}
                    
-? 
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
 
 ! LaTeX Error: Bad math environment delimiter.
 
@@ -2608,13 +2782,20 @@ Type  H <return>  for immediate help.
                                                   
 l.507 	\end{equation}
                      
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! You can't use `\eqno' in horizontal mode.
 \endmathdisplay@a ...\df@tag \@empty \else \veqno 
                                                   \alt@tag \df@tag \fi \ifx ...
 l.507 	\end{equation}
                      
-? 
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
 
 ! LaTeX Error: \begin{document} ended by \end{equation}.
 
@@ -2624,25 +2805,36 @@ Type  H <return>  for immediate help.
                                                   
 l.507 	\end{equation}
                      
-? 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.507 	\end{equation}
                      
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
 l.507 	\end{equation}
                      
-? 
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
 l.507 	\end{equation}
                      
-? 
+Things are pretty mixed up, but I think the worst is over.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 547--552
 
@@ -2736,30 +2928,48 @@ Chapter 4.
                 $
 l.22 		\begin{pmatrix}
                        v_1 ,  v_2 , \dots , \dots , v_{n-1}, v_n} \end{pmatr...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-? 
 ! Extra }, or forgotten $.
 l.22 ...v_1 ,  v_2 , \dots , \dots , v_{n-1}, v_n}
                                                    \end{pmatrix}\\
-? 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.22 ...dots , \dots , v_{n-1}, v_n} \end{pmatrix}
                                                   \\
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.24 		\begin{pmatrix}
                       
-? 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.31 		\end{pmatrix}
                     
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 1: section
 [23]) [24]
 \openout2 = `Chapters/c5.aux'.
@@ -2774,16 +2984,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--21
 ! Extra }, or forgotten $.
 l.45 ... \overrightarrow{x_{pi2}} \:are\: similar}
                                                    \\
-? 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
 ! Extra }, or forgotten $.
 l.46 ...[ ID(\overrightarrow{x_{pi1}}\:  and \: 1}
                                                   _[S_1],\overrightarrow{x_{...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-? 
 ! Extra }, or forgotten $.
 l.46 ...errightarrow{x_{pi2}} \:are\: non-similar}
                                                    \\
-? 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 66--73
 
@@ -2817,67 +3041,139 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--154
 ! Misplaced alignment tab character &.
 l.155 $ \pairsmatrix $ &
                         
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced alignment tab character &.
 l.166 	\wopt &
                = \\
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced alignment tab character &.
 <recently read> &
                  
 l.167 	&
          \argmin_{\w \geq 0}
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced alignment tab character &.
 <recently read> &
                  
 l.171 	&
          C \sum_{i=1}^{\pairsnum}
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced alignment tab character &.
 l.189 \wopt &
               = \\
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced alignment tab character &.
 <recently read> &
                  
 l.190 &
         \argmin_{\wadd}
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced alignment tab character &.
 <recently read> &
                  
 l.194 &
         C \sum_{i=1}^{\pairsnum}
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced alignment tab character &.
 <recently read> &
                  
 l.198 &
         \simlabel_i\Big)^2
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced alignment tab character &.
 l.210 				\wopt &
                   = \\
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced alignment tab character &.
 <recently read> &
                  
 l.211 				&
             \argmin_{\wadd}
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced alignment tab character &.
 <recently read> &
                  
 l.215 				&
             C \sum_{i=1}^{\pairsnum}
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ! Misplaced alignment tab character &.
 <recently read> &
                  
 l.219 				&
             \simlabel_i\Big)^2
-? 
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 ) [27]
 \openout2 = `Chapters/c6.aux'.
 
@@ -2955,13 +3251,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-<Figures/sift1.jpg, id=871, 1606.0pt x 602.25pt>
+<Figures/sift1.jpg, id=881, 1606.0pt x 602.25pt>
 File: Figures/sift1.jpg Graphic file (type jpg)
  <use Figures/sift1.jpg>
 Package pdftex.def Info: Figures/sift1.jpg used on input line 33.
 (pdftex.def)             Requested size: 452.9607pt x 169.86024pt.
 
-<Figures/sift10.jpg, id=872, 642.4pt x 321.2pt>
+<Figures/sift10.jpg, id=882, 642.4pt x 321.2pt>
 File: Figures/sift10.jpg Graphic file (type jpg)
  <use Figures/sift10.jpg>
 Package pdftex.def Info: Figures/sift10.jpg used on input line 40.
@@ -2982,7 +3278,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
-<Figures/set_ds.jpg, id=890, 2054.67625pt x 2054.67625pt>
+<Figures/set_ds.jpg, id=900, 2054.67625pt x 2054.67625pt>
 File: Figures/set_ds.jpg Graphic file (type jpg)
 
 <use Figures/set_ds.jpg>
@@ -2999,7 +3295,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--86
 
  []
 
+! Misplaced alignment tab character &.
+l.92 \wopt &
+             = \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.93 &
+       \argmin_{\wadd}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.97 &
+       C \sum_{i=1}^{\pairsnum}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.101 &
+        \simlabel_i\Big)^2
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
 [35]
+! Extra }, or forgotten $.
+l.123 ...rt{ (L_1-L_2)^2+(A_1-A_2)^2+(B_1-B_2)^2}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 133--138
 
  []
@@ -3009,19 +3361,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
+[36]
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.176 	\begin{matrix}
                        \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \end{...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-? 
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.176 ...\qquad c_1 \quad  \qquad c_2 \end{matrix}
                                                   \\
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
@@ -3032,69 +3391,159 @@ Underfull \hbox (badness 10000) in paragraph at lines 176--177
                 $
 l.179 	\begin{pmatrix}
                       
-? 
-[36]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.185 	\end{pmatrix}
                     
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.198 			\textbf{MAE} & 6.33 &
+                                \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.199 			\textbf{MSE} & 4.65 &
+                               \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.200 			\textbf{$\Delta E$} & 5.33 &
+                                      \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.234 	\begin{matrix}
                        \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \end{...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-? 
 ! Missing $ inserted.
 <inserted text> 
                 $
 l.234 ...\qquad c_1 \quad  \qquad c_2 \end{matrix}
                                                   
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.237 		\begin{pmatrix}
-                       
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.243 	\end{pmatrix}
-                    
-? 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--245
+! Missing $ inserted.
+<inserted text> 
+                $
+l.236 		\begin{pmatrix}
+                       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.242 	\end{pmatrix}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--244
 
  []
 
-[37] <Figures/orig_paper_charts.png, id=940, 757.83125pt x 386.44376pt>
+[37]
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.253 			\textbf{MAE} & 6.33 &
+                                \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.254 			\textbf{MSE} & 4.65 &
+                               \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.255 			\textbf{$\Delta E$} & 5.33 &
+                                      \hline
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+<Figures/regs.png, id=951, 957.5775pt x 552.0625pt>
+File: Figures/regs.png Graphic file (type png)
+ <use Figures/regs.png>
+Package pdftex.def Info: Figures/regs.png used on input line 266.
+(pdftex.def)             Requested size: 452.96916pt x 261.14574pt.
+
+<Figures/train_test.png, id=953, 957.5775pt x 552.0625pt>
+File: Figures/train_test.png Graphic file (type png)
+
+<use Figures/train_test.png>
+Package pdftex.def Info: Figures/train_test.png used on input line 276.
+(pdftex.def)             Requested size: 452.96916pt x 261.14574pt.
+ [38 <./Figures/regs.png>]
+<Figures/color_cam.png, id=959, 957.5775pt x 552.0625pt>
+File: Figures/color_cam.png Graphic file (type png)
+
+<use Figures/color_cam.png>
+Package pdftex.def Info: Figures/color_cam.png used on input line 286.
+(pdftex.def)             Requested size: 452.96916pt x 261.14574pt.
+
+<Figures/orig_paper_charts.png, id=960, 757.83125pt x 386.44376pt>
 File: Figures/orig_paper_charts.png Graphic file (type png)
 
 <use Figures/orig_paper_charts.png>
-Package pdftex.def Info: Figures/orig_paper_charts.png used on input line 275.
+Package pdftex.def Info: Figures/orig_paper_charts.png used on input line 298.
 (pdftex.def)             Requested size: 452.96773pt x 230.98354pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+ [39 <./Figures/train_test.png> <./Figures/color_cam.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
 
  []
 
 
-Overfull \hbox (1.7906pt too wide) in paragraph at lines 292--293
+Overfull \hbox (1.7906pt too wide) in paragraph at lines 315--316
 []\T1/ppl/m/n/10.95 Overfitting avoid-ance by ap-ply-ing cross val-i-dated cen-
 ters based on our train-ing set solely. 
  []
 
-) [38 <./Figures/orig_paper_charts.png>] [39]
+) [40 <./Figures/orig_paper_charts.png>]
 \openout2 = `Chapters/c9.aux'.
 
- (./Chapters/c9.tex [40
-
-
-
-]
+ (./Chapters/c9.tex
 Chapter 9.
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--19
@@ -3133,7 +3582,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
  []
 
 1: section
-[41]
+[41
+
+
+
+]
 Overfull \hbox (1.70377pt too wide) in paragraph at lines 40--41
 []\T1/ppl/b/n/10.95 Memory \T1/ppl/m/n/10.95 con-sump-tion may be ob-served amo
 ng var-i-ous em-bed-ding method in-clude ours,
@@ -3156,17 +3609,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 09030179B752C1B03697603647B466D4;5887.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36858 strings out of 493013
- 765630 string characters out of 6133328
- 804492 words of memory out of 5000000
- 39432 multiletter control sequences out of 15000+600000
+ 36880 strings out of 493013
+ 766069 string characters out of 6133328
+ 804693 words of memory out of 5000000
+ 39445 multiletter control sequences out of 15000+600000
  54200 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,20n,79p,10377b,1018s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,20n,79p,10377b,930s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local
@@ -3186,10 +3639,10 @@ ts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/palatino/uplri8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
 ic/esvect/vect10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/esv
 ect/vect8.pfb>
-Output written on main.pdf (62 pages, 1778029 bytes).
+Output written on main.pdf (62 pages, 1876222 bytes).
 PDF statistics:
- 1123 PDF objects out of 1200 (max. 8388607)
- 1025 compressed objects within 11 object streams
- 330 named destinations out of 1000 (max. 500000)
- 702 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1142 PDF objects out of 1200 (max. 8388607)
+ 1038 compressed objects within 11 object streams
+ 336 named destinations out of 1000 (max. 500000)
+ 717 words of extra memory for PDF output out of 10000 (max. 10000000)
 
