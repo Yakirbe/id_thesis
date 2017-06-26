@@ -88,19 +88,19 @@ Each coefficient vector element is assigned to the exact simplex index in the $\
 Learning phase is performed on a linear regression model training process.
 As described on \ref{learn_regression}, we learn by using \textbf{Stochastic Gradient Descent} \cite{SGD} optimization algorithm, regularized by a known distance such $\lone$. \\
 Loss function of the training process would be a generalized Mean Average Error \cite{MAE} loss function, constrained by our semi-metrics critireas for model divergence as described in the learning chapter \ref{Chapter5}:
-\begin{equation}
-\wopt & = \\
-& \argmin_{\wadd} 
-\Bigg( 
-\learningregtwo + 
-\\
-& C \sum_{i=1}^{\pairsnum}
-\Big(
-\distreg(\xvpairsindexifirst,\xvpairsindexisecond) + 
-\ope(\xvpairsindexifirst,\xvpairsindexisecond) \cdot \wadd - \\
-& \simlabel_i\Big)^2
-\Bigg)
-\end{equation}
+%\begin{equation}
+%\wopt & = \\
+%& \argmin_{\wadd} 
+%\Bigg( 
+%\learningregtwo + 
+%\\
+%& C \sum_{i=1}^{\pairsnum}
+%\Big(
+%\distreg(\xvpairsindexifirst,\xvpairsindexisecond) + 
+%\ope(\xvpairsindexifirst,\xvpairsindexisecond) \cdot \wadd - \\
+%& \simlabel_i\Big)^2
+%\Bigg)
+%\end{equation}
 
 
 \subsection{Assessment}
@@ -124,7 +124,7 @@ Our experiments performed by applying cross validation algorithm mentioned at  \
 Let us observe the experiments performed on data splits described \ref{color_cam}.
 \\
 
-Along all the experiments we perform sweep over the number of centers per dimension $c \in [2,9$], which will describe the behavior of all models over datasets' dispersion.
+Along all the experiments we perform sweep over the number of centers per dimension $c \in [2,10]$, which will describe the behavior of all models over datasets' dispersion.
 \\
 We display several examinations of our results:
 \begin{itemize}
@@ -203,11 +203,9 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 		\begin{table}[H]
 			\centering
 			\label{test_train2}
-			\begin{tabular}{|c|c|}
+			\begin{tabular}{|c|c|c|}
 				\hline
-				
-				\textbf{set} & \textbf{size} & \textbf{cameras} \\ \hline \textbf{train} & \textbf{8084} & \textbf{Kodak DCS Pro 14n \\
-					Konica Minolta Dimage Z3 \\
+				\textbf{set} & \textbf{size} & \textbf{cameras} \\ \hline \textbf{train} & \textbf{8084} & \textbf{Kodak DCS Pro 14n, Konica Minolta Dimage Z3,
 					Nikon Coolpix S6150} \\ \hline
 				\textbf{test} & \textbf{5416} & \textbf{Sony DCR-SR32}\\ \hline
 			\end{tabular}
@@ -244,6 +242,20 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 	\end{itemize}
 
 \end{itemize}
+
+
+\subsection{Regularizers Comparison}
+
+
+
+\subsection{Train/Test sets Comparison}
+
+
+\subsection{Unseen colors/Unseen camera sets Comparison}
+
+
+
+
 
 \section{Comparison}
 

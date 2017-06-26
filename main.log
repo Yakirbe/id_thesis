@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.18)  25 JUN 2017 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.18)  26 JUN 2017 10:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1646,7 +1646,7 @@ Package csquotes Info: ... found 'babel' package.
  (./main.aux
 (./Chapters/c1.aux) (./Chapters/c2.aux) (./Chapters/c3.aux) (./Chapters/c4.aux)
 (./Chapters/c5.aux) (./Chapters/c6.aux) (./Chapters/c7.aux) (./Chapters/c8.aux)
-)
+(./Chapters/c9.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 299.
@@ -1847,21 +1847,21 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 430.
- (./main.toc)
+ (./main.toc
+1: section
+[7])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-
-1: section
-[7] [8
-
-] (./main.lof)
+ [8] (./main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
 
 1: section
-[9] [10
+[9
+
+] [10
 
 ] (./main.lot)
 \tf@lot=\write8
@@ -1896,28 +1896,6 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 
 (./Chapters/c1.tex
 Chapter 1.
-
-LaTeX Warning: Citation `trefethen1997numerical' on page 1 undefined on input l
-ine 20.
-
-
-LaTeX Warning: Citation `danielsson1980euclidean' on page 1 undefined on input 
-line 20.
-
-
-LaTeX Warning: Citation `de2000mahalanobis' on page 1 undefined on input line 2
-2.
-
-
-LaTeX Warning: Citation `lecun2015deep' on page 1 undefined on input line 24.
-
-
-LaTeX Warning: Citation `ofirpelethesis' on page 1 undefined on input line 32.
-
-
-LaTeX Warning: Citation `brown2007automatic' on page 1 undefined on input line 
-42.
-
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
@@ -1932,14 +1910,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
 
 ] [2] [3]
-
-LaTeX Warning: Citation `weinberger2009distance' on page 4 undefined on input l
-ine 137.
-
-
-LaTeX Warning: Citation `chopra2005learning' on page 4 undefined on input line 
-139.
-
 
 ! Package inputenc Error: Unicode char ℓ (U+2113)
 (inputenc)                not set up for use with LaTeX.
@@ -1985,10 +1955,6 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
-LaTeX Warning: Citation `ofirpelethesis' on page 4 undefined on input line 154.
-
-
 ) [4]
 \openout2 = `Chapters/c2.aux'.
 
@@ -2017,9 +1983,6 @@ put line 44.
 
 ]
 Chapter 3.
-
-LaTeX Warning: Citation `ofirpelethesis' on page 9 undefined on input line 9.
-
 ! Missing $ inserted.
 <inserted text> 
                 $
@@ -2153,7 +2116,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-<Figures/flatten.jpg, id=468, 631.60968pt x 301.8778pt>
+<Figures/flatten.jpg, id=646, 631.60968pt x 301.8778pt>
 File: Figures/flatten.jpg Graphic file (type jpg)
 
 <use Figures/flatten.jpg>
@@ -2173,29 +2136,17 @@ Overfull \hbox (45.29614pt too wide) in paragraph at lines 181--181
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation `bcc' on page 11 undefined on input line 212.
-
-
 Overfull \hbox (11.95175pt too wide) in paragraph at lines 210--213
 \T1/ppl/m/n/10.95 For this we should adapt a dif-fer-ent em-bed-ding at-ti-tude
 , since it should ob-tain multi-dimensional
  []
 
 [11]
-
-LaTeX Warning: Citation `cross_val' on page 12 undefined on input line 232.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 274--276
 
  []
 
-[12]
-
-LaTeX Warning: Citation `sippl1986cayley' on page 13 undefined on input line 29
-6.
-
-[13]
+[12] [13]
 Underfull \hbox (badness 10000) in paragraph at lines 345--347
 
  []
@@ -2847,10 +2798,6 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-LaTeX Warning: Citation `suykens1999least' on page 25 undefined on input line 6
-7.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 66--73
 
  []
@@ -2866,18 +2813,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--73
 
 
 ]
-
-LaTeX Warning: Citation `SGD' on page 26 undefined on input line 80.
-
-
-LaTeX Warning: Citation `shalev2004online' on page 26 undefined on input line 8
-4.
-
-
-LaTeX Warning: Citation `shalev2007pegasos' on page 26 undefined on input line 
-110.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 146--148
 
  []
@@ -3038,9 +2973,6 @@ might try typing `S' now just to see what is salvageable.
 ]
 Chapter 6.
 
-LaTeX Warning: Citation `kmeans' on page 29 undefined on input line 14.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
@@ -3082,16 +3014,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
 
-
-LaTeX Warning: Citation `quicksort' on page 29 undefined on input line 51.
-
-
-LaTeX Warning: Citation `mergesort' on page 29 undefined on input line 51.
-
-
-LaTeX Warning: Citation `peters2002timsort' on page 29 undefined on input line 
-51.
-
 1: section
 [29]
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
@@ -3118,17 +3040,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-
-LaTeX Warning: Citation `lowe1999object' on page 31 undefined on input line 24.
-
-
-<Figures/sift1.jpg, id=680, 1606.0pt x 602.25pt>
+<Figures/sift1.jpg, id=871, 1606.0pt x 602.25pt>
 File: Figures/sift1.jpg Graphic file (type jpg)
  <use Figures/sift1.jpg>
 Package pdftex.def Info: Figures/sift1.jpg used on input line 33.
 (pdftex.def)             Requested size: 452.9607pt x 169.86024pt.
 
-<Figures/sift10.jpg, id=681, 642.4pt x 321.2pt>
+<Figures/sift10.jpg, id=872, 642.4pt x 321.2pt>
 File: Figures/sift10.jpg Graphic file (type jpg)
  <use Figures/sift10.jpg>
 Package pdftex.def Info: Figures/sift10.jpg used on input line 40.
@@ -3145,26 +3063,11 @@ Package pdftex.def Info: Figures/sift10.jpg used on input line 40.
  (./Chapters/c8.tex
 Chapter 8.
 
-LaTeX Warning: Citation `perp_color' on page 33 undefined on input line 7.
-
-
-LaTeX Warning: Citation `perp_color' on page 33 undefined on input line 8.
-
-
-LaTeX Warning: Citation `c2lm' on page 33 undefined on input line 8.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
-
-LaTeX Warning: Citation `MAE' on page 33 undefined on input line 13.
-
-
-LaTeX Warning: Citation `farnsworth' on page 33 undefined on input line 19.
-
-<Figures/set_ds.jpg, id=695, 2054.67625pt x 2054.67625pt>
+<Figures/set_ds.jpg, id=890, 2054.67625pt x 2054.67625pt>
 File: Figures/set_ds.jpg Graphic file (type jpg)
 
 <use Figures/set_ds.jpg>
@@ -3176,95 +3079,22 @@ Package pdftex.def Info: Figures/set_ds.jpg used on input line 25.
 
 
 
-]
-
-LaTeX Warning: Citation `lab' on page 34 undefined on input line 30.
-
-
-LaTeX Warning: Citation `CIELAB' on page 34 undefined on input line 31.
-
-
-LaTeX Warning: Citation `RGB' on page 34 undefined on input line 63.
-
-
-LaTeX Warning: Citation `cross_val' on page 34 undefined on input line 66.
-
-
-LaTeX Warning: Citation `kmeans' on page 34 undefined on input line 66.
-
-[34 <./Figures/set_ds.jpg>]
+] [34 <./Figures/set_ds.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 84--86
 
  []
-
-
-LaTeX Warning: Citation `SGD' on page 35 undefined on input line 89.
-
-
-LaTeX Warning: Citation `MAE' on page 35 undefined on input line 90.
-
-! Misplaced alignment tab character &.
-l.92 \wopt &
-             = \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-<recently read> &
-                 
-l.93 &
-       \argmin_{\wadd}
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-<recently read> &
-                 
-l.97 &
-       C \sum_{i=1}^{\pairsnum}
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-<recently read> &
-                 
-l.101 &
-        \simlabel_i\Big)^2
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--117
 
  []
 
-[35]
-
-LaTeX Warning: Reference `original paper results' on page 36 undefined on input
- line 121.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 121--126
 
  []
 
-
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 160--162
 
  []
@@ -3313,1008 +3143,163 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 [36]
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.209 				\textbf{set} & \textbf{size} &
-                                         \textbf{cameras} \\ \hline \textbf{...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.209 ...\ \hline \textbf{train} & \textbf{8084} &
-                                                   \textbf{Kodak DCS Pro 14n \\
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Missing } inserted.
+! Missing $ inserted.
 <inserted text> 
-                }
-l.211 					Nikon Coolpix S6150}
-                                \\ \hline
+                $
+l.222 	\begin{matrix}
+                       \qquad  c_0 \quad  \qquad c_1 \quad  \qquad c_2 \end{...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.222 ...\qquad c_1 \quad  \qquad c_2 \end{matrix}
+                                                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-! Extra }, or forgotten \endgroup.
-<recently read> \egroup 
-                        
-l.211 					Nikon Coolpix S6150}
-                                \\ \hline
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
+! Missing $ inserted.
 <inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
+                $
+l.225 		\begin{pmatrix}
+                       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
+! Missing $ inserted.
 <inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Extra }, or forgotten \endgroup.
-<inserted text> }
-                 
-l.211 					Nikon Coolpix S6150} \\ \hline
-                                         
-(That makes 100 errors; please try again.) 
+                $
+l.231 	\end{pmatrix}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--233
+
+ []
+
+<Figures/orig_paper_charts.png, id=933, 757.83125pt x 386.44376pt>
+File: Figures/orig_paper_charts.png Graphic file (type png)
+
+<use Figures/orig_paper_charts.png>
+Package pdftex.def Info: Figures/orig_paper_charts.png used on input line 263.
+(pdftex.def)             Requested size: 452.96773pt x 230.98354pt.
+ [37]
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
+
+ []
+
+
+Overfull \hbox (1.7906pt too wide) in paragraph at lines 280--281
+[]\T1/ppl/m/n/10.95 Overfitting avoid-ance by ap-ply-ing cross val-i-dated cen-
+ters based on our train-ing set solely. 
+ []
+
+) [38 <./Figures/orig_paper_charts.png>]
+\openout2 = `Chapters/c9.aux'.
+
+ (./Chapters/c9.tex
+Chapter 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
+
+ []
+
+
+Overfull \hbox (15.06737pt too wide) in paragraph at lines 20--21
+[]\T1/ppl/m/n/10.95 We have de-scribed how it may be ap-plied on pair ob-jects 
+mat-ters, such sim-i-lar-ity/dissimilarity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+1: section
+[39
+
+
+
+]
+Overfull \hbox (1.70377pt too wide) in paragraph at lines 40--41
+[]\T1/ppl/b/n/10.95 Memory \T1/ppl/m/n/10.95 con-sump-tion may be ob-served amo
+ng var-i-ous em-bed-ding method in-clude ours,
+ []
+
+) [40] (./main.bbl
+1: section
+[41
+
+
+]) [42]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 528.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 528.
+ (./main.aux (./Chapters/c1.aux) (./Chapters/c2.aux)
+(./Chapters/c3.aux) (./Chapters/c4.aux) (./Chapters/c5.aux) (./Chapters/c6.aux)
+(./Chapters/c7.aux) (./Chapters/c8.aux) (./Chapters/c9.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 528.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 528.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 09030179B752C1B03697603647B466D4;5887.
+ ) 
 Here is how much of TeX's memory you used:
- 36450 strings out of 493029
- 755343 string characters out of 6136234
- 775965 words of memory out of 5000000
- 39103 multiletter control sequences out of 15000+600000
+ 36559 strings out of 493029
+ 757045 string characters out of 6136234
+ 779122 words of memory out of 5000000
+ 39134 multiletter control sequences out of 15000+600000
  54200 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,20n,79p,10377b,918s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,20n,79p,10377b,1000s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+palatino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect/v
+ect10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/esvect/vect8.pfb>
+Output written on main.pdf (60 pages, 1776764 bytes).
+PDF statistics:
+ 1112 PDF objects out of 1200 (max. 8388607)
+ 1016 compressed objects within 11 object streams
+ 326 named destinations out of 1000 (max. 500000)
+ 702 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-!  ==> Fatal error occurred, no output PDF file produced!
