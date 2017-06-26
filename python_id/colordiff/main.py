@@ -32,7 +32,6 @@ def run_idd(cam = False, fw = True, c = "", r = ""):
         
     cvecs = embed_main(tr_fn , te_fn, c, cam = cam)
     X_tr , X_te , Y_tr , Y_te = arrange_x(cam = cam)
-    #return X_tr , X_te , Y_tr , Y_te
     # Calculate coefficients
     l_rate = 0.1
     n_epoch = 5000
@@ -44,7 +43,6 @@ def run_idd(cam = False, fw = True, c = "", r = ""):
     return {"err_te":errte, "err_tr":errtr, "c":cvecs}
 
 if __name__ == "__main__":
-    
     out = {}
     for reg in ["l1","l2","de"]:
         out_r = {"cam":{}, "color":{}}
@@ -57,3 +55,4 @@ if __name__ == "__main__":
         
     with open("results.json", "w") as f:
         json.dump(out,f)
+        out["cam"][c] = run_idd(cam = True, fw = True, c = c)
