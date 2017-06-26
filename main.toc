@@ -74,11 +74,11 @@
 \contentsline {subsubsection}{\numberline {8.2.1.3}Experiment Figures}{37}{subsubsection.8.2.1.3}
 \contentsline {subsubsection}{\numberline {8.2.1.4}Dataset properties}{37}{subsubsection.8.2.1.4}
 \contentsline {subsubsection}{\numberline {8.2.1.5}Centers locations}{37}{subsubsection.8.2.1.5}
-\contentsline {subsubsection}{\numberline {8.2.1.6}Experiment Figures}{37}{subsubsection.8.2.1.6}
+\contentsline {subsubsection}{\numberline {8.2.1.6}Experiment Figures}{38}{subsubsection.8.2.1.6}
 \contentsline {subsection}{\numberline {8.2.2}Regularizers Comparison}{38}{subsection.8.2.2}
 \contentsline {subsection}{\numberline {8.2.3}Train/Test sets Comparison}{38}{subsection.8.2.3}
 \contentsline {subsection}{\numberline {8.2.4}Unseen colors/Unseen camera sets Comparison}{38}{subsection.8.2.4}
 \contentsline {section}{\numberline {8.3}Comparison}{38}{section.8.3}
-\contentsline {chapter}{\numberline {9}Conclusions and discussion}{39}{chapter.9}
-\contentsline {section}{\numberline {9.1}Summary}{39}{section.9.1}
-\contentsline {section}{\numberline {9.2}further exploration}{40}{section.9.2}
+\contentsline {chapter}{\numberline {9}Conclusions and discussion}{41}{chapter.9}
+\contentsline {section}{\numberline {9.1}Summary}{41}{section.9.1}
+\contentsline {section}{\numberline {9.2}further exploration}{42}{section.9.2}

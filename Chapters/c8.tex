@@ -107,13 +107,25 @@ Loss function of the training process would be a generalized Mean Average Error 
 Models assessment is applied by following criteria:
 \begin{itemize}
 \item \textbf{MAE} - Mean Absolute Error
-\end{itemize}
-
-The test set of each experiment is processed by our embedding method and a  distance figure is calculated. This figure $y_i^{test}$ is being compared to the predicted label for each sample by assembling the MAE index:
 \begin{equation}
 MAE = \frac{1}{n} \cdot \sum_{i = 1}^{n}{|y^{pred}_i - y^{test}_i|}
 \end{equation}
-Where n is test set size. \\
+Where n is test set size.
+
+\item \textbf{MSE} - Mean Square Error
+\begin{equation}
+MSE = \frac{1}{n} \cdot \sum_{i = 1}^{n}{(y^{pred}_i - y^{test}_i)^2}
+\end{equation}
+
+\item \textbf{$\Delta E$} - Mean Squared Error
+\begin{equation}
+MAE = \frac{1}{n} \cdot \sum_{i = 1}^{n}{|y^{pred}_i - y^{test}_i|}
+\end{equation}
+Where n is test set size.
+
+\end{itemize}
+
+
 
 
 \section{Results}
