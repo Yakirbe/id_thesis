@@ -121,26 +121,39 @@ Where n is test set size. \\
 Let us describe our results being compared to the original paper results as described in \ref{original paper results}.
 We display the experiments for each data splitting (camera/color). 
 Our experiments performed by applying cross validation algorithm mentioned at  \ref{cross_validation}.
-Let us observe the experiments performed on data splits described \ref{color_cam}:
+Let us observe the experiments performed on data splits described \ref{color_cam}.
+\\
+
+Along all the experiments we perform sweep over the number of centers per dimension $c \in [2,9$], which will describe the behavior of all models over datasets' dispersion.
+\\
+We display several examinations of our results:
 \begin{itemize}
-	\item \textbf{unseen colors}
-	\item \textbf{unseen camera}
+	\item \textbf{regularizers scan} - $L1, L2, \Delta E$
+	\item \textbf{train .vs. test} sets error
+	\item \textbf{unseen colors .vs. unseen cameras}	
 \end{itemize}
+We also describe a comparison of results based centers extracted by cross validation algo.
 
 
-\subsection{Unseen Colors}
+\subsection{Cross-Validation Centers}
+
+\begin{itemize}
+	\item Unseen Colors
 
 Unseen color case was assembled by a certain percentage of all data set as train set, and the rest as test set. In this experiment we have taken the train set size to be $80 \%$ of the total data set.
 
 	\subsubsection{Dataset properties}
 	
-		From a total 13500 patches pairs set, the divided train-test sets amounts are:
-		\begin{itemize}
-			\item \textbf{train set size} = $10800$ 
-			\item \textbf{test set size} = $2700$
-		\end{itemize}
-		
-		train/set ratio = $4/1$
+	From a total 13500 patches pairs set, the divided train-test sets amounts are:
+	\begin{table}[H]
+		\centering
+		\label{test_train1}
+		\begin{tabular}{|c|c|}
+			\textbf{set} & \textbf{size} \\ \hline \textbf{train} & \textbf{10800} \\ \hline
+			\textbf{test} & \textbf{2700} \\ \hline
+		\end{tabular}
+		\caption{train/set ratio = $4/1$}
+	\end{table}
 		
 	\subsubsection{Centers locations}
 	
@@ -173,7 +186,8 @@ Unseen color case was assembled by a certain percentage of all data set as train
 	\end{itemize}
 
 
-\subsection{Unseen Camera}
+\item Unseen Camera
+%\subsection{Unseen Camera}
 
 Unseen camera scenario was assembled by assigning one of the cameras involved in dataset generation as test set, where the other 3 functions as train set.
 
@@ -186,7 +200,20 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 			\item \textbf{test set size} = $5416$ (Sony DCR-SR32 camera set)
 		\end{itemize}
 		
-		train/set ratio = $3/2$
+		\begin{table}[H]
+			\centering
+			\label{test_train2}
+			\begin{tabular}{|c|c|}
+				\hline
+				
+				\textbf{set} & \textbf{size} & \textbf{cameras} \\ \hline \textbf{train} & \textbf{8084} & \textbf{Kodak DCS Pro 14n \\
+					Konica Minolta Dimage Z3 \\
+					Nikon Coolpix S6150} \\ \hline
+				\textbf{test} & \textbf{5416} & \textbf{Sony DCR-SR32}\\ \hline
+			\end{tabular}
+			\caption{train/set ratio = $3/2$}
+		\end{table}
+		
 
 	\subsubsection{Centers locations}
 	
@@ -216,6 +243,7 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 	
 	\end{itemize}
 
+\end{itemize}
 
 \section{Comparison}
 
