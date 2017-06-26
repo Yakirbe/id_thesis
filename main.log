@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.28)  26 JUN 2017 12:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.28)  26 JUN 2017 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3524,16 +3524,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
-[40 <./Figures/color_cam.png> <./Figures/orig_paper_charts.png>]
-Overfull \hbox (1.7906pt too wide) in paragraph at lines 321--322
-[]\T1/ppl/m/n/10.95 Overfitting avoid-ance by ap-ply-ing cross val-i-dated cen-
-ters based on our train-ing set solely. 
- []
-
-) [41]
+[40 <./Figures/color_cam.png> <./Figures/orig_paper_charts.png>]) [41]
 \openout2 = `Chapters/c9.aux'.
 
- (./Chapters/c9.tex [42
+
+(./Chapters/c9.tex [42
 
 
 
@@ -3625,10 +3620,10 @@ ts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/urw/palatino/uplri8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
 ic/esvect/vect10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/esv
 ect/vect8.pfb>
-Output written on main.pdf (64 pages, 1878060 bytes).
+Output written on main.pdf (64 pages, 1877908 bytes).
 PDF statistics:
- 1153 PDF objects out of 1200 (max. 8388607)
- 1047 compressed objects within 11 object streams
+ 1154 PDF objects out of 1200 (max. 8388607)
+ 1048 compressed objects within 11 object streams
  338 named destinations out of 1000 (max. 500000)
  717 words of extra memory for PDF output out of 10000 (max. 10000000)
 
