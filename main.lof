@@ -15,8 +15,8 @@
 \contentsline {figure}{\numberline {7.2}{\ignorespaces SIFT kp descriptor example}}{32}{figure.caption.16}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {8.1}{\ignorespaces set ds}}{34}{figure.caption.17}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces orig res}}{38}{figure.caption.22}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces orig res}}{39}{figure.caption.23}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces orig res}}{39}{figure.caption.24}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces regs}}{38}{figure.caption.22}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces train and test set errors}}{39}{figure.caption.23}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces unseen colors vs unseen camera sets errors}}{40}{figure.caption.24}
 \contentsline {figure}{\numberline {8.5}{\ignorespaces orig res}}{40}{figure.caption.25}
 \addvspace {10\p@ }

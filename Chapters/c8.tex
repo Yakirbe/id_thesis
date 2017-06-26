@@ -195,9 +195,9 @@ Unseen color case was assembled by a certain percentage of all data set as train
 		\centering
 		\label{color_res1}
 		\begin{tabular}{|c|c|}
-			\textbf{MAE} & 6.33 &  \hline 
-			\textbf{MSE} & 4.65 & \hline
-			\textbf{$\Delta E$} & 5.33 & \hline
+			\textbf{MAE} & 0.38 &  \hline 
+			\textbf{MSE} & 0.55 & \hline
+			\textbf{$\Delta E$} & 0.41 & \hline
 		\end{tabular}
 		\caption{results of cv centers extraction over unseen colors dataset}
 	\end{table}
@@ -236,7 +236,7 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 		\begin{pmatrix}
 		0.0 &     0.0 &    0.0\\
 		50.6 &   90.55 &    84.43 \\
-		101.54 &    &   \\		
+		101.54 &  -  &  - \\		
 		171.29 &   160.98 &   158.21\\
 		255.0 &  255.0 &   255.0 \\
 	\end{pmatrix}
@@ -250,45 +250,51 @@ Unseen camera scenario was assembled by assigning one of the cameras involved in
 		\centering
 		\label{color_res2}
 		\begin{tabular}{|c|c|}
-			\textbf{MAE} & 6.33 &  \hline 
-			\textbf{MSE} & 4.65 & \hline
-			\textbf{$\Delta E$} & 5.33 & \hline
+			\textbf{MAE} & 0.41 &  \hline 
+			\textbf{MSE} & 0.50 & \hline
+			\textbf{$\Delta E$} & 0.49 & \hline
 		\end{tabular}
 		\caption{results of cv centers extraction over unseen cameras dataset}
 	\end{table}
 
 \end{itemize}
 
-
+We now display our results along several criteria, as function of number of centers per dimension
 \subsection{Regularizers Comparison}
 
 \begin{figure}[H] 
 	\includegraphics[width=\linewidth,height=10cm,keepaspectratio]{Figures/regs}
-	\caption[orig res]
-	{original paper test loss charts, as function of cluster numbers}
-	\label{original paper results}			
+	\caption[regs]
+	{regularizers error vs centers per dimension}
+	\label{regularizers error vs centers per dimension}
 \end{figure}
+
+Regularizers comparison \ref{regularizers error vs centers per dimension} performs an expected general decreasing trend as we split the data into more segments.
+Maximal error of any regularizer ($0.56$) is measured on the minimal data division degree $c=2$. It is also observed that $L2$ regularizer succeeds applying its penalty on our data in the best manner, where $\Delta E$ and $ L1$ are manage to penalize dataset.
 
 
 \subsection{Train/Test sets Comparison}
 
 \begin{figure}[H] 
 	\includegraphics[width=\linewidth,height=10cm,keepaspectratio]{Figures/train_test}
-	\caption[orig res]
-	{original paper test loss charts, as function of cluster numbers}
-	\label{original paper results}			
+	\caption[train and test set errors]
+	{train and test set errors}
+	\label{train and test set errors}
 \end{figure}
 
-
+Train-test comparison performs an expected general decreasing trend as we split the data into more segments.
+Maximal error of any set ($~0.56$) is measured on the minimal data division degree - $c=2$. Similarity of trends behavior  as shown in \ref{train and test set errors} indicates well variety of distribution among sets.
 \subsection{Unseen colors/Unseen camera sets Comparison}
 
 \begin{figure}[H] 
 	\includegraphics[width=\linewidth,height=10cm,keepaspectratio]{Figures/color_cam}
-	\caption[orig res]
-	{original paper test loss charts, as function of cluster numbers}
-	\label{original paper results}			
+	\caption[unseen colors vs unseen camera sets errors]
+	{unseen colors vs unseen camera sets errors}
+	\label{unseen colors vs unseen camera sets errors}
 \end{figure}
 
+colors-cameras comparison performs an expected general decreasing trend as we split the data into more segments.
+Maximal error of any set ($~0.56$) is measured on the minimal data division degree - $c=2$.
 
 
 
@@ -307,12 +313,11 @@ Let us treat our results versus the original paper's results.\\
 While \cite{perp_color} (regression) method
 \ref{original paper results} shows results for either camera/color scenarios for model assessment with MAE. \\
 The \ref{original paper results} charts' x - axes describes the number of clusters been used in their embedding algorithm. \\
-Their minimal values on both scenarios are \textbf{ > 0.82 for MAE}, where our results are \textbf{ < 0.80 for MAE}, all for a $p-value$ with a similar magnitude to theirs. \\
+Minimal results of \cite{perp_color} on both scenarios are \textbf{ > 0.82 for MAE}, where our results are \textbf{ < 0.6 for any test case shown above}. \\
 As clearly seen, our results applies the following conditions:
 \begin{itemize}
-	\item Slight outperforming reference original paper error scores
-	\item Small p-values which proves the validity of our method, since there is a reasonable assumption that our models provide close dataset approximation
-	\item Overfitting avoidance by applying cross validated centers based on our training set solely.
+	\item Outperforming reference original paper error scores
+	\item Overfitting avoidance example method of applying cross validated centers based on our training set solely.
 \end{itemize}
 
 This information is a meaningful confirmation of the assumption that our method is valid to work with in terms of reliability. In the following chapter we will discuss the further explorations should be performed to examine the rest of performance criterias mentioned above.
