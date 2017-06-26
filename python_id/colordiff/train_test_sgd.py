@@ -58,6 +58,12 @@ def train(tr_data, labels, l_rate, n_epoch, weight = "", reg = ""):
             if not reg:
                 #rg = L1(pair) 
                 rg = de_pair(pair)
+            elif reg == "l1":
+                rg = L1(pair)
+            elif reg == "l2":
+                rg = L2(pair)
+            elif reg == "de":
+                rg = de_pair(pair)
             error = yhat - l + 0.01*rg
             #print "error = ", error, "rg = " , rg, "pred = ", yhat, "true = ", l
             sum_error += error**2
@@ -69,7 +75,7 @@ def train(tr_data, labels, l_rate, n_epoch, weight = "", reg = ""):
     return coef
     
     
-def test(test, labels, w, method = "L2"):
+def test(test, labels, w, reg = ""):
     
     i = 0
     yp_l = []
@@ -77,7 +83,15 @@ def test(test, labels, w, method = "L2"):
     for t in test:
         pair = t[:6]
         sample = t[6:]
-        rg = de_pair(pair)
+        if not reg:
+            #rg = L1(pair) 
+            rg = de_pair(pair)
+        elif reg == "l1":
+            rg = L1(pair)
+        elif reg == "l2":
+            rg = L2(pair)
+        elif reg == "de":
+            rg = de_pair(pair)
         y_pred = np.dot(sample, w) + 0.01*rg
         y_true = labels[i]
         yt_l.append(y_true)

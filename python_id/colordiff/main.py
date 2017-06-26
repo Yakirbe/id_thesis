@@ -10,7 +10,7 @@ from edit_x_tr import arrange_x
 from id_color_diff_cam import embed_main, arrange_ds
 from train_test_sgd import train , test
 
-def run_idd(cam = False, fw = True, c = ""):
+def run_idd(cam = False, fw = True, c = "", r = ""):
     
     #select data - munswell / furnswarth
     if fw:
@@ -35,18 +35,25 @@ def run_idd(cam = False, fw = True, c = ""):
     #return X_tr , X_te , Y_tr , Y_te
     # Calculate coefficients
     l_rate = 0.1
-    n_epoch = 50
-    w = train(X_tr,Y_tr, l_rate, n_epoch, weight = "", reg = "")
-    errors = test(X_te, Y_te, w, method = "L2")
+    n_epoch = 5000
+    w = train(X_tr,Y_tr, l_rate, n_epoch, weight = "", reg = r)
+    errte = test(X_te, Y_te, w, reg = r)
+    errtr = test(X_tr, Y_tr, w, reg = r)
     print "cam = ", cam
     print "c = ", c
-    return {"err":errors,"c":c}
+    return {"err_te":errte, "err_tr":errtr, "c":cvecs}
 
 if __name__ == "__main__":
-    out = {"cam":{}, "color":{}}
-    #for _ in range(10):
-    for c in range(2,9):
-        out["color"][c] = run_idd(cam = False, fw = True, c = c)
-    for c in range(2,9):
-        out["cam"][c] = run_idd(cam = True, fw = True, c = c)
+    
+    out = {}
+    for reg in ["l1","l2","de"]:
+        out_r = {"cam":{}, "color":{}}
+        #for _ in range(10):
+        for c in range(2,11):
+            out_r["color"][c] = run_idd(cam = False, fw = True, c = c, r = reg)
+        for c in range(2,11):
+            out_r["cam"][c] = run_idd(cam = True, fw = True, c = c, r = reg)
+        out[reg] = out_r
         
+    with open("results.json", "w") as f:
+        json.dump(out,f)

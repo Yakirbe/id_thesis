@@ -33,7 +33,7 @@ def de_pair(pair):
     return de_c2k
     
     
-def get_rgb_label_set(kd_d  , refs_d , th = 4, ds_size = 100):
+def get_rgb_label_set(kd_d  , refs_d , th = 4, ds_size = 200):
     
     final_set = []
     # Color to be compared to the reference.
